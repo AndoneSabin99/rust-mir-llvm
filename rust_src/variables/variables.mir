@@ -1,0 +1,41 @@
+// WARNING: This output format is intended for human consumers only
+// and is subject to change without notice. Knock yourself out.
+fn main() -> () {
+    let mut _0: ();
+    let mut _2: i32;
+    let mut _3: (i32, bool);
+    scope 1 {
+        debug x => const 10_i32;
+        scope 2 {
+            debug y => const 11_i32;
+            scope 3 {
+                debug x => const "a string?";
+                let mut _1: i32;
+                scope 4 {
+                    debug z => _1;
+                }
+            }
+        }
+    }
+
+    bb0: {
+        _1 = const 10_i32;
+        _2 = _1;
+        _3 = CheckedAdd(_2, const 1_i32);
+        assert(!move (_3.1: bool), "attempt to compute `{} + {}`, which would overflow", move _2, const 1_i32) -> [success: bb1, unwind continue];
+    }
+
+    bb1: {
+        _1 = move (_3.0: i32);
+        return;
+    }
+}
+
+const _TRUE: i32 = {
+    let mut _0: i32;
+
+    bb0: {
+        _0 = const 1_i32;
+        return;
+    }
+}
