@@ -1,0 +1,27 @@
+// WARNING: This output format is intended for human consumers only
+// and is subject to change without notice. Knock yourself out.
+fn main() -> () {
+    let mut _0: ();
+    scope 1 {
+        debug x => const 5_i8;
+        let _1: std::option::Option<i8>;
+        scope 2 {
+            debug y => _1;
+            let _2: std::option::Option<i32>;
+            scope 3 {
+                debug nopt => _2;
+                let _3: std::option::Option<i32>;
+                scope 4 {
+                    debug opt => _3;
+                }
+            }
+        }
+    }
+
+    bb0: {
+        _1 = Option::<i8>::Some(const 5_i8);
+        _2 = Option::<i32>::None;
+        _3 = Option::<i32>::Some(const 10_i32);
+        return;
+    }
+}

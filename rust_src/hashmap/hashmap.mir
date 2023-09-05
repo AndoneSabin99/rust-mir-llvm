@@ -1,0 +1,210 @@
+// WARNING: This output format is intended for human consumers only
+// and is subject to change without notice. Knock yourself out.
+fn main() -> () {
+    let mut _0: ();
+    let mut _1: std::collections::HashMap<std::string::String, i32>;
+    let _2: std::option::Option<i32>;
+    let mut _3: &mut std::collections::HashMap<std::string::String, i32>;
+    let mut _4: std::string::String;
+    let _5: std::option::Option<i32>;
+    let mut _6: &mut std::collections::HashMap<std::string::String, i32>;
+    let mut _7: std::string::String;
+    let mut _8: std::collections::hash_map::Iter<'_, std::string::String, i32>;
+    let mut _9: &std::collections::HashMap<std::string::String, i32>;
+    let mut _11: std::option::Option<(&std::string::String, &i32)>;
+    let mut _12: &mut std::collections::hash_map::Iter<'_, std::string::String, i32>;
+    let mut _13: isize;
+    let _16: ();
+    let mut _17: std::fmt::Arguments<'_>;
+    let mut _18: &[&str];
+    let mut _19: &[core::fmt::rt::Argument<'_>];
+    let _20: &[core::fmt::rt::Argument<'_>; 2];
+    let _21: [core::fmt::rt::Argument<'_>; 2];
+    let mut _22: core::fmt::rt::Argument<'_>;
+    let _23: &&std::string::String;
+    let mut _24: core::fmt::rt::Argument<'_>;
+    let _25: &&i32;
+    let _26: std::option::Option<i32>;
+    let mut _27: &mut std::collections::HashMap<std::string::String, i32>;
+    let mut _28: std::string::String;
+    let mut _30: std::option::Option<&i32>;
+    let mut _31: &std::collections::HashMap<std::string::String, i32>;
+    let _32: &str;
+    let _33: ();
+    let mut _34: std::fmt::Arguments<'_>;
+    let mut _35: &[&str];
+    let mut _36: &[core::fmt::rt::Argument<'_>];
+    let _37: &[core::fmt::rt::Argument<'_>; 1];
+    let _38: [core::fmt::rt::Argument<'_>; 1];
+    let mut _39: core::fmt::rt::Argument<'_>;
+    let _40: &&i32;
+    scope 1 {
+        debug scores => _1;
+        let mut _10: std::collections::hash_map::Iter<'_, std::string::String, i32>;
+        let _29: &i32;
+        scope 2 {
+            debug iter => _10;
+            let _14: &std::string::String;
+            let _15: &i32;
+            scope 3 {
+                debug key => _14;
+                debug value => _15;
+                let mut _41: &[&str; 3];
+            }
+        }
+        scope 4 {
+            debug blue_scores => _29;
+            let mut _42: &[&str; 2];
+        }
+    }
+
+    bb0: {
+        _1 = HashMap::<String, i32>::new() -> [return: bb1, unwind continue];
+    }
+
+    bb1: {
+        _3 = &mut _1;
+        _4 = <String as From<&str>>::from(const "Blue") -> [return: bb2, unwind: bb23];
+    }
+
+    bb2: {
+        _2 = HashMap::<String, i32>::insert(move _3, move _4, const 10_i32) -> [return: bb3, unwind: bb23];
+    }
+
+    bb3: {
+        _6 = &mut _1;
+        _7 = <String as From<&str>>::from(const "Yellow") -> [return: bb4, unwind: bb23];
+    }
+
+    bb4: {
+        _5 = HashMap::<String, i32>::insert(move _6, move _7, const 50_i32) -> [return: bb5, unwind: bb23];
+    }
+
+    bb5: {
+        _9 = &_1;
+        _8 = <&HashMap<String, i32> as IntoIterator>::into_iter(move _9) -> [return: bb6, unwind: bb23];
+    }
+
+    bb6: {
+        _10 = move _8;
+        goto -> bb7;
+    }
+
+    bb7: {
+        _12 = &mut _10;
+        _11 = <std::collections::hash_map::Iter<'_, String, i32> as Iterator>::next(_12) -> [return: bb8, unwind: bb23];
+    }
+
+    bb8: {
+        _13 = discriminant(_11);
+        switchInt(move _13) -> [0: bb11, 1: bb9, otherwise: bb10];
+    }
+
+    bb9: {
+        _14 = (((_11 as Some).0: (&std::string::String, &i32)).0: &std::string::String);
+        _15 = (((_11 as Some).0: (&std::string::String, &i32)).1: &i32);
+        _41 = const _;
+        _18 = _41 as &[&str] (PointerCoercion(Unsize));
+        _23 = &_14;
+        _22 = core::fmt::rt::Argument::<'_>::new_display::<&String>(_23) -> [return: bb12, unwind: bb23];
+    }
+
+    bb10: {
+        unreachable;
+    }
+
+    bb11: {
+        _27 = &mut _1;
+        _28 = <String as From<&str>>::from(const "Blue") -> [return: bb15, unwind: bb23];
+    }
+
+    bb12: {
+        _25 = &_15;
+        _24 = core::fmt::rt::Argument::<'_>::new_display::<&i32>(_25) -> [return: bb13, unwind: bb23];
+    }
+
+    bb13: {
+        _21 = [move _22, move _24];
+        _20 = &_21;
+        _19 = _20 as &[core::fmt::rt::Argument<'_>] (PointerCoercion(Unsize));
+        _17 = Arguments::<'_>::new_v1(move _18, move _19) -> [return: bb14, unwind: bb23];
+    }
+
+    bb14: {
+        _16 = _print(move _17) -> [return: bb25, unwind: bb23];
+    }
+
+    bb15: {
+        _26 = HashMap::<String, i32>::insert(move _27, move _28, const 25_i32) -> [return: bb16, unwind: bb23];
+    }
+
+    bb16: {
+        _31 = &_1;
+        _32 = const "Blue";
+        _30 = HashMap::<String, i32>::get::<str>(move _31, _32) -> [return: bb17, unwind: bb23];
+    }
+
+    bb17: {
+        _29 = Option::<&i32>::unwrap(move _30) -> [return: bb18, unwind: bb23];
+    }
+
+    bb18: {
+        _42 = const _;
+        _35 = _42 as &[&str] (PointerCoercion(Unsize));
+        _40 = &_29;
+        _39 = core::fmt::rt::Argument::<'_>::new_display::<&i32>(_40) -> [return: bb19, unwind: bb23];
+    }
+
+    bb19: {
+        _38 = [move _39];
+        _37 = &_38;
+        _36 = _37 as &[core::fmt::rt::Argument<'_>] (PointerCoercion(Unsize));
+        _34 = Arguments::<'_>::new_v1(move _35, move _36) -> [return: bb20, unwind: bb23];
+    }
+
+    bb20: {
+        _33 = _print(move _34) -> [return: bb21, unwind: bb23];
+    }
+
+    bb21: {
+        drop(_1) -> [return: bb22, unwind continue];
+    }
+
+    bb22: {
+        return;
+    }
+
+    bb23 (cleanup): {
+        drop(_1) -> [return: bb24, unwind terminate];
+    }
+
+    bb24 (cleanup): {
+        resume;
+    }
+
+    bb25: {
+        goto -> bb7;
+    }
+}
+
+promoted[0] in main: &[&str; 3] = {
+    let mut _0: &[&str; 3];
+    let mut _1: [&str; 3];
+
+    bb0: {
+        _1 = [const "Hashmap content: ", const ": ", const "\n"];
+        _0 = &_1;
+        return;
+    }
+}
+
+promoted[1] in main: &[&str; 2] = {
+    let mut _0: &[&str; 2];
+    let mut _1: [&str; 2];
+
+    bb0: {
+        _1 = [const "blue: ", const "\n"];
+        _0 = &_1;
+        return;
+    }
+}

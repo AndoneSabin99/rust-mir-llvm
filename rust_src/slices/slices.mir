@@ -1,0 +1,278 @@
+// WARNING: This output format is intended for human consumers only
+// and is subject to change without notice. Knock yourself out.
+fn main() -> () {
+    let mut _0: ();
+    let _1: std::string::String;
+    let _2: &str;
+    let _3: &str;
+    let mut _4: &std::string::String;
+    let mut _5: std::ops::Range<usize>;
+    let _6: &str;
+    let _7: &str;
+    let mut _8: &std::string::String;
+    let mut _9: std::ops::Range<usize>;
+    let _12: &[i32];
+    let mut _13: &[i32; 5];
+    let mut _14: std::ops::Range<usize>;
+    let mut _16: std::boxed::Box<[i32]>;
+    let mut _17: usize;
+    let mut _18: usize;
+    let mut _19: *mut u8;
+    let mut _20: std::boxed::Box<[i32; 5]>;
+    let _22: &i32;
+    let _23: &i32;
+    let mut _24: &std::vec::Vec<i32>;
+    let _25: ();
+    let mut _26: std::fmt::Arguments<'_>;
+    let mut _27: &[&str];
+    let mut _28: &[core::fmt::rt::Argument<'_>];
+    let _29: &[core::fmt::rt::Argument<'_>; 1];
+    let _30: [core::fmt::rt::Argument<'_>; 1];
+    let mut _31: core::fmt::rt::Argument<'_>;
+    let _32: &&i32;
+    let mut _33: std::option::Option<&i32>;
+    let mut _34: &[i32];
+    let _35: &[i32];
+    let mut _36: &std::vec::Vec<i32>;
+    let mut _37: isize;
+    let _39: ();
+    let mut _40: std::fmt::Arguments<'_>;
+    let mut _41: &[&str];
+    let mut _42: &[core::fmt::rt::Argument<'_>];
+    let _43: &[core::fmt::rt::Argument<'_>; 1];
+    let _44: [core::fmt::rt::Argument<'_>; 1];
+    let mut _45: core::fmt::rt::Argument<'_>;
+    let _46: &&i32;
+    let _47: ();
+    let mut _48: std::fmt::Arguments<'_>;
+    let mut _49: &[&str];
+    let mut _53: *const [i32; 5];
+    scope 1 {
+        debug s => _1;
+        scope 2 {
+            debug _hello => _2;
+            scope 3 {
+                debug _world => _6;
+                let _10: [i32; 5];
+                scope 4 {
+                    debug a => _10;
+                    let _11: &[i32];
+                    scope 5 {
+                        debug slice => _11;
+                        let _15: std::vec::Vec<i32>;
+                        let mut _54: *const ();
+                        let mut _55: usize;
+                        let mut _56: usize;
+                        let mut _57: usize;
+                        let mut _58: usize;
+                        let mut _59: bool;
+                        scope 6 {
+                            debug v => _15;
+                            let _21: &i32;
+                            scope 8 {
+                                debug third => _21;
+                                let _38: &i32;
+                                let mut _50: &[&str; 1];
+                                let mut _52: &[&str; 2];
+                                scope 9 {
+                                    debug third => _38;
+                                    let mut _51: &[&str; 2];
+                                }
+                            }
+                        }
+                        scope 7 {
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    bb0: {
+        _1 = <String as From<&str>>::from(const "hello world") -> [return: bb1, unwind continue];
+    }
+
+    bb1: {
+        _4 = &_1;
+        _5 = std::ops::Range::<usize> { start: const 0_usize, end: const 5_usize };
+        _3 = <String as Index<std::ops::Range<usize>>>::index(move _4, move _5) -> [return: bb2, unwind: bb23];
+    }
+
+    bb2: {
+        _2 = _3;
+        _8 = &_1;
+        _9 = std::ops::Range::<usize> { start: const 6_usize, end: const 11_usize };
+        _7 = <String as Index<std::ops::Range<usize>>>::index(move _8, move _9) -> [return: bb3, unwind: bb23];
+    }
+
+    bb3: {
+        _6 = _7;
+        _10 = [const 1_i32, const 2_i32, const 3_i32, const 4_i32, const 5_i32];
+        _13 = &_10;
+        _14 = std::ops::Range::<usize> { start: const 1_usize, end: const 3_usize };
+        _12 = <[i32; 5] as Index<std::ops::Range<usize>>>::index(move _13, move _14) -> [return: bb4, unwind: bb23];
+    }
+
+    bb4: {
+        _11 = _12;
+        _17 = SizeOf([i32; 5]);
+        _18 = AlignOf([i32; 5]);
+        _19 = alloc::alloc::exchange_malloc(move _17, move _18) -> [return: bb5, unwind: bb23];
+    }
+
+    bb5: {
+        _20 = ShallowInitBox(move _19, [i32; 5]);
+        _53 = (((_20.0: std::ptr::Unique<[i32; 5]>).0: std::ptr::NonNull<[i32; 5]>).0: *const [i32; 5]);
+        _54 = _53 as *const () (PtrToPtr);
+        _55 = _54 as usize (Transmute);
+        _56 = AlignOf(i32);
+        _57 = Sub(_56, const 1_usize);
+        _58 = BitAnd(_55, _57);
+        _59 = Eq(_58, const 0_usize);
+        assert(_59, "misaligned pointer dereference: address must be a multiple of {} but is {}", _56, _55) -> [success: bb25, unwind unreachable];
+    }
+
+    bb6: {
+        _24 = &_15;
+        _23 = <Vec<i32> as Index<usize>>::index(move _24, const 2_usize) -> [return: bb7, unwind: bb22];
+    }
+
+    bb7: {
+        _22 = _23;
+        _21 = _22;
+        _52 = const _;
+        _27 = _52 as &[&str] (PointerCoercion(Unsize));
+        _32 = &_21;
+        _31 = core::fmt::rt::Argument::<'_>::new_display::<&i32>(_32) -> [return: bb8, unwind: bb22];
+    }
+
+    bb8: {
+        _30 = [move _31];
+        _29 = &_30;
+        _28 = _29 as &[core::fmt::rt::Argument<'_>] (PointerCoercion(Unsize));
+        _26 = Arguments::<'_>::new_v1(move _27, move _28) -> [return: bb9, unwind: bb22];
+    }
+
+    bb9: {
+        _25 = _print(move _26) -> [return: bb10, unwind: bb22];
+    }
+
+    bb10: {
+        _36 = &_15;
+        _35 = <Vec<i32> as Deref>::deref(move _36) -> [return: bb11, unwind: bb22];
+    }
+
+    bb11: {
+        _34 = _35;
+        _33 = core::slice::<impl [i32]>::get::<usize>(move _34, const 2_usize) -> [return: bb12, unwind: bb22];
+    }
+
+    bb12: {
+        _37 = discriminant(_33);
+        switchInt(move _37) -> [0: bb13, 1: bb15, otherwise: bb14];
+    }
+
+    bb13: {
+        _50 = const _;
+        _49 = _50 as &[&str] (PointerCoercion(Unsize));
+        _48 = Arguments::<'_>::new_const(move _49) -> [return: bb18, unwind: bb22];
+    }
+
+    bb14: {
+        unreachable;
+    }
+
+    bb15: {
+        _38 = ((_33 as Some).0: &i32);
+        _51 = const _;
+        _41 = _51 as &[&str] (PointerCoercion(Unsize));
+        _46 = &_38;
+        _45 = core::fmt::rt::Argument::<'_>::new_display::<&i32>(_46) -> [return: bb16, unwind: bb22];
+    }
+
+    bb16: {
+        _44 = [move _45];
+        _43 = &_44;
+        _42 = _43 as &[core::fmt::rt::Argument<'_>] (PointerCoercion(Unsize));
+        _40 = Arguments::<'_>::new_v1(move _41, move _42) -> [return: bb17, unwind: bb22];
+    }
+
+    bb17: {
+        _39 = _print(move _40) -> [return: bb26, unwind: bb22];
+    }
+
+    bb18: {
+        _47 = _print(move _48) -> [return: bb27, unwind: bb22];
+    }
+
+    bb19: {
+        drop(_15) -> [return: bb20, unwind: bb23];
+    }
+
+    bb20: {
+        drop(_1) -> [return: bb21, unwind continue];
+    }
+
+    bb21: {
+        return;
+    }
+
+    bb22 (cleanup): {
+        drop(_15) -> [return: bb23, unwind terminate];
+    }
+
+    bb23 (cleanup): {
+        drop(_1) -> [return: bb24, unwind terminate];
+    }
+
+    bb24 (cleanup): {
+        resume;
+    }
+
+    bb25: {
+        (*_53) = [const 1_i32, const 2_i32, const 3_i32, const 4_i32, const 5_i32];
+        _16 = move _20 as std::boxed::Box<[i32]> (PointerCoercion(Unsize));
+        _15 = slice::<impl [i32]>::into_vec::<std::alloc::Global>(move _16) -> [return: bb6, unwind: bb23];
+    }
+
+    bb26: {
+        goto -> bb19;
+    }
+
+    bb27: {
+        goto -> bb19;
+    }
+}
+
+promoted[0] in main: &[&str; 1] = {
+    let mut _0: &[&str; 1];
+    let mut _1: [&str; 1];
+
+    bb0: {
+        _1 = [const "There is no third element.\n"];
+        _0 = &_1;
+        return;
+    }
+}
+
+promoted[1] in main: &[&str; 2] = {
+    let mut _0: &[&str; 2];
+    let mut _1: [&str; 2];
+
+    bb0: {
+        _1 = [const "The third element is ", const "\n"];
+        _0 = &_1;
+        return;
+    }
+}
+
+promoted[2] in main: &[&str; 2] = {
+    let mut _0: &[&str; 2];
+    let mut _1: [&str; 2];
+
+    bb0: {
+        _1 = [const "The third element is ", const "\n"];
+        _0 = &_1;
+        return;
+    }
+}

@@ -1,0 +1,189 @@
+// WARNING: This output format is intended for human consumers only
+// and is subject to change without notice. Knock yourself out.
+fn main() -> () {
+    let mut _0: ();
+    let _1: &str;
+    let _3: &str;
+    let _5: &std::string::String;
+    let _6: &str;
+    let _7: &str;
+    let mut _8: &std::string::String;
+    let mut _9: std::ops::RangeTo<usize>;
+    let _11: &str;
+    let _13: &str;
+    let _15: ();
+    let mut _16: &mut std::string::String;
+    let mut _17: &str;
+    let _18: &str;
+    let _19: &std::string::String;
+    let mut _22: std::fmt::Arguments<'_>;
+    let mut _23: &[&str];
+    let mut _24: &[core::fmt::rt::Argument<'_>];
+    let _25: &[core::fmt::rt::Argument<'_>; 2];
+    let _26: [core::fmt::rt::Argument<'_>; 2];
+    let mut _27: core::fmt::rt::Argument<'_>;
+    let _28: &std::string::String;
+    let mut _29: core::fmt::rt::Argument<'_>;
+    let _30: &std::string::String;
+    scope 1 {
+        debug str_string => const "hello";
+        let mut _2: &str;
+        scope 2 {
+            debug str_string2 => _2;
+            let _4: std::string::String;
+            scope 3 {
+                debug str_string => _4;
+                scope 4 {
+                    debug strptr_string => _5;
+                    scope 5 {
+                        debug str_slice => _6;
+                        scope 6 {
+                            debug _s => const "hell";
+                            let _10: std::string::String;
+                            scope 7 {
+                                debug s0 => _10;
+                                let mut _12: std::string::String;
+                                scope 8 {
+                                    debug s => _12;
+                                    let _14: std::string::String;
+                                    scope 9 {
+                                        debug t => _14;
+                                        let _20: std::string::String;
+                                        let _21: std::string::String;
+                                        let mut _31: &[&str; 3];
+                                        scope 10 {
+                                            debug r => _20;
+                                        }
+                                        scope 11 {
+                                            debug res => _21;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    bb0: {
+        _1 = const "hello";
+        _2 = const "wht";
+        _3 = const "mehs";
+        _2 = _3;
+        _4 = <String as From<&str>>::from(_1) -> [return: bb1, unwind continue];
+    }
+
+    bb1: {
+        _5 = &_4;
+        _8 = &_4;
+        _9 = RangeTo::<usize> { end: const 2_usize };
+        _7 = <String as Index<RangeTo<usize>>>::index(move _8, move _9) -> [return: bb2, unwind: bb20];
+    }
+
+    bb2: {
+        _6 = _7;
+        _11 = const "hell";
+        _10 = <str as ToString>::to_string(_11) -> [return: bb3, unwind: bb20];
+    }
+
+    bb3: {
+        _13 = const "hell";
+        _12 = <str as ToString>::to_string(_13) -> [return: bb4, unwind: bb19];
+    }
+
+    bb4: {
+        _14 = <String as From<&str>>::from(const "o world") -> [return: bb5, unwind: bb18];
+    }
+
+    bb5: {
+        _16 = &mut _12;
+        _19 = &_14;
+        _18 = <String as Deref>::deref(_19) -> [return: bb6, unwind: bb17];
+    }
+
+    bb6: {
+        _17 = _18;
+        _15 = String::push_str(move _16, move _17) -> [return: bb7, unwind: bb17];
+    }
+
+    bb7: {
+        _31 = const _;
+        _23 = _31 as &[&str] (PointerCoercion(Unsize));
+        _28 = &_10;
+        _27 = core::fmt::rt::Argument::<'_>::new_display::<String>(_28) -> [return: bb8, unwind: bb17];
+    }
+
+    bb8: {
+        _30 = &_14;
+        _29 = core::fmt::rt::Argument::<'_>::new_display::<String>(_30) -> [return: bb9, unwind: bb17];
+    }
+
+    bb9: {
+        _26 = [move _27, move _29];
+        _25 = &_26;
+        _24 = _25 as &[core::fmt::rt::Argument<'_>] (PointerCoercion(Unsize));
+        _22 = Arguments::<'_>::new_v1(move _23, move _24) -> [return: bb10, unwind: bb17];
+    }
+
+    bb10: {
+        _21 = format(move _22) -> [return: bb11, unwind: bb17];
+    }
+
+    bb11: {
+        _20 = move _21;
+        drop(_20) -> [return: bb12, unwind: bb17];
+    }
+
+    bb12: {
+        drop(_14) -> [return: bb13, unwind: bb18];
+    }
+
+    bb13: {
+        drop(_12) -> [return: bb14, unwind: bb19];
+    }
+
+    bb14: {
+        drop(_10) -> [return: bb15, unwind: bb20];
+    }
+
+    bb15: {
+        drop(_4) -> [return: bb16, unwind continue];
+    }
+
+    bb16: {
+        return;
+    }
+
+    bb17 (cleanup): {
+        drop(_14) -> [return: bb18, unwind terminate];
+    }
+
+    bb18 (cleanup): {
+        drop(_12) -> [return: bb19, unwind terminate];
+    }
+
+    bb19 (cleanup): {
+        drop(_10) -> [return: bb20, unwind terminate];
+    }
+
+    bb20 (cleanup): {
+        drop(_4) -> [return: bb21, unwind terminate];
+    }
+
+    bb21 (cleanup): {
+        resume;
+    }
+}
+
+promoted[0] in main: &[&str; 3] = {
+    let mut _0: &[&str; 3];
+    let mut _1: [&str; 3];
+
+    bb0: {
+        _1 = [const "", const " is real t", const "lings"];
+        _0 = &_1;
+        return;
+    }
+}

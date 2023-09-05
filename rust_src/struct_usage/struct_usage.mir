@@ -1,0 +1,224 @@
+// WARNING: This output format is intended for human consumers only
+// and is subject to change without notice. Knock yourself out.
+fn main() -> () {
+    let mut _0: ();
+    let _1: User;
+    let mut _2: std::string::String;
+    let mut _3: std::string::String;
+    let mut _5: std::string::String;
+    let mut _6: std::string::String;
+    let mut _7: std::string::String;
+    let mut _8: std::string::String;
+    let mut _12: std::string::String;
+    let mut _13: std::string::String;
+    let mut _15: std::string::String;
+    let mut _16: std::string::String;
+    let mut _18: std::string::String;
+    let mut _19: std::string::String;
+    let mut _21: std::string::String;
+    let mut _22: std::string::String;
+    let mut _23: bool;
+    let mut _24: u64;
+    let mut _25: bool;
+    scope 1 {
+        debug _user0 => _1;
+        let mut _4: User;
+        scope 2 {
+            debug user1 => _4;
+            let _9: std::string::String;
+            scope 3 {
+                debug email => _9;
+                let _10: std::string::String;
+                scope 4 {
+                    debug username => _10;
+                    let _11: User;
+                    scope 5 {
+                        debug _user2 => _11;
+                        let _14: User;
+                        scope 6 {
+                            debug user3 => _14;
+                            let _17: User;
+                            scope 7 {
+                                debug _user4 => _17;
+                                let _20: User;
+                                scope 8 {
+                                    debug _user5 => _20;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    bb0: {
+        _25 = const false;
+        _2 = <String as From<&str>>::from(const "someone@example.com") -> [return: bb1, unwind continue];
+    }
+
+    bb1: {
+        _3 = <String as From<&str>>::from(const "someusername123") -> [return: bb2, unwind: bb34];
+    }
+
+    bb2: {
+        _1 = User { username: move _3, email: move _2, sign_in_count: const 1_u64, active: const true };
+        _5 = <String as From<&str>>::from(const "someone@example.com") -> [return: bb3, unwind: bb33];
+    }
+
+    bb3: {
+        _6 = <String as From<&str>>::from(const "someusername123") -> [return: bb4, unwind: bb32];
+    }
+
+    bb4: {
+        _4 = User { username: move _6, email: move _5, sign_in_count: const 1_u64, active: const true };
+        _7 = String::new() -> [return: bb5, unwind: bb31];
+    }
+
+    bb5: {
+        drop((_4.1: std::string::String)) -> [return: bb6, unwind: bb7];
+    }
+
+    bb6: {
+        (_4.1: std::string::String) = move _7;
+        _8 = String::new() -> [return: bb8, unwind: bb31];
+    }
+
+    bb7 (cleanup): {
+        (_4.1: std::string::String) = move _7;
+        goto -> bb31;
+    }
+
+    bb8: {
+        drop((_4.0: std::string::String)) -> [return: bb9, unwind: bb10];
+    }
+
+    bb9: {
+        (_4.0: std::string::String) = move _8;
+        _9 = <String as From<&str>>::from(const "someone@example.com") -> [return: bb11, unwind: bb31];
+    }
+
+    bb10 (cleanup): {
+        (_4.0: std::string::String) = move _8;
+        goto -> bb31;
+    }
+
+    bb11: {
+        _25 = const true;
+        _10 = <String as From<&str>>::from(const "someusername123") -> [return: bb12, unwind: bb37];
+    }
+
+    bb12: {
+        _25 = const false;
+        _12 = move _9;
+        _13 = move _10;
+        _11 = User { username: move _13, email: move _12, sign_in_count: const 1_u64, active: const true };
+        _15 = <String as From<&str>>::from(const "someone@example.com") -> [return: bb13, unwind: bb30];
+    }
+
+    bb13: {
+        _16 = <String as From<&str>>::from(const "someusername123") -> [return: bb14, unwind: bb29];
+    }
+
+    bb14: {
+        _14 = User { username: move _16, email: move _15, sign_in_count: const 1_u64, active: const true };
+        _18 = <String as From<&str>>::from(const "another@example.com") -> [return: bb15, unwind: bb28];
+    }
+
+    bb15: {
+        _19 = <String as From<&str>>::from(const "anotherusername567") -> [return: bb16, unwind: bb27];
+    }
+
+    bb16: {
+        _17 = User { username: move _19, email: move _18, sign_in_count: (_14.2: u64), active: (_14.3: bool) };
+        _21 = <String as From<&str>>::from(const "another@example.com") -> [return: bb17, unwind: bb26];
+    }
+
+    bb17: {
+        _22 = <String as From<&str>>::from(const "anotherusername567") -> [return: bb18, unwind: bb25];
+    }
+
+    bb18: {
+        _23 = (_4.3: bool);
+        _24 = (_4.2: u64);
+        _20 = User { username: move _22, email: move _21, sign_in_count: move _24, active: move _23 };
+        drop(_20) -> [return: bb19, unwind: bb26];
+    }
+
+    bb19: {
+        drop(_17) -> [return: bb20, unwind: bb28];
+    }
+
+    bb20: {
+        drop(_14) -> [return: bb21, unwind: bb30];
+    }
+
+    bb21: {
+        drop(_11) -> [return: bb22, unwind: bb37];
+    }
+
+    bb22: {
+        _25 = const false;
+        drop(_4) -> [return: bb23, unwind: bb33];
+    }
+
+    bb23: {
+        drop(_1) -> [return: bb24, unwind continue];
+    }
+
+    bb24: {
+        return;
+    }
+
+    bb25 (cleanup): {
+        drop(_21) -> [return: bb26, unwind terminate];
+    }
+
+    bb26 (cleanup): {
+        drop(_17) -> [return: bb28, unwind terminate];
+    }
+
+    bb27 (cleanup): {
+        drop(_18) -> [return: bb28, unwind terminate];
+    }
+
+    bb28 (cleanup): {
+        drop(_14) -> [return: bb30, unwind terminate];
+    }
+
+    bb29 (cleanup): {
+        drop(_15) -> [return: bb30, unwind terminate];
+    }
+
+    bb30 (cleanup): {
+        drop(_11) -> [return: bb37, unwind terminate];
+    }
+
+    bb31 (cleanup): {
+        drop(_4) -> [return: bb33, unwind terminate];
+    }
+
+    bb32 (cleanup): {
+        drop(_5) -> [return: bb33, unwind terminate];
+    }
+
+    bb33 (cleanup): {
+        drop(_1) -> [return: bb35, unwind terminate];
+    }
+
+    bb34 (cleanup): {
+        drop(_2) -> [return: bb35, unwind terminate];
+    }
+
+    bb35 (cleanup): {
+        resume;
+    }
+
+    bb36 (cleanup): {
+        drop(_9) -> [return: bb31, unwind terminate];
+    }
+
+    bb37 (cleanup): {
+        switchInt(_25) -> [0: bb31, otherwise: bb36];
+    }
+}

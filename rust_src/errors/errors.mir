@@ -1,0 +1,305 @@
+// WARNING: This output format is intended for human consumers only
+// and is subject to change without notice. Knock yourself out.
+fn main() -> () {
+    let mut _0: ();
+    let _1: std::result::Result<std::fs::File, std::io::Error>;
+    let _2: std::result::Result<std::fs::File, std::io::Error>;
+    let mut _4: isize;
+    let _7: !;
+    let mut _8: std::fmt::Arguments<'_>;
+    let mut _9: &[&str];
+    let mut _10: &[core::fmt::rt::Argument<'_>];
+    let _11: &[core::fmt::rt::Argument<'_>; 1];
+    let _12: [core::fmt::rt::Argument<'_>; 1];
+    let mut _13: core::fmt::rt::Argument<'_>;
+    let _14: &std::io::Error;
+    let mut _16: std::result::Result<std::fs::File, std::io::Error>;
+    let mut _17: isize;
+    let mut _20: std::io::ErrorKind;
+    let mut _21: &std::io::Error;
+    let mut _22: isize;
+    let mut _23: std::result::Result<std::fs::File, std::io::Error>;
+    let mut _24: isize;
+    let _27: !;
+    let mut _28: std::fmt::Arguments<'_>;
+    let mut _29: &[&str];
+    let mut _30: &[core::fmt::rt::Argument<'_>];
+    let _31: &[core::fmt::rt::Argument<'_>; 1];
+    let _32: [core::fmt::rt::Argument<'_>; 1];
+    let mut _33: core::fmt::rt::Argument<'_>;
+    let _34: &std::io::Error;
+    let _36: !;
+    let mut _37: std::fmt::Arguments<'_>;
+    let mut _38: &[&str];
+    let mut _39: &[core::fmt::rt::Argument<'_>];
+    let _40: &[core::fmt::rt::Argument<'_>; 1];
+    let _41: [core::fmt::rt::Argument<'_>; 1];
+    let mut _42: core::fmt::rt::Argument<'_>;
+    let _43: &std::io::ErrorKind;
+    scope 1 {
+        debug f => _2;
+        let _3: std::fs::File;
+        let _5: std::fs::File;
+        let _6: std::io::Error;
+        scope 2 {
+            debug f => _3;
+            let _15: std::fs::File;
+            let _18: std::fs::File;
+            let _19: std::io::Error;
+            scope 5 {
+                debug f => _15;
+            }
+            scope 6 {
+                debug file => _18;
+            }
+            scope 7 {
+                debug error => _19;
+                let _25: std::fs::File;
+                let _26: std::io::Error;
+                let _35: std::io::ErrorKind;
+                scope 8 {
+                    debug fc => _25;
+                }
+                scope 9 {
+                    debug e => _26;
+                    let mut _46: &[&str; 1];
+                }
+                scope 10 {
+                    debug other_error => _35;
+                    let mut _45: &[&str; 1];
+                }
+            }
+        }
+        scope 3 {
+            debug file => _5;
+        }
+        scope 4 {
+            debug error => _6;
+            let mut _44: &[&str; 1];
+        }
+    }
+
+    bb0: {
+        _1 = File::create::<&str>(const "hello.txt") -> [return: bb1, unwind continue];
+    }
+
+    bb1: {
+        drop(_1) -> [return: bb2, unwind continue];
+    }
+
+    bb2: {
+        _2 = File::open::<&str>(const "hello.txt") -> [return: bb3, unwind continue];
+    }
+
+    bb3: {
+        _4 = discriminant(_2);
+        switchInt(move _4) -> [0: bb6, 1: bb4, otherwise: bb5];
+    }
+
+    bb4: {
+        _6 = move ((_2 as Err).0: std::io::Error);
+        _44 = const _;
+        _9 = _44 as &[&str] (PointerCoercion(Unsize));
+        _14 = &_6;
+        _13 = core::fmt::rt::Argument::<'_>::new_debug::<std::io::Error>(_14) -> [return: bb7, unwind: bb27];
+    }
+
+    bb5: {
+        unreachable;
+    }
+
+    bb6: {
+        _5 = move ((_2 as Ok).0: std::fs::File);
+        _3 = move _5;
+        _16 = File::open::<&str>(const "hello.txt") -> [return: bb9, unwind: bb26];
+    }
+
+    bb7: {
+        _12 = [move _13];
+        _11 = &_12;
+        _10 = _11 as &[core::fmt::rt::Argument<'_>] (PointerCoercion(Unsize));
+        _8 = Arguments::<'_>::new_v1(move _9, move _10) -> [return: bb8, unwind: bb27];
+    }
+
+    bb8: {
+        _7 = panic_fmt(move _8) -> bb27;
+    }
+
+    bb9: {
+        _17 = discriminant(_16);
+        switchInt(move _17) -> [0: bb11, 1: bb10, otherwise: bb5];
+    }
+
+    bb10: {
+        _19 = move ((_16 as Err).0: std::io::Error);
+        _21 = &_19;
+        _20 = std::io::Error::kind(move _21) -> [return: bb12, unwind: bb25];
+    }
+
+    bb11: {
+        _18 = move ((_16 as Ok).0: std::fs::File);
+        _15 = move _18;
+        goto -> bb29;
+    }
+
+    bb12: {
+        _22 = discriminant(_20);
+        switchInt(move _22) -> [0: bb14, otherwise: bb13];
+    }
+
+    bb13: {
+        _35 = _20;
+        _45 = const _;
+        _38 = _45 as &[&str] (PointerCoercion(Unsize));
+        _43 = &_35;
+        _42 = core::fmt::rt::Argument::<'_>::new_debug::<ErrorKind>(_43) -> [return: bb20, unwind: bb25];
+    }
+
+    bb14: {
+        _23 = File::create::<&str>(const "hello.txt") -> [return: bb15, unwind: bb25];
+    }
+
+    bb15: {
+        _24 = discriminant(_23);
+        switchInt(move _24) -> [0: bb17, 1: bb16, otherwise: bb5];
+    }
+
+    bb16: {
+        _26 = move ((_23 as Err).0: std::io::Error);
+        _46 = const _;
+        _29 = _46 as &[&str] (PointerCoercion(Unsize));
+        _34 = &_26;
+        _33 = core::fmt::rt::Argument::<'_>::new_debug::<std::io::Error>(_34) -> [return: bb18, unwind: bb24];
+    }
+
+    bb17: {
+        _25 = move ((_23 as Ok).0: std::fs::File);
+        _15 = move _25;
+        drop(_19) -> [return: bb29, unwind: bb26];
+    }
+
+    bb18: {
+        _32 = [move _33];
+        _31 = &_32;
+        _30 = _31 as &[core::fmt::rt::Argument<'_>] (PointerCoercion(Unsize));
+        _28 = Arguments::<'_>::new_v1(move _29, move _30) -> [return: bb19, unwind: bb24];
+    }
+
+    bb19: {
+        _27 = panic_fmt(move _28) -> bb24;
+    }
+
+    bb20: {
+        _41 = [move _42];
+        _40 = &_41;
+        _39 = _40 as &[core::fmt::rt::Argument<'_>] (PointerCoercion(Unsize));
+        _37 = Arguments::<'_>::new_v1(move _38, move _39) -> [return: bb21, unwind: bb25];
+    }
+
+    bb21: {
+        _36 = panic_fmt(move _37) -> bb25;
+    }
+
+    bb22: {
+        drop(_3) -> [return: bb23, unwind continue];
+    }
+
+    bb23: {
+        return;
+    }
+
+    bb24 (cleanup): {
+        drop(_26) -> [return: bb25, unwind terminate];
+    }
+
+    bb25 (cleanup): {
+        drop(_19) -> [return: bb26, unwind terminate];
+    }
+
+    bb26 (cleanup): {
+        drop(_3) -> [return: bb28, unwind terminate];
+    }
+
+    bb27 (cleanup): {
+        drop(_6) -> [return: bb28, unwind terminate];
+    }
+
+    bb28 (cleanup): {
+        resume;
+    }
+
+    bb29: {
+        drop(_15) -> [return: bb22, unwind: bb26];
+    }
+}
+
+promoted[0] in main: &[&str; 1] = {
+    let mut _0: &[&str; 1];
+    let mut _1: [&str; 1];
+
+    bb0: {
+        _1 = [const "Problem opening the file: "];
+        _0 = &_1;
+        return;
+    }
+}
+
+promoted[1] in main: &[&str; 1] = {
+    let mut _0: &[&str; 1];
+    let mut _1: [&str; 1];
+
+    bb0: {
+        _1 = [const "Problem opening the file: "];
+        _0 = &_1;
+        return;
+    }
+}
+
+promoted[2] in main: &[&str; 1] = {
+    let mut _0: &[&str; 1];
+    let mut _1: [&str; 1];
+
+    bb0: {
+        _1 = [const "Problem creating the file: "];
+        _0 = &_1;
+        return;
+    }
+}
+
+fn main::Result::Ok(_1: T) -> main::Result<T, E> {
+    let mut _0: main::Result<T, E>;
+
+    bb0: {
+        _0 = main::Result::<T, E>::Ok(move _1);
+        return;
+    }
+}
+
+// MIR FOR CTFE
+fn main::Result::Ok(_1: T) -> main::Result<T, E> {
+    let mut _0: main::Result<T, E>;
+
+    bb0: {
+        _0 = main::Result::<T, E>::Ok(move _1);
+        return;
+    }
+}
+
+fn main::Result::Err(_1: E) -> main::Result<T, E> {
+    let mut _0: main::Result<T, E>;
+
+    bb0: {
+        _0 = main::Result::<T, E>::Err(move _1);
+        return;
+    }
+}
+
+// MIR FOR CTFE
+fn main::Result::Err(_1: E) -> main::Result<T, E> {
+    let mut _0: main::Result<T, E>;
+
+    bb0: {
+        _0 = main::Result::<T, E>::Err(move _1);
+        return;
+    }
+}

@@ -1,0 +1,388 @@
+// WARNING: This output format is intended for human consumers only
+// and is subject to change without notice. Knock yourself out.
+fn main() -> () {
+    let mut _0: ();
+    let _1: IpAddr;
+    let mut _3: std::string::String;
+    let mut _4: isize;
+    let _9: ();
+    let mut _10: std::fmt::Arguments<'_>;
+    let mut _11: &[&str];
+    let _16: ();
+    let mut _17: std::fmt::Arguments<'_>;
+    let mut _18: &[&str];
+    let _19: ();
+    let mut _20: std::fmt::Arguments<'_>;
+    let mut _21: &[&str];
+    let mut _23: isize;
+    let mut _27: IpAddr;
+    let mut _29: IpAddr;
+    let mut _30: isize;
+    let _32: ();
+    let mut _33: std::fmt::Arguments<'_>;
+    let mut _34: &[&str];
+    let mut _35: &[core::fmt::rt::Argument<'_>];
+    let _36: &[core::fmt::rt::Argument<'_>; 1];
+    let _37: [core::fmt::rt::Argument<'_>; 1];
+    let mut _38: core::fmt::rt::Argument<'_>;
+    let _39: &i32;
+    let mut _44: bool;
+    let mut _45: bool;
+    let mut _46: isize;
+    let mut _47: isize;
+    scope 1 {
+        debug home => _1;
+        let _2: IpAddr;
+        scope 2 {
+            debug loopback => _2;
+            let _5: i32;
+            let _6: i32;
+            let _7: i32;
+            let _8: i32;
+            let _12: i32;
+            let _13: i32;
+            let _14: i32;
+            let _15: std::string::String;
+            let _22: std::option::Option<IpAddr>;
+            let _24: i32;
+            let _25: i32;
+            let _26: i32;
+            let mut _41: &[&str; 1];
+            scope 3 {
+                debug a => _5;
+                debug b => _6;
+                debug c => _7;
+                debug d => _8;
+                let mut _43: &[&str; 1];
+            }
+            scope 4 {
+                debug b => _12;
+                debug c => _13;
+                debug d => _14;
+            }
+            scope 5 {
+                debug a => _15;
+                let mut _42: &[&str; 1];
+            }
+            scope 6 {
+                debug _variable => _22;
+                let _28: i32;
+                let _31: i32;
+                scope 8 {
+                    debug firstfield => _28;
+                    let mut _40: &[&str; 2];
+                }
+                scope 9 {
+                    debug a => _31;
+                }
+            }
+            scope 7 {
+                debug b => _24;
+                debug c => _25;
+                debug d => _26;
+            }
+        }
+    }
+
+    bb0: {
+        _44 = const false;
+        _45 = const false;
+        _45 = const true;
+        _1 = IpAddr::V4(const 127_i32, const 0_i32, const 0_i32, const 1_i32);
+        _3 = <String as From<&str>>::from(const "::1") -> [return: bb1, unwind: bb34];
+    }
+
+    bb1: {
+        _44 = const true;
+        _2 = IpAddr::V6(move _3);
+        _4 = discriminant(_1);
+        switchInt(move _4) -> [0: bb3, 1: bb5, otherwise: bb2];
+    }
+
+    bb2: {
+        _41 = const _;
+        _21 = _41 as &[&str] (PointerCoercion(Unsize));
+        _20 = Arguments::<'_>::new_const(move _21) -> [return: bb8, unwind: bb31];
+    }
+
+    bb3: {
+        _5 = ((_1 as V4).0: i32);
+        _6 = ((_1 as V4).1: i32);
+        _7 = ((_1 as V4).2: i32);
+        _8 = ((_1 as V4).3: i32);
+        _43 = const _;
+        _11 = _43 as &[&str] (PointerCoercion(Unsize));
+        _10 = Arguments::<'_>::new_const(move _11) -> [return: bb4, unwind: bb31];
+    }
+
+    bb4: {
+        _9 = _print(move _10) -> [return: bb35, unwind: bb31];
+    }
+
+    bb5: {
+        _45 = const false;
+        _15 = move ((_1 as V6).0: std::string::String);
+        _42 = const _;
+        _18 = _42 as &[&str] (PointerCoercion(Unsize));
+        _17 = Arguments::<'_>::new_const(move _18) -> [return: bb6, unwind: bb24];
+    }
+
+    bb6: {
+        _16 = _print(move _17) -> [return: bb7, unwind: bb24];
+    }
+
+    bb7: {
+        drop(_15) -> [return: bb9, unwind: bb31];
+    }
+
+    bb8: {
+        _19 = _print(move _20) -> [return: bb36, unwind: bb31];
+    }
+
+    bb9: {
+        _23 = discriminant(_2);
+        switchInt(move _23) -> [0: bb10, otherwise: bb11];
+    }
+
+    bb10: {
+        switchInt(((_2 as V4).0: i32)) -> [127: bb12, otherwise: bb11];
+    }
+
+    bb11: {
+        _22 = Option::<IpAddr>::None;
+        goto -> bb13;
+    }
+
+    bb12: {
+        _24 = ((_2 as V4).1: i32);
+        _25 = ((_2 as V4).2: i32);
+        _26 = ((_2 as V4).3: i32);
+        _44 = const false;
+        _27 = move _2;
+        _22 = Option::<IpAddr>::Some(move _27);
+        goto -> bb13;
+    }
+
+    bb13: {
+        _29 = IpAddr::V4(const 10_i32, const 20_i32, const 30_i32, const 40_i32);
+        _30 = discriminant(_29);
+        switchInt(move _30) -> [0: bb15, otherwise: bb14];
+    }
+
+    bb14: {
+        _28 = const 0_i32;
+        goto -> bb16;
+    }
+
+    bb15: {
+        _31 = ((_29 as V4).0: i32);
+        _28 = _31;
+        goto -> bb16;
+    }
+
+    bb16: {
+        drop(_29) -> [return: bb17, unwind: bb23];
+    }
+
+    bb17: {
+        _40 = const _;
+        _34 = _40 as &[&str] (PointerCoercion(Unsize));
+        _39 = &_28;
+        _38 = core::fmt::rt::Argument::<'_>::new_display::<i32>(_39) -> [return: bb18, unwind: bb23];
+    }
+
+    bb18: {
+        _37 = [move _38];
+        _36 = &_37;
+        _35 = _36 as &[core::fmt::rt::Argument<'_>] (PointerCoercion(Unsize));
+        _33 = Arguments::<'_>::new_v1(move _34, move _35) -> [return: bb19, unwind: bb23];
+    }
+
+    bb19: {
+        _32 = _print(move _33) -> [return: bb20, unwind: bb23];
+    }
+
+    bb20: {
+        drop(_22) -> [return: bb21, unwind: bb31];
+    }
+
+    bb21: {
+        switchInt(_44) -> [0: bb22, otherwise: bb26];
+    }
+
+    bb22: {
+        _44 = const false;
+        _46 = discriminant(_1);
+        switchInt(move _46) -> [1: bb28, otherwise: bb27];
+    }
+
+    bb23 (cleanup): {
+        drop(_22) -> [return: bb31, unwind terminate];
+    }
+
+    bb24 (cleanup): {
+        drop(_15) -> [return: bb31, unwind terminate];
+    }
+
+    bb25 (cleanup): {
+        resume;
+    }
+
+    bb26: {
+        drop(_2) -> [return: bb22, unwind: bb34];
+    }
+
+    bb27: {
+        _45 = const false;
+        return;
+    }
+
+    bb28: {
+        switchInt(_45) -> [0: bb27, otherwise: bb29];
+    }
+
+    bb29: {
+        drop(((_1 as V6).0: std::string::String)) -> [return: bb27, unwind continue];
+    }
+
+    bb30 (cleanup): {
+        drop(_2) -> [return: bb34, unwind terminate];
+    }
+
+    bb31 (cleanup): {
+        switchInt(_44) -> [0: bb34, otherwise: bb30];
+    }
+
+    bb32 (cleanup): {
+        switchInt(_45) -> [0: bb25, otherwise: bb33];
+    }
+
+    bb33 (cleanup): {
+        drop(((_1 as V6).0: std::string::String)) -> [return: bb25, unwind terminate];
+    }
+
+    bb34 (cleanup): {
+        _47 = discriminant(_1);
+        switchInt(move _47) -> [1: bb32, otherwise: bb25];
+    }
+
+    bb35: {
+        goto -> bb9;
+    }
+
+    bb36: {
+        goto -> bb9;
+    }
+}
+
+promoted[0] in main: &[&str; 2] = {
+    let mut _0: &[&str; 2];
+    let mut _1: [&str; 2];
+
+    bb0: {
+        _1 = [const "The first field is: ", const "\n"];
+        _0 = &_1;
+        return;
+    }
+}
+
+promoted[1] in main: &[&str; 1] = {
+    let mut _0: &[&str; 1];
+    let mut _1: [&str; 1];
+
+    bb0: {
+        _1 = [const " catch all\n"];
+        _0 = &_1;
+        return;
+    }
+}
+
+promoted[2] in main: &[&str; 1] = {
+    let mut _0: &[&str; 1];
+    let mut _1: [&str; 1];
+
+    bb0: {
+        _1 = [const "Is V6\n"];
+        _0 = &_1;
+        return;
+    }
+}
+
+promoted[3] in main: &[&str; 1] = {
+    let mut _0: &[&str; 1];
+    let mut _1: [&str; 1];
+
+    bb0: {
+        _1 = [const "Is V4 loopback\n"];
+        _0 = &_1;
+        return;
+    }
+}
+
+promoted[4] in main: &[&str; 1] = {
+    let mut _0: &[&str; 1];
+    let mut _1: [&str; 1];
+
+    bb0: {
+        _1 = [const "Is V4\n"];
+        _0 = &_1;
+        return;
+    }
+}
+
+fn IpAddr::V4(_1: i32, _2: i32, _3: i32, _4: i32) -> IpAddr {
+    let mut _0: IpAddr;
+
+    bb0: {
+        _0 = IpAddr::V4(move _1, move _2, move _3, move _4);
+        return;
+    }
+}
+
+// MIR FOR CTFE
+fn IpAddr::V4(_1: i32, _2: i32, _3: i32, _4: i32) -> IpAddr {
+    let mut _0: IpAddr;
+
+    bb0: {
+        _0 = IpAddr::V4(move _1, move _2, move _3, move _4);
+        return;
+    }
+}
+
+fn IpAddr::V6(_1: String) -> IpAddr {
+    let mut _0: IpAddr;
+
+    bb0: {
+        _0 = IpAddr::V6(move _1);
+        return;
+    }
+}
+
+// MIR FOR CTFE
+fn IpAddr::V6(_1: String) -> IpAddr {
+    let mut _0: IpAddr;
+
+    bb0: {
+        _0 = IpAddr::V6(move _1);
+        return;
+    }
+}
+
+fn IpAddr::V0() -> IpAddr {
+    let mut _0: IpAddr;
+
+    bb0: {
+        _0 = IpAddr::V0;
+        return;
+    }
+}
+
+// MIR FOR CTFE
+fn IpAddr::V0() -> IpAddr {
+    let mut _0: IpAddr;
+
+    bb0: {
+        _0 = IpAddr::V0;
+        return;
+    }
+}

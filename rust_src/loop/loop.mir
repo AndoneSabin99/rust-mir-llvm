@@ -1,0 +1,56 @@
+// WARNING: This output format is intended for human consumers only
+// and is subject to change without notice. Knock yourself out.
+fn main() -> () {
+    let mut _0: ();
+    let mut _1: i32;
+    let _2: ();
+    let mut _3: std::fmt::Arguments<'_>;
+    let mut _4: &[&str];
+    let mut _5: (i32, bool);
+    let mut _6: i32;
+    scope 1 {
+        debug c => _1;
+        let mut _7: &[&str; 1];
+    }
+
+    bb0: {
+        _1 = const 0_i32;
+        goto -> bb1;
+    }
+
+    bb1: {
+        _7 = const _;
+        _4 = _7 as &[&str] (PointerCoercion(Unsize));
+        _3 = Arguments::<'_>::new_const(move _4) -> [return: bb2, unwind continue];
+    }
+
+    bb2: {
+        _2 = _print(move _3) -> [return: bb3, unwind continue];
+    }
+
+    bb3: {
+        _5 = CheckedAdd(_1, const 1_i32);
+        assert(!move (_5.1: bool), "attempt to compute `{} + {}`, which would overflow", _1, const 1_i32) -> [success: bb4, unwind continue];
+    }
+
+    bb4: {
+        _1 = move (_5.0: i32);
+        _6 = _1;
+        switchInt(move _6) -> [4: bb5, otherwise: bb1];
+    }
+
+    bb5: {
+        return;
+    }
+}
+
+promoted[0] in main: &[&str; 1] = {
+    let mut _0: &[&str; 1];
+    let mut _1: [&str; 1];
+
+    bb0: {
+        _1 = [const "This will never stop\n"];
+        _0 = &_1;
+        return;
+    }
+}

@@ -1,0 +1,130 @@
+// WARNING: This output format is intended for human consumers only
+// and is subject to change without notice. Knock yourself out.
+fn main() -> () {
+    let mut _0: ();
+    let _1: i32;
+    let mut _4: i32;
+    let mut _5: (i32, bool);
+    let mut _9: f64;
+    let _19: usize;
+    let mut _20: usize;
+    let mut _21: bool;
+    let _23: usize;
+    let mut _24: usize;
+    let mut _25: bool;
+    scope 1 {
+        debug x => const 10_i32;
+        let _2: i64;
+        scope 2 {
+            debug y => const 20_i64;
+            let _3: i32;
+            scope 3 {
+                debug xy => _3;
+                let _6: f32;
+                scope 4 {
+                    debug z => const 1.20000005f32;
+                    let _7: f64;
+                    scope 5 {
+                        debug u => const 3.4500000000000002f64;
+                        let _8: f64;
+                        scope 6 {
+                            debug zu => _8;
+                            scope 7 {
+                                debug t => const true;
+                                scope 8 {
+                                    debug f => const false;
+                                    scope 9 {
+                                        debug c => const 'z';
+                                        scope 10 {
+                                            debug z => const 'ℤ';
+                                            scope 11 {
+                                                debug heart_eyed_cat => const '😻';
+                                                let _10: (i32, f64, char);
+                                                scope 12 {
+                                                    debug tuple => _10;
+                                                    let _11: i32;
+                                                    let _12: f64;
+                                                    let _13: char;
+                                                    scope 13 {
+                                                        debug el1 => _11;
+                                                        debug _el2 => _12;
+                                                        debug _el3 => _13;
+                                                        let _14: i32;
+                                                        scope 14 {
+                                                            debug el01 => _14;
+                                                            let _15: i32;
+                                                            scope 15 {
+                                                                debug first => _15;
+                                                                let _16: char;
+                                                                scope 16 {
+                                                                    debug _last => _16;
+                                                                    let _17: [i32; 5];
+                                                                    scope 17 {
+                                                                        debug a => _17;
+                                                                        let _18: i32;
+                                                                        scope 18 {
+                                                                            debug a1 => _18;
+                                                                            let _22: i32;
+                                                                            scope 19 {
+                                                                                debug a2 => _22;
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    bb0: {
+        _1 = const 10_i32;
+        _2 = const 20_i64;
+        _4 = _2 as i32 (IntToInt);
+        _5 = CheckedAdd(_1, _4);
+        assert(!move (_5.1: bool), "attempt to compute `{} + {}`, which would overflow", _1, move _4) -> [success: bb1, unwind continue];
+    }
+
+    bb1: {
+        _3 = move (_5.0: i32);
+        _6 = const 1.20000005f32;
+        _7 = const 3.4500000000000002f64;
+        _9 = _6 as f64 (FloatToFloat);
+        _8 = Add(move _9, _7);
+        _10 = (const 1_i32, const 2.5f64, const 'w');
+        _11 = (_10.0: i32);
+        _12 = (_10.1: f64);
+        _13 = (_10.2: char);
+        _14 = (_10.0: i32);
+        _15 = (_10.0: i32);
+        _16 = (_10.2: char);
+        _17 = [const 1_i32, const 2_i32, const 3_i32, const 4_i32, const 5_i32];
+        _19 = const 0_usize;
+        _20 = const 5_usize;
+        _21 = Lt(_19, _20);
+        assert(move _21, "index out of bounds: the length is {} but the index is {}", move _20, _19) -> [success: bb2, unwind continue];
+    }
+
+    bb2: {
+        _18 = _17[_19];
+        _23 = const 1_usize;
+        _24 = const 5_usize;
+        _25 = Lt(_23, _24);
+        assert(move _25, "index out of bounds: the length is {} but the index is {}", move _24, _23) -> [success: bb3, unwind continue];
+    }
+
+    bb3: {
+        _22 = _17[_23];
+        return;
+    }
+}

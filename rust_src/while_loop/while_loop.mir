@@ -1,0 +1,73 @@
+// WARNING: This output format is intended for human consumers only
+// and is subject to change without notice. Knock yourself out.
+fn main() -> () {
+    let mut _0: ();
+    let mut _1: i32;
+    let mut _2: i32;
+    let _3: ();
+    let mut _4: std::fmt::Arguments<'_>;
+    let mut _5: &[&str];
+    let mut _6: &[core::fmt::rt::Argument<'_>];
+    let _7: &[core::fmt::rt::Argument<'_>; 1];
+    let _8: [core::fmt::rt::Argument<'_>; 1];
+    let mut _9: core::fmt::rt::Argument<'_>;
+    let _10: &i32;
+    let mut _11: (i32, bool);
+    scope 1 {
+        debug c => _1;
+        let mut _12: &[&str; 2];
+    }
+
+    bb0: {
+        _1 = const 4_i32;
+        goto -> bb1;
+    }
+
+    bb1: {
+        _2 = _1;
+        switchInt(move _2) -> [0: bb7, otherwise: bb2];
+    }
+
+    bb2: {
+        _12 = const _;
+        _5 = _12 as &[&str] (PointerCoercion(Unsize));
+        _10 = &_1;
+        _9 = core::fmt::rt::Argument::<'_>::new_display::<i32>(_10) -> [return: bb3, unwind continue];
+    }
+
+    bb3: {
+        _8 = [move _9];
+        _7 = &_8;
+        _6 = _7 as &[core::fmt::rt::Argument<'_>] (PointerCoercion(Unsize));
+        _4 = Arguments::<'_>::new_v1(move _5, move _6) -> [return: bb4, unwind continue];
+    }
+
+    bb4: {
+        _3 = _print(move _4) -> [return: bb5, unwind continue];
+    }
+
+    bb5: {
+        _11 = CheckedSub(_1, const 1_i32);
+        assert(!move (_11.1: bool), "attempt to compute `{} - {}`, which would overflow", _1, const 1_i32) -> [success: bb6, unwind continue];
+    }
+
+    bb6: {
+        _1 = move (_11.0: i32);
+        goto -> bb1;
+    }
+
+    bb7: {
+        return;
+    }
+}
+
+promoted[0] in main: &[&str; 2] = {
+    let mut _0: &[&str; 2];
+    let mut _1: [&str; 2];
+
+    bb0: {
+        _1 = [const "Cycle with while ", const "!\n"];
+        _0 = &_1;
+        return;
+    }
+}

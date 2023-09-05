@@ -1,0 +1,262 @@
+// WARNING: This output format is intended for human consumers only
+// and is subject to change without notice. Knock yourself out.
+fn main() -> () {
+    let mut _0: ();
+    let _1: std::string::String;
+    let _3: &std::string::String;
+    let _4: ();
+    let mut _5: std::fmt::Arguments<'_>;
+    let mut _6: &[&str];
+    let mut _7: &[core::fmt::rt::Argument<'_>];
+    let _8: &[core::fmt::rt::Argument<'_>; 2];
+    let _9: [core::fmt::rt::Argument<'_>; 2];
+    let mut _10: core::fmt::rt::Argument<'_>;
+    let _11: &std::string::String;
+    let mut _12: core::fmt::rt::Argument<'_>;
+    let _13: &usize;
+    let _15: ();
+    let mut _16: &mut std::string::String;
+    let _19: ();
+    let mut _20: std::fmt::Arguments<'_>;
+    let mut _21: &[&str];
+    let mut _22: &[core::fmt::rt::Argument<'_>];
+    let _23: &[core::fmt::rt::Argument<'_>; 2];
+    let _24: [core::fmt::rt::Argument<'_>; 2];
+    let mut _25: core::fmt::rt::Argument<'_>;
+    let _26: &&mut std::string::String;
+    let mut _27: core::fmt::rt::Argument<'_>;
+    let _28: &&str;
+    let _30: ();
+    let mut _31: std::fmt::Arguments<'_>;
+    let mut _32: &[&str];
+    let mut _33: &[core::fmt::rt::Argument<'_>];
+    let _34: &[core::fmt::rt::Argument<'_>; 1];
+    let _35: [core::fmt::rt::Argument<'_>; 1];
+    let mut _36: core::fmt::rt::Argument<'_>;
+    let _37: &std::string::String;
+    scope 1 {
+        debug s1 => _1;
+        let _2: usize;
+        scope 2 {
+            debug len => _2;
+            let mut _14: std::string::String;
+            let mut _40: &[&str; 3];
+            scope 3 {
+                debug s => _14;
+                let _17: &mut std::string::String;
+                scope 4 {
+                    debug r1 => _17;
+                    let _18: &str;
+                    scope 5 {
+                        debug r2 => const "asd";
+                        let _29: std::string::String;
+                        let mut _39: &[&str; 3];
+                        scope 6 {
+                            debug string => _29;
+                            let mut _38: &[&str; 2];
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    bb0: {
+        _1 = <String as From<&str>>::from(const "hello") -> [return: bb1, unwind continue];
+    }
+
+    bb1: {
+        _3 = &_1;
+        _2 = calculate_length(_3) -> [return: bb2, unwind: bb22];
+    }
+
+    bb2: {
+        _40 = const _;
+        _6 = _40 as &[&str] (PointerCoercion(Unsize));
+        _11 = &_1;
+        _10 = core::fmt::rt::Argument::<'_>::new_display::<String>(_11) -> [return: bb3, unwind: bb22];
+    }
+
+    bb3: {
+        _13 = &_2;
+        _12 = core::fmt::rt::Argument::<'_>::new_display::<usize>(_13) -> [return: bb4, unwind: bb22];
+    }
+
+    bb4: {
+        _9 = [move _10, move _12];
+        _8 = &_9;
+        _7 = _8 as &[core::fmt::rt::Argument<'_>] (PointerCoercion(Unsize));
+        _5 = Arguments::<'_>::new_v1(move _6, move _7) -> [return: bb5, unwind: bb22];
+    }
+
+    bb5: {
+        _4 = _print(move _5) -> [return: bb6, unwind: bb22];
+    }
+
+    bb6: {
+        _14 = <String as From<&str>>::from(const "hello") -> [return: bb7, unwind: bb22];
+    }
+
+    bb7: {
+        _16 = &mut _14;
+        _15 = change(_16) -> [return: bb8, unwind: bb21];
+    }
+
+    bb8: {
+        _17 = &mut _14;
+        _18 = const "asd";
+        _39 = const _;
+        _21 = _39 as &[&str] (PointerCoercion(Unsize));
+        _26 = &_17;
+        _25 = core::fmt::rt::Argument::<'_>::new_display::<&mut String>(_26) -> [return: bb9, unwind: bb21];
+    }
+
+    bb9: {
+        _28 = &_18;
+        _27 = core::fmt::rt::Argument::<'_>::new_display::<&str>(_28) -> [return: bb10, unwind: bb21];
+    }
+
+    bb10: {
+        _24 = [move _25, move _27];
+        _23 = &_24;
+        _22 = _23 as &[core::fmt::rt::Argument<'_>] (PointerCoercion(Unsize));
+        _20 = Arguments::<'_>::new_v1(move _21, move _22) -> [return: bb11, unwind: bb21];
+    }
+
+    bb11: {
+        _19 = _print(move _20) -> [return: bb12, unwind: bb21];
+    }
+
+    bb12: {
+        _29 = no_dangle() -> [return: bb13, unwind: bb21];
+    }
+
+    bb13: {
+        _38 = const _;
+        _32 = _38 as &[&str] (PointerCoercion(Unsize));
+        _37 = &_29;
+        _36 = core::fmt::rt::Argument::<'_>::new_display::<String>(_37) -> [return: bb14, unwind: bb20];
+    }
+
+    bb14: {
+        _35 = [move _36];
+        _34 = &_35;
+        _33 = _34 as &[core::fmt::rt::Argument<'_>] (PointerCoercion(Unsize));
+        _31 = Arguments::<'_>::new_v1(move _32, move _33) -> [return: bb15, unwind: bb20];
+    }
+
+    bb15: {
+        _30 = _print(move _31) -> [return: bb16, unwind: bb20];
+    }
+
+    bb16: {
+        drop(_29) -> [return: bb17, unwind: bb21];
+    }
+
+    bb17: {
+        drop(_14) -> [return: bb18, unwind: bb22];
+    }
+
+    bb18: {
+        drop(_1) -> [return: bb19, unwind continue];
+    }
+
+    bb19: {
+        return;
+    }
+
+    bb20 (cleanup): {
+        drop(_29) -> [return: bb21, unwind terminate];
+    }
+
+    bb21 (cleanup): {
+        drop(_14) -> [return: bb22, unwind terminate];
+    }
+
+    bb22 (cleanup): {
+        drop(_1) -> [return: bb23, unwind terminate];
+    }
+
+    bb23 (cleanup): {
+        resume;
+    }
+}
+
+promoted[0] in main: &[&str; 2] = {
+    let mut _0: &[&str; 2];
+    let mut _1: [&str; 2];
+
+    bb0: {
+        _1 = [const "String ", const "\n"];
+        _0 = &_1;
+        return;
+    }
+}
+
+promoted[1] in main: &[&str; 3] = {
+    let mut _0: &[&str; 3];
+    let mut _1: [&str; 3];
+
+    bb0: {
+        _1 = [const "r1 and r2: ", const " and ", const "\n"];
+        _0 = &_1;
+        return;
+    }
+}
+
+promoted[2] in main: &[&str; 3] = {
+    let mut _0: &[&str; 3];
+    let mut _1: [&str; 3];
+
+    bb0: {
+        _1 = [const "The length of '", const "' is ", const ".\n"];
+        _0 = &_1;
+        return;
+    }
+}
+
+fn calculate_length(_1: &String) -> usize {
+    debug s => _1;
+    let mut _0: usize;
+
+    bb0: {
+        _0 = String::len(_1) -> [return: bb1, unwind continue];
+    }
+
+    bb1: {
+        return;
+    }
+}
+
+fn change(_1: &mut String) -> () {
+    debug some_string => _1;
+    let mut _0: ();
+    let _2: ();
+    let _3: &str;
+
+    bb0: {
+        _3 = const ", world";
+        _2 = String::push_str(_1, _3) -> [return: bb1, unwind continue];
+    }
+
+    bb1: {
+        return;
+    }
+}
+
+fn no_dangle() -> String {
+    let mut _0: std::string::String;
+    let _1: std::string::String;
+    scope 1 {
+        debug s => _1;
+    }
+
+    bb0: {
+        _1 = <String as From<&str>>::from(const "hello") -> [return: bb1, unwind continue];
+    }
+
+    bb1: {
+        _0 = move _1;
+        return;
+    }
+}

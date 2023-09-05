@@ -1,0 +1,75 @@
+// WARNING: This output format is intended for human consumers only
+// and is subject to change without notice. Knock yourself out.
+fn main() -> () {
+    let mut _0: ();
+    let _1: bool;
+    let mut _3: bool;
+    let _4: ();
+    let mut _5: std::fmt::Arguments<'_>;
+    let mut _6: &[&str];
+    let _7: ();
+    let mut _8: std::fmt::Arguments<'_>;
+    let mut _9: &[&str];
+    scope 1 {
+        debug t => const true;
+        let _2: bool;
+        scope 2 {
+            debug f => const false;
+            let mut _10: &[&str; 1];
+            let mut _11: &[&str; 1];
+        }
+    }
+
+    bb0: {
+        _1 = const true;
+        _2 = const false;
+        _3 = Eq(_1, _2);
+        switchInt(move _3) -> [0: bb3, otherwise: bb1];
+    }
+
+    bb1: {
+        _10 = const _;
+        _6 = _10 as &[&str] (PointerCoercion(Unsize));
+        _5 = Arguments::<'_>::new_const(move _6) -> [return: bb2, unwind continue];
+    }
+
+    bb2: {
+        _4 = _print(move _5) -> [return: bb5, unwind continue];
+    }
+
+    bb3: {
+        _11 = const _;
+        _9 = _11 as &[&str] (PointerCoercion(Unsize));
+        _8 = Arguments::<'_>::new_const(move _9) -> [return: bb4, unwind continue];
+    }
+
+    bb4: {
+        _7 = _print(move _8) -> [return: bb5, unwind continue];
+    }
+
+    bb5: {
+        return;
+    }
+}
+
+promoted[0] in main: &[&str; 1] = {
+    let mut _0: &[&str; 1];
+    let mut _1: [&str; 1];
+
+    bb0: {
+        _1 = [const "True is false\n"];
+        _0 = &_1;
+        return;
+    }
+}
+
+promoted[1] in main: &[&str; 1] = {
+    let mut _0: &[&str; 1];
+    let mut _1: [&str; 1];
+
+    bb0: {
+        _1 = [const "True is not false\n"];
+        _0 = &_1;
+        return;
+    }
+}
