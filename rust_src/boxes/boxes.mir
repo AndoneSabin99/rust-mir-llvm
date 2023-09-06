@@ -1,0 +1,161 @@
+// WARNING: This output format is intended for human consumers only
+// and is subject to change without notice. Knock yourself out.
+fn main() -> () {
+    let mut _0: ();
+    let _1: std::boxed::Box<i32>;
+    let _2: ();
+    let mut _3: std::fmt::Arguments<'_>;
+    let mut _4: &[&str];
+    let mut _5: &[core::fmt::rt::Argument<'_>];
+    let _6: &[core::fmt::rt::Argument<'_>; 1];
+    let _7: [core::fmt::rt::Argument<'_>; 1];
+    let mut _8: core::fmt::rt::Argument<'_>;
+    let _9: &i32;
+    let _10: ();
+    let mut _11: std::fmt::Arguments<'_>;
+    let mut _12: &[&str];
+    let mut _13: &[core::fmt::rt::Argument<'_>];
+    let _14: &[core::fmt::rt::Argument<'_>; 1];
+    let _15: [core::fmt::rt::Argument<'_>; 1];
+    let mut _16: core::fmt::rt::Argument<'_>;
+    let _17: &std::boxed::Box<i32>;
+    let _18: ();
+    let mut _19: std::fmt::Arguments<'_>;
+    let mut _20: &[&str];
+    let mut _21: &[core::fmt::rt::Argument<'_>];
+    let _22: &[core::fmt::rt::Argument<'_>; 1];
+    let _23: [core::fmt::rt::Argument<'_>; 1];
+    let mut _24: core::fmt::rt::Argument<'_>;
+    let _25: &std::boxed::Box<i32>;
+    let mut _29: *const i32;
+    scope 1 {
+        debug b => _1;
+        let mut _26: &[&str; 2];
+        let mut _27: &[&str; 2];
+        let mut _28: &[&str; 2];
+        let mut _30: *const ();
+        let mut _31: usize;
+        let mut _32: usize;
+        let mut _33: usize;
+        let mut _34: usize;
+        let mut _35: bool;
+    }
+
+    bb0: {
+        _1 = Box::<i32>::new(const 5_i32) -> [return: bb1, unwind continue];
+    }
+
+    bb1: {
+        _28 = const _;
+        _4 = _28 as &[&str] (PointerCoercion(Unsize));
+        _29 = (((_1.0: std::ptr::Unique<i32>).0: std::ptr::NonNull<i32>).0: *const i32);
+        _30 = _29 as *const () (PtrToPtr);
+        _31 = _30 as usize (Transmute);
+        _32 = AlignOf(i32);
+        _33 = Sub(_32, const 1_usize);
+        _34 = BitAnd(_31, _33);
+        _35 = Eq(_34, const 0_usize);
+        assert(_35, "misaligned pointer dereference: address must be a multiple of {} but is {}", _32, _31) -> [success: bb14, unwind unreachable];
+    }
+
+    bb2: {
+        _7 = [move _8];
+        _6 = &_7;
+        _5 = _6 as &[core::fmt::rt::Argument<'_>] (PointerCoercion(Unsize));
+        _3 = Arguments::<'_>::new_v1(move _4, move _5) -> [return: bb3, unwind: bb12];
+    }
+
+    bb3: {
+        _2 = _print(move _3) -> [return: bb4, unwind: bb12];
+    }
+
+    bb4: {
+        _27 = const _;
+        _12 = _27 as &[&str] (PointerCoercion(Unsize));
+        _17 = &_1;
+        _16 = core::fmt::rt::Argument::<'_>::new_display::<Box<i32>>(_17) -> [return: bb5, unwind: bb12];
+    }
+
+    bb5: {
+        _15 = [move _16];
+        _14 = &_15;
+        _13 = _14 as &[core::fmt::rt::Argument<'_>] (PointerCoercion(Unsize));
+        _11 = Arguments::<'_>::new_v1(move _12, move _13) -> [return: bb6, unwind: bb12];
+    }
+
+    bb6: {
+        _10 = _print(move _11) -> [return: bb7, unwind: bb12];
+    }
+
+    bb7: {
+        _26 = const _;
+        _20 = _26 as &[&str] (PointerCoercion(Unsize));
+        _25 = &_1;
+        _24 = core::fmt::rt::Argument::<'_>::new_pointer::<Box<i32>>(_25) -> [return: bb8, unwind: bb12];
+    }
+
+    bb8: {
+        _23 = [move _24];
+        _22 = &_23;
+        _21 = _22 as &[core::fmt::rt::Argument<'_>] (PointerCoercion(Unsize));
+        _19 = Arguments::<'_>::new_v1(move _20, move _21) -> [return: bb9, unwind: bb12];
+    }
+
+    bb9: {
+        _18 = _print(move _19) -> [return: bb10, unwind: bb12];
+    }
+
+    bb10: {
+        drop(_1) -> [return: bb11, unwind continue];
+    }
+
+    bb11: {
+        return;
+    }
+
+    bb12 (cleanup): {
+        drop(_1) -> [return: bb13, unwind terminate];
+    }
+
+    bb13 (cleanup): {
+        resume;
+    }
+
+    bb14: {
+        _9 = &(*_29);
+        _8 = core::fmt::rt::Argument::<'_>::new_display::<i32>(_9) -> [return: bb2, unwind: bb12];
+    }
+}
+
+promoted[0] in main: &[&str; 2] = {
+    let mut _0: &[&str; 2];
+    let mut _1: [&str; 2];
+
+    bb0: {
+        _1 = [const "b's real address = ", const "\n"];
+        _0 = &_1;
+        return;
+    }
+}
+
+promoted[1] in main: &[&str; 2] = {
+    let mut _0: &[&str; 2];
+    let mut _1: [&str; 2];
+
+    bb0: {
+        _1 = [const "b's address = ", const "\n"];
+        _0 = &_1;
+        return;
+    }
+}
+
+promoted[2] in main: &[&str; 2] = {
+    let mut _0: &[&str; 2];
+    let mut _1: [&str; 2];
+
+    bb0: {
+        _1 = [const "b's value = ", const "\n"];
+        _0 = &_1;
+        return;
+    }
+}

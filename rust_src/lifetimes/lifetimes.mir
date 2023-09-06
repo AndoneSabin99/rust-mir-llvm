@@ -1,0 +1,161 @@
+// WARNING: This output format is intended for human consumers only
+// and is subject to change without notice. Knock yourself out.
+fn main() -> () {
+    let mut _0: ();
+    let _1: std::string::String;
+    let mut _4: std::string::String;
+    let mut _5: &str;
+    let _6: &str;
+    let _7: &std::string::String;
+    let mut _8: &str;
+    let _9: &str;
+    let _10: &std::string::String;
+    let _11: ();
+    let mut _12: std::fmt::Arguments<'_>;
+    let mut _13: &[&str];
+    let mut _14: &[core::fmt::rt::Argument<'_>];
+    let _15: &[core::fmt::rt::Argument<'_>; 1];
+    let _16: [core::fmt::rt::Argument<'_>; 1];
+    let mut _17: core::fmt::rt::Argument<'_>;
+    let _18: &std::string::String;
+    let mut _20: bool;
+    scope 1 {
+        debug x => _1;
+        let _2: std::string::String;
+        scope 2 {
+            debug z => _2;
+            let _3: std::string::String;
+            let mut _19: &[&str; 2];
+            scope 3 {
+                debug y => _3;
+            }
+        }
+    }
+
+    bb0: {
+        _20 = const false;
+        _1 = <String as From<&str>>::from(const "hi") -> [return: bb1, unwind continue];
+    }
+
+    bb1: {
+        _3 = <String as From<&str>>::from(const "there") -> [return: bb2, unwind: bb16];
+    }
+
+    bb2: {
+        _7 = &_1;
+        _6 = <String as Deref>::deref(_7) -> [return: bb3, unwind: bb12];
+    }
+
+    bb3: {
+        _5 = _6;
+        _10 = &_3;
+        _9 = <String as Deref>::deref(_10) -> [return: bb4, unwind: bb12];
+    }
+
+    bb4: {
+        _8 = _9;
+        _4 = outliving_longest(move _5, move _8) -> [return: bb5, unwind: bb12];
+    }
+
+    bb5: {
+        _20 = const true;
+        _2 = move _4;
+        drop(_3) -> [return: bb6, unwind: bb16];
+    }
+
+    bb6: {
+        _19 = const _;
+        _13 = _19 as &[&str] (PointerCoercion(Unsize));
+        _18 = &_2;
+        _17 = core::fmt::rt::Argument::<'_>::new_display::<String>(_18) -> [return: bb7, unwind: bb16];
+    }
+
+    bb7: {
+        _16 = [move _17];
+        _15 = &_16;
+        _14 = _15 as &[core::fmt::rt::Argument<'_>] (PointerCoercion(Unsize));
+        _12 = Arguments::<'_>::new_v1(move _13, move _14) -> [return: bb8, unwind: bb16];
+    }
+
+    bb8: {
+        _11 = _print(move _12) -> [return: bb9, unwind: bb16];
+    }
+
+    bb9: {
+        drop(_2) -> [return: bb10, unwind: bb13];
+    }
+
+    bb10: {
+        _20 = const false;
+        drop(_1) -> [return: bb11, unwind continue];
+    }
+
+    bb11: {
+        return;
+    }
+
+    bb12 (cleanup): {
+        drop(_3) -> [return: bb16, unwind terminate];
+    }
+
+    bb13 (cleanup): {
+        drop(_1) -> [return: bb14, unwind terminate];
+    }
+
+    bb14 (cleanup): {
+        resume;
+    }
+
+    bb15 (cleanup): {
+        drop(_2) -> [return: bb13, unwind terminate];
+    }
+
+    bb16 (cleanup): {
+        switchInt(_20) -> [0: bb13, otherwise: bb15];
+    }
+}
+
+promoted[0] in main: &[&str; 2] = {
+    let mut _0: &[&str; 2];
+    let mut _1: [&str; 2];
+
+    bb0: {
+        _1 = [const "z = ", const "\n"];
+        _0 = &_1;
+        return;
+    }
+}
+
+fn outliving_longest(_1: &str, _2: &str) -> String {
+    debug x => _1;
+    debug y => _2;
+    let mut _0: std::string::String;
+    let mut _3: bool;
+    let mut _4: usize;
+    let mut _5: usize;
+
+    bb0: {
+        _4 = core::str::<impl str>::len(_1) -> [return: bb1, unwind continue];
+    }
+
+    bb1: {
+        _5 = core::str::<impl str>::len(_2) -> [return: bb2, unwind continue];
+    }
+
+    bb2: {
+        _3 = Gt(move _4, move _5);
+        switchInt(move _3) -> [0: bb4, otherwise: bb3];
+    }
+
+    bb3: {
+        _0 = <str as ToOwned>::to_owned(_1) -> [return: bb5, unwind continue];
+    }
+
+    bb4: {
+        _0 = <str as ToOwned>::to_owned(_2) -> [return: bb5, unwind continue];
+    }
+
+    bb5: {
+        return;
+    }
+}

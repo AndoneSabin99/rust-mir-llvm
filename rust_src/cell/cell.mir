@@ -1,0 +1,216 @@
+// WARNING: This output format is intended for human consumers only
+// and is subject to change without notice. Knock yourself out.
+fn foo(_1: &Cell<u32>) -> () {
+    debug cell => _1;
+    let mut _0: ();
+    let _2: u32;
+    let _3: ();
+    let mut _4: u32;
+    let mut _5: u32;
+    let mut _6: (u32, bool);
+    scope 1 {
+        debug value => _2;
+    }
+
+    bb0: {
+        _2 = Cell::<u32>::get(_1) -> [return: bb1, unwind continue];
+    }
+
+    bb1: {
+        _5 = _2;
+        _6 = CheckedMul(_5, const 2_u32);
+        assert(!move (_6.1: bool), "attempt to compute `{} * {}`, which would overflow", move _5, const 2_u32) -> [success: bb2, unwind continue];
+    }
+
+    bb2: {
+        _4 = move (_6.0: u32);
+        _3 = Cell::<u32>::set(_1, move _4) -> [return: bb3, unwind continue];
+    }
+
+    bb3: {
+        return;
+    }
+}
+
+fn main() -> () {
+    let mut _0: ();
+    let _1: std::cell::Cell<u32>;
+    let mut _3: u32;
+    let mut _4: &std::cell::Cell<u32>;
+    let mut _5: (u32, bool);
+    let _6: ();
+    let mut _7: std::fmt::Arguments<'_>;
+    let mut _8: &[&str];
+    let mut _9: &[core::fmt::rt::Argument<'_>];
+    let _10: &[core::fmt::rt::Argument<'_>; 1];
+    let _11: [core::fmt::rt::Argument<'_>; 1];
+    let mut _12: core::fmt::rt::Argument<'_>;
+    let _13: &u32;
+    let _14: u32;
+    let mut _15: &std::cell::Cell<u32>;
+    let _16: ();
+    let _17: &std::cell::Cell<u32>;
+    let _18: ();
+    let mut _19: std::fmt::Arguments<'_>;
+    let mut _20: &[&str];
+    let mut _21: &[core::fmt::rt::Argument<'_>];
+    let _22: &[core::fmt::rt::Argument<'_>; 1];
+    let _23: [core::fmt::rt::Argument<'_>; 1];
+    let mut _24: core::fmt::rt::Argument<'_>;
+    let _25: &u32;
+    let _26: u32;
+    let mut _27: &std::cell::Cell<u32>;
+    let _28: ();
+    let mut _29: &std::cell::Cell<u32>;
+    let _30: ();
+    let mut _31: std::fmt::Arguments<'_>;
+    let mut _32: &[&str];
+    let mut _33: &[core::fmt::rt::Argument<'_>];
+    let _34: &[core::fmt::rt::Argument<'_>; 1];
+    let _35: [core::fmt::rt::Argument<'_>; 1];
+    let mut _36: core::fmt::rt::Argument<'_>;
+    let _37: &u32;
+    let _38: u32;
+    let mut _39: &std::cell::Cell<u32>;
+    scope 1 {
+        debug cell => _1;
+        let _2: u32;
+        scope 2 {
+            debug new_value => _2;
+            let mut _40: &[&str; 2];
+            let mut _41: &[&str; 2];
+            let mut _42: &[&str; 2];
+        }
+    }
+
+    bb0: {
+        _1 = Cell::<u32>::new(const 1_u32) -> [return: bb1, unwind continue];
+    }
+
+    bb1: {
+        _4 = &_1;
+        _3 = Cell::<u32>::get(move _4) -> [return: bb2, unwind continue];
+    }
+
+    bb2: {
+        _5 = CheckedAdd(_3, const 10_u32);
+        assert(!move (_5.1: bool), "attempt to compute `{} + {}`, which would overflow", move _3, const 10_u32) -> [success: bb3, unwind continue];
+    }
+
+    bb3: {
+        _2 = move (_5.0: u32);
+        _42 = const _;
+        _8 = _42 as &[&str] (PointerCoercion(Unsize));
+        _15 = &_1;
+        _14 = Cell::<u32>::get(move _15) -> [return: bb4, unwind continue];
+    }
+
+    bb4: {
+        _13 = &_14;
+        _12 = core::fmt::rt::Argument::<'_>::new_display::<u32>(_13) -> [return: bb5, unwind continue];
+    }
+
+    bb5: {
+        _11 = [move _12];
+        _10 = &_11;
+        _9 = _10 as &[core::fmt::rt::Argument<'_>] (PointerCoercion(Unsize));
+        _7 = Arguments::<'_>::new_v1(move _8, move _9) -> [return: bb6, unwind continue];
+    }
+
+    bb6: {
+        _6 = _print(move _7) -> [return: bb7, unwind continue];
+    }
+
+    bb7: {
+        _17 = &_1;
+        _16 = foo(_17) -> [return: bb8, unwind continue];
+    }
+
+    bb8: {
+        _41 = const _;
+        _20 = _41 as &[&str] (PointerCoercion(Unsize));
+        _27 = &_1;
+        _26 = Cell::<u32>::get(move _27) -> [return: bb9, unwind continue];
+    }
+
+    bb9: {
+        _25 = &_26;
+        _24 = core::fmt::rt::Argument::<'_>::new_display::<u32>(_25) -> [return: bb10, unwind continue];
+    }
+
+    bb10: {
+        _23 = [move _24];
+        _22 = &_23;
+        _21 = _22 as &[core::fmt::rt::Argument<'_>] (PointerCoercion(Unsize));
+        _19 = Arguments::<'_>::new_v1(move _20, move _21) -> [return: bb11, unwind continue];
+    }
+
+    bb11: {
+        _18 = _print(move _19) -> [return: bb12, unwind continue];
+    }
+
+    bb12: {
+        _29 = &_1;
+        _28 = Cell::<u32>::set(move _29, _2) -> [return: bb13, unwind continue];
+    }
+
+    bb13: {
+        _40 = const _;
+        _32 = _40 as &[&str] (PointerCoercion(Unsize));
+        _39 = &_1;
+        _38 = Cell::<u32>::get(move _39) -> [return: bb14, unwind continue];
+    }
+
+    bb14: {
+        _37 = &_38;
+        _36 = core::fmt::rt::Argument::<'_>::new_display::<u32>(_37) -> [return: bb15, unwind continue];
+    }
+
+    bb15: {
+        _35 = [move _36];
+        _34 = &_35;
+        _33 = _34 as &[core::fmt::rt::Argument<'_>] (PointerCoercion(Unsize));
+        _31 = Arguments::<'_>::new_v1(move _32, move _33) -> [return: bb16, unwind continue];
+    }
+
+    bb16: {
+        _30 = _print(move _31) -> [return: bb17, unwind continue];
+    }
+
+    bb17: {
+        return;
+    }
+}
+
+promoted[0] in main: &[&str; 2] = {
+    let mut _0: &[&str; 2];
+    let mut _1: [&str; 2];
+
+    bb0: {
+        _1 = [const "cell value : ", const "\n"];
+        _0 = &_1;
+        return;
+    }
+}
+
+promoted[1] in main: &[&str; 2] = {
+    let mut _0: &[&str; 2];
+    let mut _1: [&str; 2];
+
+    bb0: {
+        _1 = [const "cell value : ", const "\n"];
+        _0 = &_1;
+        return;
+    }
+}
+
+promoted[2] in main: &[&str; 2] = {
+    let mut _0: &[&str; 2];
+    let mut _1: [&str; 2];
+
+    bb0: {
+        _1 = [const "cell value : ", const "\n"];
+        _0 = &_1;
+        return;
+    }
+}

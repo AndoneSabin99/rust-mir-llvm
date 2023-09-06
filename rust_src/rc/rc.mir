@@ -1,0 +1,284 @@
+// WARNING: This output format is intended for human consumers only
+// and is subject to change without notice. Knock yourself out.
+fn main() -> () {
+    let mut _0: ();
+    let _1: std::rc::Rc<RcList>;
+    let mut _2: RcList;
+    let mut _3: std::rc::Rc<RcList>;
+    let mut _4: RcList;
+    let mut _5: std::rc::Rc<RcList>;
+    let mut _6: RcList;
+    let _7: ();
+    let mut _8: std::fmt::Arguments<'_>;
+    let mut _9: &[&str];
+    let mut _10: &[core::fmt::rt::Argument<'_>];
+    let _11: &[core::fmt::rt::Argument<'_>; 1];
+    let _12: [core::fmt::rt::Argument<'_>; 1];
+    let mut _13: core::fmt::rt::Argument<'_>;
+    let _14: &usize;
+    let _15: usize;
+    let _16: &std::rc::Rc<RcList>;
+    let mut _18: std::rc::Rc<RcList>;
+    let _19: &std::rc::Rc<RcList>;
+    let _20: ();
+    let mut _21: std::fmt::Arguments<'_>;
+    let mut _22: &[&str];
+    let mut _23: &[core::fmt::rt::Argument<'_>];
+    let _24: &[core::fmt::rt::Argument<'_>; 1];
+    let _25: [core::fmt::rt::Argument<'_>; 1];
+    let mut _26: core::fmt::rt::Argument<'_>;
+    let _27: &usize;
+    let _28: usize;
+    let _29: &std::rc::Rc<RcList>;
+    let mut _31: std::rc::Rc<RcList>;
+    let _32: &std::rc::Rc<RcList>;
+    let _33: ();
+    let mut _34: std::fmt::Arguments<'_>;
+    let mut _35: &[&str];
+    let mut _36: &[core::fmt::rt::Argument<'_>];
+    let _37: &[core::fmt::rt::Argument<'_>; 1];
+    let _38: [core::fmt::rt::Argument<'_>; 1];
+    let mut _39: core::fmt::rt::Argument<'_>;
+    let _40: &usize;
+    let _41: usize;
+    let _42: &std::rc::Rc<RcList>;
+    let _43: ();
+    let mut _44: std::fmt::Arguments<'_>;
+    let mut _45: &[&str];
+    let mut _46: &[core::fmt::rt::Argument<'_>];
+    let _47: &[core::fmt::rt::Argument<'_>; 1];
+    let _48: [core::fmt::rt::Argument<'_>; 1];
+    let mut _49: core::fmt::rt::Argument<'_>;
+    let _50: &usize;
+    let _51: usize;
+    let _52: &std::rc::Rc<RcList>;
+    scope 1 {
+        debug a => _1;
+        let _17: RcList;
+        let mut _56: &[&str; 2];
+        scope 2 {
+            debug b => _17;
+            let _30: RcList;
+            let mut _53: &[&str; 2];
+            let mut _55: &[&str; 2];
+            scope 3 {
+                debug c => _30;
+                let mut _54: &[&str; 2];
+            }
+        }
+    }
+
+    bb0: {
+        _6 = RcList::RcNil;
+        _5 = Rc::<RcList>::new(move _6) -> [return: bb1, unwind continue];
+    }
+
+    bb1: {
+        _4 = RcList::RcCons(const 10_i32, move _5);
+        _3 = Rc::<RcList>::new(move _4) -> [return: bb2, unwind continue];
+    }
+
+    bb2: {
+        _2 = RcList::RcCons(const 5_i32, move _3);
+        _1 = Rc::<RcList>::new(move _2) -> [return: bb3, unwind continue];
+    }
+
+    bb3: {
+        _56 = const _;
+        _9 = _56 as &[&str] (PointerCoercion(Unsize));
+        _16 = &_1;
+        _15 = Rc::<RcList>::strong_count(_16) -> [return: bb4, unwind: bb27];
+    }
+
+    bb4: {
+        _14 = &_15;
+        _13 = core::fmt::rt::Argument::<'_>::new_display::<usize>(_14) -> [return: bb5, unwind: bb27];
+    }
+
+    bb5: {
+        _12 = [move _13];
+        _11 = &_12;
+        _10 = _11 as &[core::fmt::rt::Argument<'_>] (PointerCoercion(Unsize));
+        _8 = Arguments::<'_>::new_v1(move _9, move _10) -> [return: bb6, unwind: bb27];
+    }
+
+    bb6: {
+        _7 = _print(move _8) -> [return: bb7, unwind: bb27];
+    }
+
+    bb7: {
+        _19 = &_1;
+        _18 = <Rc<RcList> as Clone>::clone(_19) -> [return: bb8, unwind: bb27];
+    }
+
+    bb8: {
+        _17 = RcList::RcCons(const 3_i32, move _18);
+        _55 = const _;
+        _22 = _55 as &[&str] (PointerCoercion(Unsize));
+        _29 = &_1;
+        _28 = Rc::<RcList>::strong_count(_29) -> [return: bb9, unwind: bb26];
+    }
+
+    bb9: {
+        _27 = &_28;
+        _26 = core::fmt::rt::Argument::<'_>::new_display::<usize>(_27) -> [return: bb10, unwind: bb26];
+    }
+
+    bb10: {
+        _25 = [move _26];
+        _24 = &_25;
+        _23 = _24 as &[core::fmt::rt::Argument<'_>] (PointerCoercion(Unsize));
+        _21 = Arguments::<'_>::new_v1(move _22, move _23) -> [return: bb11, unwind: bb26];
+    }
+
+    bb11: {
+        _20 = _print(move _21) -> [return: bb12, unwind: bb26];
+    }
+
+    bb12: {
+        _32 = &_1;
+        _31 = <Rc<RcList> as Clone>::clone(_32) -> [return: bb13, unwind: bb26];
+    }
+
+    bb13: {
+        _30 = RcList::RcCons(const 4_i32, move _31);
+        _54 = const _;
+        _35 = _54 as &[&str] (PointerCoercion(Unsize));
+        _42 = &_1;
+        _41 = Rc::<RcList>::strong_count(_42) -> [return: bb14, unwind: bb25];
+    }
+
+    bb14: {
+        _40 = &_41;
+        _39 = core::fmt::rt::Argument::<'_>::new_display::<usize>(_40) -> [return: bb15, unwind: bb25];
+    }
+
+    bb15: {
+        _38 = [move _39];
+        _37 = &_38;
+        _36 = _37 as &[core::fmt::rt::Argument<'_>] (PointerCoercion(Unsize));
+        _34 = Arguments::<'_>::new_v1(move _35, move _36) -> [return: bb16, unwind: bb25];
+    }
+
+    bb16: {
+        _33 = _print(move _34) -> [return: bb17, unwind: bb25];
+    }
+
+    bb17: {
+        drop(_30) -> [return: bb18, unwind: bb26];
+    }
+
+    bb18: {
+        _53 = const _;
+        _45 = _53 as &[&str] (PointerCoercion(Unsize));
+        _52 = &_1;
+        _51 = Rc::<RcList>::strong_count(_52) -> [return: bb19, unwind: bb26];
+    }
+
+    bb19: {
+        _50 = &_51;
+        _49 = core::fmt::rt::Argument::<'_>::new_display::<usize>(_50) -> [return: bb20, unwind: bb26];
+    }
+
+    bb20: {
+        _48 = [move _49];
+        _47 = &_48;
+        _46 = _47 as &[core::fmt::rt::Argument<'_>] (PointerCoercion(Unsize));
+        _44 = Arguments::<'_>::new_v1(move _45, move _46) -> [return: bb21, unwind: bb26];
+    }
+
+    bb21: {
+        _43 = _print(move _44) -> [return: bb22, unwind: bb26];
+    }
+
+    bb22: {
+        drop(_17) -> [return: bb23, unwind: bb27];
+    }
+
+    bb23: {
+        drop(_1) -> [return: bb24, unwind continue];
+    }
+
+    bb24: {
+        return;
+    }
+
+    bb25 (cleanup): {
+        drop(_30) -> [return: bb26, unwind terminate];
+    }
+
+    bb26 (cleanup): {
+        drop(_17) -> [return: bb27, unwind terminate];
+    }
+
+    bb27 (cleanup): {
+        drop(_1) -> [return: bb28, unwind terminate];
+    }
+
+    bb28 (cleanup): {
+        resume;
+    }
+}
+
+promoted[0] in main: &[&str; 2] = {
+    let mut _0: &[&str; 2];
+    let mut _1: [&str; 2];
+
+    bb0: {
+        _1 = [const "count after c goes out of scope = ", const "\n"];
+        _0 = &_1;
+        return;
+    }
+}
+
+promoted[1] in main: &[&str; 2] = {
+    let mut _0: &[&str; 2];
+    let mut _1: [&str; 2];
+
+    bb0: {
+        _1 = [const "count after creating c = ", const "\n"];
+        _0 = &_1;
+        return;
+    }
+}
+
+promoted[2] in main: &[&str; 2] = {
+    let mut _0: &[&str; 2];
+    let mut _1: [&str; 2];
+
+    bb0: {
+        _1 = [const "count after creating b = ", const "\n"];
+        _0 = &_1;
+        return;
+    }
+}
+
+promoted[3] in main: &[&str; 2] = {
+    let mut _0: &[&str; 2];
+    let mut _1: [&str; 2];
+
+    bb0: {
+        _1 = [const "count after creating a = ", const "\n"];
+        _0 = &_1;
+        return;
+    }
+}
+
+fn RcList::RcCons(_1: i32, _2: Rc<RcList>) -> RcList {
+    let mut _0: RcList;
+
+    bb0: {
+        _0 = RcList::RcCons(move _1, move _2);
+        return;
+    }
+}
+
+// MIR FOR CTFE
+fn RcList::RcCons(_1: i32, _2: Rc<RcList>) -> RcList {
+    let mut _0: RcList;
+
+    bb0: {
+        _0 = RcList::RcCons(move _1, move _2);
+        return;
+    }
+}

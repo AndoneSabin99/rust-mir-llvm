@@ -1,0 +1,318 @@
+// WARNING: This output format is intended for human consumers only
+// and is subject to change without notice. Knock yourself out.
+fn Summary::say_hello() -> () {
+    let mut _0: ();
+    let _1: ();
+    let mut _2: std::fmt::Arguments<'_>;
+    let mut _3: &[&str];
+    let mut _4: &[&str; 1];
+
+    bb0: {
+        _4 = const _;
+        _3 = _4 as &[&str] (PointerCoercion(Unsize));
+        _2 = Arguments::<'_>::new_const(move _3) -> [return: bb1, unwind continue];
+    }
+
+    bb1: {
+        _1 = _print(move _2) -> [return: bb2, unwind continue];
+    }
+
+    bb2: {
+        return;
+    }
+}
+
+promoted[0] in Summary::say_hello: &[&str; 1] = {
+    let mut _0: &[&str; 1];
+    let mut _1: [&str; 1];
+
+    bb0: {
+        _1 = [const "Hello\n"];
+        _0 = &_1;
+        return;
+    }
+}
+
+fn <impl at .\traits.rs:15:1: 15:29>::summarize(_1: &NewsArticle) -> String {
+    debug self => _1;
+    let mut _0: std::string::String;
+    let _2: std::string::String;
+    let mut _3: std::fmt::Arguments<'_>;
+    let mut _4: &[&str];
+    let mut _5: &[core::fmt::rt::Argument<'_>];
+    let _6: &[core::fmt::rt::Argument<'_>; 3];
+    let _7: [core::fmt::rt::Argument<'_>; 3];
+    let mut _8: core::fmt::rt::Argument<'_>;
+    let _9: &std::string::String;
+    let mut _10: core::fmt::rt::Argument<'_>;
+    let _11: &std::string::String;
+    let mut _12: core::fmt::rt::Argument<'_>;
+    let _13: &std::string::String;
+    let mut _14: &[&str; 4];
+    scope 1 {
+        debug res => _2;
+    }
+
+    bb0: {
+        _14 = const _;
+        _4 = _14 as &[&str] (PointerCoercion(Unsize));
+        _9 = &((*_1).0: std::string::String);
+        _8 = core::fmt::rt::Argument::<'_>::new_display::<String>(_9) -> [return: bb1, unwind continue];
+    }
+
+    bb1: {
+        _11 = &((*_1).2: std::string::String);
+        _10 = core::fmt::rt::Argument::<'_>::new_display::<String>(_11) -> [return: bb2, unwind continue];
+    }
+
+    bb2: {
+        _13 = &((*_1).1: std::string::String);
+        _12 = core::fmt::rt::Argument::<'_>::new_display::<String>(_13) -> [return: bb3, unwind continue];
+    }
+
+    bb3: {
+        _7 = [move _8, move _10, move _12];
+        _6 = &_7;
+        _5 = _6 as &[core::fmt::rt::Argument<'_>] (PointerCoercion(Unsize));
+        _3 = Arguments::<'_>::new_v1(move _4, move _5) -> [return: bb4, unwind continue];
+    }
+
+    bb4: {
+        _2 = format(move _3) -> [return: bb5, unwind continue];
+    }
+
+    bb5: {
+        _0 = move _2;
+        return;
+    }
+}
+
+promoted[0] in <impl at .\traits.rs:15:1: 15:29>::summarize: &[&str; 4] = {
+    let mut _0: &[&str; 4];
+    let mut _1: [&str; 4];
+
+    bb0: {
+        _1 = [const "", const ", by ", const " (", const ")"];
+        _0 = &_1;
+        return;
+    }
+}
+
+fn <impl at .\traits.rs:28:1: 28:23>::summarize(_1: &Tweet) -> String {
+    debug self => _1;
+    let mut _0: std::string::String;
+    let _2: std::string::String;
+    let mut _3: std::fmt::Arguments<'_>;
+    let mut _4: &[&str];
+    let mut _5: &[core::fmt::rt::Argument<'_>];
+    let _6: &[core::fmt::rt::Argument<'_>; 2];
+    let _7: [core::fmt::rt::Argument<'_>; 2];
+    let mut _8: core::fmt::rt::Argument<'_>;
+    let _9: &std::string::String;
+    let mut _10: core::fmt::rt::Argument<'_>;
+    let _11: &std::string::String;
+    let mut _12: &[&str; 2];
+    scope 1 {
+        debug res => _2;
+    }
+
+    bb0: {
+        _12 = const _;
+        _4 = _12 as &[&str] (PointerCoercion(Unsize));
+        _9 = &((*_1).0: std::string::String);
+        _8 = core::fmt::rt::Argument::<'_>::new_display::<String>(_9) -> [return: bb1, unwind continue];
+    }
+
+    bb1: {
+        _11 = &((*_1).1: std::string::String);
+        _10 = core::fmt::rt::Argument::<'_>::new_display::<String>(_11) -> [return: bb2, unwind continue];
+    }
+
+    bb2: {
+        _7 = [move _8, move _10];
+        _6 = &_7;
+        _5 = _6 as &[core::fmt::rt::Argument<'_>] (PointerCoercion(Unsize));
+        _3 = Arguments::<'_>::new_v1(move _4, move _5) -> [return: bb3, unwind continue];
+    }
+
+    bb3: {
+        _2 = format(move _3) -> [return: bb4, unwind continue];
+    }
+
+    bb4: {
+        _0 = move _2;
+        return;
+    }
+}
+
+promoted[0] in <impl at .\traits.rs:28:1: 28:23>::summarize: &[&str; 2] = {
+    let mut _0: &[&str; 2];
+    let mut _1: [&str; 2];
+
+    bb0: {
+        _1 = [const "", const ": "];
+        _0 = &_1;
+        return;
+    }
+}
+
+fn <impl at .\traits.rs:28:1: 28:23>::say_hello() -> () {
+    let mut _0: ();
+    let _1: ();
+    let mut _2: std::fmt::Arguments<'_>;
+    let mut _3: &[&str];
+    let mut _4: &[&str; 1];
+
+    bb0: {
+        _4 = const _;
+        _3 = _4 as &[&str] (PointerCoercion(Unsize));
+        _2 = Arguments::<'_>::new_const(move _3) -> [return: bb1, unwind continue];
+    }
+
+    bb1: {
+        _1 = _print(move _2) -> [return: bb2, unwind continue];
+    }
+
+    bb2: {
+        return;
+    }
+}
+
+promoted[0] in <impl at .\traits.rs:28:1: 28:23>::say_hello: &[&str; 1] = {
+    let mut _0: &[&str; 1];
+    let mut _1: [&str; 1];
+
+    bb0: {
+        _1 = [const "Yello!\n"];
+        _0 = &_1;
+        return;
+    }
+}
+
+fn main() -> () {
+    let mut _0: ();
+    let _1: Tweet;
+    let mut _2: std::string::String;
+    let _3: &str;
+    let mut _4: std::string::String;
+    let _5: &str;
+    let mut _7: std::string::String;
+    let _8: &str;
+    let mut _9: std::string::String;
+    let _10: &str;
+    let mut _11: std::string::String;
+    let _12: &str;
+    let mut _13: std::string::String;
+    let _14: &str;
+    let _15: std::string::String;
+    let mut _16: &Tweet;
+    let _17: std::string::String;
+    let mut _18: &NewsArticle;
+    let _19: ();
+    let _20: ();
+    scope 1 {
+        debug t => _1;
+        let _6: NewsArticle;
+        scope 2 {
+            debug n => _6;
+        }
+    }
+
+    bb0: {
+        _3 = const "User1";
+        _2 = <str as ToString>::to_string(_3) -> [return: bb1, unwind continue];
+    }
+
+    bb1: {
+        _5 = const "qwerty";
+        _4 = <str as ToString>::to_string(_5) -> [return: bb2, unwind: bb20];
+    }
+
+    bb2: {
+        _1 = Tweet { username: move _2, content: move _4, reply: const false, retweet: const false };
+        _8 = const "Wasps!";
+        _7 = <str as ToString>::to_string(_8) -> [return: bb3, unwind: bb19];
+    }
+
+    bb3: {
+        _10 = const "Trento";
+        _9 = <str as ToString>::to_string(_10) -> [return: bb4, unwind: bb18];
+    }
+
+    bb4: {
+        _12 = const "Author1";
+        _11 = <str as ToString>::to_string(_12) -> [return: bb5, unwind: bb17];
+    }
+
+    bb5: {
+        _14 = const "there is a wasp in my attic";
+        _13 = <str as ToString>::to_string(_14) -> [return: bb6, unwind: bb16];
+    }
+
+    bb6: {
+        _6 = NewsArticle { headline: move _7, location: move _9, author: move _11, content: move _13 };
+        _16 = &_1;
+        _15 = <Tweet as Summary>::summarize(move _16) -> [return: bb7, unwind: bb15];
+    }
+
+    bb7: {
+        drop(_15) -> [return: bb8, unwind: bb15];
+    }
+
+    bb8: {
+        _18 = &_6;
+        _17 = <NewsArticle as Summary>::summarize(move _18) -> [return: bb9, unwind: bb15];
+    }
+
+    bb9: {
+        drop(_17) -> [return: bb10, unwind: bb15];
+    }
+
+    bb10: {
+        _19 = <NewsArticle as Summary>::say_hello() -> [return: bb11, unwind: bb15];
+    }
+
+    bb11: {
+        _20 = <Tweet as Summary>::say_hello() -> [return: bb12, unwind: bb15];
+    }
+
+    bb12: {
+        drop(_6) -> [return: bb13, unwind: bb19];
+    }
+
+    bb13: {
+        drop(_1) -> [return: bb14, unwind continue];
+    }
+
+    bb14: {
+        return;
+    }
+
+    bb15 (cleanup): {
+        drop(_6) -> [return: bb19, unwind terminate];
+    }
+
+    bb16 (cleanup): {
+        drop(_11) -> [return: bb17, unwind terminate];
+    }
+
+    bb17 (cleanup): {
+        drop(_9) -> [return: bb18, unwind terminate];
+    }
+
+    bb18 (cleanup): {
+        drop(_7) -> [return: bb19, unwind terminate];
+    }
+
+    bb19 (cleanup): {
+        drop(_1) -> [return: bb21, unwind terminate];
+    }
+
+    bb20 (cleanup): {
+        drop(_2) -> [return: bb21, unwind terminate];
+    }
+
+    bb21 (cleanup): {
+        resume;
+    }
+}
