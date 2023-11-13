@@ -1,0 +1,11 @@
+digraph Mir_0_3 {
+    graph [fontname="Courier, monospace"];
+    node [fontname="Courier, monospace"];
+    edge [fontname="Courier, monospace"];
+    label=<fn main() -&gt; ()<br align="left"/>let _1: ();<br align="left"/>let mut _2: std::fmt::Arguments;<br align="left"/>let _3: &amp;[std::fmt::ArgumentV1; 0];<br align="left"/>let mut _4: &amp;[&amp;str];<br align="left"/>let mut _5: &amp;[&amp;str; 1];<br align="left"/>let _6: &amp;[&amp;str; 1];<br align="left"/>let mut _7: &amp;[std::fmt::ArgumentV1];<br align="left"/>let mut _8: &amp;[std::fmt::ArgumentV1; 0];<br align="left"/>let mut _9: &amp;[&amp;str; 1];<br align="left"/>let mut _10: &amp;[std::fmt::ArgumentV1; 0];<br align="left"/>debug args =&gt; _3;<br align="left"/>>;
+    bb0__0_3 [shape="none", label=<<table border="0" cellborder="1" cellspacing="0"><tr><td bgcolor="gray" align="center" colspan="1">0</td></tr><tr><td align="left" balign="left">_10 = const main::promoted[1]<br/>_3 = _10<br/>_9 = const main::promoted[0]<br/>_6 = _9<br/>_5 = _6<br/>_4 = move _5 as &amp;[&amp;str] (Pointer(Unsize))<br/>_8 = _3<br/>_7 = move _8 as &amp;[std::fmt::ArgumentV1] (Pointer(Unsize))<br/></td></tr><tr><td align="left">_2 = Arguments::new_v1(move _4, move _7)</td></tr></table>>];
+    bb1__0_3 [shape="none", label=<<table border="0" cellborder="1" cellspacing="0"><tr><td bgcolor="gray" align="center" colspan="1">1</td></tr><tr><td align="left">_1 = _print(move _2)</td></tr></table>>];
+    bb2__0_3 [shape="none", label=<<table border="0" cellborder="1" cellspacing="0"><tr><td bgcolor="gray" align="center" colspan="1">2</td></tr><tr><td align="left">return</td></tr></table>>];
+    bb0__0_3 -> bb1__0_3 [label="return"];
+    bb1__0_3 -> bb2__0_3 [label="return"];
+}
