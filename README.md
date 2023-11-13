@@ -34,6 +34,7 @@ Standard compilation:
 Compilation for CHERI: 
 ```
 *    rustc --emit=mir hello.rs -o hello.mir --target aarch64-unknown-freebsd-purecap -C linker=/home/sabin/cheri/rust/clang-morello.sh    //obtain the .mir file of hello.rs with cheri support
-*    rustc --emit=llvm-ir hello.rs -o hello.ll --target aarch64-unknown-freebsd-purecap -C linker=/home/sabin/cheri/rust/clang-morello.sh    //obtain the .ll file of hello.rs with cheri support 
+*    rustc --emit=llvm-ir hello.rs -o hello.ll --target aarch64-unknown-freebsd-purecap -C linker=/home/sabin/cheri/rust/clang-morello.sh    //obtain the .ll file of hello.rs with cheri support
+*    rustc -Z unpretty=mir-cfg hello.rs --target aarch64-unknown-freebsd-purecap -C linker=/home/sabin/cheri/rust/clang-morello.sh > graph.txt  //obtain the cfg representation
 ```
 Remember to substitute the placeholders (`rustc`, `hello.rs`, `graph.txt`, etc.) with your actual values.
