@@ -1,0 +1,74 @@
+digraph __crate__ {
+subgraph cluster_Mir_0_10 {
+    graph [fontname="Courier, monospace"];
+    node [fontname="Courier, monospace"];
+    edge [fontname="Courier, monospace"];
+    label=<fn main::{closure#0}(_1: [closure@arc.rs:12:33: 18:10]) -&gt; ()<br align="left"/>let _2: ();<br align="left"/>let mut _3: std::fmt::Arguments;<br align="left"/>let mut _4: [std::fmt::ArgumentV1; 1];<br align="left"/>let mut _5: (&amp;std::sync::Arc&lt;&amp;str&gt;,);<br align="left"/>let mut _6: &amp;std::sync::Arc&lt;&amp;str&gt;;<br align="left"/>let _7: &amp;std::sync::Arc&lt;&amp;str&gt;;<br align="left"/>let mut _8: std::fmt::ArgumentV1;<br align="left"/>let mut _9: &amp;std::sync::Arc&lt;&amp;str&gt;;<br align="left"/>let mut _10: for&lt;'r, 's, 't0&gt; fn(&amp;'r std::sync::Arc&lt;&amp;str&gt;, &amp;'s mut std::fmt::Formatter&lt;'t0&gt;) -&gt; std::result::Result&lt;(), std::fmt::Error&gt;;<br align="left"/>let _11: &amp;[std::fmt::ArgumentV1; 1];<br align="left"/>let mut _12: &amp;[&amp;str];<br align="left"/>let mut _13: &amp;[&amp;str; 2];<br align="left"/>let _14: &amp;[&amp;str; 2];<br align="left"/>let mut _15: &amp;[std::fmt::ArgumentV1];<br align="left"/>let mut _16: &amp;[std::fmt::ArgumentV1; 1];<br align="left"/>let _17: ();<br align="left"/>let mut _18: std::fmt::Arguments;<br align="left"/>let mut _19: [std::fmt::ArgumentV1; 1];<br align="left"/>let mut _20: (&amp;usize,);<br align="left"/>let mut _21: &amp;usize;<br align="left"/>let _22: usize;<br align="left"/>let mut _23: &amp;std::sync::Arc&lt;&amp;str&gt;;<br align="left"/>let _24: &amp;std::sync::Arc&lt;&amp;str&gt;;<br align="left"/>let _25: &amp;usize;<br align="left"/>let mut _26: std::fmt::ArgumentV1;<br align="left"/>let mut _27: &amp;usize;<br align="left"/>let mut _28: for&lt;'r, 's, 't0&gt; fn(&amp;'r usize, &amp;'s mut std::fmt::Formatter&lt;'t0&gt;) -&gt; std::result::Result&lt;(), std::fmt::Error&gt;;<br align="left"/>let _29: &amp;[std::fmt::ArgumentV1; 1];<br align="left"/>let mut _30: &amp;[&amp;str];<br align="left"/>let mut _31: &amp;[&amp;str; 2];<br align="left"/>let _32: &amp;[&amp;str; 2];<br align="left"/>let mut _33: &amp;[std::fmt::ArgumentV1];<br align="left"/>let mut _34: &amp;[std::fmt::ArgumentV1; 1];<br align="left"/>let mut _35: &amp;[&amp;str; 2];<br align="left"/>let mut _36: &amp;[&amp;str; 2];<br align="left"/>debug apple =&gt; (_1.0: std::sync::Arc&lt;&amp;str&gt;);<br align="left"/>debug arg0 =&gt; _7;<br align="left"/>debug args =&gt; _11;<br align="left"/>debug arg0 =&gt; _25;<br align="left"/>debug args =&gt; _29;<br align="left"/>>;
+    bb0__0_10 [shape="none", label=<<table border="0" cellborder="1" cellspacing="0"><tr><td bgcolor="gray" align="center" colspan="1">0</td></tr><tr><td align="left" balign="left">_6 = &amp;(_1.0: std::sync::Arc&lt;&amp;str&gt;)<br/>(_5.0: &amp;std::sync::Arc&lt;&amp;str&gt;) = move _6<br/>_7 = (_5.0: &amp;std::sync::Arc&lt;&amp;str&gt;)<br/>_9 = _7<br/>_10 = &lt;Arc&lt;&amp;str&gt; as Debug&gt;::fmt as for&lt;'r, 's, 't0&gt; fn(&amp;'r std::sync::Arc&lt;&amp;str&gt;, &amp;'s mut std::fmt::Formatter&lt;'t0&gt;) -&gt; std::result::Result&lt;(), std::fmt::Error&gt; (Pointer(ReifyFnPointer))<br/></td></tr><tr><td align="left">_8 = ArgumentV1::new::&lt;Arc&lt;&amp;str&gt;&gt;(move _9, move _10)</td></tr></table>>];
+    bb1__0_10 [shape="none", label=<<table border="0" cellborder="1" cellspacing="0"><tr><td bgcolor="gray" align="center" colspan="1">1</td></tr><tr><td align="left" balign="left">_4 = [move _8]<br/>_11 = &amp;_4<br/>_36 = const main::{closure#0}::promoted[1]<br/>_14 = _36<br/>_13 = _14<br/>_12 = move _13 as &amp;[&amp;str] (Pointer(Unsize))<br/>_16 = _11<br/>_15 = move _16 as &amp;[std::fmt::ArgumentV1] (Pointer(Unsize))<br/></td></tr><tr><td align="left">_3 = Arguments::new_v1(move _12, move _15)</td></tr></table>>];
+    bb2__0_10 [shape="none", label=<<table border="0" cellborder="1" cellspacing="0"><tr><td bgcolor="gray" align="center" colspan="1">2</td></tr><tr><td align="left">_2 = _print(move _3)</td></tr></table>>];
+    bb3__0_10 [shape="none", label=<<table border="0" cellborder="1" cellspacing="0"><tr><td bgcolor="gray" align="center" colspan="1">3</td></tr><tr><td align="left" balign="left">_24 = &amp;(_1.0: std::sync::Arc&lt;&amp;str&gt;)<br/>_23 = _24<br/></td></tr><tr><td align="left">_22 = Arc::&lt;&amp;str&gt;::strong_count(move _23)</td></tr></table>>];
+    bb4__0_10 [shape="none", label=<<table border="0" cellborder="1" cellspacing="0"><tr><td bgcolor="gray" align="center" colspan="1">4</td></tr><tr><td align="left" balign="left">_21 = &amp;_22<br/>(_20.0: &amp;usize) = move _21<br/>_25 = (_20.0: &amp;usize)<br/>_27 = _25<br/>_28 = &lt;usize as std::fmt::Display&gt;::fmt as for&lt;'r, 's, 't0&gt; fn(&amp;'r usize, &amp;'s mut std::fmt::Formatter&lt;'t0&gt;) -&gt; std::result::Result&lt;(), std::fmt::Error&gt; (Pointer(ReifyFnPointer))<br/></td></tr><tr><td align="left">_26 = ArgumentV1::new::&lt;usize&gt;(move _27, move _28)</td></tr></table>>];
+    bb5__0_10 [shape="none", label=<<table border="0" cellborder="1" cellspacing="0"><tr><td bgcolor="gray" align="center" colspan="1">5</td></tr><tr><td align="left" balign="left">_19 = [move _26]<br/>_29 = &amp;_19<br/>_35 = const main::{closure#0}::promoted[0]<br/>_32 = _35<br/>_31 = _32<br/>_30 = move _31 as &amp;[&amp;str] (Pointer(Unsize))<br/>_34 = _29<br/>_33 = move _34 as &amp;[std::fmt::ArgumentV1] (Pointer(Unsize))<br/></td></tr><tr><td align="left">_18 = Arguments::new_v1(move _30, move _33)</td></tr></table>>];
+    bb6__0_10 [shape="none", label=<<table border="0" cellborder="1" cellspacing="0"><tr><td bgcolor="gray" align="center" colspan="1">6</td></tr><tr><td align="left">_17 = _print(move _18)</td></tr></table>>];
+    bb7__0_10 [shape="none", label=<<table border="0" cellborder="1" cellspacing="0"><tr><td bgcolor="gray" align="center" colspan="1">7</td></tr><tr><td align="left">drop(_1)</td></tr></table>>];
+    bb8__0_10 [shape="none", label=<<table border="0" cellborder="1" cellspacing="0"><tr><td bgcolor="gray" align="center" colspan="1">8</td></tr><tr><td align="left">return</td></tr></table>>];
+    bb9__0_10 [shape="none", label=<<table border="0" cellborder="1" cellspacing="0"><tr><td bgcolor="lightblue" align="center" colspan="1">9 (cleanup)</td></tr><tr><td align="left">drop(_1)</td></tr></table>>];
+    bb10__0_10 [shape="none", label=<<table border="0" cellborder="1" cellspacing="0"><tr><td bgcolor="lightblue" align="center" colspan="1">10 (cleanup)</td></tr><tr><td align="left">resume</td></tr></table>>];
+    bb0__0_10 -> bb1__0_10 [label="return"];
+    bb0__0_10 -> bb9__0_10 [label="unwind"];
+    bb1__0_10 -> bb2__0_10 [label="return"];
+    bb1__0_10 -> bb9__0_10 [label="unwind"];
+    bb2__0_10 -> bb3__0_10 [label="return"];
+    bb2__0_10 -> bb9__0_10 [label="unwind"];
+    bb3__0_10 -> bb4__0_10 [label="return"];
+    bb3__0_10 -> bb9__0_10 [label="unwind"];
+    bb4__0_10 -> bb5__0_10 [label="return"];
+    bb4__0_10 -> bb9__0_10 [label="unwind"];
+    bb5__0_10 -> bb6__0_10 [label="return"];
+    bb5__0_10 -> bb9__0_10 [label="unwind"];
+    bb6__0_10 -> bb7__0_10 [label="return"];
+    bb6__0_10 -> bb9__0_10 [label="unwind"];
+    bb7__0_10 -> bb8__0_10 [label="return"];
+    bb9__0_10 -> bb10__0_10 [label="return"];
+}
+subgraph cluster_Mir_0_3 {
+    graph [fontname="Courier, monospace"];
+    node [fontname="Courier, monospace"];
+    edge [fontname="Courier, monospace"];
+    label=<fn main() -&gt; ()<br align="left"/>let _1: std::sync::Arc&lt;&amp;str&gt;;<br align="left"/>let mut _2: std::ops::Range&lt;i32&gt;;<br align="left"/>let mut _3: std::ops::Range&lt;i32&gt;;<br align="left"/>let mut _4: std::ops::Range&lt;i32&gt;;<br align="left"/>let mut _5: i32;<br align="left"/>let mut _6: std::option::Option&lt;i32&gt;;<br align="left"/>let mut _7: &amp;mut std::ops::Range&lt;i32&gt;;<br align="left"/>let mut _8: &amp;mut std::ops::Range&lt;i32&gt;;<br align="left"/>let mut _9: isize;<br align="left"/>let _10: i32;<br align="left"/>let mut _11: i32;<br align="left"/>let _12: std::sync::Arc&lt;&amp;str&gt;;<br align="left"/>let mut _13: &amp;std::sync::Arc&lt;&amp;str&gt;;<br align="left"/>let _14: &amp;std::sync::Arc&lt;&amp;str&gt;;<br align="left"/>let _15: std::thread::JoinHandle&lt;()&gt;;<br align="left"/>let mut _16: [closure@arc.rs:12:33: 18:10];<br align="left"/>let _17: std::result::Result&lt;(), std::boxed::Box&lt;dyn std::any::Any + std::marker::Send&gt;&gt;;<br align="left"/>let mut _18: std::thread::JoinHandle&lt;()&gt;;<br align="left"/>debug apple =&gt; _1;<br align="left"/>debug iter =&gt; _4;<br align="left"/>debug __next =&gt; _5;<br align="left"/>debug val =&gt; _10;<br align="left"/>debug apple =&gt; _12;<br align="left"/>debug tjh =&gt; _15;<br align="left"/>>;
+    bb0__0_3 [shape="none", label=<<table border="0" cellborder="1" cellspacing="0"><tr><td bgcolor="gray" align="center" colspan="1">0</td></tr><tr><td align="left">_1 = Arc::&lt;&amp;str&gt;::new(const &quot;the same apple&quot;)</td></tr></table>>];
+    bb1__0_3 [shape="none", label=<<table border="0" cellborder="1" cellspacing="0"><tr><td bgcolor="gray" align="center" colspan="1">1</td></tr><tr><td align="left" balign="left">(_3.0: i32) = const 0_i32<br/>(_3.1: i32) = const 10_i32<br/></td></tr><tr><td align="left">_2 = &lt;std::ops::Range&lt;i32&gt; as IntoIterator&gt;::into_iter(move _3)</td></tr></table>>];
+    bb2__0_3 [shape="none", label=<<table border="0" cellborder="1" cellspacing="0"><tr><td bgcolor="gray" align="center" colspan="1">2</td></tr><tr><td align="left" balign="left">_4 = move _2<br/></td></tr><tr><td align="left">goto</td></tr></table>>];
+    bb3__0_3 [shape="none", label=<<table border="0" cellborder="1" cellspacing="0"><tr><td bgcolor="gray" align="center" colspan="1">3</td></tr><tr><td align="left" balign="left">_8 = &amp;mut _4<br/>_7 = &amp;mut (*_8)<br/></td></tr><tr><td align="left">_6 = &lt;std::ops::Range&lt;i32&gt; as Iterator&gt;::next(move _7)</td></tr></table>>];
+    bb4__0_3 [shape="none", label=<<table border="0" cellborder="1" cellspacing="0"><tr><td bgcolor="gray" align="center" colspan="1">4</td></tr><tr><td align="left" balign="left">_9 = discriminant(_6)<br/></td></tr><tr><td align="left">switchInt(move _9)</td></tr></table>>];
+    bb5__0_3 [shape="none", label=<<table border="0" cellborder="1" cellspacing="0"><tr><td bgcolor="gray" align="center" colspan="1">5</td></tr><tr><td align="left">drop(_1)</td></tr></table>>];
+    bb6__0_3 [shape="none", label=<<table border="0" cellborder="1" cellspacing="0"><tr><td bgcolor="gray" align="center" colspan="1">6</td></tr><tr><td align="left">unreachable</td></tr></table>>];
+    bb7__0_3 [shape="none", label=<<table border="0" cellborder="1" cellspacing="0"><tr><td bgcolor="gray" align="center" colspan="1">7</td></tr><tr><td align="left" balign="left">_10 = ((_6 as Some).0: i32)<br/>_11 = _10<br/>_5 = move _11<br/>_14 = &amp;_1<br/>_13 = _14<br/></td></tr><tr><td align="left">_12 = &lt;Arc&lt;&amp;str&gt; as Clone&gt;::clone(move _13)</td></tr></table>>];
+    bb8__0_3 [shape="none", label=<<table border="0" cellborder="1" cellspacing="0"><tr><td bgcolor="gray" align="center" colspan="1">8</td></tr><tr><td align="left" balign="left">(_16.0: std::sync::Arc&lt;&amp;str&gt;) = move _12<br/></td></tr><tr><td align="left">_15 = spawn::&lt;[closure@arc.rs:12:33: 18:10], ()&gt;(move _16)</td></tr></table>>];
+    bb9__0_3 [shape="none", label=<<table border="0" cellborder="1" cellspacing="0"><tr><td bgcolor="gray" align="center" colspan="1">9</td></tr><tr><td align="left" balign="left">_18 = move _15<br/></td></tr><tr><td align="left">_17 = JoinHandle::&lt;()&gt;::join(move _18)</td></tr></table>>];
+    bb10__0_3 [shape="none", label=<<table border="0" cellborder="1" cellspacing="0"><tr><td bgcolor="gray" align="center" colspan="1">10</td></tr><tr><td align="left">drop(_17)</td></tr></table>>];
+    bb11__0_3 [shape="none", label=<<table border="0" cellborder="1" cellspacing="0"><tr><td bgcolor="gray" align="center" colspan="1">11</td></tr><tr><td align="left">return</td></tr></table>>];
+    bb12__0_3 [shape="none", label=<<table border="0" cellborder="1" cellspacing="0"><tr><td bgcolor="lightblue" align="center" colspan="1">12 (cleanup)</td></tr><tr><td align="left">drop(_1)</td></tr></table>>];
+    bb13__0_3 [shape="none", label=<<table border="0" cellborder="1" cellspacing="0"><tr><td bgcolor="lightblue" align="center" colspan="1">13 (cleanup)</td></tr><tr><td align="left">resume</td></tr></table>>];
+    bb0__0_3 -> bb1__0_3 [label="return"];
+    bb1__0_3 -> bb2__0_3 [label="return"];
+    bb1__0_3 -> bb12__0_3 [label="unwind"];
+    bb2__0_3 -> bb3__0_3 [label=""];
+    bb3__0_3 -> bb4__0_3 [label="return"];
+    bb3__0_3 -> bb12__0_3 [label="unwind"];
+    bb4__0_3 -> bb5__0_3 [label="0_isize"];
+    bb4__0_3 -> bb7__0_3 [label="1_isize"];
+    bb4__0_3 -> bb6__0_3 [label="otherwise"];
+    bb5__0_3 -> bb11__0_3 [label="return"];
+    bb7__0_3 -> bb8__0_3 [label="return"];
+    bb7__0_3 -> bb12__0_3 [label="unwind"];
+    bb8__0_3 -> bb9__0_3 [label="return"];
+    bb8__0_3 -> bb12__0_3 [label="unwind"];
+    bb9__0_3 -> bb10__0_3 [label="return"];
+    bb9__0_3 -> bb12__0_3 [label="unwind"];
+    bb10__0_3 -> bb3__0_3 [label="return"];
+    bb10__0_3 -> bb12__0_3 [label="unwind"];
+    bb12__0_3 -> bb13__0_3 [label="return"];
+}
+}

@@ -1,0 +1,669 @@
+// WARNING: This output format is intended for human consumers only
+// and is subject to change without notice. Knock yourself out.
+fn Summary::say_hello() -> () {
+    let mut _0: ();                      // return place in scope 0 at traits.rs:3:20: 3:20
+    let _1: ();                          // in scope 0 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:9: 97:62
+    let mut _2: std::fmt::Arguments;     // in scope 0 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+    let _3: &[std::fmt::ArgumentV1; 0];  // in scope 0 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+    let mut _4: &[&str];                 // in scope 0 at traits.rs:4:18: 4:25
+    let mut _5: &[&str; 1];              // in scope 0 at traits.rs:4:18: 4:25
+    let _6: &[&str; 1];                  // in scope 0 at traits.rs:4:18: 4:25
+    let mut _7: &[std::fmt::ArgumentV1]; // in scope 0 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+    let mut _8: &[std::fmt::ArgumentV1; 0]; // in scope 0 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+    let mut _10: &[std::fmt::ArgumentV1; 0]; // in scope 0 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+    scope 1 {
+        debug args => _3;                // in scope 1 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+        scope 2 {
+            let mut _9: &[&str; 1];      // in scope 2 at traits.rs:4:18: 4:25
+        }
+    }
+
+    bb0: {
+        _10 = const <Self as Summary>::say_hello::promoted[1]; // scope 0 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+                                         // ty::Const
+                                         // + ty: &[std::fmt::ArgumentV1; 0]
+                                         // + val: Unevaluated(Summary::say_hello, [Self], Some(promoted[1]))
+                                         // mir::Constant
+                                         // + span: /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+                                         // + literal: Const { ty: &[std::fmt::ArgumentV1; 0], val: Unevaluated(Unevaluated { def: WithOptConstParam { did: DefId(0:5 ~ traits[fcf6]::Summary::say_hello), const_param_did: None }, substs_: Some([Self]), promoted: Some(promoted[1]) }) }
+        _3 = _10;                        // scope 0 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+        _9 = const <Self as Summary>::say_hello::promoted[0]; // scope 2 at traits.rs:4:18: 4:25
+                                         // ty::Const
+                                         // + ty: &[&str; 1]
+                                         // + val: Unevaluated(Summary::say_hello, [Self], Some(promoted[0]))
+                                         // mir::Constant
+                                         // + span: traits.rs:4:18: 4:25
+                                         // + literal: Const { ty: &[&str; 1], val: Unevaluated(Unevaluated { def: WithOptConstParam { did: DefId(0:5 ~ traits[fcf6]::Summary::say_hello), const_param_did: None }, substs_: Some([Self]), promoted: Some(promoted[0]) }) }
+        _6 = _9;                         // scope 2 at traits.rs:4:18: 4:25
+        _5 = _6;                         // scope 2 at traits.rs:4:18: 4:25
+        _4 = move _5 as &[&str] (Pointer(Unsize)); // scope 2 at traits.rs:4:18: 4:25
+        _8 = _3;                         // scope 2 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+        _7 = move _8 as &[std::fmt::ArgumentV1] (Pointer(Unsize)); // scope 2 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+        _2 = Arguments::new_v1(move _4, move _7) -> bb1; // scope 2 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+                                         // mir::Constant
+                                         // + span: /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+                                         // + user_ty: UserType(0)
+                                         // + literal: Const { ty: unsafe fn(&[&'static str], &[std::fmt::ArgumentV1]) -> std::fmt::Arguments {std::fmt::Arguments::new_v1}, val: Value(Scalar(<ZST>)) }
+    }
+
+    bb1: {
+        _1 = _print(move _2) -> bb2;     // scope 0 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:9: 97:62
+                                         // mir::Constant
+                                         // + span: /home/sabin/cheri/rust/library/std/src/macros.rs:97:9: 97:27
+                                         // + literal: Const { ty: for<'r> fn(std::fmt::Arguments<'r>) {std::io::_print}, val: Value(Scalar(<ZST>)) }
+    }
+
+    bb2: {
+        return;                          // scope 0 at traits.rs:5:6: 5:6
+    }
+}
+
+promoted[0] in Summary::say_hello: &[&str; 1] = {
+    let mut _0: &[&str; 1];              // return place in scope 0 at traits.rs:4:18: 4:25
+    let mut _1: [&str; 1];               // in scope 0 at traits.rs:4:18: 4:25
+
+    bb0: {
+        _1 = [const "Hello\n"];          // scope 0 at traits.rs:4:18: 4:25
+                                         // ty::Const
+                                         // + ty: &str
+                                         // + val: Value(Slice { data: Allocation { bytes: [72, 101, 108, 108, 111, 10], relocations: Relocations(SortedMap { data: [] }), init_mask: InitMask { blocks: [63], len: Size { raw: 6 } }, align: Align { pow2: 0 }, mutability: Not, extra: () }, start: 0, end: 6 })
+                                         // mir::Constant
+                                         // + span: traits.rs:4:18: 4:25
+                                         // + literal: Const { ty: &str, val: Value(Slice { data: Allocation { bytes: [72, 101, 108, 108, 111, 10], relocations: Relocations(SortedMap { data: [] }), init_mask: InitMask { blocks: [63], len: Size { raw: 6 } }, align: Align { pow2: 0 }, mutability: Not, extra: () }, start: 0, end: 6 }) }
+        _0 = &_1;                        // scope 0 at traits.rs:4:18: 4:25
+        return;                          // scope 0 at traits.rs:4:18: 4:25
+    }
+}
+
+promoted[1] in Summary::say_hello: &[ArgumentV1; 0] = {
+    let mut _0: &[std::fmt::ArgumentV1; 0]; // return place in scope 0 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+    let mut _1: [std::fmt::ArgumentV1; 0]; // in scope 0 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+
+    bb0: {
+        _1 = [];                         // scope 0 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+        _0 = &_1;                        // scope 0 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+        return;                          // scope 0 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+    }
+}
+
+fn main() -> () {
+    let mut _0: ();                      // return place in scope 0 at traits.rs:37:10: 37:10
+    let _1: Tweet;                       // in scope 0 at traits.rs:38:9: 38:10
+    let mut _2: std::string::String;     // in scope 0 at traits.rs:39:19: 39:38
+    let mut _3: &str;                    // in scope 0 at traits.rs:39:19: 39:26
+    let _4: &str;                        // in scope 0 at traits.rs:39:19: 39:26
+    let mut _5: std::string::String;     // in scope 0 at traits.rs:40:18: 40:38
+    let mut _6: &str;                    // in scope 0 at traits.rs:40:18: 40:26
+    let _7: &str;                        // in scope 0 at traits.rs:40:18: 40:26
+    let mut _9: std::string::String;     // in scope 0 at traits.rs:45:19: 45:39
+    let mut _10: &str;                   // in scope 0 at traits.rs:45:19: 45:27
+    let _11: &str;                       // in scope 0 at traits.rs:45:19: 45:27
+    let mut _12: std::string::String;    // in scope 0 at traits.rs:46:19: 46:39
+    let mut _13: &str;                   // in scope 0 at traits.rs:46:19: 46:27
+    let _14: &str;                       // in scope 0 at traits.rs:46:19: 46:27
+    let mut _15: std::string::String;    // in scope 0 at traits.rs:47:17: 47:38
+    let mut _16: &str;                   // in scope 0 at traits.rs:47:17: 47:26
+    let _17: &str;                       // in scope 0 at traits.rs:47:17: 47:26
+    let mut _18: std::string::String;    // in scope 0 at traits.rs:48:18: 48:59
+    let mut _19: &str;                   // in scope 0 at traits.rs:48:18: 48:47
+    let _20: &str;                       // in scope 0 at traits.rs:48:18: 48:47
+    let _21: std::string::String;        // in scope 0 at traits.rs:50:5: 50:18
+    let mut _22: &Tweet;                 // in scope 0 at traits.rs:50:5: 50:6
+    let _23: std::string::String;        // in scope 0 at traits.rs:51:5: 51:18
+    let mut _24: &NewsArticle;           // in scope 0 at traits.rs:51:5: 51:6
+    let _25: ();                         // in scope 0 at traits.rs:53:5: 53:29
+    let _26: ();                         // in scope 0 at traits.rs:54:5: 54:23
+    scope 1 {
+        debug t => _1;                   // in scope 1 at traits.rs:38:9: 38:10
+        let _8: NewsArticle;             // in scope 1 at traits.rs:44:9: 44:10
+        scope 2 {
+            debug n => _8;               // in scope 2 at traits.rs:44:9: 44:10
+        }
+    }
+
+    bb0: {
+        _4 = const "User1";              // scope 0 at traits.rs:39:19: 39:26
+                                         // ty::Const
+                                         // + ty: &str
+                                         // + val: Value(Slice { data: Allocation { bytes: [85, 115, 101, 114, 49], relocations: Relocations(SortedMap { data: [] }), init_mask: InitMask { blocks: [31], len: Size { raw: 5 } }, align: Align { pow2: 0 }, mutability: Not, extra: () }, start: 0, end: 5 })
+                                         // mir::Constant
+                                         // + span: traits.rs:39:19: 39:26
+                                         // + literal: Const { ty: &str, val: Value(Slice { data: Allocation { bytes: [85, 115, 101, 114, 49], relocations: Relocations(SortedMap { data: [] }), init_mask: InitMask { blocks: [31], len: Size { raw: 5 } }, align: Align { pow2: 0 }, mutability: Not, extra: () }, start: 0, end: 5 }) }
+        _3 = _4;                         // scope 0 at traits.rs:39:19: 39:26
+        _2 = <str as ToString>::to_string(move _3) -> bb1; // scope 0 at traits.rs:39:19: 39:38
+                                         // mir::Constant
+                                         // + span: traits.rs:39:27: 39:36
+                                         // + literal: Const { ty: for<'r> fn(&'r str) -> std::string::String {<str as std::string::ToString>::to_string}, val: Value(Scalar(<ZST>)) }
+    }
+
+    bb1: {
+        _7 = const "qwerty";             // scope 0 at traits.rs:40:18: 40:26
+                                         // ty::Const
+                                         // + ty: &str
+                                         // + val: Value(Slice { data: Allocation { bytes: [113, 119, 101, 114, 116, 121], relocations: Relocations(SortedMap { data: [] }), init_mask: InitMask { blocks: [63], len: Size { raw: 6 } }, align: Align { pow2: 0 }, mutability: Not, extra: () }, start: 0, end: 6 })
+                                         // mir::Constant
+                                         // + span: traits.rs:40:18: 40:26
+                                         // + literal: Const { ty: &str, val: Value(Slice { data: Allocation { bytes: [113, 119, 101, 114, 116, 121], relocations: Relocations(SortedMap { data: [] }), init_mask: InitMask { blocks: [63], len: Size { raw: 6 } }, align: Align { pow2: 0 }, mutability: Not, extra: () }, start: 0, end: 6 }) }
+        _6 = _7;                         // scope 0 at traits.rs:40:18: 40:26
+        _5 = <str as ToString>::to_string(move _6) -> [return: bb2, unwind: bb20]; // scope 0 at traits.rs:40:18: 40:38
+                                         // mir::Constant
+                                         // + span: traits.rs:40:27: 40:36
+                                         // + literal: Const { ty: for<'r> fn(&'r str) -> std::string::String {<str as std::string::ToString>::to_string}, val: Value(Scalar(<ZST>)) }
+    }
+
+    bb2: {
+        (_1.0: std::string::String) = move _2; // scope 0 at traits.rs:38:13: 43:6
+        (_1.1: std::string::String) = move _5; // scope 0 at traits.rs:38:13: 43:6
+        (_1.2: bool) = const false;      // scope 0 at traits.rs:38:13: 43:6
+        (_1.3: bool) = const false;      // scope 0 at traits.rs:38:13: 43:6
+        _11 = const "Wasps!";            // scope 1 at traits.rs:45:19: 45:27
+                                         // ty::Const
+                                         // + ty: &str
+                                         // + val: Value(Slice { data: Allocation { bytes: [87, 97, 115, 112, 115, 33], relocations: Relocations(SortedMap { data: [] }), init_mask: InitMask { blocks: [63], len: Size { raw: 6 } }, align: Align { pow2: 0 }, mutability: Not, extra: () }, start: 0, end: 6 })
+                                         // mir::Constant
+                                         // + span: traits.rs:45:19: 45:27
+                                         // + literal: Const { ty: &str, val: Value(Slice { data: Allocation { bytes: [87, 97, 115, 112, 115, 33], relocations: Relocations(SortedMap { data: [] }), init_mask: InitMask { blocks: [63], len: Size { raw: 6 } }, align: Align { pow2: 0 }, mutability: Not, extra: () }, start: 0, end: 6 }) }
+        _10 = _11;                       // scope 1 at traits.rs:45:19: 45:27
+        _9 = <str as ToString>::to_string(move _10) -> [return: bb3, unwind: bb19]; // scope 1 at traits.rs:45:19: 45:39
+                                         // mir::Constant
+                                         // + span: traits.rs:45:28: 45:37
+                                         // + literal: Const { ty: for<'r> fn(&'r str) -> std::string::String {<str as std::string::ToString>::to_string}, val: Value(Scalar(<ZST>)) }
+    }
+
+    bb3: {
+        _14 = const "Trento";            // scope 1 at traits.rs:46:19: 46:27
+                                         // ty::Const
+                                         // + ty: &str
+                                         // + val: Value(Slice { data: Allocation { bytes: [84, 114, 101, 110, 116, 111], relocations: Relocations(SortedMap { data: [] }), init_mask: InitMask { blocks: [63], len: Size { raw: 6 } }, align: Align { pow2: 0 }, mutability: Not, extra: () }, start: 0, end: 6 })
+                                         // mir::Constant
+                                         // + span: traits.rs:46:19: 46:27
+                                         // + literal: Const { ty: &str, val: Value(Slice { data: Allocation { bytes: [84, 114, 101, 110, 116, 111], relocations: Relocations(SortedMap { data: [] }), init_mask: InitMask { blocks: [63], len: Size { raw: 6 } }, align: Align { pow2: 0 }, mutability: Not, extra: () }, start: 0, end: 6 }) }
+        _13 = _14;                       // scope 1 at traits.rs:46:19: 46:27
+        _12 = <str as ToString>::to_string(move _13) -> [return: bb4, unwind: bb18]; // scope 1 at traits.rs:46:19: 46:39
+                                         // mir::Constant
+                                         // + span: traits.rs:46:28: 46:37
+                                         // + literal: Const { ty: for<'r> fn(&'r str) -> std::string::String {<str as std::string::ToString>::to_string}, val: Value(Scalar(<ZST>)) }
+    }
+
+    bb4: {
+        _17 = const "Author1";           // scope 1 at traits.rs:47:17: 47:26
+                                         // ty::Const
+                                         // + ty: &str
+                                         // + val: Value(Slice { data: Allocation { bytes: [65, 117, 116, 104, 111, 114, 49], relocations: Relocations(SortedMap { data: [] }), init_mask: InitMask { blocks: [127], len: Size { raw: 7 } }, align: Align { pow2: 0 }, mutability: Not, extra: () }, start: 0, end: 7 })
+                                         // mir::Constant
+                                         // + span: traits.rs:47:17: 47:26
+                                         // + literal: Const { ty: &str, val: Value(Slice { data: Allocation { bytes: [65, 117, 116, 104, 111, 114, 49], relocations: Relocations(SortedMap { data: [] }), init_mask: InitMask { blocks: [127], len: Size { raw: 7 } }, align: Align { pow2: 0 }, mutability: Not, extra: () }, start: 0, end: 7 }) }
+        _16 = _17;                       // scope 1 at traits.rs:47:17: 47:26
+        _15 = <str as ToString>::to_string(move _16) -> [return: bb5, unwind: bb17]; // scope 1 at traits.rs:47:17: 47:38
+                                         // mir::Constant
+                                         // + span: traits.rs:47:27: 47:36
+                                         // + literal: Const { ty: for<'r> fn(&'r str) -> std::string::String {<str as std::string::ToString>::to_string}, val: Value(Scalar(<ZST>)) }
+    }
+
+    bb5: {
+        _20 = const "there is a wasp in my attic"; // scope 1 at traits.rs:48:18: 48:47
+                                         // ty::Const
+                                         // + ty: &str
+                                         // + val: Value(Slice { data: Allocation { bytes: [116, 104, 101, 114, 101, 32, 105, 115, 32, 97, 32, 119, 97, 115, 112, 32, 105, 110, 32, 109, 121, 32, 97, 116, 116, 105, 99], relocations: Relocations(SortedMap { data: [] }), init_mask: InitMask { blocks: [134217727], len: Size { raw: 27 } }, align: Align { pow2: 0 }, mutability: Not, extra: () }, start: 0, end: 27 })
+                                         // mir::Constant
+                                         // + span: traits.rs:48:18: 48:47
+                                         // + literal: Const { ty: &str, val: Value(Slice { data: Allocation { bytes: [116, 104, 101, 114, 101, 32, 105, 115, 32, 97, 32, 119, 97, 115, 112, 32, 105, 110, 32, 109, 121, 32, 97, 116, 116, 105, 99], relocations: Relocations(SortedMap { data: [] }), init_mask: InitMask { blocks: [134217727], len: Size { raw: 27 } }, align: Align { pow2: 0 }, mutability: Not, extra: () }, start: 0, end: 27 }) }
+        _19 = _20;                       // scope 1 at traits.rs:48:18: 48:47
+        _18 = <str as ToString>::to_string(move _19) -> [return: bb6, unwind: bb16]; // scope 1 at traits.rs:48:18: 48:59
+                                         // mir::Constant
+                                         // + span: traits.rs:48:48: 48:57
+                                         // + literal: Const { ty: for<'r> fn(&'r str) -> std::string::String {<str as std::string::ToString>::to_string}, val: Value(Scalar(<ZST>)) }
+    }
+
+    bb6: {
+        (_8.0: std::string::String) = move _9; // scope 1 at traits.rs:44:13: 49:6
+        (_8.1: std::string::String) = move _12; // scope 1 at traits.rs:44:13: 49:6
+        (_8.2: std::string::String) = move _15; // scope 1 at traits.rs:44:13: 49:6
+        (_8.3: std::string::String) = move _18; // scope 1 at traits.rs:44:13: 49:6
+        _22 = &_1;                       // scope 2 at traits.rs:50:5: 50:6
+        _21 = <Tweet as Summary>::summarize(move _22) -> [return: bb7, unwind: bb15]; // scope 2 at traits.rs:50:5: 50:18
+                                         // mir::Constant
+                                         // + span: traits.rs:50:7: 50:16
+                                         // + literal: Const { ty: for<'r> fn(&'r Tweet) -> std::string::String {<Tweet as Summary>::summarize}, val: Value(Scalar(<ZST>)) }
+    }
+
+    bb7: {
+        drop(_21) -> [return: bb8, unwind: bb15]; // scope 2 at traits.rs:50:18: 50:19
+    }
+
+    bb8: {
+        _24 = &_8;                       // scope 2 at traits.rs:51:5: 51:6
+        _23 = <NewsArticle as Summary>::summarize(move _24) -> [return: bb9, unwind: bb15]; // scope 2 at traits.rs:51:5: 51:18
+                                         // mir::Constant
+                                         // + span: traits.rs:51:7: 51:16
+                                         // + literal: Const { ty: for<'r> fn(&'r NewsArticle) -> std::string::String {<NewsArticle as Summary>::summarize}, val: Value(Scalar(<ZST>)) }
+    }
+
+    bb9: {
+        drop(_23) -> [return: bb10, unwind: bb15]; // scope 2 at traits.rs:51:18: 51:19
+    }
+
+    bb10: {
+        _25 = <NewsArticle as Summary>::say_hello() -> [return: bb11, unwind: bb15]; // scope 2 at traits.rs:53:5: 53:29
+                                         // mir::Constant
+                                         // + span: traits.rs:53:5: 53:27
+                                         // + literal: Const { ty: fn() {<NewsArticle as Summary>::say_hello}, val: Value(Scalar(<ZST>)) }
+    }
+
+    bb11: {
+        _26 = <Tweet as Summary>::say_hello() -> [return: bb12, unwind: bb15]; // scope 2 at traits.rs:54:5: 54:23
+                                         // mir::Constant
+                                         // + span: traits.rs:54:5: 54:21
+                                         // + literal: Const { ty: fn() {<Tweet as Summary>::say_hello}, val: Value(Scalar(<ZST>)) }
+    }
+
+    bb12: {
+        drop(_8) -> [return: bb13, unwind: bb19]; // scope 1 at traits.rs:55:1: 55:2
+    }
+
+    bb13: {
+        drop(_1) -> bb14;                // scope 0 at traits.rs:55:1: 55:2
+    }
+
+    bb14: {
+        return;                          // scope 0 at traits.rs:55:2: 55:2
+    }
+
+    bb15 (cleanup): {
+        drop(_8) -> bb19;                // scope 1 at traits.rs:55:1: 55:2
+    }
+
+    bb16 (cleanup): {
+        drop(_15) -> bb17;               // scope 1 at traits.rs:49:5: 49:6
+    }
+
+    bb17 (cleanup): {
+        drop(_12) -> bb18;               // scope 1 at traits.rs:49:5: 49:6
+    }
+
+    bb18 (cleanup): {
+        drop(_9) -> bb19;                // scope 1 at traits.rs:49:5: 49:6
+    }
+
+    bb19 (cleanup): {
+        drop(_1) -> bb21;                // scope 0 at traits.rs:55:1: 55:2
+    }
+
+    bb20 (cleanup): {
+        drop(_2) -> bb21;                // scope 0 at traits.rs:43:5: 43:6
+    }
+
+    bb21 (cleanup): {
+        resume;                          // scope 0 at traits.rs:37:1: 55:2
+    }
+}
+
+fn <impl at traits.rs:15:1: 19:2>::summarize(_1: &NewsArticle) -> String {
+    debug self => _1;                    // in scope 0 at traits.rs:16:18: 16:23
+    let mut _0: std::string::String;     // return place in scope 0 at /home/sabin/cheri/rust/library/alloc/src/macros.rs:111:13: 111:16
+    let mut _2: std::fmt::Arguments;     // in scope 0 at /home/sabin/cheri/rust/library/alloc/src/macros.rs:111:39: 111:79
+    let mut _3: [std::fmt::ArgumentV1; 3]; // in scope 0 at /home/sabin/cheri/rust/library/alloc/src/macros.rs:111:39: 111:79
+    let mut _4: (&std::string::String, &std::string::String, &std::string::String); // in scope 0 at /home/sabin/cheri/rust/library/alloc/src/macros.rs:111:39: 111:79
+    let mut _5: &std::string::String;    // in scope 0 at traits.rs:17:35: 17:48
+    let mut _6: &std::string::String;    // in scope 0 at traits.rs:17:50: 17:61
+    let mut _7: &std::string::String;    // in scope 0 at traits.rs:17:63: 17:76
+    let _8: &std::string::String;        // in scope 0 at traits.rs:17:35: 17:48
+    let _9: &std::string::String;        // in scope 0 at traits.rs:17:50: 17:61
+    let _10: &std::string::String;       // in scope 0 at traits.rs:17:63: 17:76
+    let mut _11: std::fmt::ArgumentV1;   // in scope 0 at /home/sabin/cheri/rust/library/alloc/src/macros.rs:111:39: 111:79
+    let mut _12: &std::string::String;   // in scope 0 at traits.rs:17:35: 17:48
+    let mut _13: for<'r, 's, 't0> fn(&'r std::string::String, &'s mut std::fmt::Formatter<'t0>) -> std::result::Result<(), std::fmt::Error>; // in scope 0 at traits.rs:17:35: 17:48
+    let mut _14: std::fmt::ArgumentV1;   // in scope 0 at /home/sabin/cheri/rust/library/alloc/src/macros.rs:111:39: 111:79
+    let mut _15: &std::string::String;   // in scope 0 at traits.rs:17:50: 17:61
+    let mut _16: for<'r, 's, 't0> fn(&'r std::string::String, &'s mut std::fmt::Formatter<'t0>) -> std::result::Result<(), std::fmt::Error>; // in scope 0 at traits.rs:17:50: 17:61
+    let mut _17: std::fmt::ArgumentV1;   // in scope 0 at /home/sabin/cheri/rust/library/alloc/src/macros.rs:111:39: 111:79
+    let mut _18: &std::string::String;   // in scope 0 at traits.rs:17:63: 17:76
+    let mut _19: for<'r, 's, 't0> fn(&'r std::string::String, &'s mut std::fmt::Formatter<'t0>) -> std::result::Result<(), std::fmt::Error>; // in scope 0 at traits.rs:17:63: 17:76
+    let _20: &[std::fmt::ArgumentV1; 3]; // in scope 0 at /home/sabin/cheri/rust/library/alloc/src/macros.rs:111:39: 111:79
+    let mut _21: &[&str];                // in scope 0 at traits.rs:17:17: 17:33
+    let mut _22: &[&str; 4];             // in scope 0 at traits.rs:17:17: 17:33
+    let _23: &[&str; 4];                 // in scope 0 at traits.rs:17:17: 17:33
+    let mut _24: &[std::fmt::ArgumentV1]; // in scope 0 at /home/sabin/cheri/rust/library/alloc/src/macros.rs:111:39: 111:79
+    let mut _25: &[std::fmt::ArgumentV1; 3]; // in scope 0 at /home/sabin/cheri/rust/library/alloc/src/macros.rs:111:39: 111:79
+    scope 1 {
+        debug res => _0;                 // in scope 1 at /home/sabin/cheri/rust/library/alloc/src/macros.rs:111:13: 111:16
+    }
+    scope 2 {
+        debug arg0 => _8;                // in scope 2 at traits.rs:17:35: 17:48
+        debug arg1 => _9;                // in scope 2 at traits.rs:17:50: 17:61
+        debug arg2 => _10;               // in scope 2 at traits.rs:17:63: 17:76
+    }
+    scope 3 {
+        debug args => _20;               // in scope 3 at /home/sabin/cheri/rust/library/alloc/src/macros.rs:111:39: 111:79
+        scope 4 {
+            let mut _26: &[&str; 4];     // in scope 4 at traits.rs:17:17: 17:33
+        }
+    }
+
+    bb0: {
+        _5 = &((*_1).0: std::string::String); // scope 0 at traits.rs:17:35: 17:48
+        _6 = &((*_1).2: std::string::String); // scope 0 at traits.rs:17:50: 17:61
+        _7 = &((*_1).1: std::string::String); // scope 0 at traits.rs:17:63: 17:76
+        (_4.0: &std::string::String) = move _5; // scope 0 at /home/sabin/cheri/rust/library/alloc/src/macros.rs:111:39: 111:79
+        (_4.1: &std::string::String) = move _6; // scope 0 at /home/sabin/cheri/rust/library/alloc/src/macros.rs:111:39: 111:79
+        (_4.2: &std::string::String) = move _7; // scope 0 at /home/sabin/cheri/rust/library/alloc/src/macros.rs:111:39: 111:79
+        _8 = (_4.0: &std::string::String); // scope 0 at traits.rs:17:35: 17:48
+        _9 = (_4.1: &std::string::String); // scope 0 at traits.rs:17:50: 17:61
+        _10 = (_4.2: &std::string::String); // scope 0 at traits.rs:17:63: 17:76
+        _12 = _8;                        // scope 2 at traits.rs:17:35: 17:48
+        _13 = <String as std::fmt::Display>::fmt as for<'r, 's, 't0> fn(&'r std::string::String, &'s mut std::fmt::Formatter<'t0>) -> std::result::Result<(), std::fmt::Error> (Pointer(ReifyFnPointer)); // scope 2 at traits.rs:17:35: 17:48
+                                         // mir::Constant
+                                         // + span: traits.rs:17:35: 17:48
+                                         // + literal: Const { ty: for<'r, 's, 't0> fn(&'r std::string::String, &'s mut std::fmt::Formatter<'t0>) -> std::result::Result<(), std::fmt::Error> {<std::string::String as std::fmt::Display>::fmt}, val: Value(Scalar(<ZST>)) }
+        _11 = ArgumentV1::new::<String>(move _12, move _13) -> bb1; // scope 2 at /home/sabin/cheri/rust/library/alloc/src/macros.rs:111:39: 111:79
+                                         // mir::Constant
+                                         // + span: /home/sabin/cheri/rust/library/alloc/src/macros.rs:111:39: 111:79
+                                         // + user_ty: UserType(0)
+                                         // + literal: Const { ty: for<'b> fn(&'b std::string::String, for<'r, 's, 't0> fn(&'r std::string::String, &'s mut std::fmt::Formatter<'t0>) -> std::result::Result<(), std::fmt::Error>) -> std::fmt::ArgumentV1<'b> {std::fmt::ArgumentV1::new::<std::string::String>}, val: Value(Scalar(<ZST>)) }
+    }
+
+    bb1: {
+        _15 = _9;                        // scope 2 at traits.rs:17:50: 17:61
+        _16 = <String as std::fmt::Display>::fmt as for<'r, 's, 't0> fn(&'r std::string::String, &'s mut std::fmt::Formatter<'t0>) -> std::result::Result<(), std::fmt::Error> (Pointer(ReifyFnPointer)); // scope 2 at traits.rs:17:50: 17:61
+                                         // mir::Constant
+                                         // + span: traits.rs:17:50: 17:61
+                                         // + literal: Const { ty: for<'r, 's, 't0> fn(&'r std::string::String, &'s mut std::fmt::Formatter<'t0>) -> std::result::Result<(), std::fmt::Error> {<std::string::String as std::fmt::Display>::fmt}, val: Value(Scalar(<ZST>)) }
+        _14 = ArgumentV1::new::<String>(move _15, move _16) -> bb2; // scope 2 at /home/sabin/cheri/rust/library/alloc/src/macros.rs:111:39: 111:79
+                                         // mir::Constant
+                                         // + span: /home/sabin/cheri/rust/library/alloc/src/macros.rs:111:39: 111:79
+                                         // + user_ty: UserType(1)
+                                         // + literal: Const { ty: for<'b> fn(&'b std::string::String, for<'r, 's, 't0> fn(&'r std::string::String, &'s mut std::fmt::Formatter<'t0>) -> std::result::Result<(), std::fmt::Error>) -> std::fmt::ArgumentV1<'b> {std::fmt::ArgumentV1::new::<std::string::String>}, val: Value(Scalar(<ZST>)) }
+    }
+
+    bb2: {
+        _18 = _10;                       // scope 2 at traits.rs:17:63: 17:76
+        _19 = <String as std::fmt::Display>::fmt as for<'r, 's, 't0> fn(&'r std::string::String, &'s mut std::fmt::Formatter<'t0>) -> std::result::Result<(), std::fmt::Error> (Pointer(ReifyFnPointer)); // scope 2 at traits.rs:17:63: 17:76
+                                         // mir::Constant
+                                         // + span: traits.rs:17:63: 17:76
+                                         // + literal: Const { ty: for<'r, 's, 't0> fn(&'r std::string::String, &'s mut std::fmt::Formatter<'t0>) -> std::result::Result<(), std::fmt::Error> {<std::string::String as std::fmt::Display>::fmt}, val: Value(Scalar(<ZST>)) }
+        _17 = ArgumentV1::new::<String>(move _18, move _19) -> bb3; // scope 2 at /home/sabin/cheri/rust/library/alloc/src/macros.rs:111:39: 111:79
+                                         // mir::Constant
+                                         // + span: /home/sabin/cheri/rust/library/alloc/src/macros.rs:111:39: 111:79
+                                         // + user_ty: UserType(2)
+                                         // + literal: Const { ty: for<'b> fn(&'b std::string::String, for<'r, 's, 't0> fn(&'r std::string::String, &'s mut std::fmt::Formatter<'t0>) -> std::result::Result<(), std::fmt::Error>) -> std::fmt::ArgumentV1<'b> {std::fmt::ArgumentV1::new::<std::string::String>}, val: Value(Scalar(<ZST>)) }
+    }
+
+    bb3: {
+        _3 = [move _11, move _14, move _17]; // scope 2 at /home/sabin/cheri/rust/library/alloc/src/macros.rs:111:39: 111:79
+        _20 = &_3;                       // scope 0 at /home/sabin/cheri/rust/library/alloc/src/macros.rs:111:39: 111:79
+        _26 = const <NewsArticle as Summary>::summarize::promoted[0]; // scope 4 at traits.rs:17:17: 17:33
+                                         // ty::Const
+                                         // + ty: &[&str; 4]
+                                         // + val: Unevaluated(<NewsArticle as Summary>::summarize, [], Some(promoted[0]))
+                                         // mir::Constant
+                                         // + span: traits.rs:17:17: 17:33
+                                         // + literal: Const { ty: &[&str; 4], val: Unevaluated(Unevaluated { def: WithOptConstParam { did: DefId(0:12 ~ traits[fcf6]::{impl#0}::summarize), const_param_did: None }, substs_: Some([]), promoted: Some(promoted[0]) }) }
+        _23 = _26;                       // scope 4 at traits.rs:17:17: 17:33
+        _22 = _23;                       // scope 4 at traits.rs:17:17: 17:33
+        _21 = move _22 as &[&str] (Pointer(Unsize)); // scope 4 at traits.rs:17:17: 17:33
+        _25 = _20;                       // scope 4 at /home/sabin/cheri/rust/library/alloc/src/macros.rs:111:39: 111:79
+        _24 = move _25 as &[std::fmt::ArgumentV1] (Pointer(Unsize)); // scope 4 at /home/sabin/cheri/rust/library/alloc/src/macros.rs:111:39: 111:79
+        _2 = Arguments::new_v1(move _21, move _24) -> bb4; // scope 4 at /home/sabin/cheri/rust/library/alloc/src/macros.rs:111:39: 111:79
+                                         // mir::Constant
+                                         // + span: /home/sabin/cheri/rust/library/alloc/src/macros.rs:111:39: 111:79
+                                         // + user_ty: UserType(3)
+                                         // + literal: Const { ty: unsafe fn(&[&'static str], &[std::fmt::ArgumentV1]) -> std::fmt::Arguments {std::fmt::Arguments::new_v1}, val: Value(Scalar(<ZST>)) }
+    }
+
+    bb4: {
+        _0 = format(move _2) -> bb5;     // scope 0 at /home/sabin/cheri/rust/library/alloc/src/macros.rs:111:19: 111:80
+                                         // mir::Constant
+                                         // + span: /home/sabin/cheri/rust/library/alloc/src/macros.rs:111:19: 111:38
+                                         // + literal: Const { ty: for<'r> fn(std::fmt::Arguments<'r>) -> std::string::String {std::fmt::format}, val: Value(Scalar(<ZST>)) }
+    }
+
+    bb5: {
+        return;                          // scope 0 at traits.rs:18:6: 18:6
+    }
+}
+
+promoted[0] in <impl at traits.rs:15:1: 19:2>::summarize: &[&str; 4] = {
+    let mut _0: &[&str; 4];              // return place in scope 0 at traits.rs:17:17: 17:33
+    let mut _1: [&str; 4];               // in scope 0 at traits.rs:17:17: 17:33
+
+    bb0: {
+        _1 = [const "", const ", by ", const " (", const ")"]; // scope 0 at traits.rs:17:17: 17:33
+                                         // ty::Const
+                                         // + ty: &str
+                                         // + val: Value(Slice { data: Allocation { bytes: [], relocations: Relocations(SortedMap { data: [] }), init_mask: InitMask { blocks: [], len: Size { raw: 0 } }, align: Align { pow2: 0 }, mutability: Not, extra: () }, start: 0, end: 0 })
+                                         // mir::Constant
+                                         // + span: traits.rs:17:17: 17:33
+                                         // + literal: Const { ty: &str, val: Value(Slice { data: Allocation { bytes: [], relocations: Relocations(SortedMap { data: [] }), init_mask: InitMask { blocks: [], len: Size { raw: 0 } }, align: Align { pow2: 0 }, mutability: Not, extra: () }, start: 0, end: 0 }) }
+                                         // ty::Const
+                                         // + ty: &str
+                                         // + val: Value(Slice { data: Allocation { bytes: [44, 32, 98, 121, 32], relocations: Relocations(SortedMap { data: [] }), init_mask: InitMask { blocks: [31], len: Size { raw: 5 } }, align: Align { pow2: 0 }, mutability: Not, extra: () }, start: 0, end: 5 })
+                                         // mir::Constant
+                                         // + span: traits.rs:17:17: 17:33
+                                         // + literal: Const { ty: &str, val: Value(Slice { data: Allocation { bytes: [44, 32, 98, 121, 32], relocations: Relocations(SortedMap { data: [] }), init_mask: InitMask { blocks: [31], len: Size { raw: 5 } }, align: Align { pow2: 0 }, mutability: Not, extra: () }, start: 0, end: 5 }) }
+                                         // ty::Const
+                                         // + ty: &str
+                                         // + val: Value(Slice { data: Allocation { bytes: [32, 40], relocations: Relocations(SortedMap { data: [] }), init_mask: InitMask { blocks: [3], len: Size { raw: 2 } }, align: Align { pow2: 0 }, mutability: Not, extra: () }, start: 0, end: 2 })
+                                         // mir::Constant
+                                         // + span: traits.rs:17:17: 17:33
+                                         // + literal: Const { ty: &str, val: Value(Slice { data: Allocation { bytes: [32, 40], relocations: Relocations(SortedMap { data: [] }), init_mask: InitMask { blocks: [3], len: Size { raw: 2 } }, align: Align { pow2: 0 }, mutability: Not, extra: () }, start: 0, end: 2 }) }
+                                         // ty::Const
+                                         // + ty: &str
+                                         // + val: Value(Slice { data: Allocation { bytes: [41], relocations: Relocations(SortedMap { data: [] }), init_mask: InitMask { blocks: [1], len: Size { raw: 1 } }, align: Align { pow2: 0 }, mutability: Not, extra: () }, start: 0, end: 1 })
+                                         // mir::Constant
+                                         // + span: traits.rs:17:17: 17:33
+                                         // + literal: Const { ty: &str, val: Value(Slice { data: Allocation { bytes: [41], relocations: Relocations(SortedMap { data: [] }), init_mask: InitMask { blocks: [1], len: Size { raw: 1 } }, align: Align { pow2: 0 }, mutability: Not, extra: () }, start: 0, end: 1 }) }
+        _0 = &_1;                        // scope 0 at traits.rs:17:17: 17:33
+        return;                          // scope 0 at traits.rs:17:17: 17:33
+    }
+}
+
+fn <impl at traits.rs:28:1: 35:2>::say_hello() -> () {
+    let mut _0: ();                      // return place in scope 0 at traits.rs:32:20: 32:20
+    let _1: ();                          // in scope 0 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:9: 97:62
+    let mut _2: std::fmt::Arguments;     // in scope 0 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+    let _3: &[std::fmt::ArgumentV1; 0];  // in scope 0 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+    let mut _4: &[&str];                 // in scope 0 at traits.rs:33:18: 33:26
+    let mut _5: &[&str; 1];              // in scope 0 at traits.rs:33:18: 33:26
+    let _6: &[&str; 1];                  // in scope 0 at traits.rs:33:18: 33:26
+    let mut _7: &[std::fmt::ArgumentV1]; // in scope 0 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+    let mut _8: &[std::fmt::ArgumentV1; 0]; // in scope 0 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+    let mut _10: &[std::fmt::ArgumentV1; 0]; // in scope 0 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+    scope 1 {
+        debug args => _3;                // in scope 1 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+        scope 2 {
+            let mut _9: &[&str; 1];      // in scope 2 at traits.rs:33:18: 33:26
+        }
+    }
+
+    bb0: {
+        _10 = const <Tweet as Summary>::say_hello::promoted[1]; // scope 0 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+                                         // ty::Const
+                                         // + ty: &[std::fmt::ArgumentV1; 0]
+                                         // + val: Unevaluated(<Tweet as Summary>::say_hello, [], Some(promoted[1]))
+                                         // mir::Constant
+                                         // + span: /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+                                         // + literal: Const { ty: &[std::fmt::ArgumentV1; 0], val: Unevaluated(Unevaluated { def: WithOptConstParam { did: DefId(0:20 ~ traits[fcf6]::{impl#1}::say_hello), const_param_did: None }, substs_: Some([]), promoted: Some(promoted[1]) }) }
+        _3 = _10;                        // scope 0 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+        _9 = const <Tweet as Summary>::say_hello::promoted[0]; // scope 2 at traits.rs:33:18: 33:26
+                                         // ty::Const
+                                         // + ty: &[&str; 1]
+                                         // + val: Unevaluated(<Tweet as Summary>::say_hello, [], Some(promoted[0]))
+                                         // mir::Constant
+                                         // + span: traits.rs:33:18: 33:26
+                                         // + literal: Const { ty: &[&str; 1], val: Unevaluated(Unevaluated { def: WithOptConstParam { did: DefId(0:20 ~ traits[fcf6]::{impl#1}::say_hello), const_param_did: None }, substs_: Some([]), promoted: Some(promoted[0]) }) }
+        _6 = _9;                         // scope 2 at traits.rs:33:18: 33:26
+        _5 = _6;                         // scope 2 at traits.rs:33:18: 33:26
+        _4 = move _5 as &[&str] (Pointer(Unsize)); // scope 2 at traits.rs:33:18: 33:26
+        _8 = _3;                         // scope 2 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+        _7 = move _8 as &[std::fmt::ArgumentV1] (Pointer(Unsize)); // scope 2 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+        _2 = Arguments::new_v1(move _4, move _7) -> bb1; // scope 2 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+                                         // mir::Constant
+                                         // + span: /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+                                         // + user_ty: UserType(0)
+                                         // + literal: Const { ty: unsafe fn(&[&'static str], &[std::fmt::ArgumentV1]) -> std::fmt::Arguments {std::fmt::Arguments::new_v1}, val: Value(Scalar(<ZST>)) }
+    }
+
+    bb1: {
+        _1 = _print(move _2) -> bb2;     // scope 0 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:9: 97:62
+                                         // mir::Constant
+                                         // + span: /home/sabin/cheri/rust/library/std/src/macros.rs:97:9: 97:27
+                                         // + literal: Const { ty: for<'r> fn(std::fmt::Arguments<'r>) {std::io::_print}, val: Value(Scalar(<ZST>)) }
+    }
+
+    bb2: {
+        return;                          // scope 0 at traits.rs:34:6: 34:6
+    }
+}
+
+promoted[0] in <impl at traits.rs:28:1: 35:2>::say_hello: &[&str; 1] = {
+    let mut _0: &[&str; 1];              // return place in scope 0 at traits.rs:33:18: 33:26
+    let mut _1: [&str; 1];               // in scope 0 at traits.rs:33:18: 33:26
+
+    bb0: {
+        _1 = [const "Yello!\n"];         // scope 0 at traits.rs:33:18: 33:26
+                                         // ty::Const
+                                         // + ty: &str
+                                         // + val: Value(Slice { data: Allocation { bytes: [89, 101, 108, 108, 111, 33, 10], relocations: Relocations(SortedMap { data: [] }), init_mask: InitMask { blocks: [127], len: Size { raw: 7 } }, align: Align { pow2: 0 }, mutability: Not, extra: () }, start: 0, end: 7 })
+                                         // mir::Constant
+                                         // + span: traits.rs:33:18: 33:26
+                                         // + literal: Const { ty: &str, val: Value(Slice { data: Allocation { bytes: [89, 101, 108, 108, 111, 33, 10], relocations: Relocations(SortedMap { data: [] }), init_mask: InitMask { blocks: [127], len: Size { raw: 7 } }, align: Align { pow2: 0 }, mutability: Not, extra: () }, start: 0, end: 7 }) }
+        _0 = &_1;                        // scope 0 at traits.rs:33:18: 33:26
+        return;                          // scope 0 at traits.rs:33:18: 33:26
+    }
+}
+
+promoted[1] in <impl at traits.rs:28:1: 35:2>::say_hello: &[ArgumentV1; 0] = {
+    let mut _0: &[std::fmt::ArgumentV1; 0]; // return place in scope 0 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+    let mut _1: [std::fmt::ArgumentV1; 0]; // in scope 0 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+
+    bb0: {
+        _1 = [];                         // scope 0 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+        _0 = &_1;                        // scope 0 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+        return;                          // scope 0 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+    }
+}
+
+fn <impl at traits.rs:28:1: 35:2>::summarize(_1: &Tweet) -> String {
+    debug self => _1;                    // in scope 0 at traits.rs:29:18: 29:23
+    let mut _0: std::string::String;     // return place in scope 0 at /home/sabin/cheri/rust/library/alloc/src/macros.rs:111:13: 111:16
+    let mut _2: std::fmt::Arguments;     // in scope 0 at /home/sabin/cheri/rust/library/alloc/src/macros.rs:111:39: 111:79
+    let mut _3: [std::fmt::ArgumentV1; 2]; // in scope 0 at /home/sabin/cheri/rust/library/alloc/src/macros.rs:111:39: 111:79
+    let mut _4: (&std::string::String, &std::string::String); // in scope 0 at /home/sabin/cheri/rust/library/alloc/src/macros.rs:111:39: 111:79
+    let mut _5: &std::string::String;    // in scope 0 at traits.rs:30:27: 30:40
+    let mut _6: &std::string::String;    // in scope 0 at traits.rs:30:42: 30:54
+    let _7: &std::string::String;        // in scope 0 at traits.rs:30:27: 30:40
+    let _8: &std::string::String;        // in scope 0 at traits.rs:30:42: 30:54
+    let mut _9: std::fmt::ArgumentV1;    // in scope 0 at /home/sabin/cheri/rust/library/alloc/src/macros.rs:111:39: 111:79
+    let mut _10: &std::string::String;   // in scope 0 at traits.rs:30:27: 30:40
+    let mut _11: for<'r, 's, 't0> fn(&'r std::string::String, &'s mut std::fmt::Formatter<'t0>) -> std::result::Result<(), std::fmt::Error>; // in scope 0 at traits.rs:30:27: 30:40
+    let mut _12: std::fmt::ArgumentV1;   // in scope 0 at /home/sabin/cheri/rust/library/alloc/src/macros.rs:111:39: 111:79
+    let mut _13: &std::string::String;   // in scope 0 at traits.rs:30:42: 30:54
+    let mut _14: for<'r, 's, 't0> fn(&'r std::string::String, &'s mut std::fmt::Formatter<'t0>) -> std::result::Result<(), std::fmt::Error>; // in scope 0 at traits.rs:30:42: 30:54
+    let _15: &[std::fmt::ArgumentV1; 2]; // in scope 0 at /home/sabin/cheri/rust/library/alloc/src/macros.rs:111:39: 111:79
+    let mut _16: &[&str];                // in scope 0 at traits.rs:30:17: 30:25
+    let mut _17: &[&str; 2];             // in scope 0 at traits.rs:30:17: 30:25
+    let _18: &[&str; 2];                 // in scope 0 at traits.rs:30:17: 30:25
+    let mut _19: &[std::fmt::ArgumentV1]; // in scope 0 at /home/sabin/cheri/rust/library/alloc/src/macros.rs:111:39: 111:79
+    let mut _20: &[std::fmt::ArgumentV1; 2]; // in scope 0 at /home/sabin/cheri/rust/library/alloc/src/macros.rs:111:39: 111:79
+    scope 1 {
+        debug res => _0;                 // in scope 1 at /home/sabin/cheri/rust/library/alloc/src/macros.rs:111:13: 111:16
+    }
+    scope 2 {
+        debug arg0 => _7;                // in scope 2 at traits.rs:30:27: 30:40
+        debug arg1 => _8;                // in scope 2 at traits.rs:30:42: 30:54
+    }
+    scope 3 {
+        debug args => _15;               // in scope 3 at /home/sabin/cheri/rust/library/alloc/src/macros.rs:111:39: 111:79
+        scope 4 {
+            let mut _21: &[&str; 2];     // in scope 4 at traits.rs:30:17: 30:25
+        }
+    }
+
+    bb0: {
+        _5 = &((*_1).0: std::string::String); // scope 0 at traits.rs:30:27: 30:40
+        _6 = &((*_1).1: std::string::String); // scope 0 at traits.rs:30:42: 30:54
+        (_4.0: &std::string::String) = move _5; // scope 0 at /home/sabin/cheri/rust/library/alloc/src/macros.rs:111:39: 111:79
+        (_4.1: &std::string::String) = move _6; // scope 0 at /home/sabin/cheri/rust/library/alloc/src/macros.rs:111:39: 111:79
+        _7 = (_4.0: &std::string::String); // scope 0 at traits.rs:30:27: 30:40
+        _8 = (_4.1: &std::string::String); // scope 0 at traits.rs:30:42: 30:54
+        _10 = _7;                        // scope 2 at traits.rs:30:27: 30:40
+        _11 = <String as std::fmt::Display>::fmt as for<'r, 's, 't0> fn(&'r std::string::String, &'s mut std::fmt::Formatter<'t0>) -> std::result::Result<(), std::fmt::Error> (Pointer(ReifyFnPointer)); // scope 2 at traits.rs:30:27: 30:40
+                                         // mir::Constant
+                                         // + span: traits.rs:30:27: 30:40
+                                         // + literal: Const { ty: for<'r, 's, 't0> fn(&'r std::string::String, &'s mut std::fmt::Formatter<'t0>) -> std::result::Result<(), std::fmt::Error> {<std::string::String as std::fmt::Display>::fmt}, val: Value(Scalar(<ZST>)) }
+        _9 = ArgumentV1::new::<String>(move _10, move _11) -> bb1; // scope 2 at /home/sabin/cheri/rust/library/alloc/src/macros.rs:111:39: 111:79
+                                         // mir::Constant
+                                         // + span: /home/sabin/cheri/rust/library/alloc/src/macros.rs:111:39: 111:79
+                                         // + user_ty: UserType(0)
+                                         // + literal: Const { ty: for<'b> fn(&'b std::string::String, for<'r, 's, 't0> fn(&'r std::string::String, &'s mut std::fmt::Formatter<'t0>) -> std::result::Result<(), std::fmt::Error>) -> std::fmt::ArgumentV1<'b> {std::fmt::ArgumentV1::new::<std::string::String>}, val: Value(Scalar(<ZST>)) }
+    }
+
+    bb1: {
+        _13 = _8;                        // scope 2 at traits.rs:30:42: 30:54
+        _14 = <String as std::fmt::Display>::fmt as for<'r, 's, 't0> fn(&'r std::string::String, &'s mut std::fmt::Formatter<'t0>) -> std::result::Result<(), std::fmt::Error> (Pointer(ReifyFnPointer)); // scope 2 at traits.rs:30:42: 30:54
+                                         // mir::Constant
+                                         // + span: traits.rs:30:42: 30:54
+                                         // + literal: Const { ty: for<'r, 's, 't0> fn(&'r std::string::String, &'s mut std::fmt::Formatter<'t0>) -> std::result::Result<(), std::fmt::Error> {<std::string::String as std::fmt::Display>::fmt}, val: Value(Scalar(<ZST>)) }
+        _12 = ArgumentV1::new::<String>(move _13, move _14) -> bb2; // scope 2 at /home/sabin/cheri/rust/library/alloc/src/macros.rs:111:39: 111:79
+                                         // mir::Constant
+                                         // + span: /home/sabin/cheri/rust/library/alloc/src/macros.rs:111:39: 111:79
+                                         // + user_ty: UserType(1)
+                                         // + literal: Const { ty: for<'b> fn(&'b std::string::String, for<'r, 's, 't0> fn(&'r std::string::String, &'s mut std::fmt::Formatter<'t0>) -> std::result::Result<(), std::fmt::Error>) -> std::fmt::ArgumentV1<'b> {std::fmt::ArgumentV1::new::<std::string::String>}, val: Value(Scalar(<ZST>)) }
+    }
+
+    bb2: {
+        _3 = [move _9, move _12];        // scope 2 at /home/sabin/cheri/rust/library/alloc/src/macros.rs:111:39: 111:79
+        _15 = &_3;                       // scope 0 at /home/sabin/cheri/rust/library/alloc/src/macros.rs:111:39: 111:79
+        _21 = const <Tweet as Summary>::summarize::promoted[0]; // scope 4 at traits.rs:30:17: 30:25
+                                         // ty::Const
+                                         // + ty: &[&str; 2]
+                                         // + val: Unevaluated(<Tweet as Summary>::summarize, [], Some(promoted[0]))
+                                         // mir::Constant
+                                         // + span: traits.rs:30:17: 30:25
+                                         // + literal: Const { ty: &[&str; 2], val: Unevaluated(Unevaluated { def: WithOptConstParam { did: DefId(0:19 ~ traits[fcf6]::{impl#1}::summarize), const_param_did: None }, substs_: Some([]), promoted: Some(promoted[0]) }) }
+        _18 = _21;                       // scope 4 at traits.rs:30:17: 30:25
+        _17 = _18;                       // scope 4 at traits.rs:30:17: 30:25
+        _16 = move _17 as &[&str] (Pointer(Unsize)); // scope 4 at traits.rs:30:17: 30:25
+        _20 = _15;                       // scope 4 at /home/sabin/cheri/rust/library/alloc/src/macros.rs:111:39: 111:79
+        _19 = move _20 as &[std::fmt::ArgumentV1] (Pointer(Unsize)); // scope 4 at /home/sabin/cheri/rust/library/alloc/src/macros.rs:111:39: 111:79
+        _2 = Arguments::new_v1(move _16, move _19) -> bb3; // scope 4 at /home/sabin/cheri/rust/library/alloc/src/macros.rs:111:39: 111:79
+                                         // mir::Constant
+                                         // + span: /home/sabin/cheri/rust/library/alloc/src/macros.rs:111:39: 111:79
+                                         // + user_ty: UserType(2)
+                                         // + literal: Const { ty: unsafe fn(&[&'static str], &[std::fmt::ArgumentV1]) -> std::fmt::Arguments {std::fmt::Arguments::new_v1}, val: Value(Scalar(<ZST>)) }
+    }
+
+    bb3: {
+        _0 = format(move _2) -> bb4;     // scope 0 at /home/sabin/cheri/rust/library/alloc/src/macros.rs:111:19: 111:80
+                                         // mir::Constant
+                                         // + span: /home/sabin/cheri/rust/library/alloc/src/macros.rs:111:19: 111:38
+                                         // + literal: Const { ty: for<'r> fn(std::fmt::Arguments<'r>) -> std::string::String {std::fmt::format}, val: Value(Scalar(<ZST>)) }
+    }
+
+    bb4: {
+        return;                          // scope 0 at traits.rs:31:6: 31:6
+    }
+}
+
+promoted[0] in <impl at traits.rs:28:1: 35:2>::summarize: &[&str; 2] = {
+    let mut _0: &[&str; 2];              // return place in scope 0 at traits.rs:30:17: 30:25
+    let mut _1: [&str; 2];               // in scope 0 at traits.rs:30:17: 30:25
+
+    bb0: {
+        _1 = [const "", const ": "];     // scope 0 at traits.rs:30:17: 30:25
+                                         // ty::Const
+                                         // + ty: &str
+                                         // + val: Value(Slice { data: Allocation { bytes: [], relocations: Relocations(SortedMap { data: [] }), init_mask: InitMask { blocks: [], len: Size { raw: 0 } }, align: Align { pow2: 0 }, mutability: Not, extra: () }, start: 0, end: 0 })
+                                         // mir::Constant
+                                         // + span: traits.rs:30:17: 30:25
+                                         // + literal: Const { ty: &str, val: Value(Slice { data: Allocation { bytes: [], relocations: Relocations(SortedMap { data: [] }), init_mask: InitMask { blocks: [], len: Size { raw: 0 } }, align: Align { pow2: 0 }, mutability: Not, extra: () }, start: 0, end: 0 }) }
+                                         // ty::Const
+                                         // + ty: &str
+                                         // + val: Value(Slice { data: Allocation { bytes: [58, 32], relocations: Relocations(SortedMap { data: [] }), init_mask: InitMask { blocks: [3], len: Size { raw: 2 } }, align: Align { pow2: 0 }, mutability: Not, extra: () }, start: 0, end: 2 })
+                                         // mir::Constant
+                                         // + span: traits.rs:30:17: 30:25
+                                         // + literal: Const { ty: &str, val: Value(Slice { data: Allocation { bytes: [58, 32], relocations: Relocations(SortedMap { data: [] }), init_mask: InitMask { blocks: [3], len: Size { raw: 2 } }, align: Align { pow2: 0 }, mutability: Not, extra: () }, start: 0, end: 2 }) }
+        _0 = &_1;                        // scope 0 at traits.rs:30:17: 30:25
+        return;                          // scope 0 at traits.rs:30:17: 30:25
+    }
+}

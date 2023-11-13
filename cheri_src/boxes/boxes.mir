@@ -1,0 +1,309 @@
+// WARNING: This output format is intended for human consumers only
+// and is subject to change without notice. Knock yourself out.
+fn main() -> () {
+    let mut _0: ();                      // return place in scope 0 at boxes.rs:1:10: 1:10
+    let _1: std::boxed::Box<i32>;        // in scope 0 at boxes.rs:3:9: 3:10
+    let _2: ();                          // in scope 0 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:9: 97:62
+    let mut _3: std::fmt::Arguments;     // in scope 0 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+    let mut _4: [std::fmt::ArgumentV1; 1]; // in scope 0 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+    let mut _5: (&i32,);                 // in scope 0 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+    let mut _6: &i32;                    // in scope 0 at boxes.rs:5:32: 5:34
+    let mut _8: std::fmt::ArgumentV1;    // in scope 0 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+    let mut _9: &i32;                    // in scope 0 at boxes.rs:5:32: 5:34
+    let mut _10: for<'r, 's, 't0> fn(&'r i32, &'s mut std::fmt::Formatter<'t0>) -> std::result::Result<(), std::fmt::Error>; // in scope 0 at boxes.rs:5:32: 5:34
+    let mut _12: &[&str];                // in scope 0 at boxes.rs:5:14: 5:30
+    let mut _13: &[&str; 2];             // in scope 0 at boxes.rs:5:14: 5:30
+    let _14: &[&str; 2];                 // in scope 0 at boxes.rs:5:14: 5:30
+    let mut _15: &[std::fmt::ArgumentV1]; // in scope 0 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+    let mut _16: &[std::fmt::ArgumentV1; 1]; // in scope 0 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+    let _17: ();                         // in scope 0 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:9: 97:62
+    let mut _18: std::fmt::Arguments;    // in scope 0 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+    let mut _19: [std::fmt::ArgumentV1; 1]; // in scope 0 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+    let mut _20: (&std::boxed::Box<i32>,); // in scope 0 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+    let mut _21: &std::boxed::Box<i32>;  // in scope 0 at boxes.rs:7:34: 7:35
+    let mut _23: std::fmt::ArgumentV1;   // in scope 0 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+    let mut _24: &std::boxed::Box<i32>;  // in scope 0 at boxes.rs:7:34: 7:35
+    let mut _25: for<'r, 's, 't0> fn(&'r std::boxed::Box<i32>, &'s mut std::fmt::Formatter<'t0>) -> std::result::Result<(), std::fmt::Error>; // in scope 0 at boxes.rs:7:34: 7:35
+    let mut _27: &[&str];                // in scope 0 at boxes.rs:7:14: 7:32
+    let mut _28: &[&str; 2];             // in scope 0 at boxes.rs:7:14: 7:32
+    let _29: &[&str; 2];                 // in scope 0 at boxes.rs:7:14: 7:32
+    let mut _30: &[std::fmt::ArgumentV1]; // in scope 0 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+    let mut _31: &[std::fmt::ArgumentV1; 1]; // in scope 0 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+    let _32: ();                         // in scope 0 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:9: 97:62
+    let mut _33: std::fmt::Arguments;    // in scope 0 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+    let mut _34: [std::fmt::ArgumentV1; 1]; // in scope 0 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+    let mut _35: (&std::boxed::Box<i32>,); // in scope 0 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+    let mut _36: &std::boxed::Box<i32>;  // in scope 0 at boxes.rs:9:41: 9:42
+    let mut _38: std::fmt::ArgumentV1;   // in scope 0 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+    let mut _39: &std::boxed::Box<i32>;  // in scope 0 at boxes.rs:9:41: 9:42
+    let mut _40: for<'r, 's, 't0> fn(&'r std::boxed::Box<i32>, &'s mut std::fmt::Formatter<'t0>) -> std::result::Result<(), std::fmt::Error>; // in scope 0 at boxes.rs:9:41: 9:42
+    let mut _42: &[&str];                // in scope 0 at boxes.rs:9:14: 9:39
+    let mut _43: &[&str; 2];             // in scope 0 at boxes.rs:9:14: 9:39
+    let _44: &[&str; 2];                 // in scope 0 at boxes.rs:9:14: 9:39
+    let mut _45: &[std::fmt::ArgumentV1]; // in scope 0 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+    let mut _46: &[std::fmt::ArgumentV1; 1]; // in scope 0 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+    scope 1 {
+        debug b => _1;                   // in scope 1 at boxes.rs:3:9: 3:10
+        let _7: &i32;                    // in scope 1 at boxes.rs:5:32: 5:34
+        let _11: &[std::fmt::ArgumentV1; 1]; // in scope 1 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+        let _22: &std::boxed::Box<i32>;  // in scope 1 at boxes.rs:7:34: 7:35
+        let _26: &[std::fmt::ArgumentV1; 1]; // in scope 1 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+        let _37: &std::boxed::Box<i32>;  // in scope 1 at boxes.rs:9:41: 9:42
+        let _41: &[std::fmt::ArgumentV1; 1]; // in scope 1 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+        scope 2 {
+            debug arg0 => _7;            // in scope 2 at boxes.rs:5:32: 5:34
+        }
+        scope 3 {
+            debug args => _11;           // in scope 3 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+            scope 4 {
+                let mut _49: &[&str; 2]; // in scope 4 at boxes.rs:5:14: 5:30
+            }
+        }
+        scope 5 {
+            debug arg0 => _22;           // in scope 5 at boxes.rs:7:34: 7:35
+        }
+        scope 6 {
+            debug args => _26;           // in scope 6 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+            scope 7 {
+                let mut _48: &[&str; 2]; // in scope 7 at boxes.rs:7:14: 7:32
+            }
+        }
+        scope 8 {
+            debug arg0 => _37;           // in scope 8 at boxes.rs:9:41: 9:42
+        }
+        scope 9 {
+            debug args => _41;           // in scope 9 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+            scope 10 {
+                let mut _47: &[&str; 2]; // in scope 10 at boxes.rs:9:14: 9:39
+            }
+        }
+    }
+
+    bb0: {
+        _1 = Box::<i32>::new(const 5_i32) -> bb1; // scope 0 at boxes.rs:3:13: 3:24
+                                         // mir::Constant
+                                         // + span: boxes.rs:3:13: 3:21
+                                         // + user_ty: UserType(0)
+                                         // + literal: Const { ty: fn(i32) -> std::boxed::Box<i32> {std::boxed::Box::<i32>::new}, val: Value(Scalar(<ZST>)) }
+    }
+
+    bb1: {
+        _6 = &(*_1);                     // scope 1 at boxes.rs:5:32: 5:34
+        (_5.0: &i32) = move _6;          // scope 1 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+        _7 = (_5.0: &i32);               // scope 1 at boxes.rs:5:32: 5:34
+        _9 = _7;                         // scope 2 at boxes.rs:5:32: 5:34
+        _10 = <i32 as std::fmt::Display>::fmt as for<'r, 's, 't0> fn(&'r i32, &'s mut std::fmt::Formatter<'t0>) -> std::result::Result<(), std::fmt::Error> (Pointer(ReifyFnPointer)); // scope 2 at boxes.rs:5:32: 5:34
+                                         // mir::Constant
+                                         // + span: boxes.rs:5:32: 5:34
+                                         // + literal: Const { ty: for<'r, 's, 't0> fn(&'r i32, &'s mut std::fmt::Formatter<'t0>) -> std::result::Result<(), std::fmt::Error> {<i32 as std::fmt::Display>::fmt}, val: Value(Scalar(<ZST>)) }
+        _8 = ArgumentV1::new::<i32>(move _9, move _10) -> [return: bb2, unwind: bb12]; // scope 2 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+                                         // mir::Constant
+                                         // + span: /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+                                         // + user_ty: UserType(1)
+                                         // + literal: Const { ty: for<'b> fn(&'b i32, for<'r, 's, 't0> fn(&'r i32, &'s mut std::fmt::Formatter<'t0>) -> std::result::Result<(), std::fmt::Error>) -> std::fmt::ArgumentV1<'b> {std::fmt::ArgumentV1::new::<i32>}, val: Value(Scalar(<ZST>)) }
+    }
+
+    bb2: {
+        _4 = [move _8];                  // scope 2 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+        _11 = &_4;                       // scope 1 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+        _49 = const main::promoted[2];   // scope 4 at boxes.rs:5:14: 5:30
+                                         // ty::Const
+                                         // + ty: &[&str; 2]
+                                         // + val: Unevaluated(main, [], Some(promoted[2]))
+                                         // mir::Constant
+                                         // + span: boxes.rs:5:14: 5:30
+                                         // + literal: Const { ty: &[&str; 2], val: Unevaluated(Unevaluated { def: WithOptConstParam { did: DefId(0:3 ~ boxes[91f9]::main), const_param_did: None }, substs_: Some([]), promoted: Some(promoted[2]) }) }
+        _14 = _49;                       // scope 4 at boxes.rs:5:14: 5:30
+        _13 = _14;                       // scope 4 at boxes.rs:5:14: 5:30
+        _12 = move _13 as &[&str] (Pointer(Unsize)); // scope 4 at boxes.rs:5:14: 5:30
+        _16 = _11;                       // scope 4 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+        _15 = move _16 as &[std::fmt::ArgumentV1] (Pointer(Unsize)); // scope 4 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+        _3 = Arguments::new_v1(move _12, move _15) -> [return: bb3, unwind: bb12]; // scope 4 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+                                         // mir::Constant
+                                         // + span: /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+                                         // + user_ty: UserType(2)
+                                         // + literal: Const { ty: unsafe fn(&[&'static str], &[std::fmt::ArgumentV1]) -> std::fmt::Arguments {std::fmt::Arguments::new_v1}, val: Value(Scalar(<ZST>)) }
+    }
+
+    bb3: {
+        _2 = _print(move _3) -> [return: bb4, unwind: bb12]; // scope 1 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:9: 97:62
+                                         // mir::Constant
+                                         // + span: /home/sabin/cheri/rust/library/std/src/macros.rs:97:9: 97:27
+                                         // + literal: Const { ty: for<'r> fn(std::fmt::Arguments<'r>) {std::io::_print}, val: Value(Scalar(<ZST>)) }
+    }
+
+    bb4: {
+        _21 = &_1;                       // scope 1 at boxes.rs:7:34: 7:35
+        (_20.0: &std::boxed::Box<i32>) = move _21; // scope 1 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+        _22 = (_20.0: &std::boxed::Box<i32>); // scope 1 at boxes.rs:7:34: 7:35
+        _24 = _22;                       // scope 5 at boxes.rs:7:34: 7:35
+        _25 = <Box<i32> as std::fmt::Display>::fmt as for<'r, 's, 't0> fn(&'r std::boxed::Box<i32>, &'s mut std::fmt::Formatter<'t0>) -> std::result::Result<(), std::fmt::Error> (Pointer(ReifyFnPointer)); // scope 5 at boxes.rs:7:34: 7:35
+                                         // mir::Constant
+                                         // + span: boxes.rs:7:34: 7:35
+                                         // + literal: Const { ty: for<'r, 's, 't0> fn(&'r std::boxed::Box<i32>, &'s mut std::fmt::Formatter<'t0>) -> std::result::Result<(), std::fmt::Error> {<std::boxed::Box<i32> as std::fmt::Display>::fmt}, val: Value(Scalar(<ZST>)) }
+        _23 = ArgumentV1::new::<Box<i32>>(move _24, move _25) -> [return: bb5, unwind: bb12]; // scope 5 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+                                         // mir::Constant
+                                         // + span: /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+                                         // + user_ty: UserType(3)
+                                         // + literal: Const { ty: for<'b> fn(&'b std::boxed::Box<i32>, for<'r, 's, 't0> fn(&'r std::boxed::Box<i32>, &'s mut std::fmt::Formatter<'t0>) -> std::result::Result<(), std::fmt::Error>) -> std::fmt::ArgumentV1<'b> {std::fmt::ArgumentV1::new::<std::boxed::Box<i32>>}, val: Value(Scalar(<ZST>)) }
+    }
+
+    bb5: {
+        _19 = [move _23];                // scope 5 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+        _26 = &_19;                      // scope 1 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+        _48 = const main::promoted[1];   // scope 7 at boxes.rs:7:14: 7:32
+                                         // ty::Const
+                                         // + ty: &[&str; 2]
+                                         // + val: Unevaluated(main, [], Some(promoted[1]))
+                                         // mir::Constant
+                                         // + span: boxes.rs:7:14: 7:32
+                                         // + literal: Const { ty: &[&str; 2], val: Unevaluated(Unevaluated { def: WithOptConstParam { did: DefId(0:3 ~ boxes[91f9]::main), const_param_did: None }, substs_: Some([]), promoted: Some(promoted[1]) }) }
+        _29 = _48;                       // scope 7 at boxes.rs:7:14: 7:32
+        _28 = _29;                       // scope 7 at boxes.rs:7:14: 7:32
+        _27 = move _28 as &[&str] (Pointer(Unsize)); // scope 7 at boxes.rs:7:14: 7:32
+        _31 = _26;                       // scope 7 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+        _30 = move _31 as &[std::fmt::ArgumentV1] (Pointer(Unsize)); // scope 7 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+        _18 = Arguments::new_v1(move _27, move _30) -> [return: bb6, unwind: bb12]; // scope 7 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+                                         // mir::Constant
+                                         // + span: /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+                                         // + user_ty: UserType(4)
+                                         // + literal: Const { ty: unsafe fn(&[&'static str], &[std::fmt::ArgumentV1]) -> std::fmt::Arguments {std::fmt::Arguments::new_v1}, val: Value(Scalar(<ZST>)) }
+    }
+
+    bb6: {
+        _17 = _print(move _18) -> [return: bb7, unwind: bb12]; // scope 1 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:9: 97:62
+                                         // mir::Constant
+                                         // + span: /home/sabin/cheri/rust/library/std/src/macros.rs:97:9: 97:27
+                                         // + literal: Const { ty: for<'r> fn(std::fmt::Arguments<'r>) {std::io::_print}, val: Value(Scalar(<ZST>)) }
+    }
+
+    bb7: {
+        _36 = &_1;                       // scope 1 at boxes.rs:9:41: 9:42
+        (_35.0: &std::boxed::Box<i32>) = move _36; // scope 1 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+        _37 = (_35.0: &std::boxed::Box<i32>); // scope 1 at boxes.rs:9:41: 9:42
+        _39 = _37;                       // scope 8 at boxes.rs:9:41: 9:42
+        _40 = <Box<i32> as Pointer>::fmt as for<'r, 's, 't0> fn(&'r std::boxed::Box<i32>, &'s mut std::fmt::Formatter<'t0>) -> std::result::Result<(), std::fmt::Error> (Pointer(ReifyFnPointer)); // scope 8 at boxes.rs:9:41: 9:42
+                                         // mir::Constant
+                                         // + span: boxes.rs:9:41: 9:42
+                                         // + literal: Const { ty: for<'r, 's, 't0> fn(&'r std::boxed::Box<i32>, &'s mut std::fmt::Formatter<'t0>) -> std::result::Result<(), std::fmt::Error> {<std::boxed::Box<i32> as std::fmt::Pointer>::fmt}, val: Value(Scalar(<ZST>)) }
+        _38 = ArgumentV1::new::<Box<i32>>(move _39, move _40) -> [return: bb8, unwind: bb12]; // scope 8 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+                                         // mir::Constant
+                                         // + span: /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+                                         // + user_ty: UserType(5)
+                                         // + literal: Const { ty: for<'b> fn(&'b std::boxed::Box<i32>, for<'r, 's, 't0> fn(&'r std::boxed::Box<i32>, &'s mut std::fmt::Formatter<'t0>) -> std::result::Result<(), std::fmt::Error>) -> std::fmt::ArgumentV1<'b> {std::fmt::ArgumentV1::new::<std::boxed::Box<i32>>}, val: Value(Scalar(<ZST>)) }
+    }
+
+    bb8: {
+        _34 = [move _38];                // scope 8 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+        _41 = &_34;                      // scope 1 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+        _47 = const main::promoted[0];   // scope 10 at boxes.rs:9:14: 9:39
+                                         // ty::Const
+                                         // + ty: &[&str; 2]
+                                         // + val: Unevaluated(main, [], Some(promoted[0]))
+                                         // mir::Constant
+                                         // + span: boxes.rs:9:14: 9:39
+                                         // + literal: Const { ty: &[&str; 2], val: Unevaluated(Unevaluated { def: WithOptConstParam { did: DefId(0:3 ~ boxes[91f9]::main), const_param_did: None }, substs_: Some([]), promoted: Some(promoted[0]) }) }
+        _44 = _47;                       // scope 10 at boxes.rs:9:14: 9:39
+        _43 = _44;                       // scope 10 at boxes.rs:9:14: 9:39
+        _42 = move _43 as &[&str] (Pointer(Unsize)); // scope 10 at boxes.rs:9:14: 9:39
+        _46 = _41;                       // scope 10 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+        _45 = move _46 as &[std::fmt::ArgumentV1] (Pointer(Unsize)); // scope 10 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+        _33 = Arguments::new_v1(move _42, move _45) -> [return: bb9, unwind: bb12]; // scope 10 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+                                         // mir::Constant
+                                         // + span: /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+                                         // + user_ty: UserType(6)
+                                         // + literal: Const { ty: unsafe fn(&[&'static str], &[std::fmt::ArgumentV1]) -> std::fmt::Arguments {std::fmt::Arguments::new_v1}, val: Value(Scalar(<ZST>)) }
+    }
+
+    bb9: {
+        _32 = _print(move _33) -> [return: bb10, unwind: bb12]; // scope 1 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:9: 97:62
+                                         // mir::Constant
+                                         // + span: /home/sabin/cheri/rust/library/std/src/macros.rs:97:9: 97:27
+                                         // + literal: Const { ty: for<'r> fn(std::fmt::Arguments<'r>) {std::io::_print}, val: Value(Scalar(<ZST>)) }
+    }
+
+    bb10: {
+        drop(_1) -> bb11;                // scope 0 at boxes.rs:10:1: 10:2
+    }
+
+    bb11: {
+        return;                          // scope 0 at boxes.rs:10:2: 10:2
+    }
+
+    bb12 (cleanup): {
+        drop(_1) -> bb13;                // scope 0 at boxes.rs:10:1: 10:2
+    }
+
+    bb13 (cleanup): {
+        resume;                          // scope 0 at boxes.rs:1:1: 10:2
+    }
+}
+
+promoted[0] in main: &[&str; 2] = {
+    let mut _0: &[&str; 2];              // return place in scope 0 at boxes.rs:9:14: 9:39
+    let mut _1: [&str; 2];               // in scope 0 at boxes.rs:9:14: 9:39
+
+    bb0: {
+        _1 = [const "b's real address = ", const "\n"]; // scope 0 at boxes.rs:9:14: 9:39
+                                         // ty::Const
+                                         // + ty: &str
+                                         // + val: Value(Slice { data: Allocation { bytes: [98, 39, 115, 32, 114, 101, 97, 108, 32, 97, 100, 100, 114, 101, 115, 115, 32, 61, 32], relocations: Relocations(SortedMap { data: [] }), init_mask: InitMask { blocks: [524287], len: Size { raw: 19 } }, align: Align { pow2: 0 }, mutability: Not, extra: () }, start: 0, end: 19 })
+                                         // mir::Constant
+                                         // + span: boxes.rs:9:14: 9:39
+                                         // + literal: Const { ty: &str, val: Value(Slice { data: Allocation { bytes: [98, 39, 115, 32, 114, 101, 97, 108, 32, 97, 100, 100, 114, 101, 115, 115, 32, 61, 32], relocations: Relocations(SortedMap { data: [] }), init_mask: InitMask { blocks: [524287], len: Size { raw: 19 } }, align: Align { pow2: 0 }, mutability: Not, extra: () }, start: 0, end: 19 }) }
+                                         // ty::Const
+                                         // + ty: &str
+                                         // + val: Value(Slice { data: Allocation { bytes: [10], relocations: Relocations(SortedMap { data: [] }), init_mask: InitMask { blocks: [1], len: Size { raw: 1 } }, align: Align { pow2: 0 }, mutability: Not, extra: () }, start: 0, end: 1 })
+                                         // mir::Constant
+                                         // + span: boxes.rs:9:14: 9:39
+                                         // + literal: Const { ty: &str, val: Value(Slice { data: Allocation { bytes: [10], relocations: Relocations(SortedMap { data: [] }), init_mask: InitMask { blocks: [1], len: Size { raw: 1 } }, align: Align { pow2: 0 }, mutability: Not, extra: () }, start: 0, end: 1 }) }
+        _0 = &_1;                        // scope 0 at boxes.rs:9:14: 9:39
+        return;                          // scope 0 at boxes.rs:9:14: 9:39
+    }
+}
+
+promoted[1] in main: &[&str; 2] = {
+    let mut _0: &[&str; 2];              // return place in scope 0 at boxes.rs:7:14: 7:32
+    let mut _1: [&str; 2];               // in scope 0 at boxes.rs:7:14: 7:32
+
+    bb0: {
+        _1 = [const "b's address = ", const "\n"]; // scope 0 at boxes.rs:7:14: 7:32
+                                         // ty::Const
+                                         // + ty: &str
+                                         // + val: Value(Slice { data: Allocation { bytes: [98, 39, 115, 32, 97, 100, 100, 114, 101, 115, 115, 32, 61, 32], relocations: Relocations(SortedMap { data: [] }), init_mask: InitMask { blocks: [16383], len: Size { raw: 14 } }, align: Align { pow2: 0 }, mutability: Not, extra: () }, start: 0, end: 14 })
+                                         // mir::Constant
+                                         // + span: boxes.rs:7:14: 7:32
+                                         // + literal: Const { ty: &str, val: Value(Slice { data: Allocation { bytes: [98, 39, 115, 32, 97, 100, 100, 114, 101, 115, 115, 32, 61, 32], relocations: Relocations(SortedMap { data: [] }), init_mask: InitMask { blocks: [16383], len: Size { raw: 14 } }, align: Align { pow2: 0 }, mutability: Not, extra: () }, start: 0, end: 14 }) }
+                                         // ty::Const
+                                         // + ty: &str
+                                         // + val: Value(Slice { data: Allocation { bytes: [10], relocations: Relocations(SortedMap { data: [] }), init_mask: InitMask { blocks: [1], len: Size { raw: 1 } }, align: Align { pow2: 0 }, mutability: Not, extra: () }, start: 0, end: 1 })
+                                         // mir::Constant
+                                         // + span: boxes.rs:7:14: 7:32
+                                         // + literal: Const { ty: &str, val: Value(Slice { data: Allocation { bytes: [10], relocations: Relocations(SortedMap { data: [] }), init_mask: InitMask { blocks: [1], len: Size { raw: 1 } }, align: Align { pow2: 0 }, mutability: Not, extra: () }, start: 0, end: 1 }) }
+        _0 = &_1;                        // scope 0 at boxes.rs:7:14: 7:32
+        return;                          // scope 0 at boxes.rs:7:14: 7:32
+    }
+}
+
+promoted[2] in main: &[&str; 2] = {
+    let mut _0: &[&str; 2];              // return place in scope 0 at boxes.rs:5:14: 5:30
+    let mut _1: [&str; 2];               // in scope 0 at boxes.rs:5:14: 5:30
+
+    bb0: {
+        _1 = [const "b's value = ", const "\n"]; // scope 0 at boxes.rs:5:14: 5:30
+                                         // ty::Const
+                                         // + ty: &str
+                                         // + val: Value(Slice { data: Allocation { bytes: [98, 39, 115, 32, 118, 97, 108, 117, 101, 32, 61, 32], relocations: Relocations(SortedMap { data: [] }), init_mask: InitMask { blocks: [4095], len: Size { raw: 12 } }, align: Align { pow2: 0 }, mutability: Not, extra: () }, start: 0, end: 12 })
+                                         // mir::Constant
+                                         // + span: boxes.rs:5:14: 5:30
+                                         // + literal: Const { ty: &str, val: Value(Slice { data: Allocation { bytes: [98, 39, 115, 32, 118, 97, 108, 117, 101, 32, 61, 32], relocations: Relocations(SortedMap { data: [] }), init_mask: InitMask { blocks: [4095], len: Size { raw: 12 } }, align: Align { pow2: 0 }, mutability: Not, extra: () }, start: 0, end: 12 }) }
+                                         // ty::Const
+                                         // + ty: &str
+                                         // + val: Value(Slice { data: Allocation { bytes: [10], relocations: Relocations(SortedMap { data: [] }), init_mask: InitMask { blocks: [1], len: Size { raw: 1 } }, align: Align { pow2: 0 }, mutability: Not, extra: () }, start: 0, end: 1 })
+                                         // mir::Constant
+                                         // + span: boxes.rs:5:14: 5:30
+                                         // + literal: Const { ty: &str, val: Value(Slice { data: Allocation { bytes: [10], relocations: Relocations(SortedMap { data: [] }), init_mask: InitMask { blocks: [1], len: Size { raw: 1 } }, align: Align { pow2: 0 }, mutability: Not, extra: () }, start: 0, end: 1 }) }
+        _0 = &_1;                        // scope 0 at boxes.rs:5:14: 5:30
+        return;                          // scope 0 at boxes.rs:5:14: 5:30
+    }
+}

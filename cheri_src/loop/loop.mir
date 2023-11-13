@@ -1,0 +1,109 @@
+// WARNING: This output format is intended for human consumers only
+// and is subject to change without notice. Knock yourself out.
+fn main() -> () {
+    let mut _0: ();                      // return place in scope 0 at loop.rs:1:10: 1:10
+    let mut _1: i32;                     // in scope 0 at loop.rs:2:9: 2:14
+    let _2: ();                          // in scope 0 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:9: 97:62
+    let mut _3: std::fmt::Arguments;     // in scope 0 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+    let mut _5: &[&str];                 // in scope 0 at loop.rs:4:18: 4:40
+    let mut _6: &[&str; 1];              // in scope 0 at loop.rs:4:18: 4:40
+    let _7: &[&str; 1];                  // in scope 0 at loop.rs:4:18: 4:40
+    let mut _8: &[std::fmt::ArgumentV1]; // in scope 0 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+    let mut _9: &[std::fmt::ArgumentV1; 0]; // in scope 0 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+    let mut _10: (i32, bool);            // in scope 0 at loop.rs:5:9: 5:15
+    let mut _11: i32;                    // in scope 0 at loop.rs:6:12: 6:13
+    scope 1 {
+        debug c => _1;                   // in scope 1 at loop.rs:2:9: 2:14
+        let _4: &[std::fmt::ArgumentV1; 0]; // in scope 1 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+        let mut _13: &[std::fmt::ArgumentV1; 0]; // in scope 1 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+        scope 2 {
+            debug args => _4;            // in scope 2 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+            scope 3 {
+                let mut _12: &[&str; 1]; // in scope 3 at loop.rs:4:18: 4:40
+            }
+        }
+    }
+
+    bb0: {
+        _1 = const 0_i32;                // scope 0 at loop.rs:2:17: 2:18
+        goto -> bb1;                     // scope 1 at loop.rs:3:5: 10:6
+    }
+
+    bb1: {
+        _13 = const main::promoted[1];   // scope 1 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+                                         // ty::Const
+                                         // + ty: &[std::fmt::ArgumentV1; 0]
+                                         // + val: Unevaluated(main, [], Some(promoted[1]))
+                                         // mir::Constant
+                                         // + span: /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+                                         // + literal: Const { ty: &[std::fmt::ArgumentV1; 0], val: Unevaluated(Unevaluated { def: WithOptConstParam { did: DefId(0:3 ~ loop[b2ce]::main), const_param_did: None }, substs_: Some([]), promoted: Some(promoted[1]) }) }
+        _4 = _13;                        // scope 1 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+        _12 = const main::promoted[0];   // scope 3 at loop.rs:4:18: 4:40
+                                         // ty::Const
+                                         // + ty: &[&str; 1]
+                                         // + val: Unevaluated(main, [], Some(promoted[0]))
+                                         // mir::Constant
+                                         // + span: loop.rs:4:18: 4:40
+                                         // + literal: Const { ty: &[&str; 1], val: Unevaluated(Unevaluated { def: WithOptConstParam { did: DefId(0:3 ~ loop[b2ce]::main), const_param_did: None }, substs_: Some([]), promoted: Some(promoted[0]) }) }
+        _7 = _12;                        // scope 3 at loop.rs:4:18: 4:40
+        _6 = _7;                         // scope 3 at loop.rs:4:18: 4:40
+        _5 = move _6 as &[&str] (Pointer(Unsize)); // scope 3 at loop.rs:4:18: 4:40
+        _9 = _4;                         // scope 3 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+        _8 = move _9 as &[std::fmt::ArgumentV1] (Pointer(Unsize)); // scope 3 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+        _3 = Arguments::new_v1(move _5, move _8) -> bb2; // scope 3 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+                                         // mir::Constant
+                                         // + span: /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+                                         // + user_ty: UserType(0)
+                                         // + literal: Const { ty: unsafe fn(&[&'static str], &[std::fmt::ArgumentV1]) -> std::fmt::Arguments {std::fmt::Arguments::new_v1}, val: Value(Scalar(<ZST>)) }
+    }
+
+    bb2: {
+        _2 = _print(move _3) -> bb3;     // scope 1 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:9: 97:62
+                                         // mir::Constant
+                                         // + span: /home/sabin/cheri/rust/library/std/src/macros.rs:97:9: 97:27
+                                         // + literal: Const { ty: for<'r> fn(std::fmt::Arguments<'r>) {std::io::_print}, val: Value(Scalar(<ZST>)) }
+    }
+
+    bb3: {
+        _10 = CheckedAdd(_1, const 1_i32); // scope 1 at loop.rs:5:9: 5:15
+        assert(!move (_10.1: bool), "attempt to compute `{} + {}`, which would overflow", _1, const 1_i32) -> bb4; // scope 1 at loop.rs:5:9: 5:15
+    }
+
+    bb4: {
+        _1 = move (_10.0: i32);          // scope 1 at loop.rs:5:9: 5:15
+        _11 = _1;                        // scope 1 at loop.rs:6:12: 6:13
+        switchInt(move _11) -> [4_i32: bb5, otherwise: bb1]; // scope 1 at loop.rs:6:12: 6:18
+    }
+
+    bb5: {
+        return;                          // scope 0 at loop.rs:11:2: 11:2
+    }
+}
+
+promoted[0] in main: &[&str; 1] = {
+    let mut _0: &[&str; 1];              // return place in scope 0 at loop.rs:4:18: 4:40
+    let mut _1: [&str; 1];               // in scope 0 at loop.rs:4:18: 4:40
+
+    bb0: {
+        _1 = [const "This will never stop\n"]; // scope 0 at loop.rs:4:18: 4:40
+                                         // ty::Const
+                                         // + ty: &str
+                                         // + val: Value(Slice { data: Allocation { bytes: [84, 104, 105, 115, 32, 119, 105, 108, 108, 32, 110, 101, 118, 101, 114, 32, 115, 116, 111, 112, 10], relocations: Relocations(SortedMap { data: [] }), init_mask: InitMask { blocks: [2097151], len: Size { raw: 21 } }, align: Align { pow2: 0 }, mutability: Not, extra: () }, start: 0, end: 21 })
+                                         // mir::Constant
+                                         // + span: loop.rs:4:18: 4:40
+                                         // + literal: Const { ty: &str, val: Value(Slice { data: Allocation { bytes: [84, 104, 105, 115, 32, 119, 105, 108, 108, 32, 110, 101, 118, 101, 114, 32, 115, 116, 111, 112, 10], relocations: Relocations(SortedMap { data: [] }), init_mask: InitMask { blocks: [2097151], len: Size { raw: 21 } }, align: Align { pow2: 0 }, mutability: Not, extra: () }, start: 0, end: 21 }) }
+        _0 = &_1;                        // scope 0 at loop.rs:4:18: 4:40
+        return;                          // scope 0 at loop.rs:4:18: 4:40
+    }
+}
+
+promoted[1] in main: &[ArgumentV1; 0] = {
+    let mut _0: &[std::fmt::ArgumentV1; 0]; // return place in scope 0 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+    let mut _1: [std::fmt::ArgumentV1; 0]; // in scope 0 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+
+    bb0: {
+        _1 = [];                         // scope 0 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+        _0 = &_1;                        // scope 0 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+        return;                          // scope 0 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+    }
+}

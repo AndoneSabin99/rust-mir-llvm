@@ -1,0 +1,61 @@
+digraph __crate__ {
+subgraph cluster_Mir_0_16 {
+    graph [fontname="Courier, monospace"];
+    node [fontname="Courier, monospace"];
+    edge [fontname="Courier, monospace"];
+    label=<fn IpAddr::V6(_1: std::string::String) -&gt; IpAddr<br align="left"/>>;
+    bb0__0_16 [shape="none", label=<<table border="0" cellborder="1" cellspacing="0"><tr><td bgcolor="gray" align="center" colspan="1">0</td></tr><tr><td align="left" balign="left">((_0 as V6).0: std::string::String) = move _1<br/>discriminant(_0) = 1<br/></td></tr><tr><td align="left">return</td></tr></table>>];
+}
+subgraph cluster_Mir_0_16 {
+    graph [fontname="Courier, monospace"];
+    node [fontname="Courier, monospace"];
+    edge [fontname="Courier, monospace"];
+    label=<fn IpAddr::V6(_1: std::string::String) -&gt; IpAddr<br align="left"/>>;
+    bb0__0_16 [shape="none", label=<<table border="0" cellborder="1" cellspacing="0"><tr><td bgcolor="gray" align="center" colspan="1">0</td></tr><tr><td align="left" balign="left">((_0 as V6).0: std::string::String) = move _1<br/>discriminant(_0) = 1<br/></td></tr><tr><td align="left">return</td></tr></table>>];
+}
+subgraph cluster_Mir_0_10 {
+    graph [fontname="Courier, monospace"];
+    node [fontname="Courier, monospace"];
+    edge [fontname="Courier, monospace"];
+    label=<fn IpAddr::V4(_1: i32, _2: i32, _3: i32, _4: i32) -&gt; IpAddr<br align="left"/>>;
+    bb0__0_10 [shape="none", label=<<table border="0" cellborder="1" cellspacing="0"><tr><td bgcolor="gray" align="center" colspan="1">0</td></tr><tr><td align="left" balign="left">((_0 as V4).0: i32) = move _1<br/>((_0 as V4).1: i32) = move _2<br/>((_0 as V4).2: i32) = move _3<br/>((_0 as V4).3: i32) = move _4<br/>discriminant(_0) = 0<br/></td></tr><tr><td align="left">return</td></tr></table>>];
+}
+subgraph cluster_Mir_0_10 {
+    graph [fontname="Courier, monospace"];
+    node [fontname="Courier, monospace"];
+    edge [fontname="Courier, monospace"];
+    label=<fn IpAddr::V4(_1: i32, _2: i32, _3: i32, _4: i32) -&gt; IpAddr<br align="left"/>>;
+    bb0__0_10 [shape="none", label=<<table border="0" cellborder="1" cellspacing="0"><tr><td bgcolor="gray" align="center" colspan="1">0</td></tr><tr><td align="left" balign="left">((_0 as V4).0: i32) = move _1<br/>((_0 as V4).1: i32) = move _2<br/>((_0 as V4).2: i32) = move _3<br/>((_0 as V4).3: i32) = move _4<br/>discriminant(_0) = 0<br/></td></tr><tr><td align="left">return</td></tr></table>>];
+}
+subgraph cluster_Mir_0_20 {
+    graph [fontname="Courier, monospace"];
+    node [fontname="Courier, monospace"];
+    edge [fontname="Courier, monospace"];
+    label=<fn main() -&gt; ()<br align="left"/>let _1: IpAddrKind;<br align="left"/>let _2: IpAddrKind;<br align="left"/>let _3: IpAddr;<br align="left"/>let mut _4: std::string::String;<br align="left"/>let _5: IpAddr;<br align="left"/>debug _four =&gt; _1;<br align="left"/>debug _six =&gt; _2;<br align="left"/>debug loopback =&gt; _3;<br align="left"/>debug home =&gt; _5;<br align="left"/>>;
+    bb0__0_20 [shape="none", label=<<table border="0" cellborder="1" cellspacing="0"><tr><td bgcolor="gray" align="center" colspan="1">0</td></tr><tr><td align="left" balign="left">discriminant(_1) = 0<br/>discriminant(_2) = 1<br/></td></tr><tr><td align="left">_4 = &lt;String as From&lt;&amp;str&gt;&gt;::from(const &quot;::1&quot;)</td></tr></table>>];
+    bb1__0_20 [shape="none", label=<<table border="0" cellborder="1" cellspacing="0"><tr><td bgcolor="gray" align="center" colspan="1">1</td></tr><tr><td align="left" balign="left">((_3 as V6).0: std::string::String) = move _4<br/>discriminant(_3) = 1<br/>((_5 as V4).0: i32) = const 127_i32<br/>((_5 as V4).1: i32) = const 0_i32<br/>((_5 as V4).2: i32) = const 0_i32<br/>((_5 as V4).3: i32) = const 1_i32<br/>discriminant(_5) = 0<br/></td></tr><tr><td align="left">drop(_5)</td></tr></table>>];
+    bb2__0_20 [shape="none", label=<<table border="0" cellborder="1" cellspacing="0"><tr><td bgcolor="gray" align="center" colspan="1">2</td></tr><tr><td align="left">drop(_3)</td></tr></table>>];
+    bb3__0_20 [shape="none", label=<<table border="0" cellborder="1" cellspacing="0"><tr><td bgcolor="gray" align="center" colspan="1">3</td></tr><tr><td align="left">return</td></tr></table>>];
+    bb4__0_20 [shape="none", label=<<table border="0" cellborder="1" cellspacing="0"><tr><td bgcolor="lightblue" align="center" colspan="1">4 (cleanup)</td></tr><tr><td align="left">drop(_3)</td></tr></table>>];
+    bb5__0_20 [shape="none", label=<<table border="0" cellborder="1" cellspacing="0"><tr><td bgcolor="lightblue" align="center" colspan="1">5 (cleanup)</td></tr><tr><td align="left">resume</td></tr></table>>];
+    bb0__0_20 -> bb1__0_20 [label="return"];
+    bb1__0_20 -> bb2__0_20 [label="return"];
+    bb1__0_20 -> bb4__0_20 [label="unwind"];
+    bb2__0_20 -> bb3__0_20 [label="return"];
+    bb4__0_20 -> bb5__0_20 [label="return"];
+}
+subgraph cluster_Mir_0_19 {
+    graph [fontname="Courier, monospace"];
+    node [fontname="Courier, monospace"];
+    edge [fontname="Courier, monospace"];
+    label=<fn IpAddr::V0() -&gt; IpAddr<br align="left"/>>;
+    bb0__0_19 [shape="none", label=<<table border="0" cellborder="1" cellspacing="0"><tr><td bgcolor="gray" align="center" colspan="1">0</td></tr><tr><td align="left" balign="left">discriminant(_0) = 2<br/></td></tr><tr><td align="left">return</td></tr></table>>];
+}
+subgraph cluster_Mir_0_19 {
+    graph [fontname="Courier, monospace"];
+    node [fontname="Courier, monospace"];
+    edge [fontname="Courier, monospace"];
+    label=<fn IpAddr::V0() -&gt; IpAddr<br align="left"/>>;
+    bb0__0_19 [shape="none", label=<<table border="0" cellborder="1" cellspacing="0"><tr><td bgcolor="gray" align="center" colspan="1">0</td></tr><tr><td align="left" balign="left">discriminant(_0) = 2<br/></td></tr><tr><td align="left">return</td></tr></table>>];
+}
+}

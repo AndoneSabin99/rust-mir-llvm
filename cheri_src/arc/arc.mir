@@ -1,0 +1,356 @@
+// WARNING: This output format is intended for human consumers only
+// and is subject to change without notice. Knock yourself out.
+fn main::{closure#0}(_1: [closure@arc.rs:12:33: 18:10]) -> () {
+    debug apple => (_1.0: std::sync::Arc<&str>); // in scope 0 at arc.rs:10:13: 10:18
+    let mut _0: ();                      // return place in scope 0 at arc.rs:12:41: 12:41
+    let _2: ();                          // in scope 0 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:9: 97:62
+    let mut _3: std::fmt::Arguments;     // in scope 0 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+    let mut _4: [std::fmt::ArgumentV1; 1]; // in scope 0 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+    let mut _5: (&std::sync::Arc<&str>,); // in scope 0 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+    let mut _6: &std::sync::Arc<&str>;   // in scope 0 at arc.rs:15:30: 15:35
+    let _7: &std::sync::Arc<&str>;       // in scope 0 at arc.rs:15:30: 15:35
+    let mut _8: std::fmt::ArgumentV1;    // in scope 0 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+    let mut _9: &std::sync::Arc<&str>;   // in scope 0 at arc.rs:15:30: 15:35
+    let mut _10: for<'r, 's, 't0> fn(&'r std::sync::Arc<&str>, &'s mut std::fmt::Formatter<'t0>) -> std::result::Result<(), std::fmt::Error>; // in scope 0 at arc.rs:15:30: 15:35
+    let _11: &[std::fmt::ArgumentV1; 1]; // in scope 0 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+    let mut _12: &[&str];                // in scope 0 at arc.rs:15:22: 15:28
+    let mut _13: &[&str; 2];             // in scope 0 at arc.rs:15:22: 15:28
+    let _14: &[&str; 2];                 // in scope 0 at arc.rs:15:22: 15:28
+    let mut _15: &[std::fmt::ArgumentV1]; // in scope 0 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+    let mut _16: &[std::fmt::ArgumentV1; 1]; // in scope 0 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+    let _17: ();                         // in scope 0 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:9: 97:62
+    let mut _18: std::fmt::Arguments;    // in scope 0 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+    let mut _19: [std::fmt::ArgumentV1; 1]; // in scope 0 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+    let mut _20: (&usize,);              // in scope 0 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+    let mut _21: &usize;                 // in scope 0 at arc.rs:16:68: 16:93
+    let _22: usize;                      // in scope 0 at arc.rs:16:68: 16:93
+    let mut _23: &std::sync::Arc<&str>;  // in scope 0 at arc.rs:16:86: 16:92
+    let _24: &std::sync::Arc<&str>;      // in scope 0 at arc.rs:16:86: 16:92
+    let _25: &usize;                     // in scope 0 at arc.rs:16:68: 16:93
+    let mut _26: std::fmt::ArgumentV1;   // in scope 0 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+    let mut _27: &usize;                 // in scope 0 at arc.rs:16:68: 16:93
+    let mut _28: for<'r, 's, 't0> fn(&'r usize, &'s mut std::fmt::Formatter<'t0>) -> std::result::Result<(), std::fmt::Error>; // in scope 0 at arc.rs:16:68: 16:93
+    let _29: &[std::fmt::ArgumentV1; 1]; // in scope 0 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+    let mut _30: &[&str];                // in scope 0 at arc.rs:16:22: 16:66
+    let mut _31: &[&str; 2];             // in scope 0 at arc.rs:16:22: 16:66
+    let _32: &[&str; 2];                 // in scope 0 at arc.rs:16:22: 16:66
+    let mut _33: &[std::fmt::ArgumentV1]; // in scope 0 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+    let mut _34: &[std::fmt::ArgumentV1; 1]; // in scope 0 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+    scope 1 {
+        debug arg0 => _7;                // in scope 1 at arc.rs:15:30: 15:35
+    }
+    scope 2 {
+        debug args => _11;               // in scope 2 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+        scope 3 {
+            let mut _36: &[&str; 2];     // in scope 3 at arc.rs:15:22: 15:28
+        }
+    }
+    scope 4 {
+        debug arg0 => _25;               // in scope 4 at arc.rs:16:68: 16:93
+    }
+    scope 5 {
+        debug args => _29;               // in scope 5 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+        scope 6 {
+            let mut _35: &[&str; 2];     // in scope 6 at arc.rs:16:22: 16:66
+        }
+    }
+
+    bb0: {
+        _6 = &(_1.0: std::sync::Arc<&str>); // scope 0 at arc.rs:15:30: 15:35
+        (_5.0: &std::sync::Arc<&str>) = move _6; // scope 0 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+        _7 = (_5.0: &std::sync::Arc<&str>); // scope 0 at arc.rs:15:30: 15:35
+        _9 = _7;                         // scope 1 at arc.rs:15:30: 15:35
+        _10 = <Arc<&str> as Debug>::fmt as for<'r, 's, 't0> fn(&'r std::sync::Arc<&str>, &'s mut std::fmt::Formatter<'t0>) -> std::result::Result<(), std::fmt::Error> (Pointer(ReifyFnPointer)); // scope 1 at arc.rs:15:30: 15:35
+                                         // mir::Constant
+                                         // + span: arc.rs:15:30: 15:35
+                                         // + literal: Const { ty: for<'r, 's, 't0> fn(&'r std::sync::Arc<&str>, &'s mut std::fmt::Formatter<'t0>) -> std::result::Result<(), std::fmt::Error> {<std::sync::Arc<&str> as std::fmt::Debug>::fmt}, val: Value(Scalar(<ZST>)) }
+        _8 = ArgumentV1::new::<Arc<&str>>(move _9, move _10) -> [return: bb1, unwind: bb9]; // scope 1 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+                                         // mir::Constant
+                                         // + span: /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+                                         // + user_ty: UserType(0)
+                                         // + literal: Const { ty: for<'b> fn(&'b std::sync::Arc<&str>, for<'r, 's, 't0> fn(&'r std::sync::Arc<&str>, &'s mut std::fmt::Formatter<'t0>) -> std::result::Result<(), std::fmt::Error>) -> std::fmt::ArgumentV1<'b> {std::fmt::ArgumentV1::new::<std::sync::Arc<&str>>}, val: Value(Scalar(<ZST>)) }
+    }
+
+    bb1: {
+        _4 = [move _8];                  // scope 1 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+        _11 = &_4;                       // scope 0 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+        _36 = const main::{closure#0}::promoted[1]; // scope 3 at arc.rs:15:22: 15:28
+                                         // ty::Const
+                                         // + ty: &[&str; 2]
+                                         // + val: Unevaluated(main::{closure#0}, [<closure_kind>, <closure_signature>, <upvars>], Some(promoted[1]))
+                                         // mir::Constant
+                                         // + span: arc.rs:15:22: 15:28
+                                         // + literal: Const { ty: &[&str; 2], val: Unevaluated(Unevaluated { def: WithOptConstParam { did: DefId(0:10 ~ arc[a270]::main::{closure#0}), const_param_did: None }, substs_: Some([<closure_kind>, <closure_signature>, <upvars>]), promoted: Some(promoted[1]) }) }
+        _14 = _36;                       // scope 3 at arc.rs:15:22: 15:28
+        _13 = _14;                       // scope 3 at arc.rs:15:22: 15:28
+        _12 = move _13 as &[&str] (Pointer(Unsize)); // scope 3 at arc.rs:15:22: 15:28
+        _16 = _11;                       // scope 3 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+        _15 = move _16 as &[std::fmt::ArgumentV1] (Pointer(Unsize)); // scope 3 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+        _3 = Arguments::new_v1(move _12, move _15) -> [return: bb2, unwind: bb9]; // scope 3 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+                                         // mir::Constant
+                                         // + span: /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+                                         // + user_ty: UserType(1)
+                                         // + literal: Const { ty: unsafe fn(&[&'static str], &[std::fmt::ArgumentV1]) -> std::fmt::Arguments {std::fmt::Arguments::new_v1}, val: Value(Scalar(<ZST>)) }
+    }
+
+    bb2: {
+        _2 = _print(move _3) -> [return: bb3, unwind: bb9]; // scope 0 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:9: 97:62
+                                         // mir::Constant
+                                         // + span: /home/sabin/cheri/rust/library/std/src/macros.rs:97:9: 97:27
+                                         // + literal: Const { ty: for<'r> fn(std::fmt::Arguments<'r>) {std::io::_print}, val: Value(Scalar(<ZST>)) }
+    }
+
+    bb3: {
+        _24 = &(_1.0: std::sync::Arc<&str>); // scope 0 at arc.rs:16:86: 16:92
+        _23 = _24;                       // scope 0 at arc.rs:16:86: 16:92
+        _22 = Arc::<&str>::strong_count(move _23) -> [return: bb4, unwind: bb9]; // scope 0 at arc.rs:16:68: 16:93
+                                         // mir::Constant
+                                         // + span: arc.rs:16:68: 16:85
+                                         // + user_ty: UserType(2)
+                                         // + literal: Const { ty: for<'r> fn(&'r std::sync::Arc<&str>) -> usize {std::sync::Arc::<&str>::strong_count}, val: Value(Scalar(<ZST>)) }
+    }
+
+    bb4: {
+        _21 = &_22;                      // scope 0 at arc.rs:16:68: 16:93
+        (_20.0: &usize) = move _21;      // scope 0 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+        _25 = (_20.0: &usize);           // scope 0 at arc.rs:16:68: 16:93
+        _27 = _25;                       // scope 4 at arc.rs:16:68: 16:93
+        _28 = <usize as std::fmt::Display>::fmt as for<'r, 's, 't0> fn(&'r usize, &'s mut std::fmt::Formatter<'t0>) -> std::result::Result<(), std::fmt::Error> (Pointer(ReifyFnPointer)); // scope 4 at arc.rs:16:68: 16:93
+                                         // mir::Constant
+                                         // + span: arc.rs:16:68: 16:93
+                                         // + literal: Const { ty: for<'r, 's, 't0> fn(&'r usize, &'s mut std::fmt::Formatter<'t0>) -> std::result::Result<(), std::fmt::Error> {<usize as std::fmt::Display>::fmt}, val: Value(Scalar(<ZST>)) }
+        _26 = ArgumentV1::new::<usize>(move _27, move _28) -> [return: bb5, unwind: bb9]; // scope 4 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+                                         // mir::Constant
+                                         // + span: /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+                                         // + user_ty: UserType(3)
+                                         // + literal: Const { ty: for<'b> fn(&'b usize, for<'r, 's, 't0> fn(&'r usize, &'s mut std::fmt::Formatter<'t0>) -> std::result::Result<(), std::fmt::Error>) -> std::fmt::ArgumentV1<'b> {std::fmt::ArgumentV1::new::<usize>}, val: Value(Scalar(<ZST>)) }
+    }
+
+    bb5: {
+        _19 = [move _26];                // scope 4 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+        _29 = &_19;                      // scope 0 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+        _35 = const main::{closure#0}::promoted[0]; // scope 6 at arc.rs:16:22: 16:66
+                                         // ty::Const
+                                         // + ty: &[&str; 2]
+                                         // + val: Unevaluated(main::{closure#0}, [<closure_kind>, <closure_signature>, <upvars>], Some(promoted[0]))
+                                         // mir::Constant
+                                         // + span: arc.rs:16:22: 16:66
+                                         // + literal: Const { ty: &[&str; 2], val: Unevaluated(Unevaluated { def: WithOptConstParam { did: DefId(0:10 ~ arc[a270]::main::{closure#0}), const_param_did: None }, substs_: Some([<closure_kind>, <closure_signature>, <upvars>]), promoted: Some(promoted[0]) }) }
+        _32 = _35;                       // scope 6 at arc.rs:16:22: 16:66
+        _31 = _32;                       // scope 6 at arc.rs:16:22: 16:66
+        _30 = move _31 as &[&str] (Pointer(Unsize)); // scope 6 at arc.rs:16:22: 16:66
+        _34 = _29;                       // scope 6 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+        _33 = move _34 as &[std::fmt::ArgumentV1] (Pointer(Unsize)); // scope 6 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+        _18 = Arguments::new_v1(move _30, move _33) -> [return: bb6, unwind: bb9]; // scope 6 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+                                         // mir::Constant
+                                         // + span: /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+                                         // + user_ty: UserType(4)
+                                         // + literal: Const { ty: unsafe fn(&[&'static str], &[std::fmt::ArgumentV1]) -> std::fmt::Arguments {std::fmt::Arguments::new_v1}, val: Value(Scalar(<ZST>)) }
+    }
+
+    bb6: {
+        _17 = _print(move _18) -> [return: bb7, unwind: bb9]; // scope 0 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:9: 97:62
+                                         // mir::Constant
+                                         // + span: /home/sabin/cheri/rust/library/std/src/macros.rs:97:9: 97:27
+                                         // + literal: Const { ty: for<'r> fn(std::fmt::Arguments<'r>) {std::io::_print}, val: Value(Scalar(<ZST>)) }
+    }
+
+    bb7: {
+        drop(_1) -> bb8;                 // scope 0 at arc.rs:18:9: 18:10
+    }
+
+    bb8: {
+        return;                          // scope 0 at arc.rs:18:10: 18:10
+    }
+
+    bb9 (cleanup): {
+        drop(_1) -> bb10;                // scope 0 at arc.rs:18:9: 18:10
+    }
+
+    bb10 (cleanup): {
+        resume;                          // scope 0 at arc.rs:12:33: 18:10
+    }
+}
+
+promoted[0] in main::{closure#0}: &[&str; 2] = {
+    let mut _0: &[&str; 2];              // return place in scope 0 at arc.rs:16:22: 16:66
+    let mut _1: [&str; 2];               // in scope 0 at arc.rs:16:22: 16:66
+
+    bb0: {
+        _1 = [const "count after creating apple in a thread: ", const "\n"]; // scope 0 at arc.rs:16:22: 16:66
+                                         // ty::Const
+                                         // + ty: &str
+                                         // + val: Value(Slice { data: Allocation { bytes: [99, 111, 117, 110, 116, 32, 97, 102, 116, 101, 114, 32, 99, 114, 101, 97, 116, 105, 110, 103, 32, 97, 112, 112, 108, 101, 32, 105, 110, 32, 97, 32, 116, 104, 114, 101, 97, 100, 58, 32], relocations: Relocations(SortedMap { data: [] }), init_mask: InitMask { blocks: [1099511627775], len: Size { raw: 40 } }, align: Align { pow2: 0 }, mutability: Not, extra: () }, start: 0, end: 40 })
+                                         // mir::Constant
+                                         // + span: arc.rs:16:22: 16:66
+                                         // + literal: Const { ty: &str, val: Value(Slice { data: Allocation { bytes: [99, 111, 117, 110, 116, 32, 97, 102, 116, 101, 114, 32, 99, 114, 101, 97, 116, 105, 110, 103, 32, 97, 112, 112, 108, 101, 32, 105, 110, 32, 97, 32, 116, 104, 114, 101, 97, 100, 58, 32], relocations: Relocations(SortedMap { data: [] }), init_mask: InitMask { blocks: [1099511627775], len: Size { raw: 40 } }, align: Align { pow2: 0 }, mutability: Not, extra: () }, start: 0, end: 40 }) }
+                                         // ty::Const
+                                         // + ty: &str
+                                         // + val: Value(Slice { data: Allocation { bytes: [10], relocations: Relocations(SortedMap { data: [] }), init_mask: InitMask { blocks: [1], len: Size { raw: 1 } }, align: Align { pow2: 0 }, mutability: Not, extra: () }, start: 0, end: 1 })
+                                         // mir::Constant
+                                         // + span: arc.rs:16:22: 16:66
+                                         // + literal: Const { ty: &str, val: Value(Slice { data: Allocation { bytes: [10], relocations: Relocations(SortedMap { data: [] }), init_mask: InitMask { blocks: [1], len: Size { raw: 1 } }, align: Align { pow2: 0 }, mutability: Not, extra: () }, start: 0, end: 1 }) }
+        _0 = &_1;                        // scope 0 at arc.rs:16:22: 16:66
+        return;                          // scope 0 at arc.rs:16:22: 16:66
+    }
+}
+
+promoted[1] in main::{closure#0}: &[&str; 2] = {
+    let mut _0: &[&str; 2];              // return place in scope 0 at arc.rs:15:22: 15:28
+    let mut _1: [&str; 2];               // in scope 0 at arc.rs:15:22: 15:28
+
+    bb0: {
+        _1 = [const "", const "\n"];     // scope 0 at arc.rs:15:22: 15:28
+                                         // ty::Const
+                                         // + ty: &str
+                                         // + val: Value(Slice { data: Allocation { bytes: [], relocations: Relocations(SortedMap { data: [] }), init_mask: InitMask { blocks: [], len: Size { raw: 0 } }, align: Align { pow2: 0 }, mutability: Not, extra: () }, start: 0, end: 0 })
+                                         // mir::Constant
+                                         // + span: arc.rs:15:22: 15:28
+                                         // + literal: Const { ty: &str, val: Value(Slice { data: Allocation { bytes: [], relocations: Relocations(SortedMap { data: [] }), init_mask: InitMask { blocks: [], len: Size { raw: 0 } }, align: Align { pow2: 0 }, mutability: Not, extra: () }, start: 0, end: 0 }) }
+                                         // ty::Const
+                                         // + ty: &str
+                                         // + val: Value(Slice { data: Allocation { bytes: [10], relocations: Relocations(SortedMap { data: [] }), init_mask: InitMask { blocks: [1], len: Size { raw: 1 } }, align: Align { pow2: 0 }, mutability: Not, extra: () }, start: 0, end: 1 })
+                                         // mir::Constant
+                                         // + span: arc.rs:15:22: 15:28
+                                         // + literal: Const { ty: &str, val: Value(Slice { data: Allocation { bytes: [10], relocations: Relocations(SortedMap { data: [] }), init_mask: InitMask { blocks: [1], len: Size { raw: 1 } }, align: Align { pow2: 0 }, mutability: Not, extra: () }, start: 0, end: 1 }) }
+        _0 = &_1;                        // scope 0 at arc.rs:15:22: 15:28
+        return;                          // scope 0 at arc.rs:15:22: 15:28
+    }
+}
+
+fn main() -> () {
+    let mut _0: ();                      // return place in scope 0 at arc.rs:1:10: 1:10
+    let _1: std::sync::Arc<&str>;        // in scope 0 at arc.rs:6:9: 6:14
+    let mut _2: std::ops::Range<i32>;    // in scope 0 at arc.rs:8:14: 8:19
+    let mut _3: std::ops::Range<i32>;    // in scope 0 at arc.rs:8:14: 8:19
+    let mut _6: std::option::Option<i32>; // in scope 0 at arc.rs:8:14: 8:19
+    let mut _7: &mut std::ops::Range<i32>; // in scope 0 at arc.rs:8:14: 8:19
+    let mut _8: &mut std::ops::Range<i32>; // in scope 0 at arc.rs:8:14: 8:19
+    let mut _9: isize;                   // in scope 0 at arc.rs:8:9: 8:10
+    let mut _11: i32;                    // in scope 0 at arc.rs:8:9: 8:10
+    let mut _13: &std::sync::Arc<&str>;  // in scope 0 at arc.rs:10:32: 10:38
+    let _14: &std::sync::Arc<&str>;      // in scope 0 at arc.rs:10:32: 10:38
+    let mut _16: [closure@arc.rs:12:33: 18:10]; // in scope 0 at arc.rs:12:33: 18:10
+    let _17: std::result::Result<(), std::boxed::Box<dyn std::any::Any + std::marker::Send>>; // in scope 0 at arc.rs:20:9: 20:19
+    let mut _18: std::thread::JoinHandle<()>; // in scope 0 at arc.rs:20:9: 20:12
+    scope 1 {
+        debug apple => _1;               // in scope 1 at arc.rs:6:9: 6:14
+        let mut _4: std::ops::Range<i32>; // in scope 1 at arc.rs:8:14: 8:19
+        scope 2 {
+            debug iter => _4;            // in scope 2 at arc.rs:8:14: 8:19
+            let mut _5: i32;             // in scope 2 at arc.rs:8:14: 8:19
+            scope 3 {
+                debug __next => _5;      // in scope 3 at arc.rs:8:14: 8:19
+                let _10: i32;            // in scope 3 at arc.rs:8:9: 8:10
+                scope 4 {
+                    debug val => _10;    // in scope 4 at arc.rs:8:9: 8:10
+                }
+                scope 5 {
+                    let _12: std::sync::Arc<&str>; // in scope 5 at arc.rs:10:13: 10:18
+                    scope 6 {
+                        debug apple => _12; // in scope 6 at arc.rs:10:13: 10:18
+                        let _15: std::thread::JoinHandle<()>; // in scope 6 at arc.rs:12:13: 12:16
+                        scope 7 {
+                            debug tjh => _15; // in scope 7 at arc.rs:12:13: 12:16
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    bb0: {
+        _1 = Arc::<&str>::new(const "the same apple") -> bb1; // scope 0 at arc.rs:6:17: 6:43
+                                         // mir::Constant
+                                         // + span: arc.rs:6:17: 6:25
+                                         // + user_ty: UserType(0)
+                                         // + literal: Const { ty: fn(&str) -> std::sync::Arc<&str> {std::sync::Arc::<&str>::new}, val: Value(Scalar(<ZST>)) }
+                                         // ty::Const
+                                         // + ty: &str
+                                         // + val: Value(Slice { data: Allocation { bytes: [116, 104, 101, 32, 115, 97, 109, 101, 32, 97, 112, 112, 108, 101], relocations: Relocations(SortedMap { data: [] }), init_mask: InitMask { blocks: [16383], len: Size { raw: 14 } }, align: Align { pow2: 0 }, mutability: Not, extra: () }, start: 0, end: 14 })
+                                         // mir::Constant
+                                         // + span: arc.rs:6:26: 6:42
+                                         // + literal: Const { ty: &str, val: Value(Slice { data: Allocation { bytes: [116, 104, 101, 32, 115, 97, 109, 101, 32, 97, 112, 112, 108, 101], relocations: Relocations(SortedMap { data: [] }), init_mask: InitMask { blocks: [16383], len: Size { raw: 14 } }, align: Align { pow2: 0 }, mutability: Not, extra: () }, start: 0, end: 14 }) }
+    }
+
+    bb1: {
+        (_3.0: i32) = const 0_i32;       // scope 1 at arc.rs:8:14: 8:19
+        (_3.1: i32) = const 10_i32;      // scope 1 at arc.rs:8:14: 8:19
+        _2 = <std::ops::Range<i32> as IntoIterator>::into_iter(move _3) -> [return: bb2, unwind: bb12]; // scope 1 at arc.rs:8:14: 8:19
+                                         // mir::Constant
+                                         // + span: arc.rs:8:14: 8:19
+                                         // + literal: Const { ty: fn(std::ops::Range<i32>) -> <std::ops::Range<i32> as std::iter::IntoIterator>::IntoIter {<std::ops::Range<i32> as std::iter::IntoIterator>::into_iter}, val: Value(Scalar(<ZST>)) }
+    }
+
+    bb2: {
+        _4 = move _2;                    // scope 1 at arc.rs:8:14: 8:19
+        goto -> bb3;                     // scope 2 at arc.rs:8:5: 21:6
+    }
+
+    bb3: {
+        _8 = &mut _4;                    // scope 3 at arc.rs:8:14: 8:19
+        _7 = &mut (*_8);                 // scope 3 at arc.rs:8:14: 8:19
+        _6 = <std::ops::Range<i32> as Iterator>::next(move _7) -> [return: bb4, unwind: bb12]; // scope 3 at arc.rs:8:14: 8:19
+                                         // mir::Constant
+                                         // + span: arc.rs:8:14: 8:19
+                                         // + literal: Const { ty: for<'r> fn(&'r mut std::ops::Range<i32>) -> std::option::Option<<std::ops::Range<i32> as std::iter::Iterator>::Item> {<std::ops::Range<i32> as std::iter::Iterator>::next}, val: Value(Scalar(<ZST>)) }
+    }
+
+    bb4: {
+        _9 = discriminant(_6);           // scope 3 at arc.rs:8:14: 8:19
+        switchInt(move _9) -> [0_isize: bb5, 1_isize: bb7, otherwise: bb6]; // scope 3 at arc.rs:8:14: 8:19
+    }
+
+    bb5: {
+        drop(_1) -> bb11;                // scope 0 at arc.rs:22:1: 22:2
+    }
+
+    bb6: {
+        unreachable;                     // scope 3 at arc.rs:8:14: 8:19
+    }
+
+    bb7: {
+        _10 = ((_6 as Some).0: i32);     // scope 3 at arc.rs:8:9: 8:10
+        _11 = _10;                       // scope 4 at arc.rs:8:9: 8:10
+        _5 = move _11;                   // scope 4 at arc.rs:8:9: 8:10
+        _14 = &_1;                       // scope 5 at arc.rs:10:32: 10:38
+        _13 = _14;                       // scope 5 at arc.rs:10:32: 10:38
+        _12 = <Arc<&str> as Clone>::clone(move _13) -> [return: bb8, unwind: bb12]; // scope 5 at arc.rs:10:21: 10:39
+                                         // mir::Constant
+                                         // + span: arc.rs:10:21: 10:31
+                                         // + user_ty: UserType(1)
+                                         // + literal: Const { ty: for<'r> fn(&'r std::sync::Arc<&str>) -> std::sync::Arc<&str> {<std::sync::Arc<&str> as std::clone::Clone>::clone}, val: Value(Scalar(<ZST>)) }
+    }
+
+    bb8: {
+        (_16.0: std::sync::Arc<&str>) = move _12; // scope 6 at arc.rs:12:33: 18:10
+        _15 = spawn::<[closure@arc.rs:12:33: 18:10], ()>(move _16) -> [return: bb9, unwind: bb12]; // scope 6 at arc.rs:12:19: 18:11
+                                         // mir::Constant
+                                         // + span: arc.rs:12:19: 12:32
+                                         // + literal: Const { ty: fn([closure@arc.rs:12:33: 18:10]) -> std::thread::JoinHandle<()> {std::thread::spawn::<[closure@arc.rs:12:33: 18:10], ()>}, val: Value(Scalar(<ZST>)) }
+    }
+
+    bb9: {
+        _18 = move _15;                  // scope 7 at arc.rs:20:9: 20:12
+        _17 = JoinHandle::<()>::join(move _18) -> [return: bb10, unwind: bb12]; // scope 7 at arc.rs:20:9: 20:19
+                                         // mir::Constant
+                                         // + span: arc.rs:20:13: 20:17
+                                         // + literal: Const { ty: fn(std::thread::JoinHandle<()>) -> std::result::Result<(), std::boxed::Box<(dyn std::any::Any + std::marker::Send + 'static)>> {std::thread::JoinHandle::<()>::join}, val: Value(Scalar(<ZST>)) }
+    }
+
+    bb10: {
+        drop(_17) -> [return: bb3, unwind: bb12]; // scope 7 at arc.rs:20:19: 20:20
+    }
+
+    bb11: {
+        return;                          // scope 0 at arc.rs:22:2: 22:2
+    }
+
+    bb12 (cleanup): {
+        drop(_1) -> bb13;                // scope 0 at arc.rs:22:1: 22:2
+    }
+
+    bb13 (cleanup): {
+        resume;                          // scope 0 at arc.rs:1:1: 22:2
+    }
+}

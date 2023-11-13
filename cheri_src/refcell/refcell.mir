@@ -1,0 +1,408 @@
+// WARNING: This output format is intended for human consumers only
+// and is subject to change without notice. Knock yourself out.
+fn main() -> () {
+    let mut _0: ();                      // return place in scope 0 at refcell.rs:11:10: 11:10
+    let _1: std::rc::Rc<std::cell::RefCell<i32>>; // in scope 0 at refcell.rs:14:9: 14:14
+    let mut _2: std::cell::RefCell<i32>; // in scope 0 at refcell.rs:14:25: 14:40
+    let mut _4: List;                    // in scope 0 at refcell.rs:18:21: 18:58
+    let mut _5: std::rc::Rc<std::cell::RefCell<i32>>; // in scope 0 at refcell.rs:18:26: 18:43
+    let mut _6: &std::rc::Rc<std::cell::RefCell<i32>>; // in scope 0 at refcell.rs:18:36: 18:42
+    let _7: &std::rc::Rc<std::cell::RefCell<i32>>; // in scope 0 at refcell.rs:18:36: 18:42
+    let mut _8: std::rc::Rc<List>;       // in scope 0 at refcell.rs:18:45: 18:57
+    let mut _9: List;                    // in scope 0 at refcell.rs:18:53: 18:56
+    let mut _11: std::rc::Rc<std::cell::RefCell<i32>>; // in scope 0 at refcell.rs:21:18: 21:42
+    let mut _12: std::cell::RefCell<i32>; // in scope 0 at refcell.rs:21:26: 21:41
+    let mut _13: std::rc::Rc<List>;      // in scope 0 at refcell.rs:21:44: 21:57
+    let mut _14: &std::rc::Rc<List>;     // in scope 0 at refcell.rs:21:54: 21:56
+    let _15: &std::rc::Rc<List>;         // in scope 0 at refcell.rs:21:54: 21:56
+    let mut _17: std::rc::Rc<std::cell::RefCell<i32>>; // in scope 0 at refcell.rs:22:18: 22:42
+    let mut _18: std::cell::RefCell<i32>; // in scope 0 at refcell.rs:22:26: 22:41
+    let mut _19: std::rc::Rc<List>;      // in scope 0 at refcell.rs:22:44: 22:57
+    let mut _20: &std::rc::Rc<List>;     // in scope 0 at refcell.rs:22:54: 22:56
+    let _21: &std::rc::Rc<List>;         // in scope 0 at refcell.rs:22:54: 22:56
+    let mut _22: &mut i32;               // in scope 0 at refcell.rs:28:5: 28:24
+    let mut _23: &mut std::cell::RefMut<i32>; // in scope 0 at refcell.rs:28:6: 28:24
+    let mut _24: std::cell::RefMut<i32>; // in scope 0 at refcell.rs:28:6: 28:24
+    let mut _25: &std::cell::RefCell<i32>; // in scope 0 at refcell.rs:28:6: 28:11
+    let _26: &std::cell::RefCell<i32>;   // in scope 0 at refcell.rs:28:6: 28:24
+    let mut _27: &std::rc::Rc<std::cell::RefCell<i32>>; // in scope 0 at refcell.rs:28:6: 28:11
+    let mut _28: (i32, bool);            // in scope 0 at refcell.rs:28:5: 28:30
+    scope 1 {
+        debug value => _1;               // in scope 1 at refcell.rs:14:9: 14:14
+        let _3: std::rc::Rc<List>;       // in scope 1 at refcell.rs:18:9: 18:10
+        scope 2 {
+            debug a => _3;               // in scope 2 at refcell.rs:18:9: 18:10
+            let _10: List;               // in scope 2 at refcell.rs:21:9: 21:10
+            scope 3 {
+                debug b => _10;          // in scope 3 at refcell.rs:21:9: 21:10
+                let _16: List;           // in scope 3 at refcell.rs:22:9: 22:10
+                scope 4 {
+                    debug c => _16;      // in scope 4 at refcell.rs:22:9: 22:10
+                }
+            }
+        }
+    }
+
+    bb0: {
+        _2 = RefCell::<i32>::new(const 5_i32) -> bb1; // scope 0 at refcell.rs:14:25: 14:40
+                                         // mir::Constant
+                                         // + span: refcell.rs:14:25: 14:37
+                                         // + user_ty: UserType(1)
+                                         // + literal: Const { ty: fn(i32) -> std::cell::RefCell<i32> {std::cell::RefCell::<i32>::new}, val: Value(Scalar(<ZST>)) }
+    }
+
+    bb1: {
+        _1 = Rc::<RefCell<i32>>::new(move _2) -> bb2; // scope 0 at refcell.rs:14:17: 14:41
+                                         // mir::Constant
+                                         // + span: refcell.rs:14:17: 14:24
+                                         // + user_ty: UserType(0)
+                                         // + literal: Const { ty: fn(std::cell::RefCell<i32>) -> std::rc::Rc<std::cell::RefCell<i32>> {std::rc::Rc::<std::cell::RefCell<i32>>::new}, val: Value(Scalar(<ZST>)) }
+    }
+
+    bb2: {
+        _7 = &_1;                        // scope 1 at refcell.rs:18:36: 18:42
+        _6 = _7;                         // scope 1 at refcell.rs:18:36: 18:42
+        _5 = <Rc<RefCell<i32>> as Clone>::clone(move _6) -> [return: bb3, unwind: bb28]; // scope 1 at refcell.rs:18:26: 18:43
+                                         // mir::Constant
+                                         // + span: refcell.rs:18:26: 18:35
+                                         // + user_ty: UserType(3)
+                                         // + literal: Const { ty: for<'r> fn(&'r std::rc::Rc<std::cell::RefCell<i32>>) -> std::rc::Rc<std::cell::RefCell<i32>> {<std::rc::Rc<std::cell::RefCell<i32>> as std::clone::Clone>::clone}, val: Value(Scalar(<ZST>)) }
+    }
+
+    bb3: {
+        discriminant(_9) = 1;            // scope 1 at refcell.rs:18:53: 18:56
+        _8 = Rc::<List>::new(move _9) -> [return: bb4, unwind: bb27]; // scope 1 at refcell.rs:18:45: 18:57
+                                         // mir::Constant
+                                         // + span: refcell.rs:18:45: 18:52
+                                         // + user_ty: UserType(4)
+                                         // + literal: Const { ty: fn(List) -> std::rc::Rc<List> {std::rc::Rc::<List>::new}, val: Value(Scalar(<ZST>)) }
+    }
+
+    bb4: {
+        ((_4 as Cons).0: std::rc::Rc<std::cell::RefCell<i32>>) = move _5; // scope 1 at refcell.rs:18:21: 18:58
+        ((_4 as Cons).1: std::rc::Rc<List>) = move _8; // scope 1 at refcell.rs:18:21: 18:58
+        discriminant(_4) = 0;            // scope 1 at refcell.rs:18:21: 18:58
+        _3 = Rc::<List>::new(move _4) -> [return: bb5, unwind: bb28]; // scope 1 at refcell.rs:18:13: 18:59
+                                         // mir::Constant
+                                         // + span: refcell.rs:18:13: 18:20
+                                         // + user_ty: UserType(2)
+                                         // + literal: Const { ty: fn(List) -> std::rc::Rc<List> {std::rc::Rc::<List>::new}, val: Value(Scalar(<ZST>)) }
+    }
+
+    bb5: {
+        _12 = RefCell::<i32>::new(const 3_i32) -> [return: bb6, unwind: bb26]; // scope 2 at refcell.rs:21:26: 21:41
+                                         // mir::Constant
+                                         // + span: refcell.rs:21:26: 21:38
+                                         // + user_ty: UserType(6)
+                                         // + literal: Const { ty: fn(i32) -> std::cell::RefCell<i32> {std::cell::RefCell::<i32>::new}, val: Value(Scalar(<ZST>)) }
+    }
+
+    bb6: {
+        _11 = Rc::<RefCell<i32>>::new(move _12) -> [return: bb7, unwind: bb26]; // scope 2 at refcell.rs:21:18: 21:42
+                                         // mir::Constant
+                                         // + span: refcell.rs:21:18: 21:25
+                                         // + user_ty: UserType(5)
+                                         // + literal: Const { ty: fn(std::cell::RefCell<i32>) -> std::rc::Rc<std::cell::RefCell<i32>> {std::rc::Rc::<std::cell::RefCell<i32>>::new}, val: Value(Scalar(<ZST>)) }
+    }
+
+    bb7: {
+        _15 = &_3;                       // scope 2 at refcell.rs:21:54: 21:56
+        _14 = _15;                       // scope 2 at refcell.rs:21:54: 21:56
+        _13 = <Rc<List> as Clone>::clone(move _14) -> [return: bb8, unwind: bb25]; // scope 2 at refcell.rs:21:44: 21:57
+                                         // mir::Constant
+                                         // + span: refcell.rs:21:44: 21:53
+                                         // + user_ty: UserType(7)
+                                         // + literal: Const { ty: for<'r> fn(&'r std::rc::Rc<List>) -> std::rc::Rc<List> {<std::rc::Rc<List> as std::clone::Clone>::clone}, val: Value(Scalar(<ZST>)) }
+    }
+
+    bb8: {
+        ((_10 as Cons).0: std::rc::Rc<std::cell::RefCell<i32>>) = move _11; // scope 2 at refcell.rs:21:13: 21:58
+        ((_10 as Cons).1: std::rc::Rc<List>) = move _13; // scope 2 at refcell.rs:21:13: 21:58
+        discriminant(_10) = 0;           // scope 2 at refcell.rs:21:13: 21:58
+        _18 = RefCell::<i32>::new(const 4_i32) -> [return: bb9, unwind: bb24]; // scope 3 at refcell.rs:22:26: 22:41
+                                         // mir::Constant
+                                         // + span: refcell.rs:22:26: 22:38
+                                         // + user_ty: UserType(9)
+                                         // + literal: Const { ty: fn(i32) -> std::cell::RefCell<i32> {std::cell::RefCell::<i32>::new}, val: Value(Scalar(<ZST>)) }
+    }
+
+    bb9: {
+        _17 = Rc::<RefCell<i32>>::new(move _18) -> [return: bb10, unwind: bb24]; // scope 3 at refcell.rs:22:18: 22:42
+                                         // mir::Constant
+                                         // + span: refcell.rs:22:18: 22:25
+                                         // + user_ty: UserType(8)
+                                         // + literal: Const { ty: fn(std::cell::RefCell<i32>) -> std::rc::Rc<std::cell::RefCell<i32>> {std::rc::Rc::<std::cell::RefCell<i32>>::new}, val: Value(Scalar(<ZST>)) }
+    }
+
+    bb10: {
+        _21 = &_3;                       // scope 3 at refcell.rs:22:54: 22:56
+        _20 = _21;                       // scope 3 at refcell.rs:22:54: 22:56
+        _19 = <Rc<List> as Clone>::clone(move _20) -> [return: bb11, unwind: bb23]; // scope 3 at refcell.rs:22:44: 22:57
+                                         // mir::Constant
+                                         // + span: refcell.rs:22:44: 22:53
+                                         // + user_ty: UserType(10)
+                                         // + literal: Const { ty: for<'r> fn(&'r std::rc::Rc<List>) -> std::rc::Rc<List> {<std::rc::Rc<List> as std::clone::Clone>::clone}, val: Value(Scalar(<ZST>)) }
+    }
+
+    bb11: {
+        ((_16 as Cons).0: std::rc::Rc<std::cell::RefCell<i32>>) = move _17; // scope 3 at refcell.rs:22:13: 22:58
+        ((_16 as Cons).1: std::rc::Rc<List>) = move _19; // scope 3 at refcell.rs:22:13: 22:58
+        discriminant(_16) = 0;           // scope 3 at refcell.rs:22:13: 22:58
+        _27 = &_1;                       // scope 4 at refcell.rs:28:6: 28:11
+        _26 = <Rc<RefCell<i32>> as Deref>::deref(move _27) -> [return: bb12, unwind: bb22]; // scope 4 at refcell.rs:28:6: 28:24
+                                         // mir::Constant
+                                         // + span: refcell.rs:28:6: 28:24
+                                         // + literal: Const { ty: for<'r> fn(&'r std::rc::Rc<std::cell::RefCell<i32>>) -> &'r <std::rc::Rc<std::cell::RefCell<i32>> as std::ops::Deref>::Target {<std::rc::Rc<std::cell::RefCell<i32>> as std::ops::Deref>::deref}, val: Value(Scalar(<ZST>)) }
+    }
+
+    bb12: {
+        _25 = _26;                       // scope 4 at refcell.rs:28:6: 28:11
+        _24 = RefCell::<i32>::borrow_mut(move _25) -> [return: bb13, unwind: bb22]; // scope 4 at refcell.rs:28:6: 28:24
+                                         // mir::Constant
+                                         // + span: refcell.rs:28:12: 28:22
+                                         // + literal: Const { ty: for<'r> fn(&'r std::cell::RefCell<i32>) -> std::cell::RefMut<'r, i32> {std::cell::RefCell::<i32>::borrow_mut}, val: Value(Scalar(<ZST>)) }
+    }
+
+    bb13: {
+        _23 = &mut _24;                  // scope 4 at refcell.rs:28:6: 28:24
+        _22 = <RefMut<i32> as DerefMut>::deref_mut(move _23) -> [return: bb14, unwind: bb21]; // scope 4 at refcell.rs:28:5: 28:24
+                                         // mir::Constant
+                                         // + span: refcell.rs:28:5: 28:24
+                                         // + literal: Const { ty: for<'r> fn(&'r mut std::cell::RefMut<i32>) -> &'r mut <std::cell::RefMut<i32> as std::ops::Deref>::Target {<std::cell::RefMut<i32> as std::ops::DerefMut>::deref_mut}, val: Value(Scalar(<ZST>)) }
+    }
+
+    bb14: {
+        _28 = CheckedAdd((*_22), const 10_i32); // scope 4 at refcell.rs:28:5: 28:30
+        assert(!move (_28.1: bool), "attempt to compute `{} + {}`, which would overflow", (*_22), const 10_i32) -> [success: bb15, unwind: bb21]; // scope 4 at refcell.rs:28:5: 28:30
+    }
+
+    bb15: {
+        (*_22) = move (_28.0: i32);      // scope 4 at refcell.rs:28:5: 28:30
+        drop(_24) -> [return: bb16, unwind: bb22]; // scope 4 at refcell.rs:28:30: 28:31
+    }
+
+    bb16: {
+        drop(_16) -> [return: bb17, unwind: bb24]; // scope 3 at refcell.rs:33:1: 33:2
+    }
+
+    bb17: {
+        drop(_10) -> [return: bb18, unwind: bb26]; // scope 2 at refcell.rs:33:1: 33:2
+    }
+
+    bb18: {
+        drop(_3) -> [return: bb19, unwind: bb28]; // scope 1 at refcell.rs:33:1: 33:2
+    }
+
+    bb19: {
+        drop(_1) -> bb20;                // scope 0 at refcell.rs:33:1: 33:2
+    }
+
+    bb20: {
+        return;                          // scope 0 at refcell.rs:33:2: 33:2
+    }
+
+    bb21 (cleanup): {
+        drop(_24) -> bb22;               // scope 4 at refcell.rs:28:30: 28:31
+    }
+
+    bb22 (cleanup): {
+        drop(_16) -> bb24;               // scope 3 at refcell.rs:33:1: 33:2
+    }
+
+    bb23 (cleanup): {
+        drop(_17) -> bb24;               // scope 3 at refcell.rs:22:57: 22:58
+    }
+
+    bb24 (cleanup): {
+        drop(_10) -> bb26;               // scope 2 at refcell.rs:33:1: 33:2
+    }
+
+    bb25 (cleanup): {
+        drop(_11) -> bb26;               // scope 2 at refcell.rs:21:57: 21:58
+    }
+
+    bb26 (cleanup): {
+        drop(_3) -> bb28;                // scope 1 at refcell.rs:33:1: 33:2
+    }
+
+    bb27 (cleanup): {
+        drop(_5) -> bb28;                // scope 1 at refcell.rs:18:57: 18:58
+    }
+
+    bb28 (cleanup): {
+        drop(_1) -> bb29;                // scope 0 at refcell.rs:33:1: 33:2
+    }
+
+    bb29 (cleanup): {
+        resume;                          // scope 0 at refcell.rs:11:1: 33:2
+    }
+}
+
+fn <impl at refcell.rs:1:10: 1:15>::fmt(_1: &List, _2: &mut Formatter) -> Result<(), std::fmt::Error> {
+    debug self => _1;                    // in scope 0 at refcell.rs:1:10: 1:15
+    debug f => _2;                       // in scope 0 at refcell.rs:1:10: 1:15
+    let mut _0: std::result::Result<(), std::fmt::Error>; // return place in scope 0 at refcell.rs:1:10: 1:15
+    let mut _3: (&List,);                // in scope 0 at refcell.rs:1:10: 1:15
+    let mut _4: &List;                   // in scope 0 at refcell.rs:1:10: 1:15
+    let mut _5: isize;                   // in scope 0 at refcell.rs:1:10: 1:15
+    let _6: &std::rc::Rc<std::cell::RefCell<i32>>; // in scope 0 at refcell.rs:3:10: 3:26
+    let _7: &std::rc::Rc<List>;          // in scope 0 at refcell.rs:3:28: 3:36
+    let mut _9: std::fmt::DebugTuple;    // in scope 0 at refcell.rs:1:10: 1:15
+    let mut _10: &mut std::fmt::Formatter; // in scope 0 at refcell.rs:1:10: 1:15
+    let mut _11: &str;                   // in scope 0 at refcell.rs:1:10: 1:15
+    let _12: &str;                       // in scope 0 at refcell.rs:1:10: 1:15
+    let mut _13: &mut std::fmt::DebugTuple; // in scope 0 at refcell.rs:1:10: 1:15
+    let mut _14: &mut std::fmt::DebugTuple; // in scope 0 at refcell.rs:1:10: 1:15
+    let mut _15: &dyn std::fmt::Debug;   // in scope 0 at refcell.rs:3:10: 3:26
+    let mut _16: &&std::rc::Rc<std::cell::RefCell<i32>>; // in scope 0 at refcell.rs:3:10: 3:26
+    let _17: &&std::rc::Rc<std::cell::RefCell<i32>>; // in scope 0 at refcell.rs:3:10: 3:26
+    let _18: &std::rc::Rc<std::cell::RefCell<i32>>; // in scope 0 at refcell.rs:3:10: 3:26
+    let mut _19: &mut std::fmt::DebugTuple; // in scope 0 at refcell.rs:1:10: 1:15
+    let mut _20: &mut std::fmt::DebugTuple; // in scope 0 at refcell.rs:1:10: 1:15
+    let mut _21: &dyn std::fmt::Debug;   // in scope 0 at refcell.rs:3:28: 3:36
+    let mut _22: &&std::rc::Rc<List>;    // in scope 0 at refcell.rs:3:28: 3:36
+    let _23: &&std::rc::Rc<List>;        // in scope 0 at refcell.rs:3:28: 3:36
+    let _24: &std::rc::Rc<List>;         // in scope 0 at refcell.rs:3:28: 3:36
+    let mut _25: &mut std::fmt::DebugTuple; // in scope 0 at refcell.rs:1:10: 1:15
+    let _26: &mut std::fmt::DebugTuple;  // in scope 0 at refcell.rs:1:10: 1:15
+    let mut _27: std::fmt::DebugTuple;   // in scope 0 at refcell.rs:1:10: 1:15
+    let mut _28: &mut std::fmt::Formatter; // in scope 0 at refcell.rs:1:10: 1:15
+    let mut _29: &str;                   // in scope 0 at refcell.rs:1:10: 1:15
+    let _30: &str;                       // in scope 0 at refcell.rs:1:10: 1:15
+    let mut _31: &mut std::fmt::DebugTuple; // in scope 0 at refcell.rs:1:10: 1:15
+    scope 1 {
+        debug __self_0 => _6;            // in scope 1 at refcell.rs:3:10: 3:26
+        debug __self_1 => _7;            // in scope 1 at refcell.rs:3:28: 3:36
+        let _8: &mut std::fmt::DebugTuple; // in scope 1 at refcell.rs:1:10: 1:15
+        scope 2 {
+            debug debug_trait_builder => _8; // in scope 2 at refcell.rs:1:10: 1:15
+            scope 3 {
+                scope 4 {
+                }
+            }
+        }
+    }
+    scope 5 {
+        debug debug_trait_builder => _26; // in scope 5 at refcell.rs:1:10: 1:15
+    }
+
+    bb0: {
+        _4 = _1;                         // scope 0 at refcell.rs:1:10: 1:15
+        (_3.0: &List) = move _4;         // scope 0 at refcell.rs:1:10: 1:15
+        _5 = discriminant((*(_3.0: &List))); // scope 0 at refcell.rs:1:10: 1:15
+        switchInt(move _5) -> [0_isize: bb3, 1_isize: bb1, otherwise: bb2]; // scope 0 at refcell.rs:1:10: 1:15
+    }
+
+    bb1: {
+        _28 = &mut (*_2);                // scope 0 at refcell.rs:1:10: 1:15
+        _30 = const "Nil";               // scope 0 at refcell.rs:1:10: 1:15
+                                         // ty::Const
+                                         // + ty: &str
+                                         // + val: Value(Slice { data: Allocation { bytes: [78, 105, 108], relocations: Relocations(SortedMap { data: [] }), init_mask: InitMask { blocks: [7], len: Size { raw: 3 } }, align: Align { pow2: 0 }, mutability: Not, extra: () }, start: 0, end: 3 })
+                                         // mir::Constant
+                                         // + span: refcell.rs:1:10: 1:15
+                                         // + literal: Const { ty: &str, val: Value(Slice { data: Allocation { bytes: [78, 105, 108], relocations: Relocations(SortedMap { data: [] }), init_mask: InitMask { blocks: [7], len: Size { raw: 3 } }, align: Align { pow2: 0 }, mutability: Not, extra: () }, start: 0, end: 3 }) }
+        _29 = _30;                       // scope 0 at refcell.rs:1:10: 1:15
+        _27 = Formatter::debug_tuple(move _28, move _29) -> bb7; // scope 0 at refcell.rs:1:10: 1:15
+                                         // mir::Constant
+                                         // + span: refcell.rs:1:10: 1:15
+                                         // + user_ty: UserType(4)
+                                         // + literal: Const { ty: for<'b, 'r> fn(&'b mut std::fmt::Formatter, &'r str) -> std::fmt::DebugTuple<'b, '_> {std::fmt::Formatter::debug_tuple}, val: Value(Scalar(<ZST>)) }
+    }
+
+    bb2: {
+        unreachable;                     // scope 0 at refcell.rs:1:10: 1:15
+    }
+
+    bb3: {
+        _6 = &(((*(_3.0: &List)) as Cons).0: std::rc::Rc<std::cell::RefCell<i32>>); // scope 0 at refcell.rs:3:10: 3:26
+        _7 = &(((*(_3.0: &List)) as Cons).1: std::rc::Rc<List>); // scope 0 at refcell.rs:3:28: 3:36
+        _10 = &mut (*_2);                // scope 1 at refcell.rs:1:10: 1:15
+        _12 = const "Cons";              // scope 1 at refcell.rs:1:10: 1:15
+                                         // ty::Const
+                                         // + ty: &str
+                                         // + val: Value(Slice { data: Allocation { bytes: [67, 111, 110, 115], relocations: Relocations(SortedMap { data: [] }), init_mask: InitMask { blocks: [15], len: Size { raw: 4 } }, align: Align { pow2: 0 }, mutability: Not, extra: () }, start: 0, end: 4 })
+                                         // mir::Constant
+                                         // + span: refcell.rs:1:10: 1:15
+                                         // + literal: Const { ty: &str, val: Value(Slice { data: Allocation { bytes: [67, 111, 110, 115], relocations: Relocations(SortedMap { data: [] }), init_mask: InitMask { blocks: [15], len: Size { raw: 4 } }, align: Align { pow2: 0 }, mutability: Not, extra: () }, start: 0, end: 4 }) }
+        _11 = _12;                       // scope 1 at refcell.rs:1:10: 1:15
+        _9 = Formatter::debug_tuple(move _10, move _11) -> bb4; // scope 1 at refcell.rs:1:10: 1:15
+                                         // mir::Constant
+                                         // + span: refcell.rs:1:10: 1:15
+                                         // + user_ty: UserType(0)
+                                         // + literal: Const { ty: for<'b, 'r> fn(&'b mut std::fmt::Formatter, &'r str) -> std::fmt::DebugTuple<'b, '_> {std::fmt::Formatter::debug_tuple}, val: Value(Scalar(<ZST>)) }
+    }
+
+    bb4: {
+        _8 = &mut _9;                    // scope 1 at refcell.rs:1:10: 1:15
+        _14 = &mut (*_8);                // scope 2 at refcell.rs:1:10: 1:15
+        _18 = _6;                        // scope 2 at refcell.rs:3:10: 3:26
+        _17 = &_18;                      // scope 2 at refcell.rs:3:10: 3:26
+        _16 = _17;                       // scope 2 at refcell.rs:3:10: 3:26
+        _15 = move _16 as &dyn std::fmt::Debug (Pointer(Unsize)); // scope 2 at refcell.rs:3:10: 3:26
+        _13 = DebugTuple::field(move _14, move _15) -> bb5; // scope 2 at refcell.rs:1:10: 1:15
+                                         // mir::Constant
+                                         // + span: refcell.rs:1:10: 1:15
+                                         // + user_ty: UserType(1)
+                                         // + literal: Const { ty: for<'r, 's> fn(&'r mut std::fmt::DebugTuple, &'s (dyn std::fmt::Debug + 's)) -> &'r mut std::fmt::DebugTuple {std::fmt::DebugTuple::field}, val: Value(Scalar(<ZST>)) }
+    }
+
+    bb5: {
+        _20 = &mut (*_8);                // scope 3 at refcell.rs:1:10: 1:15
+        _24 = _7;                        // scope 3 at refcell.rs:3:28: 3:36
+        _23 = &_24;                      // scope 3 at refcell.rs:3:28: 3:36
+        _22 = _23;                       // scope 3 at refcell.rs:3:28: 3:36
+        _21 = move _22 as &dyn std::fmt::Debug (Pointer(Unsize)); // scope 3 at refcell.rs:3:28: 3:36
+        _19 = DebugTuple::field(move _20, move _21) -> bb6; // scope 3 at refcell.rs:1:10: 1:15
+                                         // mir::Constant
+                                         // + span: refcell.rs:1:10: 1:15
+                                         // + user_ty: UserType(2)
+                                         // + literal: Const { ty: for<'r, 's> fn(&'r mut std::fmt::DebugTuple, &'s (dyn std::fmt::Debug + 's)) -> &'r mut std::fmt::DebugTuple {std::fmt::DebugTuple::field}, val: Value(Scalar(<ZST>)) }
+    }
+
+    bb6: {
+        _25 = &mut (*_8);                // scope 4 at refcell.rs:1:10: 1:15
+        _0 = DebugTuple::finish(move _25) -> bb8; // scope 4 at refcell.rs:1:10: 1:15
+                                         // mir::Constant
+                                         // + span: refcell.rs:1:10: 1:15
+                                         // + user_ty: UserType(3)
+                                         // + literal: Const { ty: for<'r> fn(&'r mut std::fmt::DebugTuple) -> std::result::Result<(), std::fmt::Error> {std::fmt::DebugTuple::finish}, val: Value(Scalar(<ZST>)) }
+    }
+
+    bb7: {
+        _26 = &mut _27;                  // scope 0 at refcell.rs:1:10: 1:15
+        _31 = &mut (*_26);               // scope 5 at refcell.rs:1:10: 1:15
+        _0 = DebugTuple::finish(move _31) -> bb8; // scope 5 at refcell.rs:1:10: 1:15
+                                         // mir::Constant
+                                         // + span: refcell.rs:1:10: 1:15
+                                         // + user_ty: UserType(5)
+                                         // + literal: Const { ty: for<'r> fn(&'r mut std::fmt::DebugTuple) -> std::result::Result<(), std::fmt::Error> {std::fmt::DebugTuple::finish}, val: Value(Scalar(<ZST>)) }
+    }
+
+    bb8: {
+        return;                          // scope 0 at refcell.rs:1:15: 1:15
+    }
+}
+
+fn List::Cons(_1: Rc<RefCell<i32>>, _2: Rc<List>) -> List {
+    let mut _0: List;                    // return place in scope 0 at refcell.rs:3:5: 3:37
+
+    bb0: {
+        ((_0 as Cons).0: std::rc::Rc<std::cell::RefCell<i32>>) = move _1; // scope 0 at refcell.rs:3:5: 3:37
+        ((_0 as Cons).1: std::rc::Rc<List>) = move _2; // scope 0 at refcell.rs:3:5: 3:37
+        discriminant(_0) = 0;            // scope 0 at refcell.rs:3:5: 3:37
+        return;                          // scope 0 at refcell.rs:3:5: 3:37
+    }
+}
+
+// MIR FOR CTFE
+fn List::Cons(_1: Rc<RefCell<i32>>, _2: Rc<List>) -> List {
+    let mut _0: List;                    // return place in scope 0 at refcell.rs:3:5: 3:37
+
+    bb0: {
+        ((_0 as Cons).0: std::rc::Rc<std::cell::RefCell<i32>>) = move _1; // scope 0 at refcell.rs:3:5: 3:37
+        ((_0 as Cons).1: std::rc::Rc<List>) = move _2; // scope 0 at refcell.rs:3:5: 3:37
+        discriminant(_0) = 0;            // scope 0 at refcell.rs:3:5: 3:37
+        return;                          // scope 0 at refcell.rs:3:5: 3:37
+    }
+}

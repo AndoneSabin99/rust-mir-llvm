@@ -1,0 +1,268 @@
+// WARNING: This output format is intended for human consumers only
+// and is subject to change without notice. Knock yourself out.
+fn outliving_longest(_1: &str, _2: &str) -> String {
+    debug x => _1;                       // in scope 0 at lifetimes.rs:11:30: 11:31
+    debug y => _2;                       // in scope 0 at lifetimes.rs:11:42: 11:43
+    let mut _0: std::string::String;     // return place in scope 0 at lifetimes.rs:11:57: 11:63
+    let mut _3: bool;                    // in scope 0 at lifetimes.rs:12:8: 12:25
+    let mut _4: usize;                   // in scope 0 at lifetimes.rs:12:8: 12:15
+    let mut _5: &str;                    // in scope 0 at lifetimes.rs:12:8: 12:9
+    let mut _6: usize;                   // in scope 0 at lifetimes.rs:12:18: 12:25
+    let mut _7: &str;                    // in scope 0 at lifetimes.rs:12:18: 12:19
+    let mut _8: &str;                    // in scope 0 at lifetimes.rs:13:9: 13:10
+    let mut _9: &str;                    // in scope 0 at lifetimes.rs:15:9: 15:10
+
+    bb0: {
+        _5 = _1;                         // scope 0 at lifetimes.rs:12:8: 12:9
+        _4 = core::str::<impl str>::len(move _5) -> bb1; // scope 0 at lifetimes.rs:12:8: 12:15
+                                         // mir::Constant
+                                         // + span: lifetimes.rs:12:10: 12:13
+                                         // + literal: Const { ty: for<'r> fn(&'r str) -> usize {core::str::<impl str>::len}, val: Value(Scalar(<ZST>)) }
+    }
+
+    bb1: {
+        _7 = _2;                         // scope 0 at lifetimes.rs:12:18: 12:19
+        _6 = core::str::<impl str>::len(move _7) -> bb2; // scope 0 at lifetimes.rs:12:18: 12:25
+                                         // mir::Constant
+                                         // + span: lifetimes.rs:12:20: 12:23
+                                         // + literal: Const { ty: for<'r> fn(&'r str) -> usize {core::str::<impl str>::len}, val: Value(Scalar(<ZST>)) }
+    }
+
+    bb2: {
+        _3 = Gt(move _4, move _6);       // scope 0 at lifetimes.rs:12:8: 12:25
+        switchInt(move _3) -> [false: bb4, otherwise: bb3]; // scope 0 at lifetimes.rs:12:8: 12:25
+    }
+
+    bb3: {
+        _8 = _1;                         // scope 0 at lifetimes.rs:13:9: 13:10
+        _0 = <str as ToOwned>::to_owned(move _8) -> bb5; // scope 0 at lifetimes.rs:13:9: 13:21
+                                         // mir::Constant
+                                         // + span: lifetimes.rs:13:11: 13:19
+                                         // + literal: Const { ty: for<'r> fn(&'r str) -> <str as std::borrow::ToOwned>::Owned {<str as std::borrow::ToOwned>::to_owned}, val: Value(Scalar(<ZST>)) }
+    }
+
+    bb4: {
+        _9 = _2;                         // scope 0 at lifetimes.rs:15:9: 15:10
+        _0 = <str as ToOwned>::to_owned(move _9) -> bb5; // scope 0 at lifetimes.rs:15:9: 15:21
+                                         // mir::Constant
+                                         // + span: lifetimes.rs:15:11: 15:19
+                                         // + literal: Const { ty: for<'r> fn(&'r str) -> <str as std::borrow::ToOwned>::Owned {<str as std::borrow::ToOwned>::to_owned}, val: Value(Scalar(<ZST>)) }
+    }
+
+    bb5: {
+        return;                          // scope 0 at lifetimes.rs:17:2: 17:2
+    }
+}
+
+fn main() -> () {
+    let mut _0: ();                      // return place in scope 0 at lifetimes.rs:1:11: 1:11
+    let _1: std::string::String;         // in scope 0 at lifetimes.rs:2:9: 2:10
+    let mut _4: std::string::String;     // in scope 0 at lifetimes.rs:6:13: 6:38
+    let mut _5: &str;                    // in scope 0 at lifetimes.rs:6:31: 6:33
+    let _6: &str;                        // in scope 0 at lifetimes.rs:6:31: 6:33
+    let mut _7: &std::string::String;    // in scope 0 at lifetimes.rs:6:31: 6:33
+    let _8: &std::string::String;        // in scope 0 at lifetimes.rs:6:31: 6:33
+    let mut _9: &str;                    // in scope 0 at lifetimes.rs:6:35: 6:37
+    let _10: &str;                       // in scope 0 at lifetimes.rs:6:35: 6:37
+    let mut _11: &std::string::String;   // in scope 0 at lifetimes.rs:6:35: 6:37
+    let _12: &std::string::String;       // in scope 0 at lifetimes.rs:6:35: 6:37
+    let _13: ();                         // in scope 0 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:9: 97:62
+    let mut _14: std::fmt::Arguments;    // in scope 0 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+    let mut _15: [std::fmt::ArgumentV1; 1]; // in scope 0 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+    let mut _16: (&std::string::String,); // in scope 0 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+    let mut _17: &std::string::String;   // in scope 0 at lifetimes.rs:8:24: 8:25
+    let mut _19: std::fmt::ArgumentV1;   // in scope 0 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+    let mut _20: &std::string::String;   // in scope 0 at lifetimes.rs:8:24: 8:25
+    let mut _21: for<'r, 's, 't0> fn(&'r std::string::String, &'s mut std::fmt::Formatter<'t0>) -> std::result::Result<(), std::fmt::Error>; // in scope 0 at lifetimes.rs:8:24: 8:25
+    let mut _23: &[&str];                // in scope 0 at lifetimes.rs:8:14: 8:22
+    let mut _24: &[&str; 2];             // in scope 0 at lifetimes.rs:8:14: 8:22
+    let _25: &[&str; 2];                 // in scope 0 at lifetimes.rs:8:14: 8:22
+    let mut _26: &[std::fmt::ArgumentV1]; // in scope 0 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+    let mut _27: &[std::fmt::ArgumentV1; 1]; // in scope 0 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+    let mut _29: bool;                   // in scope 0 at lifetimes.rs:9:1: 9:2
+    scope 1 {
+        debug x => _1;                   // in scope 1 at lifetimes.rs:2:9: 2:10
+        let _2: std::string::String;     // in scope 1 at lifetimes.rs:3:9: 3:10
+        scope 2 {
+            debug z => _2;               // in scope 2 at lifetimes.rs:3:9: 3:10
+            let _3: std::string::String; // in scope 2 at lifetimes.rs:5:13: 5:14
+            let _18: &std::string::String; // in scope 2 at lifetimes.rs:8:24: 8:25
+            let _22: &[std::fmt::ArgumentV1; 1]; // in scope 2 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+            scope 3 {
+                debug y => _3;           // in scope 3 at lifetimes.rs:5:13: 5:14
+            }
+            scope 4 {
+                debug arg0 => _18;       // in scope 4 at lifetimes.rs:8:24: 8:25
+            }
+            scope 5 {
+                debug args => _22;       // in scope 5 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+                scope 6 {
+                    let mut _28: &[&str; 2]; // in scope 6 at lifetimes.rs:8:14: 8:22
+                }
+            }
+        }
+    }
+
+    bb0: {
+        _29 = const false;               // scope 0 at lifetimes.rs:2:9: 2:10
+        _1 = <String as From<&str>>::from(const "hi") -> bb1; // scope 0 at lifetimes.rs:2:13: 2:31
+                                         // mir::Constant
+                                         // + span: lifetimes.rs:2:13: 2:25
+                                         // + user_ty: UserType(0)
+                                         // + literal: Const { ty: fn(&str) -> std::string::String {<std::string::String as std::convert::From<&str>>::from}, val: Value(Scalar(<ZST>)) }
+                                         // ty::Const
+                                         // + ty: &str
+                                         // + val: Value(Slice { data: Allocation { bytes: [104, 105], relocations: Relocations(SortedMap { data: [] }), init_mask: InitMask { blocks: [3], len: Size { raw: 2 } }, align: Align { pow2: 0 }, mutability: Not, extra: () }, start: 0, end: 2 })
+                                         // mir::Constant
+                                         // + span: lifetimes.rs:2:26: 2:30
+                                         // + literal: Const { ty: &str, val: Value(Slice { data: Allocation { bytes: [104, 105], relocations: Relocations(SortedMap { data: [] }), init_mask: InitMask { blocks: [3], len: Size { raw: 2 } }, align: Align { pow2: 0 }, mutability: Not, extra: () }, start: 0, end: 2 }) }
+    }
+
+    bb1: {
+        _3 = <String as From<&str>>::from(const "there") -> [return: bb2, unwind: bb16]; // scope 2 at lifetimes.rs:5:17: 5:38
+                                         // mir::Constant
+                                         // + span: lifetimes.rs:5:17: 5:29
+                                         // + user_ty: UserType(1)
+                                         // + literal: Const { ty: fn(&str) -> std::string::String {<std::string::String as std::convert::From<&str>>::from}, val: Value(Scalar(<ZST>)) }
+                                         // ty::Const
+                                         // + ty: &str
+                                         // + val: Value(Slice { data: Allocation { bytes: [116, 104, 101, 114, 101], relocations: Relocations(SortedMap { data: [] }), init_mask: InitMask { blocks: [31], len: Size { raw: 5 } }, align: Align { pow2: 0 }, mutability: Not, extra: () }, start: 0, end: 5 })
+                                         // mir::Constant
+                                         // + span: lifetimes.rs:5:30: 5:37
+                                         // + literal: Const { ty: &str, val: Value(Slice { data: Allocation { bytes: [116, 104, 101, 114, 101], relocations: Relocations(SortedMap { data: [] }), init_mask: InitMask { blocks: [31], len: Size { raw: 5 } }, align: Align { pow2: 0 }, mutability: Not, extra: () }, start: 0, end: 5 }) }
+    }
+
+    bb2: {
+        _8 = &_1;                        // scope 3 at lifetimes.rs:6:31: 6:33
+        _7 = _8;                         // scope 3 at lifetimes.rs:6:31: 6:33
+        _6 = <String as Deref>::deref(move _7) -> [return: bb3, unwind: bb12]; // scope 3 at lifetimes.rs:6:31: 6:33
+                                         // mir::Constant
+                                         // + span: lifetimes.rs:6:31: 6:33
+                                         // + literal: Const { ty: for<'r> fn(&'r std::string::String) -> &'r <std::string::String as std::ops::Deref>::Target {<std::string::String as std::ops::Deref>::deref}, val: Value(Scalar(<ZST>)) }
+    }
+
+    bb3: {
+        _5 = _6;                         // scope 3 at lifetimes.rs:6:31: 6:33
+        _12 = &_3;                       // scope 3 at lifetimes.rs:6:35: 6:37
+        _11 = _12;                       // scope 3 at lifetimes.rs:6:35: 6:37
+        _10 = <String as Deref>::deref(move _11) -> [return: bb4, unwind: bb12]; // scope 3 at lifetimes.rs:6:35: 6:37
+                                         // mir::Constant
+                                         // + span: lifetimes.rs:6:35: 6:37
+                                         // + literal: Const { ty: for<'r> fn(&'r std::string::String) -> &'r <std::string::String as std::ops::Deref>::Target {<std::string::String as std::ops::Deref>::deref}, val: Value(Scalar(<ZST>)) }
+    }
+
+    bb4: {
+        _9 = _10;                        // scope 3 at lifetimes.rs:6:35: 6:37
+        _4 = outliving_longest(move _5, move _9) -> [return: bb5, unwind: bb12]; // scope 3 at lifetimes.rs:6:13: 6:38
+                                         // mir::Constant
+                                         // + span: lifetimes.rs:6:13: 6:30
+                                         // + literal: Const { ty: for<'a, 'b> fn(&'a str, &'b str) -> std::string::String {outliving_longest}, val: Value(Scalar(<ZST>)) }
+    }
+
+    bb5: {
+        _29 = const true;                // scope 3 at lifetimes.rs:6:9: 6:10
+        _2 = move _4;                    // scope 3 at lifetimes.rs:6:9: 6:10
+        drop(_3) -> [return: bb6, unwind: bb16]; // scope 2 at lifetimes.rs:7:5: 7:6
+    }
+
+    bb6: {
+        _17 = &_2;                       // scope 2 at lifetimes.rs:8:24: 8:25
+        (_16.0: &std::string::String) = move _17; // scope 2 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+        _18 = (_16.0: &std::string::String); // scope 2 at lifetimes.rs:8:24: 8:25
+        _20 = _18;                       // scope 4 at lifetimes.rs:8:24: 8:25
+        _21 = <String as std::fmt::Display>::fmt as for<'r, 's, 't0> fn(&'r std::string::String, &'s mut std::fmt::Formatter<'t0>) -> std::result::Result<(), std::fmt::Error> (Pointer(ReifyFnPointer)); // scope 4 at lifetimes.rs:8:24: 8:25
+                                         // mir::Constant
+                                         // + span: lifetimes.rs:8:24: 8:25
+                                         // + literal: Const { ty: for<'r, 's, 't0> fn(&'r std::string::String, &'s mut std::fmt::Formatter<'t0>) -> std::result::Result<(), std::fmt::Error> {<std::string::String as std::fmt::Display>::fmt}, val: Value(Scalar(<ZST>)) }
+        _19 = ArgumentV1::new::<String>(move _20, move _21) -> [return: bb7, unwind: bb16]; // scope 4 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+                                         // mir::Constant
+                                         // + span: /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+                                         // + user_ty: UserType(2)
+                                         // + literal: Const { ty: for<'b> fn(&'b std::string::String, for<'r, 's, 't0> fn(&'r std::string::String, &'s mut std::fmt::Formatter<'t0>) -> std::result::Result<(), std::fmt::Error>) -> std::fmt::ArgumentV1<'b> {std::fmt::ArgumentV1::new::<std::string::String>}, val: Value(Scalar(<ZST>)) }
+    }
+
+    bb7: {
+        _15 = [move _19];                // scope 4 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+        _22 = &_15;                      // scope 2 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+        _28 = const main::promoted[0];   // scope 6 at lifetimes.rs:8:14: 8:22
+                                         // ty::Const
+                                         // + ty: &[&str; 2]
+                                         // + val: Unevaluated(main, [], Some(promoted[0]))
+                                         // mir::Constant
+                                         // + span: lifetimes.rs:8:14: 8:22
+                                         // + literal: Const { ty: &[&str; 2], val: Unevaluated(Unevaluated { def: WithOptConstParam { did: DefId(0:3 ~ lifetimes[6544]::main), const_param_did: None }, substs_: Some([]), promoted: Some(promoted[0]) }) }
+        _25 = _28;                       // scope 6 at lifetimes.rs:8:14: 8:22
+        _24 = _25;                       // scope 6 at lifetimes.rs:8:14: 8:22
+        _23 = move _24 as &[&str] (Pointer(Unsize)); // scope 6 at lifetimes.rs:8:14: 8:22
+        _27 = _22;                       // scope 6 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+        _26 = move _27 as &[std::fmt::ArgumentV1] (Pointer(Unsize)); // scope 6 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+        _14 = Arguments::new_v1(move _23, move _26) -> [return: bb8, unwind: bb16]; // scope 6 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+                                         // mir::Constant
+                                         // + span: /home/sabin/cheri/rust/library/std/src/macros.rs:97:28: 97:61
+                                         // + user_ty: UserType(3)
+                                         // + literal: Const { ty: unsafe fn(&[&'static str], &[std::fmt::ArgumentV1]) -> std::fmt::Arguments {std::fmt::Arguments::new_v1}, val: Value(Scalar(<ZST>)) }
+    }
+
+    bb8: {
+        _13 = _print(move _14) -> [return: bb9, unwind: bb16]; // scope 2 at /home/sabin/cheri/rust/library/std/src/macros.rs:97:9: 97:62
+                                         // mir::Constant
+                                         // + span: /home/sabin/cheri/rust/library/std/src/macros.rs:97:9: 97:27
+                                         // + literal: Const { ty: for<'r> fn(std::fmt::Arguments<'r>) {std::io::_print}, val: Value(Scalar(<ZST>)) }
+    }
+
+    bb9: {
+        drop(_2) -> [return: bb10, unwind: bb13]; // scope 1 at lifetimes.rs:9:1: 9:2
+    }
+
+    bb10: {
+        _29 = const false;               // scope 1 at lifetimes.rs:9:1: 9:2
+        drop(_1) -> bb11;                // scope 0 at lifetimes.rs:9:1: 9:2
+    }
+
+    bb11: {
+        return;                          // scope 0 at lifetimes.rs:9:2: 9:2
+    }
+
+    bb12 (cleanup): {
+        drop(_3) -> bb16;                // scope 2 at lifetimes.rs:7:5: 7:6
+    }
+
+    bb13 (cleanup): {
+        drop(_1) -> bb14;                // scope 0 at lifetimes.rs:9:1: 9:2
+    }
+
+    bb14 (cleanup): {
+        resume;                          // scope 0 at lifetimes.rs:1:1: 9:2
+    }
+
+    bb15 (cleanup): {
+        drop(_2) -> bb13;                // scope 1 at lifetimes.rs:9:1: 9:2
+    }
+
+    bb16 (cleanup): {
+        switchInt(_29) -> [false: bb13, otherwise: bb15]; // scope 1 at lifetimes.rs:9:1: 9:2
+    }
+}
+
+promoted[0] in main: &[&str; 2] = {
+    let mut _0: &[&str; 2];              // return place in scope 0 at lifetimes.rs:8:14: 8:22
+    let mut _1: [&str; 2];               // in scope 0 at lifetimes.rs:8:14: 8:22
+
+    bb0: {
+        _1 = [const "z = ", const "\n"]; // scope 0 at lifetimes.rs:8:14: 8:22
+                                         // ty::Const
+                                         // + ty: &str
+                                         // + val: Value(Slice { data: Allocation { bytes: [122, 32, 61, 32], relocations: Relocations(SortedMap { data: [] }), init_mask: InitMask { blocks: [15], len: Size { raw: 4 } }, align: Align { pow2: 0 }, mutability: Not, extra: () }, start: 0, end: 4 })
+                                         // mir::Constant
+                                         // + span: lifetimes.rs:8:14: 8:22
+                                         // + literal: Const { ty: &str, val: Value(Slice { data: Allocation { bytes: [122, 32, 61, 32], relocations: Relocations(SortedMap { data: [] }), init_mask: InitMask { blocks: [15], len: Size { raw: 4 } }, align: Align { pow2: 0 }, mutability: Not, extra: () }, start: 0, end: 4 }) }
+                                         // ty::Const
+                                         // + ty: &str
+                                         // + val: Value(Slice { data: Allocation { bytes: [10], relocations: Relocations(SortedMap { data: [] }), init_mask: InitMask { blocks: [1], len: Size { raw: 1 } }, align: Align { pow2: 0 }, mutability: Not, extra: () }, start: 0, end: 1 })
+                                         // mir::Constant
+                                         // + span: lifetimes.rs:8:14: 8:22
+                                         // + literal: Const { ty: &str, val: Value(Slice { data: Allocation { bytes: [10], relocations: Relocations(SortedMap { data: [] }), init_mask: InitMask { blocks: [1], len: Size { raw: 1 } }, align: Align { pow2: 0 }, mutability: Not, extra: () }, start: 0, end: 1 }) }
+        _0 = &_1;                        // scope 0 at lifetimes.rs:8:14: 8:22
+        return;                          // scope 0 at lifetimes.rs:8:14: 8:22
+    }
+}

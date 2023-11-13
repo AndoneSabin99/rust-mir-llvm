@@ -1,0 +1,145 @@
+// WARNING: This output format is intended for human consumers only
+// and is subject to change without notice. Knock yourself out.
+fn main() -> () {
+    let mut _0: ();                      // return place in scope 0 at vec.rs:1:10: 1:10
+    let mut _1: std::vec::Vec<i32>;      // in scope 0 at vec.rs:4:9: 4:14
+    let _2: ();                          // in scope 0 at vec.rs:6:5: 6:14
+    let mut _3: &mut std::vec::Vec<i32>; // in scope 0 at vec.rs:6:5: 6:6
+    let _4: ();                          // in scope 0 at vec.rs:7:5: 7:14
+    let mut _5: &mut std::vec::Vec<i32>; // in scope 0 at vec.rs:7:5: 7:6
+    let _6: ();                          // in scope 0 at vec.rs:8:5: 8:14
+    let mut _7: &mut std::vec::Vec<i32>; // in scope 0 at vec.rs:8:5: 8:6
+    let _8: ();                          // in scope 0 at vec.rs:9:5: 9:14
+    let mut _9: &mut std::vec::Vec<i32>; // in scope 0 at vec.rs:9:5: 9:6
+    let _10: std::option::Option<i32>;   // in scope 0 at vec.rs:10:5: 10:12
+    let mut _11: &mut std::vec::Vec<i32>; // in scope 0 at vec.rs:10:5: 10:6
+    let mut _13: std::option::Option<&i32>; // in scope 0 at vec.rs:12:13: 12:21
+    let mut _14: &[i32];                 // in scope 0 at vec.rs:12:13: 12:14
+    let _15: &[i32];                     // in scope 0 at vec.rs:12:13: 12:21
+    let mut _16: &std::vec::Vec<i32>;    // in scope 0 at vec.rs:12:13: 12:14
+    let mut _18: std::option::Option<&i32>; // in scope 0 at vec.rs:13:14: 13:22
+    let mut _19: &[i32];                 // in scope 0 at vec.rs:13:14: 13:15
+    let _20: &[i32];                     // in scope 0 at vec.rs:13:14: 13:22
+    let mut _21: &std::vec::Vec<i32>;    // in scope 0 at vec.rs:13:14: 13:15
+    scope 1 {
+        debug v => _1;                   // in scope 1 at vec.rs:4:9: 4:14
+        let _12: &i32;                   // in scope 1 at vec.rs:12:9: 12:10
+        scope 2 {
+            debug n => _12;              // in scope 2 at vec.rs:12:9: 12:10
+            let _17: &i32;               // in scope 2 at vec.rs:13:9: 13:11
+            scope 3 {
+                debug nn => _17;         // in scope 3 at vec.rs:13:9: 13:11
+            }
+        }
+    }
+
+    bb0: {
+        _1 = Vec::<i32>::new() -> bb1;   // scope 0 at vec.rs:4:27: 4:37
+                                         // mir::Constant
+                                         // + span: vec.rs:4:27: 4:35
+                                         // + user_ty: UserType(1)
+                                         // + literal: Const { ty: fn() -> std::vec::Vec<i32> {std::vec::Vec::<i32>::new}, val: Value(Scalar(<ZST>)) }
+    }
+
+    bb1: {
+        _3 = &mut _1;                    // scope 1 at vec.rs:6:5: 6:6
+        _2 = Vec::<i32>::push(move _3, const 5_i32) -> [return: bb2, unwind: bb14]; // scope 1 at vec.rs:6:5: 6:14
+                                         // mir::Constant
+                                         // + span: vec.rs:6:7: 6:11
+                                         // + literal: Const { ty: for<'r> fn(&'r mut std::vec::Vec<i32>, i32) {std::vec::Vec::<i32>::push}, val: Value(Scalar(<ZST>)) }
+    }
+
+    bb2: {
+        _5 = &mut _1;                    // scope 1 at vec.rs:7:5: 7:6
+        _4 = Vec::<i32>::push(move _5, const 5_i32) -> [return: bb3, unwind: bb14]; // scope 1 at vec.rs:7:5: 7:14
+                                         // mir::Constant
+                                         // + span: vec.rs:7:7: 7:11
+                                         // + literal: Const { ty: for<'r> fn(&'r mut std::vec::Vec<i32>, i32) {std::vec::Vec::<i32>::push}, val: Value(Scalar(<ZST>)) }
+    }
+
+    bb3: {
+        _7 = &mut _1;                    // scope 1 at vec.rs:8:5: 8:6
+        _6 = Vec::<i32>::push(move _7, const 6_i32) -> [return: bb4, unwind: bb14]; // scope 1 at vec.rs:8:5: 8:14
+                                         // mir::Constant
+                                         // + span: vec.rs:8:7: 8:11
+                                         // + literal: Const { ty: for<'r> fn(&'r mut std::vec::Vec<i32>, i32) {std::vec::Vec::<i32>::push}, val: Value(Scalar(<ZST>)) }
+    }
+
+    bb4: {
+        _9 = &mut _1;                    // scope 1 at vec.rs:9:5: 9:6
+        _8 = Vec::<i32>::push(move _9, const 5_i32) -> [return: bb5, unwind: bb14]; // scope 1 at vec.rs:9:5: 9:14
+                                         // mir::Constant
+                                         // + span: vec.rs:9:7: 9:11
+                                         // + literal: Const { ty: for<'r> fn(&'r mut std::vec::Vec<i32>, i32) {std::vec::Vec::<i32>::push}, val: Value(Scalar(<ZST>)) }
+    }
+
+    bb5: {
+        _11 = &mut _1;                   // scope 1 at vec.rs:10:5: 10:6
+        _10 = Vec::<i32>::pop(move _11) -> [return: bb6, unwind: bb14]; // scope 1 at vec.rs:10:5: 10:12
+                                         // mir::Constant
+                                         // + span: vec.rs:10:7: 10:10
+                                         // + literal: Const { ty: for<'r> fn(&'r mut std::vec::Vec<i32>) -> std::option::Option<i32> {std::vec::Vec::<i32>::pop}, val: Value(Scalar(<ZST>)) }
+    }
+
+    bb6: {
+        _16 = &_1;                       // scope 1 at vec.rs:12:13: 12:14
+        _15 = <Vec<i32> as Deref>::deref(move _16) -> [return: bb7, unwind: bb14]; // scope 1 at vec.rs:12:13: 12:21
+                                         // mir::Constant
+                                         // + span: vec.rs:12:13: 12:21
+                                         // + literal: Const { ty: for<'r> fn(&'r std::vec::Vec<i32>) -> &'r <std::vec::Vec<i32> as std::ops::Deref>::Target {<std::vec::Vec<i32> as std::ops::Deref>::deref}, val: Value(Scalar(<ZST>)) }
+    }
+
+    bb7: {
+        _14 = _15;                       // scope 1 at vec.rs:12:13: 12:14
+        _13 = core::slice::<impl [i32]>::get::<usize>(move _14, const 0_usize) -> [return: bb8, unwind: bb14]; // scope 1 at vec.rs:12:13: 12:21
+                                         // mir::Constant
+                                         // + span: vec.rs:12:15: 12:18
+                                         // + literal: Const { ty: for<'r> fn(&'r [i32], usize) -> std::option::Option<&'r <usize as std::slice::SliceIndex<[i32]>>::Output> {core::slice::<impl [i32]>::get::<usize>}, val: Value(Scalar(<ZST>)) }
+    }
+
+    bb8: {
+        _12 = Option::<&i32>::unwrap(move _13) -> [return: bb9, unwind: bb14]; // scope 1 at vec.rs:12:13: 12:30
+                                         // mir::Constant
+                                         // + span: vec.rs:12:22: 12:28
+                                         // + literal: Const { ty: fn(std::option::Option<&i32>) -> &i32 {std::option::Option::<&i32>::unwrap}, val: Value(Scalar(<ZST>)) }
+    }
+
+    bb9: {
+        _21 = &_1;                       // scope 2 at vec.rs:13:14: 13:15
+        _20 = <Vec<i32> as Deref>::deref(move _21) -> [return: bb10, unwind: bb14]; // scope 2 at vec.rs:13:14: 13:22
+                                         // mir::Constant
+                                         // + span: vec.rs:13:14: 13:22
+                                         // + literal: Const { ty: for<'r> fn(&'r std::vec::Vec<i32>) -> &'r <std::vec::Vec<i32> as std::ops::Deref>::Target {<std::vec::Vec<i32> as std::ops::Deref>::deref}, val: Value(Scalar(<ZST>)) }
+    }
+
+    bb10: {
+        _19 = _20;                       // scope 2 at vec.rs:13:14: 13:15
+        _18 = core::slice::<impl [i32]>::get::<usize>(move _19, const 2_usize) -> [return: bb11, unwind: bb14]; // scope 2 at vec.rs:13:14: 13:22
+                                         // mir::Constant
+                                         // + span: vec.rs:13:16: 13:19
+                                         // + literal: Const { ty: for<'r> fn(&'r [i32], usize) -> std::option::Option<&'r <usize as std::slice::SliceIndex<[i32]>>::Output> {core::slice::<impl [i32]>::get::<usize>}, val: Value(Scalar(<ZST>)) }
+    }
+
+    bb11: {
+        _17 = Option::<&i32>::unwrap(move _18) -> [return: bb12, unwind: bb14]; // scope 2 at vec.rs:13:14: 13:31
+                                         // mir::Constant
+                                         // + span: vec.rs:13:23: 13:29
+                                         // + literal: Const { ty: fn(std::option::Option<&i32>) -> &i32 {std::option::Option::<&i32>::unwrap}, val: Value(Scalar(<ZST>)) }
+    }
+
+    bb12: {
+        drop(_1) -> bb13;                // scope 0 at vec.rs:14:1: 14:2
+    }
+
+    bb13: {
+        return;                          // scope 0 at vec.rs:14:2: 14:2
+    }
+
+    bb14 (cleanup): {
+        drop(_1) -> bb15;                // scope 0 at vec.rs:14:1: 14:2
+    }
+
+    bb15 (cleanup): {
+        resume;                          // scope 0 at vec.rs:1:1: 14:2
+    }
+}

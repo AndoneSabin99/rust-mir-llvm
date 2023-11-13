@@ -1,0 +1,132 @@
+// WARNING: This output format is intended for human consumers only
+// and is subject to change without notice. Knock yourself out.
+fn IpAddr::V6(_1: String) -> IpAddr {
+    let mut _0: IpAddr;                  // return place in scope 0 at enum_usage.rs:10:5: 10:15
+
+    bb0: {
+        ((_0 as V6).0: std::string::String) = move _1; // scope 0 at enum_usage.rs:10:5: 10:15
+        discriminant(_0) = 1;            // scope 0 at enum_usage.rs:10:5: 10:15
+        return;                          // scope 0 at enum_usage.rs:10:5: 10:15
+    }
+}
+
+// MIR FOR CTFE
+fn IpAddr::V6(_1: String) -> IpAddr {
+    let mut _0: IpAddr;                  // return place in scope 0 at enum_usage.rs:10:5: 10:15
+
+    bb0: {
+        ((_0 as V6).0: std::string::String) = move _1; // scope 0 at enum_usage.rs:10:5: 10:15
+        discriminant(_0) = 1;            // scope 0 at enum_usage.rs:10:5: 10:15
+        return;                          // scope 0 at enum_usage.rs:10:5: 10:15
+    }
+}
+
+fn IpAddr::V4(_1: i32, _2: i32, _3: i32, _4: i32) -> IpAddr {
+    let mut _0: IpAddr;                  // return place in scope 0 at enum_usage.rs:9:5: 9:24
+
+    bb0: {
+        ((_0 as V4).0: i32) = move _1;   // scope 0 at enum_usage.rs:9:5: 9:24
+        ((_0 as V4).1: i32) = move _2;   // scope 0 at enum_usage.rs:9:5: 9:24
+        ((_0 as V4).2: i32) = move _3;   // scope 0 at enum_usage.rs:9:5: 9:24
+        ((_0 as V4).3: i32) = move _4;   // scope 0 at enum_usage.rs:9:5: 9:24
+        discriminant(_0) = 0;            // scope 0 at enum_usage.rs:9:5: 9:24
+        return;                          // scope 0 at enum_usage.rs:9:5: 9:24
+    }
+}
+
+// MIR FOR CTFE
+fn IpAddr::V4(_1: i32, _2: i32, _3: i32, _4: i32) -> IpAddr {
+    let mut _0: IpAddr;                  // return place in scope 0 at enum_usage.rs:9:5: 9:24
+
+    bb0: {
+        ((_0 as V4).0: i32) = move _1;   // scope 0 at enum_usage.rs:9:5: 9:24
+        ((_0 as V4).1: i32) = move _2;   // scope 0 at enum_usage.rs:9:5: 9:24
+        ((_0 as V4).2: i32) = move _3;   // scope 0 at enum_usage.rs:9:5: 9:24
+        ((_0 as V4).3: i32) = move _4;   // scope 0 at enum_usage.rs:9:5: 9:24
+        discriminant(_0) = 0;            // scope 0 at enum_usage.rs:9:5: 9:24
+        return;                          // scope 0 at enum_usage.rs:9:5: 9:24
+    }
+}
+
+fn main() -> () {
+    let mut _0: ();                      // return place in scope 0 at enum_usage.rs:14:10: 14:10
+    let _1: IpAddrKind;                  // in scope 0 at enum_usage.rs:16:9: 16:14
+    let mut _4: std::string::String;     // in scope 0 at enum_usage.rs:20:31: 20:50
+    scope 1 {
+        debug _four => _1;               // in scope 1 at enum_usage.rs:16:9: 16:14
+        let _2: IpAddrKind;              // in scope 1 at enum_usage.rs:18:9: 18:13
+        scope 2 {
+            debug _six => _2;            // in scope 2 at enum_usage.rs:18:9: 18:13
+            let _3: IpAddr;              // in scope 2 at enum_usage.rs:20:9: 20:17
+            scope 3 {
+                debug loopback => _3;    // in scope 3 at enum_usage.rs:20:9: 20:17
+                let _5: IpAddr;          // in scope 3 at enum_usage.rs:21:9: 21:13
+                scope 4 {
+                    debug home => _5;    // in scope 4 at enum_usage.rs:21:9: 21:13
+                }
+            }
+        }
+    }
+
+    bb0: {
+        discriminant(_1) = 0;            // scope 0 at enum_usage.rs:16:17: 16:31
+        discriminant(_2) = 1;            // scope 1 at enum_usage.rs:18:16: 18:30
+        _4 = <String as From<&str>>::from(const "::1") -> bb1; // scope 2 at enum_usage.rs:20:31: 20:50
+                                         // mir::Constant
+                                         // + span: enum_usage.rs:20:31: 20:43
+                                         // + user_ty: UserType(0)
+                                         // + literal: Const { ty: fn(&str) -> std::string::String {<std::string::String as std::convert::From<&str>>::from}, val: Value(Scalar(<ZST>)) }
+                                         // ty::Const
+                                         // + ty: &str
+                                         // + val: Value(Slice { data: Allocation { bytes: [58, 58, 49], relocations: Relocations(SortedMap { data: [] }), init_mask: InitMask { blocks: [7], len: Size { raw: 3 } }, align: Align { pow2: 0 }, mutability: Not, extra: () }, start: 0, end: 3 })
+                                         // mir::Constant
+                                         // + span: enum_usage.rs:20:44: 20:49
+                                         // + literal: Const { ty: &str, val: Value(Slice { data: Allocation { bytes: [58, 58, 49], relocations: Relocations(SortedMap { data: [] }), init_mask: InitMask { blocks: [7], len: Size { raw: 3 } }, align: Align { pow2: 0 }, mutability: Not, extra: () }, start: 0, end: 3 }) }
+    }
+
+    bb1: {
+        ((_3 as V6).0: std::string::String) = move _4; // scope 2 at enum_usage.rs:20:20: 20:51
+        discriminant(_3) = 1;            // scope 2 at enum_usage.rs:20:20: 20:51
+        ((_5 as V4).0: i32) = const 127_i32; // scope 3 at enum_usage.rs:21:16: 21:40
+        ((_5 as V4).1: i32) = const 0_i32; // scope 3 at enum_usage.rs:21:16: 21:40
+        ((_5 as V4).2: i32) = const 0_i32; // scope 3 at enum_usage.rs:21:16: 21:40
+        ((_5 as V4).3: i32) = const 1_i32; // scope 3 at enum_usage.rs:21:16: 21:40
+        discriminant(_5) = 0;            // scope 3 at enum_usage.rs:21:16: 21:40
+        drop(_5) -> [return: bb2, unwind: bb4]; // scope 3 at enum_usage.rs:23:1: 23:2
+    }
+
+    bb2: {
+        drop(_3) -> bb3;                 // scope 2 at enum_usage.rs:23:1: 23:2
+    }
+
+    bb3: {
+        return;                          // scope 0 at enum_usage.rs:23:2: 23:2
+    }
+
+    bb4 (cleanup): {
+        drop(_3) -> bb5;                 // scope 2 at enum_usage.rs:23:1: 23:2
+    }
+
+    bb5 (cleanup): {
+        resume;                          // scope 0 at enum_usage.rs:14:1: 23:2
+    }
+}
+
+fn IpAddr::V0() -> IpAddr {
+    let mut _0: IpAddr;                  // return place in scope 0 at enum_usage.rs:11:5: 11:9
+
+    bb0: {
+        discriminant(_0) = 2;            // scope 0 at enum_usage.rs:11:5: 11:9
+        return;                          // scope 0 at enum_usage.rs:11:5: 11:9
+    }
+}
+
+// MIR FOR CTFE
+fn IpAddr::V0() -> IpAddr {
+    let mut _0: IpAddr;                  // return place in scope 0 at enum_usage.rs:11:5: 11:9
+
+    bb0: {
+        discriminant(_0) = 2;            // scope 0 at enum_usage.rs:11:5: 11:9
+        return;                          // scope 0 at enum_usage.rs:11:5: 11:9
+    }
+}

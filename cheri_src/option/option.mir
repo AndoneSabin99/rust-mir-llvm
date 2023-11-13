@@ -1,0 +1,31 @@
+// WARNING: This output format is intended for human consumers only
+// and is subject to change without notice. Knock yourself out.
+fn main() -> () {
+    let mut _0: ();                      // return place in scope 0 at option.rs:2:10: 2:10
+    let _1: i8;                          // in scope 0 at option.rs:4:9: 4:10
+    scope 1 {
+        debug x => _1;                   // in scope 1 at option.rs:4:9: 4:10
+        let _2: std::option::Option<i8>; // in scope 1 at option.rs:5:9: 5:10
+        scope 2 {
+            debug y => _2;               // in scope 2 at option.rs:5:9: 5:10
+            let _3: std::option::Option<i32>; // in scope 2 at option.rs:8:9: 8:13
+            scope 3 {
+                debug nopt => _3;        // in scope 3 at option.rs:8:9: 8:13
+                let _4: std::option::Option<i32>; // in scope 3 at option.rs:9:9: 9:12
+                scope 4 {
+                    debug opt => _4;     // in scope 4 at option.rs:9:9: 9:12
+                }
+            }
+        }
+    }
+
+    bb0: {
+        _1 = const 5_i8;                 // scope 0 at option.rs:4:17: 4:18
+        ((_2 as Some).0: i8) = const 5_i8; // scope 1 at option.rs:5:25: 5:32
+        discriminant(_2) = 1;            // scope 1 at option.rs:5:25: 5:32
+        discriminant(_3) = 0;            // scope 2 at option.rs:8:30: 8:34
+        ((_4 as Some).0: i32) = const 10_i32; // scope 3 at option.rs:9:15: 9:23
+        discriminant(_4) = 1;            // scope 3 at option.rs:9:15: 9:23
+        return;                          // scope 0 at option.rs:10:2: 10:2
+    }
+}

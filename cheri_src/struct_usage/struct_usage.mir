@@ -1,0 +1,368 @@
+// WARNING: This output format is intended for human consumers only
+// and is subject to change without notice. Knock yourself out.
+fn main() -> () {
+    let mut _0: ();                      // return place in scope 0 at struct_usage.rs:8:10: 8:10
+    let _1: User;                        // in scope 0 at struct_usage.rs:10:9: 10:15
+    let mut _2: std::string::String;     // in scope 0 at struct_usage.rs:11:16: 11:51
+    let mut _3: std::string::String;     // in scope 0 at struct_usage.rs:12:19: 12:50
+    let mut _5: std::string::String;     // in scope 0 at struct_usage.rs:20:16: 20:51
+    let mut _6: std::string::String;     // in scope 0 at struct_usage.rs:21:19: 21:50
+    let mut _7: std::string::String;     // in scope 0 at struct_usage.rs:26:19: 26:32
+    let mut _8: std::string::String;     // in scope 0 at struct_usage.rs:27:22: 27:35
+    let mut _12: std::string::String;    // in scope 0 at struct_usage.rs:37:9: 37:14
+    let mut _13: std::string::String;    // in scope 0 at struct_usage.rs:38:9: 38:17
+    let mut _15: std::string::String;    // in scope 0 at struct_usage.rs:44:16: 44:51
+    let mut _16: std::string::String;    // in scope 0 at struct_usage.rs:45:19: 45:50
+    let mut _18: std::string::String;    // in scope 0 at struct_usage.rs:52:16: 52:51
+    let mut _19: std::string::String;    // in scope 0 at struct_usage.rs:53:19: 53:53
+    let mut _21: std::string::String;    // in scope 0 at struct_usage.rs:57:16: 57:51
+    let mut _22: std::string::String;    // in scope 0 at struct_usage.rs:58:19: 58:53
+    let mut _23: bool;                   // in scope 0 at struct_usage.rs:59:17: 59:29
+    let mut _24: u64;                    // in scope 0 at struct_usage.rs:60:24: 60:43
+    let mut _25: bool;                   // in scope 0 at struct_usage.rs:62:1: 62:2
+    scope 1 {
+        debug _user0 => _1;              // in scope 1 at struct_usage.rs:10:9: 10:15
+        let mut _4: User;                // in scope 1 at struct_usage.rs:19:9: 19:18
+        scope 2 {
+            debug user1 => _4;           // in scope 2 at struct_usage.rs:19:9: 19:18
+            let _9: std::string::String; // in scope 2 at struct_usage.rs:33:9: 33:14
+            scope 3 {
+                debug email => _9;       // in scope 3 at struct_usage.rs:33:9: 33:14
+                let _10: std::string::String; // in scope 3 at struct_usage.rs:34:9: 34:17
+                scope 4 {
+                    debug username => _10; // in scope 4 at struct_usage.rs:34:9: 34:17
+                    let _11: User;       // in scope 4 at struct_usage.rs:36:9: 36:15
+                    scope 5 {
+                        debug _user2 => _11; // in scope 5 at struct_usage.rs:36:9: 36:15
+                        let _14: User;   // in scope 5 at struct_usage.rs:43:9: 43:14
+                        scope 6 {
+                            debug user3 => _14; // in scope 6 at struct_usage.rs:43:9: 43:14
+                            let _17: User; // in scope 6 at struct_usage.rs:51:9: 51:15
+                            scope 7 {
+                                debug _user4 => _17; // in scope 7 at struct_usage.rs:51:9: 51:15
+                                let _20: User; // in scope 7 at struct_usage.rs:56:9: 56:15
+                                scope 8 {
+                                    debug _user5 => _20; // in scope 8 at struct_usage.rs:56:9: 56:15
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    bb0: {
+        _25 = const false;               // scope 0 at struct_usage.rs:10:9: 10:15
+        _2 = <String as From<&str>>::from(const "someone@example.com") -> bb1; // scope 0 at struct_usage.rs:11:16: 11:51
+                                         // mir::Constant
+                                         // + span: struct_usage.rs:11:16: 11:28
+                                         // + user_ty: UserType(0)
+                                         // + literal: Const { ty: fn(&str) -> std::string::String {<std::string::String as std::convert::From<&str>>::from}, val: Value(Scalar(<ZST>)) }
+                                         // ty::Const
+                                         // + ty: &str
+                                         // + val: Value(Slice { data: Allocation { bytes: [115, 111, 109, 101, 111, 110, 101, 64, 101, 120, 97, 109, 112, 108, 101, 46, 99, 111, 109], relocations: Relocations(SortedMap { data: [] }), init_mask: InitMask { blocks: [524287], len: Size { raw: 19 } }, align: Align { pow2: 0 }, mutability: Not, extra: () }, start: 0, end: 19 })
+                                         // mir::Constant
+                                         // + span: struct_usage.rs:11:29: 11:50
+                                         // + literal: Const { ty: &str, val: Value(Slice { data: Allocation { bytes: [115, 111, 109, 101, 111, 110, 101, 64, 101, 120, 97, 109, 112, 108, 101, 46, 99, 111, 109], relocations: Relocations(SortedMap { data: [] }), init_mask: InitMask { blocks: [524287], len: Size { raw: 19 } }, align: Align { pow2: 0 }, mutability: Not, extra: () }, start: 0, end: 19 }) }
+    }
+
+    bb1: {
+        _3 = <String as From<&str>>::from(const "someusername123") -> [return: bb2, unwind: bb30]; // scope 0 at struct_usage.rs:12:19: 12:50
+                                         // mir::Constant
+                                         // + span: struct_usage.rs:12:19: 12:31
+                                         // + user_ty: UserType(1)
+                                         // + literal: Const { ty: fn(&str) -> std::string::String {<std::string::String as std::convert::From<&str>>::from}, val: Value(Scalar(<ZST>)) }
+                                         // ty::Const
+                                         // + ty: &str
+                                         // + val: Value(Slice { data: Allocation { bytes: [115, 111, 109, 101, 117, 115, 101, 114, 110, 97, 109, 101, 49, 50, 51], relocations: Relocations(SortedMap { data: [] }), init_mask: InitMask { blocks: [32767], len: Size { raw: 15 } }, align: Align { pow2: 0 }, mutability: Not, extra: () }, start: 0, end: 15 })
+                                         // mir::Constant
+                                         // + span: struct_usage.rs:12:32: 12:49
+                                         // + literal: Const { ty: &str, val: Value(Slice { data: Allocation { bytes: [115, 111, 109, 101, 117, 115, 101, 114, 110, 97, 109, 101, 49, 50, 51], relocations: Relocations(SortedMap { data: [] }), init_mask: InitMask { blocks: [32767], len: Size { raw: 15 } }, align: Align { pow2: 0 }, mutability: Not, extra: () }, start: 0, end: 15 }) }
+    }
+
+    bb2: {
+        (_1.0: std::string::String) = move _3; // scope 0 at struct_usage.rs:10:18: 15:6
+        (_1.1: std::string::String) = move _2; // scope 0 at struct_usage.rs:10:18: 15:6
+        (_1.2: u64) = const 1_u64;       // scope 0 at struct_usage.rs:10:18: 15:6
+        (_1.3: bool) = const true;       // scope 0 at struct_usage.rs:10:18: 15:6
+        _5 = <String as From<&str>>::from(const "someone@example.com") -> [return: bb3, unwind: bb29]; // scope 1 at struct_usage.rs:20:16: 20:51
+                                         // mir::Constant
+                                         // + span: struct_usage.rs:20:16: 20:28
+                                         // + user_ty: UserType(2)
+                                         // + literal: Const { ty: fn(&str) -> std::string::String {<std::string::String as std::convert::From<&str>>::from}, val: Value(Scalar(<ZST>)) }
+                                         // ty::Const
+                                         // + ty: &str
+                                         // + val: Value(Slice { data: Allocation { bytes: [115, 111, 109, 101, 111, 110, 101, 64, 101, 120, 97, 109, 112, 108, 101, 46, 99, 111, 109], relocations: Relocations(SortedMap { data: [] }), init_mask: InitMask { blocks: [524287], len: Size { raw: 19 } }, align: Align { pow2: 0 }, mutability: Not, extra: () }, start: 0, end: 19 })
+                                         // mir::Constant
+                                         // + span: struct_usage.rs:20:29: 20:50
+                                         // + literal: Const { ty: &str, val: Value(Slice { data: Allocation { bytes: [115, 111, 109, 101, 111, 110, 101, 64, 101, 120, 97, 109, 112, 108, 101, 46, 99, 111, 109], relocations: Relocations(SortedMap { data: [] }), init_mask: InitMask { blocks: [524287], len: Size { raw: 19 } }, align: Align { pow2: 0 }, mutability: Not, extra: () }, start: 0, end: 19 }) }
+    }
+
+    bb3: {
+        _6 = <String as From<&str>>::from(const "someusername123") -> [return: bb4, unwind: bb28]; // scope 1 at struct_usage.rs:21:19: 21:50
+                                         // mir::Constant
+                                         // + span: struct_usage.rs:21:19: 21:31
+                                         // + user_ty: UserType(3)
+                                         // + literal: Const { ty: fn(&str) -> std::string::String {<std::string::String as std::convert::From<&str>>::from}, val: Value(Scalar(<ZST>)) }
+                                         // ty::Const
+                                         // + ty: &str
+                                         // + val: Value(Slice { data: Allocation { bytes: [115, 111, 109, 101, 117, 115, 101, 114, 110, 97, 109, 101, 49, 50, 51], relocations: Relocations(SortedMap { data: [] }), init_mask: InitMask { blocks: [32767], len: Size { raw: 15 } }, align: Align { pow2: 0 }, mutability: Not, extra: () }, start: 0, end: 15 })
+                                         // mir::Constant
+                                         // + span: struct_usage.rs:21:32: 21:49
+                                         // + literal: Const { ty: &str, val: Value(Slice { data: Allocation { bytes: [115, 111, 109, 101, 117, 115, 101, 114, 110, 97, 109, 101, 49, 50, 51], relocations: Relocations(SortedMap { data: [] }), init_mask: InitMask { blocks: [32767], len: Size { raw: 15 } }, align: Align { pow2: 0 }, mutability: Not, extra: () }, start: 0, end: 15 }) }
+    }
+
+    bb4: {
+        (_4.0: std::string::String) = move _6; // scope 1 at struct_usage.rs:19:21: 24:6
+        (_4.1: std::string::String) = move _5; // scope 1 at struct_usage.rs:19:21: 24:6
+        (_4.2: u64) = const 1_u64;       // scope 1 at struct_usage.rs:19:21: 24:6
+        (_4.3: bool) = const true;       // scope 1 at struct_usage.rs:19:21: 24:6
+        _7 = String::new() -> [return: bb5, unwind: bb27]; // scope 2 at struct_usage.rs:26:19: 26:32
+                                         // mir::Constant
+                                         // + span: struct_usage.rs:26:19: 26:30
+                                         // + literal: Const { ty: fn() -> std::string::String {std::string::String::new}, val: Value(Scalar(<ZST>)) }
+    }
+
+    bb5: {
+        drop((_4.1: std::string::String)) -> [return: bb33, unwind: bb32]; // scope 2 at struct_usage.rs:26:5: 26:16
+    }
+
+    bb6: {
+        drop((_4.0: std::string::String)) -> [return: bb35, unwind: bb34]; // scope 2 at struct_usage.rs:27:5: 27:19
+    }
+
+    bb7: {
+        _25 = const true;                // scope 3 at struct_usage.rs:34:9: 34:17
+        _10 = <String as From<&str>>::from(const "someusername123") -> [return: bb8, unwind: bb37]; // scope 3 at struct_usage.rs:34:20: 34:51
+                                         // mir::Constant
+                                         // + span: struct_usage.rs:34:20: 34:32
+                                         // + user_ty: UserType(5)
+                                         // + literal: Const { ty: fn(&str) -> std::string::String {<std::string::String as std::convert::From<&str>>::from}, val: Value(Scalar(<ZST>)) }
+                                         // ty::Const
+                                         // + ty: &str
+                                         // + val: Value(Slice { data: Allocation { bytes: [115, 111, 109, 101, 117, 115, 101, 114, 110, 97, 109, 101, 49, 50, 51], relocations: Relocations(SortedMap { data: [] }), init_mask: InitMask { blocks: [32767], len: Size { raw: 15 } }, align: Align { pow2: 0 }, mutability: Not, extra: () }, start: 0, end: 15 })
+                                         // mir::Constant
+                                         // + span: struct_usage.rs:34:33: 34:50
+                                         // + literal: Const { ty: &str, val: Value(Slice { data: Allocation { bytes: [115, 111, 109, 101, 117, 115, 101, 114, 110, 97, 109, 101, 49, 50, 51], relocations: Relocations(SortedMap { data: [] }), init_mask: InitMask { blocks: [32767], len: Size { raw: 15 } }, align: Align { pow2: 0 }, mutability: Not, extra: () }, start: 0, end: 15 }) }
+    }
+
+    bb8: {
+        _25 = const false;               // scope 4 at struct_usage.rs:37:9: 37:14
+        _12 = move _9;                   // scope 4 at struct_usage.rs:37:9: 37:14
+        _13 = move _10;                  // scope 4 at struct_usage.rs:38:9: 38:17
+        (_11.0: std::string::String) = move _13; // scope 4 at struct_usage.rs:36:18: 41:6
+        (_11.1: std::string::String) = move _12; // scope 4 at struct_usage.rs:36:18: 41:6
+        (_11.2: u64) = const 1_u64;      // scope 4 at struct_usage.rs:36:18: 41:6
+        (_11.3: bool) = const true;      // scope 4 at struct_usage.rs:36:18: 41:6
+        _15 = <String as From<&str>>::from(const "someone@example.com") -> [return: bb9, unwind: bb26]; // scope 5 at struct_usage.rs:44:16: 44:51
+                                         // mir::Constant
+                                         // + span: struct_usage.rs:44:16: 44:28
+                                         // + user_ty: UserType(6)
+                                         // + literal: Const { ty: fn(&str) -> std::string::String {<std::string::String as std::convert::From<&str>>::from}, val: Value(Scalar(<ZST>)) }
+                                         // ty::Const
+                                         // + ty: &str
+                                         // + val: Value(Slice { data: Allocation { bytes: [115, 111, 109, 101, 111, 110, 101, 64, 101, 120, 97, 109, 112, 108, 101, 46, 99, 111, 109], relocations: Relocations(SortedMap { data: [] }), init_mask: InitMask { blocks: [524287], len: Size { raw: 19 } }, align: Align { pow2: 0 }, mutability: Not, extra: () }, start: 0, end: 19 })
+                                         // mir::Constant
+                                         // + span: struct_usage.rs:44:29: 44:50
+                                         // + literal: Const { ty: &str, val: Value(Slice { data: Allocation { bytes: [115, 111, 109, 101, 111, 110, 101, 64, 101, 120, 97, 109, 112, 108, 101, 46, 99, 111, 109], relocations: Relocations(SortedMap { data: [] }), init_mask: InitMask { blocks: [524287], len: Size { raw: 19 } }, align: Align { pow2: 0 }, mutability: Not, extra: () }, start: 0, end: 19 }) }
+    }
+
+    bb9: {
+        _16 = <String as From<&str>>::from(const "someusername123") -> [return: bb10, unwind: bb25]; // scope 5 at struct_usage.rs:45:19: 45:50
+                                         // mir::Constant
+                                         // + span: struct_usage.rs:45:19: 45:31
+                                         // + user_ty: UserType(7)
+                                         // + literal: Const { ty: fn(&str) -> std::string::String {<std::string::String as std::convert::From<&str>>::from}, val: Value(Scalar(<ZST>)) }
+                                         // ty::Const
+                                         // + ty: &str
+                                         // + val: Value(Slice { data: Allocation { bytes: [115, 111, 109, 101, 117, 115, 101, 114, 110, 97, 109, 101, 49, 50, 51], relocations: Relocations(SortedMap { data: [] }), init_mask: InitMask { blocks: [32767], len: Size { raw: 15 } }, align: Align { pow2: 0 }, mutability: Not, extra: () }, start: 0, end: 15 })
+                                         // mir::Constant
+                                         // + span: struct_usage.rs:45:32: 45:49
+                                         // + literal: Const { ty: &str, val: Value(Slice { data: Allocation { bytes: [115, 111, 109, 101, 117, 115, 101, 114, 110, 97, 109, 101, 49, 50, 51], relocations: Relocations(SortedMap { data: [] }), init_mask: InitMask { blocks: [32767], len: Size { raw: 15 } }, align: Align { pow2: 0 }, mutability: Not, extra: () }, start: 0, end: 15 }) }
+    }
+
+    bb10: {
+        (_14.0: std::string::String) = move _16; // scope 5 at struct_usage.rs:43:17: 48:6
+        (_14.1: std::string::String) = move _15; // scope 5 at struct_usage.rs:43:17: 48:6
+        (_14.2: u64) = const 1_u64;      // scope 5 at struct_usage.rs:43:17: 48:6
+        (_14.3: bool) = const true;      // scope 5 at struct_usage.rs:43:17: 48:6
+        _18 = <String as From<&str>>::from(const "another@example.com") -> [return: bb11, unwind: bb24]; // scope 6 at struct_usage.rs:52:16: 52:51
+                                         // mir::Constant
+                                         // + span: struct_usage.rs:52:16: 52:28
+                                         // + user_ty: UserType(8)
+                                         // + literal: Const { ty: fn(&str) -> std::string::String {<std::string::String as std::convert::From<&str>>::from}, val: Value(Scalar(<ZST>)) }
+                                         // ty::Const
+                                         // + ty: &str
+                                         // + val: Value(Slice { data: Allocation { bytes: [97, 110, 111, 116, 104, 101, 114, 64, 101, 120, 97, 109, 112, 108, 101, 46, 99, 111, 109], relocations: Relocations(SortedMap { data: [] }), init_mask: InitMask { blocks: [524287], len: Size { raw: 19 } }, align: Align { pow2: 0 }, mutability: Not, extra: () }, start: 0, end: 19 })
+                                         // mir::Constant
+                                         // + span: struct_usage.rs:52:29: 52:50
+                                         // + literal: Const { ty: &str, val: Value(Slice { data: Allocation { bytes: [97, 110, 111, 116, 104, 101, 114, 64, 101, 120, 97, 109, 112, 108, 101, 46, 99, 111, 109], relocations: Relocations(SortedMap { data: [] }), init_mask: InitMask { blocks: [524287], len: Size { raw: 19 } }, align: Align { pow2: 0 }, mutability: Not, extra: () }, start: 0, end: 19 }) }
+    }
+
+    bb11: {
+        _19 = <String as From<&str>>::from(const "anotherusername567") -> [return: bb12, unwind: bb23]; // scope 6 at struct_usage.rs:53:19: 53:53
+                                         // mir::Constant
+                                         // + span: struct_usage.rs:53:19: 53:31
+                                         // + user_ty: UserType(9)
+                                         // + literal: Const { ty: fn(&str) -> std::string::String {<std::string::String as std::convert::From<&str>>::from}, val: Value(Scalar(<ZST>)) }
+                                         // ty::Const
+                                         // + ty: &str
+                                         // + val: Value(Slice { data: Allocation { bytes: [97, 110, 111, 116, 104, 101, 114, 117, 115, 101, 114, 110, 97, 109, 101, 53, 54, 55], relocations: Relocations(SortedMap { data: [] }), init_mask: InitMask { blocks: [262143], len: Size { raw: 18 } }, align: Align { pow2: 0 }, mutability: Not, extra: () }, start: 0, end: 18 })
+                                         // mir::Constant
+                                         // + span: struct_usage.rs:53:32: 53:52
+                                         // + literal: Const { ty: &str, val: Value(Slice { data: Allocation { bytes: [97, 110, 111, 116, 104, 101, 114, 117, 115, 101, 114, 110, 97, 109, 101, 53, 54, 55], relocations: Relocations(SortedMap { data: [] }), init_mask: InitMask { blocks: [262143], len: Size { raw: 18 } }, align: Align { pow2: 0 }, mutability: Not, extra: () }, start: 0, end: 18 }) }
+    }
+
+    bb12: {
+        (_17.0: std::string::String) = move _19; // scope 6 at struct_usage.rs:51:18: 55:6
+        (_17.1: std::string::String) = move _18; // scope 6 at struct_usage.rs:51:18: 55:6
+        (_17.2: u64) = (_14.2: u64);     // scope 6 at struct_usage.rs:51:18: 55:6
+        (_17.3: bool) = (_14.3: bool);   // scope 6 at struct_usage.rs:51:18: 55:6
+        _21 = <String as From<&str>>::from(const "another@example.com") -> [return: bb13, unwind: bb22]; // scope 7 at struct_usage.rs:57:16: 57:51
+                                         // mir::Constant
+                                         // + span: struct_usage.rs:57:16: 57:28
+                                         // + user_ty: UserType(10)
+                                         // + literal: Const { ty: fn(&str) -> std::string::String {<std::string::String as std::convert::From<&str>>::from}, val: Value(Scalar(<ZST>)) }
+                                         // ty::Const
+                                         // + ty: &str
+                                         // + val: Value(Slice { data: Allocation { bytes: [97, 110, 111, 116, 104, 101, 114, 64, 101, 120, 97, 109, 112, 108, 101, 46, 99, 111, 109], relocations: Relocations(SortedMap { data: [] }), init_mask: InitMask { blocks: [524287], len: Size { raw: 19 } }, align: Align { pow2: 0 }, mutability: Not, extra: () }, start: 0, end: 19 })
+                                         // mir::Constant
+                                         // + span: struct_usage.rs:57:29: 57:50
+                                         // + literal: Const { ty: &str, val: Value(Slice { data: Allocation { bytes: [97, 110, 111, 116, 104, 101, 114, 64, 101, 120, 97, 109, 112, 108, 101, 46, 99, 111, 109], relocations: Relocations(SortedMap { data: [] }), init_mask: InitMask { blocks: [524287], len: Size { raw: 19 } }, align: Align { pow2: 0 }, mutability: Not, extra: () }, start: 0, end: 19 }) }
+    }
+
+    bb13: {
+        _22 = <String as From<&str>>::from(const "anotherusername567") -> [return: bb14, unwind: bb21]; // scope 7 at struct_usage.rs:58:19: 58:53
+                                         // mir::Constant
+                                         // + span: struct_usage.rs:58:19: 58:31
+                                         // + user_ty: UserType(11)
+                                         // + literal: Const { ty: fn(&str) -> std::string::String {<std::string::String as std::convert::From<&str>>::from}, val: Value(Scalar(<ZST>)) }
+                                         // ty::Const
+                                         // + ty: &str
+                                         // + val: Value(Slice { data: Allocation { bytes: [97, 110, 111, 116, 104, 101, 114, 117, 115, 101, 114, 110, 97, 109, 101, 53, 54, 55], relocations: Relocations(SortedMap { data: [] }), init_mask: InitMask { blocks: [262143], len: Size { raw: 18 } }, align: Align { pow2: 0 }, mutability: Not, extra: () }, start: 0, end: 18 })
+                                         // mir::Constant
+                                         // + span: struct_usage.rs:58:32: 58:52
+                                         // + literal: Const { ty: &str, val: Value(Slice { data: Allocation { bytes: [97, 110, 111, 116, 104, 101, 114, 117, 115, 101, 114, 110, 97, 109, 101, 53, 54, 55], relocations: Relocations(SortedMap { data: [] }), init_mask: InitMask { blocks: [262143], len: Size { raw: 18 } }, align: Align { pow2: 0 }, mutability: Not, extra: () }, start: 0, end: 18 }) }
+    }
+
+    bb14: {
+        _23 = (_4.3: bool);              // scope 7 at struct_usage.rs:59:17: 59:29
+        _24 = (_4.2: u64);               // scope 7 at struct_usage.rs:60:24: 60:43
+        (_20.0: std::string::String) = move _22; // scope 7 at struct_usage.rs:56:18: 61:6
+        (_20.1: std::string::String) = move _21; // scope 7 at struct_usage.rs:56:18: 61:6
+        (_20.2: u64) = move _24;         // scope 7 at struct_usage.rs:56:18: 61:6
+        (_20.3: bool) = move _23;        // scope 7 at struct_usage.rs:56:18: 61:6
+        drop(_20) -> [return: bb15, unwind: bb22]; // scope 7 at struct_usage.rs:62:1: 62:2
+    }
+
+    bb15: {
+        drop(_17) -> [return: bb16, unwind: bb24]; // scope 6 at struct_usage.rs:62:1: 62:2
+    }
+
+    bb16: {
+        drop(_14) -> [return: bb17, unwind: bb26]; // scope 5 at struct_usage.rs:62:1: 62:2
+    }
+
+    bb17: {
+        drop(_11) -> [return: bb18, unwind: bb37]; // scope 4 at struct_usage.rs:62:1: 62:2
+    }
+
+    bb18: {
+        _25 = const false;               // scope 2 at struct_usage.rs:62:1: 62:2
+        drop(_4) -> [return: bb19, unwind: bb29]; // scope 1 at struct_usage.rs:62:1: 62:2
+    }
+
+    bb19: {
+        drop(_1) -> bb20;                // scope 0 at struct_usage.rs:62:1: 62:2
+    }
+
+    bb20: {
+        return;                          // scope 0 at struct_usage.rs:62:2: 62:2
+    }
+
+    bb21 (cleanup): {
+        drop(_21) -> bb22;               // scope 7 at struct_usage.rs:61:5: 61:6
+    }
+
+    bb22 (cleanup): {
+        drop(_17) -> bb24;               // scope 6 at struct_usage.rs:62:1: 62:2
+    }
+
+    bb23 (cleanup): {
+        drop(_18) -> bb24;               // scope 6 at struct_usage.rs:55:5: 55:6
+    }
+
+    bb24 (cleanup): {
+        drop(_14) -> bb26;               // scope 5 at struct_usage.rs:62:1: 62:2
+    }
+
+    bb25 (cleanup): {
+        drop(_15) -> bb26;               // scope 5 at struct_usage.rs:48:5: 48:6
+    }
+
+    bb26 (cleanup): {
+        drop(_11) -> bb37;               // scope 4 at struct_usage.rs:62:1: 62:2
+    }
+
+    bb27 (cleanup): {
+        drop(_4) -> bb29;                // scope 1 at struct_usage.rs:62:1: 62:2
+    }
+
+    bb28 (cleanup): {
+        drop(_5) -> bb29;                // scope 1 at struct_usage.rs:24:5: 24:6
+    }
+
+    bb29 (cleanup): {
+        drop(_1) -> bb31;                // scope 0 at struct_usage.rs:62:1: 62:2
+    }
+
+    bb30 (cleanup): {
+        drop(_2) -> bb31;                // scope 0 at struct_usage.rs:15:5: 15:6
+    }
+
+    bb31 (cleanup): {
+        resume;                          // scope 0 at struct_usage.rs:8:1: 62:2
+    }
+
+    bb32 (cleanup): {
+        (_4.1: std::string::String) = move _7; // scope 2 at struct_usage.rs:26:5: 26:16
+        goto -> bb27;                    // scope 2 at struct_usage.rs:26:5: 26:16
+    }
+
+    bb33: {
+        (_4.1: std::string::String) = move _7; // scope 2 at struct_usage.rs:26:5: 26:16
+        _8 = String::new() -> [return: bb6, unwind: bb27]; // scope 2 at struct_usage.rs:27:22: 27:35
+                                         // mir::Constant
+                                         // + span: struct_usage.rs:27:22: 27:33
+                                         // + literal: Const { ty: fn() -> std::string::String {std::string::String::new}, val: Value(Scalar(<ZST>)) }
+    }
+
+    bb34 (cleanup): {
+        (_4.0: std::string::String) = move _8; // scope 2 at struct_usage.rs:27:5: 27:19
+        goto -> bb27;                    // scope 2 at struct_usage.rs:27:5: 27:19
+    }
+
+    bb35: {
+        (_4.0: std::string::String) = move _8; // scope 2 at struct_usage.rs:27:5: 27:19
+        _9 = <String as From<&str>>::from(const "someone@example.com") -> [return: bb7, unwind: bb27]; // scope 2 at struct_usage.rs:33:17: 33:52
+                                         // mir::Constant
+                                         // + span: struct_usage.rs:33:17: 33:29
+                                         // + user_ty: UserType(4)
+                                         // + literal: Const { ty: fn(&str) -> std::string::String {<std::string::String as std::convert::From<&str>>::from}, val: Value(Scalar(<ZST>)) }
+                                         // ty::Const
+                                         // + ty: &str
+                                         // + val: Value(Slice { data: Allocation { bytes: [115, 111, 109, 101, 111, 110, 101, 64, 101, 120, 97, 109, 112, 108, 101, 46, 99, 111, 109], relocations: Relocations(SortedMap { data: [] }), init_mask: InitMask { blocks: [524287], len: Size { raw: 19 } }, align: Align { pow2: 0 }, mutability: Not, extra: () }, start: 0, end: 19 })
+                                         // mir::Constant
+                                         // + span: struct_usage.rs:33:30: 33:51
+                                         // + literal: Const { ty: &str, val: Value(Slice { data: Allocation { bytes: [115, 111, 109, 101, 111, 110, 101, 64, 101, 120, 97, 109, 112, 108, 101, 46, 99, 111, 109], relocations: Relocations(SortedMap { data: [] }), init_mask: InitMask { blocks: [524287], len: Size { raw: 19 } }, align: Align { pow2: 0 }, mutability: Not, extra: () }, start: 0, end: 19 }) }
+    }
+
+    bb36 (cleanup): {
+        drop(_9) -> bb27;                // scope 2 at struct_usage.rs:62:1: 62:2
+    }
+
+    bb37 (cleanup): {
+        switchInt(_25) -> [false: bb27, otherwise: bb36]; // scope 2 at struct_usage.rs:62:1: 62:2
+    }
+}

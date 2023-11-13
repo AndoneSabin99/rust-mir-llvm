@@ -1,0 +1,111 @@
+// WARNING: This output format is intended for human consumers only
+// and is subject to change without notice. Knock yourself out.
+fn main() -> () {
+    let mut _0: ();                      // return place in scope 0 at var_types.rs:1:10: 1:10
+    let _1: i32;                         // in scope 0 at var_types.rs:3:9: 3:10
+    let _20: usize;                      // in scope 0 at var_types.rs:37:16: 37:17
+    let _22: usize;                      // in scope 0 at var_types.rs:38:16: 38:17
+    scope 1 {
+        debug x => _1;                   // in scope 1 at var_types.rs:3:9: 3:10
+        let _2: i64;                     // in scope 1 at var_types.rs:4:9: 4:10
+        scope 2 {
+            debug y => _2;               // in scope 2 at var_types.rs:4:9: 4:10
+            let _3: i32;                 // in scope 2 at var_types.rs:6:9: 6:11
+            scope 3 {
+                debug xy => _3;          // in scope 3 at var_types.rs:6:9: 6:11
+                let _4: f32;             // in scope 3 at var_types.rs:9:9: 9:10
+                scope 4 {
+                    debug z => _4;       // in scope 4 at var_types.rs:9:9: 9:10
+                    let _5: f64;         // in scope 4 at var_types.rs:10:9: 10:10
+                    scope 5 {
+                        debug u => _5;   // in scope 5 at var_types.rs:10:9: 10:10
+                        let _6: f64;     // in scope 5 at var_types.rs:11:9: 11:11
+                        scope 6 {
+                            debug zu => _6; // in scope 6 at var_types.rs:11:9: 11:11
+                            let _7: bool; // in scope 6 at var_types.rs:14:9: 14:10
+                            scope 7 {
+                                debug t => _7; // in scope 7 at var_types.rs:14:9: 14:10
+                                let _8: bool; // in scope 7 at var_types.rs:15:9: 15:10
+                                scope 8 {
+                                    debug f => _8; // in scope 8 at var_types.rs:15:9: 15:10
+                                    let _9: char; // in scope 8 at var_types.rs:18:9: 18:10
+                                    scope 9 {
+                                        debug c => _9; // in scope 9 at var_types.rs:18:9: 18:10
+                                        let _10: char; // in scope 9 at var_types.rs:19:9: 19:10
+                                        scope 10 {
+                                            debug z => _10; // in scope 10 at var_types.rs:19:9: 19:10
+                                            let _11: (i32, f64, char); // in scope 10 at var_types.rs:23:9: 23:14
+                                            scope 11 {
+                                                debug tuple => _11; // in scope 11 at var_types.rs:23:9: 23:14
+                                                let _12: i32; // in scope 11 at var_types.rs:26:10: 26:13
+                                                let _13: f64; // in scope 11 at var_types.rs:26:15: 26:19
+                                                let _14: char; // in scope 11 at var_types.rs:26:21: 26:25
+                                                scope 12 {
+                                                    debug el1 => _12; // in scope 12 at var_types.rs:26:10: 26:13
+                                                    debug _el2 => _13; // in scope 12 at var_types.rs:26:15: 26:19
+                                                    debug _el3 => _14; // in scope 12 at var_types.rs:26:21: 26:25
+                                                    let _15: i32; // in scope 12 at var_types.rs:28:10: 28:14
+                                                    scope 13 {
+                                                        debug el01 => _15; // in scope 13 at var_types.rs:28:10: 28:14
+                                                        let _16: i32; // in scope 13 at var_types.rs:30:9: 30:14
+                                                        scope 14 {
+                                                            debug first => _16; // in scope 14 at var_types.rs:30:9: 30:14
+                                                            let _17: char; // in scope 14 at var_types.rs:32:9: 32:14
+                                                            scope 15 {
+                                                                debug _last => _17; // in scope 15 at var_types.rs:32:9: 32:14
+                                                                let _18: [i32; 5]; // in scope 15 at var_types.rs:35:9: 35:10
+                                                                scope 16 {
+                                                                    debug a => _18; // in scope 16 at var_types.rs:35:9: 35:10
+                                                                    let _19: i32; // in scope 16 at var_types.rs:37:9: 37:11
+                                                                    scope 17 {
+                                                                        debug a1 => _19; // in scope 17 at var_types.rs:37:9: 37:11
+                                                                        let _21: i32; // in scope 17 at var_types.rs:38:9: 38:11
+                                                                        scope 18 {
+                                                                            debug a2 => _21; // in scope 18 at var_types.rs:38:9: 38:11
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    bb0: {
+        _1 = const 10_i32;               // scope 0 at var_types.rs:3:19: 3:21
+        _2 = const 20_i64;               // scope 1 at var_types.rs:4:19: 4:21
+        _3 = const 30_i32;               // scope 2 at var_types.rs:6:14: 6:28
+        _4 = const 1.20000005f32;        // scope 3 at var_types.rs:9:19: 9:22
+        _5 = const 3.4500000000000002f64; // scope 4 at var_types.rs:10:19: 10:23
+        _6 = const 4.650000047683716f64; // scope 5 at var_types.rs:11:14: 11:26
+        _7 = const true;                 // scope 6 at var_types.rs:14:20: 14:24
+        _8 = const false;                // scope 7 at var_types.rs:15:20: 15:25
+        _9 = const 'z';                  // scope 8 at var_types.rs:18:13: 18:16
+        _10 = const 'ℤ';                 // scope 9 at var_types.rs:19:13: 19:16
+        (_11.0: i32) = const 1_i32;      // scope 10 at var_types.rs:23:34: 23:47
+        (_11.1: f64) = const 2.5f64;     // scope 10 at var_types.rs:23:34: 23:47
+        (_11.2: char) = const 'w';       // scope 10 at var_types.rs:23:34: 23:47
+        _12 = const 1_i32;               // scope 11 at var_types.rs:26:10: 26:13
+        _13 = const 2.5f64;              // scope 11 at var_types.rs:26:15: 26:19
+        _14 = const 'w';                 // scope 11 at var_types.rs:26:21: 26:25
+        _15 = const 1_i32;               // scope 12 at var_types.rs:28:10: 28:14
+        _16 = const 1_i32;               // scope 13 at var_types.rs:30:17: 30:24
+        _17 = const 'w';                 // scope 14 at var_types.rs:32:17: 32:24
+        _18 = [const 1_i32, const 2_i32, const 3_i32, const 4_i32, const 5_i32]; // scope 15 at var_types.rs:35:13: 35:28
+        _20 = const 0_usize;             // scope 16 at var_types.rs:37:16: 37:17
+        _19 = _18[_20];                  // scope 16 at var_types.rs:37:14: 37:18
+        _22 = const 1_usize;             // scope 17 at var_types.rs:38:16: 38:17
+        _21 = _18[_22];                  // scope 17 at var_types.rs:38:14: 38:18
+        return;                          // scope 0 at var_types.rs:39:2: 39:2
+    }
+}

@@ -1,0 +1,521 @@
+// WARNING: This output format is intended for human consumers only
+// and is subject to change without notice. Knock yourself out.
+fn main::Result::Ok(_1: T) -> main::Result<T, E> {
+    let mut _0: main::Result<T, E>;      // return place in scope 0 at errors.rs:4:9: 4:14
+
+    bb0: {
+        ((_0 as Ok).0: T) = move _1;     // scope 0 at errors.rs:4:9: 4:14
+        discriminant(_0) = 0;            // scope 0 at errors.rs:4:9: 4:14
+        return;                          // scope 0 at errors.rs:4:9: 4:14
+    }
+}
+
+// MIR FOR CTFE
+fn main::Result::Ok(_1: T) -> main::Result<T, E> {
+    let mut _0: main::Result<T, E>;      // return place in scope 0 at errors.rs:4:9: 4:14
+
+    bb0: {
+        ((_0 as Ok).0: T) = move _1;     // scope 0 at errors.rs:4:9: 4:14
+        discriminant(_0) = 0;            // scope 0 at errors.rs:4:9: 4:14
+        return;                          // scope 0 at errors.rs:4:9: 4:14
+    }
+}
+
+fn main::Result::Err(_1: E) -> main::Result<T, E> {
+    let mut _0: main::Result<T, E>;      // return place in scope 0 at errors.rs:5:9: 5:15
+
+    bb0: {
+        ((_0 as Err).0: E) = move _1;    // scope 0 at errors.rs:5:9: 5:15
+        discriminant(_0) = 1;            // scope 0 at errors.rs:5:9: 5:15
+        return;                          // scope 0 at errors.rs:5:9: 5:15
+    }
+}
+
+// MIR FOR CTFE
+fn main::Result::Err(_1: E) -> main::Result<T, E> {
+    let mut _0: main::Result<T, E>;      // return place in scope 0 at errors.rs:5:9: 5:15
+
+    bb0: {
+        ((_0 as Err).0: E) = move _1;    // scope 0 at errors.rs:5:9: 5:15
+        discriminant(_0) = 1;            // scope 0 at errors.rs:5:9: 5:15
+        return;                          // scope 0 at errors.rs:5:9: 5:15
+    }
+}
+
+fn main() -> () {
+    let mut _0: ();                      // return place in scope 0 at errors.rs:1:10: 1:10
+    let _1: std::result::Result<std::fs::File, std::io::Error>; // in scope 0 at errors.rs:11:5: 11:30
+    let _2: std::result::Result<std::fs::File, std::io::Error>; // in scope 0 at errors.rs:13:9: 13:10
+    let mut _4: isize;                   // in scope 0 at errors.rs:16:9: 16:17
+    let mut _7: &std::fmt::Arguments;    // in scope 0 at /home/sabin/cheri/rust/library/std/src/panic.rs:24:37: 24:80
+    let _8: &std::fmt::Arguments;        // in scope 0 at /home/sabin/cheri/rust/library/std/src/panic.rs:24:37: 24:80
+    let _9: std::fmt::Arguments;         // in scope 0 at /home/sabin/cheri/rust/library/std/src/panic.rs:24:38: 24:80
+    let mut _10: [std::fmt::ArgumentV1; 1]; // in scope 0 at /home/sabin/cheri/rust/library/std/src/panic.rs:24:38: 24:80
+    let mut _11: (&std::io::Error,);     // in scope 0 at /home/sabin/cheri/rust/library/std/src/panic.rs:24:38: 24:80
+    let mut _12: &std::io::Error;        // in scope 0 at errors.rs:17:64: 17:69
+    let mut _14: std::fmt::ArgumentV1;   // in scope 0 at /home/sabin/cheri/rust/library/std/src/panic.rs:24:38: 24:80
+    let mut _15: &std::io::Error;        // in scope 0 at errors.rs:17:64: 17:69
+    let mut _16: for<'r, 's, 't0> fn(&'r std::io::Error, &'s mut std::fmt::Formatter<'t0>) -> std::result::Result<(), std::fmt::Error>; // in scope 0 at errors.rs:17:64: 17:69
+    let mut _18: &[&str];                // in scope 0 at errors.rs:17:30: 17:62
+    let mut _19: &[&str; 1];             // in scope 0 at errors.rs:17:30: 17:62
+    let _20: &[&str; 1];                 // in scope 0 at errors.rs:17:30: 17:62
+    let mut _21: &[std::fmt::ArgumentV1]; // in scope 0 at /home/sabin/cheri/rust/library/std/src/panic.rs:24:38: 24:80
+    let mut _22: &[std::fmt::ArgumentV1; 1]; // in scope 0 at /home/sabin/cheri/rust/library/std/src/panic.rs:24:38: 24:80
+    let mut _24: std::result::Result<std::fs::File, std::io::Error>; // in scope 0 at errors.rs:22:19: 22:42
+    let mut _25: isize;                  // in scope 0 at errors.rs:23:9: 23:17
+    let mut _28: std::io::ErrorKind;     // in scope 0 at errors.rs:24:29: 24:41
+    let mut _29: &std::io::Error;        // in scope 0 at errors.rs:24:29: 24:34
+    let mut _30: isize;                  // in scope 0 at errors.rs:25:13: 25:32
+    let mut _31: std::result::Result<std::fs::File, std::io::Error>; // in scope 0 at errors.rs:25:42: 25:67
+    let mut _32: isize;                  // in scope 0 at errors.rs:26:17: 26:23
+    let mut _35: &std::fmt::Arguments;   // in scope 0 at /home/sabin/cheri/rust/library/std/src/panic.rs:24:37: 24:80
+    let _36: &std::fmt::Arguments;       // in scope 0 at /home/sabin/cheri/rust/library/std/src/panic.rs:24:37: 24:80
+    let _37: std::fmt::Arguments;        // in scope 0 at /home/sabin/cheri/rust/library/std/src/panic.rs:24:38: 24:80
+    let mut _38: [std::fmt::ArgumentV1; 1]; // in scope 0 at /home/sabin/cheri/rust/library/std/src/panic.rs:24:38: 24:80
+    let mut _39: (&std::io::Error,);     // in scope 0 at /home/sabin/cheri/rust/library/std/src/panic.rs:24:38: 24:80
+    let mut _40: &std::io::Error;        // in scope 0 at errors.rs:27:69: 27:70
+    let mut _42: std::fmt::ArgumentV1;   // in scope 0 at /home/sabin/cheri/rust/library/std/src/panic.rs:24:38: 24:80
+    let mut _43: &std::io::Error;        // in scope 0 at errors.rs:27:69: 27:70
+    let mut _44: for<'r, 's, 't0> fn(&'r std::io::Error, &'s mut std::fmt::Formatter<'t0>) -> std::result::Result<(), std::fmt::Error>; // in scope 0 at errors.rs:27:69: 27:70
+    let mut _46: &[&str];                // in scope 0 at errors.rs:27:34: 27:67
+    let mut _47: &[&str; 1];             // in scope 0 at errors.rs:27:34: 27:67
+    let _48: &[&str; 1];                 // in scope 0 at errors.rs:27:34: 27:67
+    let mut _49: &[std::fmt::ArgumentV1]; // in scope 0 at /home/sabin/cheri/rust/library/std/src/panic.rs:24:38: 24:80
+    let mut _50: &[std::fmt::ArgumentV1; 1]; // in scope 0 at /home/sabin/cheri/rust/library/std/src/panic.rs:24:38: 24:80
+    let mut _52: &std::fmt::Arguments;   // in scope 0 at /home/sabin/cheri/rust/library/std/src/panic.rs:24:37: 24:80
+    let _53: &std::fmt::Arguments;       // in scope 0 at /home/sabin/cheri/rust/library/std/src/panic.rs:24:37: 24:80
+    let _54: std::fmt::Arguments;        // in scope 0 at /home/sabin/cheri/rust/library/std/src/panic.rs:24:38: 24:80
+    let mut _55: [std::fmt::ArgumentV1; 1]; // in scope 0 at /home/sabin/cheri/rust/library/std/src/panic.rs:24:38: 24:80
+    let mut _56: (&std::io::ErrorKind,); // in scope 0 at /home/sabin/cheri/rust/library/std/src/panic.rs:24:38: 24:80
+    let mut _57: &std::io::ErrorKind;    // in scope 0 at errors.rs:30:58: 30:69
+    let mut _59: std::fmt::ArgumentV1;   // in scope 0 at /home/sabin/cheri/rust/library/std/src/panic.rs:24:38: 24:80
+    let mut _60: &std::io::ErrorKind;    // in scope 0 at errors.rs:30:58: 30:69
+    let mut _61: for<'r, 's, 't0> fn(&'r std::io::ErrorKind, &'s mut std::fmt::Formatter<'t0>) -> std::result::Result<(), std::fmt::Error>; // in scope 0 at errors.rs:30:58: 30:69
+    let mut _63: &[&str];                // in scope 0 at errors.rs:30:24: 30:56
+    let mut _64: &[&str; 1];             // in scope 0 at errors.rs:30:24: 30:56
+    let _65: &[&str; 1];                 // in scope 0 at errors.rs:30:24: 30:56
+    let mut _66: &[std::fmt::ArgumentV1]; // in scope 0 at /home/sabin/cheri/rust/library/std/src/panic.rs:24:38: 24:80
+    let mut _67: &[std::fmt::ArgumentV1; 1]; // in scope 0 at /home/sabin/cheri/rust/library/std/src/panic.rs:24:38: 24:80
+    scope 1 {
+        debug f => _2;                   // in scope 1 at errors.rs:13:9: 13:10
+        let _3: std::fs::File;           // in scope 1 at errors.rs:15:9: 15:10
+        let _5: std::fs::File;           // in scope 1 at errors.rs:16:12: 16:16
+        let _6: std::io::Error;          // in scope 1 at errors.rs:17:13: 17:18
+        scope 2 {
+            debug f => _3;               // in scope 2 at errors.rs:15:9: 15:10
+            let _23: std::fs::File;      // in scope 2 at errors.rs:22:9: 22:10
+            let _26: std::fs::File;      // in scope 2 at errors.rs:23:12: 23:16
+            let _27: std::io::Error;     // in scope 2 at errors.rs:24:13: 24:18
+            scope 8 {
+                debug f => _23;          // in scope 8 at errors.rs:22:9: 22:10
+            }
+            scope 9 {
+                debug file => _26;       // in scope 9 at errors.rs:23:12: 23:16
+            }
+            scope 10 {
+                debug error => _27;      // in scope 10 at errors.rs:24:13: 24:18
+                let _33: std::fs::File;  // in scope 10 at errors.rs:26:20: 26:22
+                let _34: std::io::Error; // in scope 10 at errors.rs:27:21: 27:22
+                let _51: std::io::ErrorKind; // in scope 10 at errors.rs:29:13: 29:24
+                scope 11 {
+                    debug fc => _33;     // in scope 11 at errors.rs:26:20: 26:22
+                }
+                scope 12 {
+                    debug e => _34;      // in scope 12 at errors.rs:27:21: 27:22
+                    let _41: &std::io::Error; // in scope 12 at errors.rs:27:69: 27:70
+                    let _45: &[std::fmt::ArgumentV1; 1]; // in scope 12 at /home/sabin/cheri/rust/library/std/src/panic.rs:24:38: 24:80
+                    scope 13 {
+                        debug arg0 => _41; // in scope 13 at errors.rs:27:69: 27:70
+                    }
+                    scope 14 {
+                        debug args => _45; // in scope 14 at /home/sabin/cheri/rust/library/std/src/panic.rs:24:38: 24:80
+                        scope 15 {
+                            let mut _68: &[&str; 1]; // in scope 15 at errors.rs:27:34: 27:67
+                        }
+                    }
+                }
+                scope 16 {
+                    debug other_error => _51; // in scope 16 at errors.rs:29:13: 29:24
+                    let _58: &std::io::ErrorKind; // in scope 16 at errors.rs:30:58: 30:69
+                    let _62: &[std::fmt::ArgumentV1; 1]; // in scope 16 at /home/sabin/cheri/rust/library/std/src/panic.rs:24:38: 24:80
+                    scope 17 {
+                        debug arg0 => _58; // in scope 17 at errors.rs:30:58: 30:69
+                    }
+                    scope 18 {
+                        debug args => _62; // in scope 18 at /home/sabin/cheri/rust/library/std/src/panic.rs:24:38: 24:80
+                        scope 19 {
+                            let mut _69: &[&str; 1]; // in scope 19 at errors.rs:30:24: 30:56
+                        }
+                    }
+                }
+            }
+        }
+        scope 3 {
+            debug file => _5;            // in scope 3 at errors.rs:16:12: 16:16
+        }
+        scope 4 {
+            debug error => _6;           // in scope 4 at errors.rs:17:13: 17:18
+            let _13: &std::io::Error;    // in scope 4 at errors.rs:17:64: 17:69
+            let _17: &[std::fmt::ArgumentV1; 1]; // in scope 4 at /home/sabin/cheri/rust/library/std/src/panic.rs:24:38: 24:80
+            scope 5 {
+                debug arg0 => _13;       // in scope 5 at errors.rs:17:64: 17:69
+            }
+            scope 6 {
+                debug args => _17;       // in scope 6 at /home/sabin/cheri/rust/library/std/src/panic.rs:24:38: 24:80
+                scope 7 {
+                    let mut _70: &[&str; 1]; // in scope 7 at errors.rs:17:30: 17:62
+                }
+            }
+        }
+    }
+
+    bb0: {
+        _1 = File::create::<&str>(const "hello.txt") -> bb1; // scope 0 at errors.rs:11:5: 11:30
+                                         // mir::Constant
+                                         // + span: errors.rs:11:5: 11:17
+                                         // + user_ty: UserType(0)
+                                         // + literal: Const { ty: fn(&str) -> std::result::Result<std::fs::File, std::io::Error> {std::fs::File::create::<&str>}, val: Value(Scalar(<ZST>)) }
+                                         // ty::Const
+                                         // + ty: &str
+                                         // + val: Value(Slice { data: Allocation { bytes: [104, 101, 108, 108, 111, 46, 116, 120, 116], relocations: Relocations(SortedMap { data: [] }), init_mask: InitMask { blocks: [511], len: Size { raw: 9 } }, align: Align { pow2: 0 }, mutability: Not, extra: () }, start: 0, end: 9 })
+                                         // mir::Constant
+                                         // + span: errors.rs:11:18: 11:29
+                                         // + literal: Const { ty: &str, val: Value(Slice { data: Allocation { bytes: [104, 101, 108, 108, 111, 46, 116, 120, 116], relocations: Relocations(SortedMap { data: [] }), init_mask: InitMask { blocks: [511], len: Size { raw: 9 } }, align: Align { pow2: 0 }, mutability: Not, extra: () }, start: 0, end: 9 }) }
+    }
+
+    bb1: {
+        drop(_1) -> bb2;                 // scope 0 at errors.rs:11:30: 11:31
+    }
+
+    bb2: {
+        _2 = File::open::<&str>(const "hello.txt") -> bb3; // scope 0 at errors.rs:13:13: 13:36
+                                         // mir::Constant
+                                         // + span: errors.rs:13:13: 13:23
+                                         // + user_ty: UserType(1)
+                                         // + literal: Const { ty: fn(&str) -> std::result::Result<std::fs::File, std::io::Error> {std::fs::File::open::<&str>}, val: Value(Scalar(<ZST>)) }
+                                         // ty::Const
+                                         // + ty: &str
+                                         // + val: Value(Slice { data: Allocation { bytes: [104, 101, 108, 108, 111, 46, 116, 120, 116], relocations: Relocations(SortedMap { data: [] }), init_mask: InitMask { blocks: [511], len: Size { raw: 9 } }, align: Align { pow2: 0 }, mutability: Not, extra: () }, start: 0, end: 9 })
+                                         // mir::Constant
+                                         // + span: errors.rs:13:24: 13:35
+                                         // + literal: Const { ty: &str, val: Value(Slice { data: Allocation { bytes: [104, 101, 108, 108, 111, 46, 116, 120, 116], relocations: Relocations(SortedMap { data: [] }), init_mask: InitMask { blocks: [511], len: Size { raw: 9 } }, align: Align { pow2: 0 }, mutability: Not, extra: () }, start: 0, end: 9 }) }
+    }
+
+    bb3: {
+        _4 = discriminant(_2);           // scope 1 at errors.rs:15:19: 15:20
+        switchInt(move _4) -> [0_isize: bb6, 1_isize: bb4, otherwise: bb5]; // scope 1 at errors.rs:15:13: 15:20
+    }
+
+    bb4: {
+        _6 = move ((_2 as Err).0: std::io::Error); // scope 1 at errors.rs:17:13: 17:18
+        _12 = &_6;                       // scope 4 at errors.rs:17:64: 17:69
+        (_11.0: &std::io::Error) = move _12; // scope 4 at /home/sabin/cheri/rust/library/std/src/panic.rs:24:38: 24:80
+        _13 = (_11.0: &std::io::Error);  // scope 4 at errors.rs:17:64: 17:69
+        _15 = _13;                       // scope 5 at errors.rs:17:64: 17:69
+        _16 = <std::io::Error as Debug>::fmt as for<'r, 's, 't0> fn(&'r std::io::Error, &'s mut std::fmt::Formatter<'t0>) -> std::result::Result<(), std::fmt::Error> (Pointer(ReifyFnPointer)); // scope 5 at errors.rs:17:64: 17:69
+                                         // mir::Constant
+                                         // + span: errors.rs:17:64: 17:69
+                                         // + literal: Const { ty: for<'r, 's, 't0> fn(&'r std::io::Error, &'s mut std::fmt::Formatter<'t0>) -> std::result::Result<(), std::fmt::Error> {<std::io::Error as std::fmt::Debug>::fmt}, val: Value(Scalar(<ZST>)) }
+        _14 = ArgumentV1::new::<std::io::Error>(move _15, move _16) -> [return: bb7, unwind: bb29]; // scope 5 at /home/sabin/cheri/rust/library/std/src/panic.rs:24:38: 24:80
+                                         // mir::Constant
+                                         // + span: /home/sabin/cheri/rust/library/std/src/panic.rs:24:38: 24:80
+                                         // + user_ty: UserType(2)
+                                         // + literal: Const { ty: for<'b> fn(&'b std::io::Error, for<'r, 's, 't0> fn(&'r std::io::Error, &'s mut std::fmt::Formatter<'t0>) -> std::result::Result<(), std::fmt::Error>) -> std::fmt::ArgumentV1<'b> {std::fmt::ArgumentV1::new::<std::io::Error>}, val: Value(Scalar(<ZST>)) }
+    }
+
+    bb5: {
+        unreachable;                     // scope 1 at errors.rs:15:19: 15:20
+    }
+
+    bb6: {
+        _5 = move ((_2 as Ok).0: std::fs::File); // scope 1 at errors.rs:16:12: 16:16
+        _3 = move _5;                    // scope 3 at errors.rs:16:21: 16:25
+        _24 = File::open::<&str>(const "hello.txt") -> [return: bb9, unwind: bb28]; // scope 2 at errors.rs:22:19: 22:42
+                                         // mir::Constant
+                                         // + span: errors.rs:22:19: 22:29
+                                         // + user_ty: UserType(4)
+                                         // + literal: Const { ty: fn(&str) -> std::result::Result<std::fs::File, std::io::Error> {std::fs::File::open::<&str>}, val: Value(Scalar(<ZST>)) }
+                                         // ty::Const
+                                         // + ty: &str
+                                         // + val: Value(Slice { data: Allocation { bytes: [104, 101, 108, 108, 111, 46, 116, 120, 116], relocations: Relocations(SortedMap { data: [] }), init_mask: InitMask { blocks: [511], len: Size { raw: 9 } }, align: Align { pow2: 0 }, mutability: Not, extra: () }, start: 0, end: 9 })
+                                         // mir::Constant
+                                         // + span: errors.rs:22:30: 22:41
+                                         // + literal: Const { ty: &str, val: Value(Slice { data: Allocation { bytes: [104, 101, 108, 108, 111, 46, 116, 120, 116], relocations: Relocations(SortedMap { data: [] }), init_mask: InitMask { blocks: [511], len: Size { raw: 9 } }, align: Align { pow2: 0 }, mutability: Not, extra: () }, start: 0, end: 9 }) }
+    }
+
+    bb7: {
+        _10 = [move _14];                // scope 5 at /home/sabin/cheri/rust/library/std/src/panic.rs:24:38: 24:80
+        _17 = &_10;                      // scope 4 at /home/sabin/cheri/rust/library/std/src/panic.rs:24:38: 24:80
+        _70 = const main::promoted[2];   // scope 7 at errors.rs:17:30: 17:62
+                                         // ty::Const
+                                         // + ty: &[&str; 1]
+                                         // + val: Unevaluated(main, [], Some(promoted[2]))
+                                         // mir::Constant
+                                         // + span: errors.rs:17:30: 17:62
+                                         // + literal: Const { ty: &[&str; 1], val: Unevaluated(Unevaluated { def: WithOptConstParam { did: DefId(0:3 ~ errors[dd32]::main), const_param_did: None }, substs_: Some([]), promoted: Some(promoted[2]) }) }
+        _20 = _70;                       // scope 7 at errors.rs:17:30: 17:62
+        _19 = _20;                       // scope 7 at errors.rs:17:30: 17:62
+        _18 = move _19 as &[&str] (Pointer(Unsize)); // scope 7 at errors.rs:17:30: 17:62
+        _22 = _17;                       // scope 7 at /home/sabin/cheri/rust/library/std/src/panic.rs:24:38: 24:80
+        _21 = move _22 as &[std::fmt::ArgumentV1] (Pointer(Unsize)); // scope 7 at /home/sabin/cheri/rust/library/std/src/panic.rs:24:38: 24:80
+        _9 = Arguments::new_v1(move _18, move _21) -> [return: bb8, unwind: bb29]; // scope 7 at /home/sabin/cheri/rust/library/std/src/panic.rs:24:38: 24:80
+                                         // mir::Constant
+                                         // + span: /home/sabin/cheri/rust/library/std/src/panic.rs:24:38: 24:80
+                                         // + user_ty: UserType(3)
+                                         // + literal: Const { ty: unsafe fn(&[&'static str], &[std::fmt::ArgumentV1]) -> std::fmt::Arguments {std::fmt::Arguments::new_v1}, val: Value(Scalar(<ZST>)) }
+    }
+
+    bb8: {
+        _8 = &_9;                        // scope 4 at /home/sabin/cheri/rust/library/std/src/panic.rs:24:37: 24:80
+        _7 = _8;                         // scope 4 at /home/sabin/cheri/rust/library/std/src/panic.rs:24:37: 24:80
+        begin_panic_fmt(move _7) -> bb29; // scope 4 at /home/sabin/cheri/rust/library/std/src/panic.rs:24:9: 24:81
+                                         // mir::Constant
+                                         // + span: /home/sabin/cheri/rust/library/std/src/panic.rs:24:9: 24:36
+                                         // + literal: Const { ty: for<'r, 's> fn(&'r std::fmt::Arguments<'s>) -> ! {std::rt::begin_panic_fmt}, val: Value(Scalar(<ZST>)) }
+    }
+
+    bb9: {
+        _25 = discriminant(_24);         // scope 2 at errors.rs:22:19: 22:42
+        switchInt(move _25) -> [0_isize: bb12, 1_isize: bb10, otherwise: bb11]; // scope 2 at errors.rs:22:13: 22:42
+    }
+
+    bb10: {
+        _27 = move ((_24 as Err).0: std::io::Error); // scope 2 at errors.rs:24:13: 24:18
+        _29 = &_27;                      // scope 10 at errors.rs:24:29: 24:34
+        _28 = std::io::Error::kind(move _29) -> [return: bb13, unwind: bb27]; // scope 10 at errors.rs:24:29: 24:41
+                                         // mir::Constant
+                                         // + span: errors.rs:24:35: 24:39
+                                         // + literal: Const { ty: for<'r> fn(&'r std::io::Error) -> std::io::ErrorKind {std::io::Error::kind}, val: Value(Scalar(<ZST>)) }
+    }
+
+    bb11: {
+        unreachable;                     // scope 2 at errors.rs:22:19: 22:42
+    }
+
+    bb12: {
+        _26 = move ((_24 as Ok).0: std::fs::File); // scope 2 at errors.rs:23:12: 23:16
+        _23 = move _26;                  // scope 9 at errors.rs:23:21: 23:25
+        goto -> bb31;                    // scope 2 at errors.rs:23:24: 23:25
+    }
+
+    bb13: {
+        _30 = discriminant(_28);         // scope 10 at errors.rs:24:29: 24:41
+        switchInt(move _30) -> [0_isize: bb15, otherwise: bb14]; // scope 10 at errors.rs:24:23: 24:41
+    }
+
+    bb14: {
+        _51 = _28;                       // scope 10 at errors.rs:29:13: 29:24
+        _57 = &_51;                      // scope 16 at errors.rs:30:58: 30:69
+        (_56.0: &std::io::ErrorKind) = move _57; // scope 16 at /home/sabin/cheri/rust/library/std/src/panic.rs:24:38: 24:80
+        _58 = (_56.0: &std::io::ErrorKind); // scope 16 at errors.rs:30:58: 30:69
+        _60 = _58;                       // scope 17 at errors.rs:30:58: 30:69
+        _61 = <ErrorKind as Debug>::fmt as for<'r, 's, 't0> fn(&'r std::io::ErrorKind, &'s mut std::fmt::Formatter<'t0>) -> std::result::Result<(), std::fmt::Error> (Pointer(ReifyFnPointer)); // scope 17 at errors.rs:30:58: 30:69
+                                         // mir::Constant
+                                         // + span: errors.rs:30:58: 30:69
+                                         // + literal: Const { ty: for<'r, 's, 't0> fn(&'r std::io::ErrorKind, &'s mut std::fmt::Formatter<'t0>) -> std::result::Result<(), std::fmt::Error> {<std::io::ErrorKind as std::fmt::Debug>::fmt}, val: Value(Scalar(<ZST>)) }
+        _59 = ArgumentV1::new::<ErrorKind>(move _60, move _61) -> [return: bb22, unwind: bb27]; // scope 17 at /home/sabin/cheri/rust/library/std/src/panic.rs:24:38: 24:80
+                                         // mir::Constant
+                                         // + span: /home/sabin/cheri/rust/library/std/src/panic.rs:24:38: 24:80
+                                         // + user_ty: UserType(8)
+                                         // + literal: Const { ty: for<'b> fn(&'b std::io::ErrorKind, for<'r, 's, 't0> fn(&'r std::io::ErrorKind, &'s mut std::fmt::Formatter<'t0>) -> std::result::Result<(), std::fmt::Error>) -> std::fmt::ArgumentV1<'b> {std::fmt::ArgumentV1::new::<std::io::ErrorKind>}, val: Value(Scalar(<ZST>)) }
+    }
+
+    bb15: {
+        _31 = File::create::<&str>(const "hello.txt") -> [return: bb16, unwind: bb27]; // scope 10 at errors.rs:25:42: 25:67
+                                         // mir::Constant
+                                         // + span: errors.rs:25:42: 25:54
+                                         // + user_ty: UserType(5)
+                                         // + literal: Const { ty: fn(&str) -> std::result::Result<std::fs::File, std::io::Error> {std::fs::File::create::<&str>}, val: Value(Scalar(<ZST>)) }
+                                         // ty::Const
+                                         // + ty: &str
+                                         // + val: Value(Slice { data: Allocation { bytes: [104, 101, 108, 108, 111, 46, 116, 120, 116], relocations: Relocations(SortedMap { data: [] }), init_mask: InitMask { blocks: [511], len: Size { raw: 9 } }, align: Align { pow2: 0 }, mutability: Not, extra: () }, start: 0, end: 9 })
+                                         // mir::Constant
+                                         // + span: errors.rs:25:55: 25:66
+                                         // + literal: Const { ty: &str, val: Value(Slice { data: Allocation { bytes: [104, 101, 108, 108, 111, 46, 116, 120, 116], relocations: Relocations(SortedMap { data: [] }), init_mask: InitMask { blocks: [511], len: Size { raw: 9 } }, align: Align { pow2: 0 }, mutability: Not, extra: () }, start: 0, end: 9 }) }
+    }
+
+    bb16: {
+        _32 = discriminant(_31);         // scope 10 at errors.rs:25:42: 25:67
+        switchInt(move _32) -> [0_isize: bb19, 1_isize: bb17, otherwise: bb18]; // scope 10 at errors.rs:25:36: 25:67
+    }
+
+    bb17: {
+        _34 = move ((_31 as Err).0: std::io::Error); // scope 10 at errors.rs:27:21: 27:22
+        _40 = &_34;                      // scope 12 at errors.rs:27:69: 27:70
+        (_39.0: &std::io::Error) = move _40; // scope 12 at /home/sabin/cheri/rust/library/std/src/panic.rs:24:38: 24:80
+        _41 = (_39.0: &std::io::Error);  // scope 12 at errors.rs:27:69: 27:70
+        _43 = _41;                       // scope 13 at errors.rs:27:69: 27:70
+        _44 = <std::io::Error as Debug>::fmt as for<'r, 's, 't0> fn(&'r std::io::Error, &'s mut std::fmt::Formatter<'t0>) -> std::result::Result<(), std::fmt::Error> (Pointer(ReifyFnPointer)); // scope 13 at errors.rs:27:69: 27:70
+                                         // mir::Constant
+                                         // + span: errors.rs:27:69: 27:70
+                                         // + literal: Const { ty: for<'r, 's, 't0> fn(&'r std::io::Error, &'s mut std::fmt::Formatter<'t0>) -> std::result::Result<(), std::fmt::Error> {<std::io::Error as std::fmt::Debug>::fmt}, val: Value(Scalar(<ZST>)) }
+        _42 = ArgumentV1::new::<std::io::Error>(move _43, move _44) -> [return: bb20, unwind: bb26]; // scope 13 at /home/sabin/cheri/rust/library/std/src/panic.rs:24:38: 24:80
+                                         // mir::Constant
+                                         // + span: /home/sabin/cheri/rust/library/std/src/panic.rs:24:38: 24:80
+                                         // + user_ty: UserType(6)
+                                         // + literal: Const { ty: for<'b> fn(&'b std::io::Error, for<'r, 's, 't0> fn(&'r std::io::Error, &'s mut std::fmt::Formatter<'t0>) -> std::result::Result<(), std::fmt::Error>) -> std::fmt::ArgumentV1<'b> {std::fmt::ArgumentV1::new::<std::io::Error>}, val: Value(Scalar(<ZST>)) }
+    }
+
+    bb18: {
+        unreachable;                     // scope 10 at errors.rs:25:42: 25:67
+    }
+
+    bb19: {
+        _33 = move ((_31 as Ok).0: std::fs::File); // scope 10 at errors.rs:26:20: 26:22
+        _23 = move _33;                  // scope 11 at errors.rs:26:27: 26:29
+        drop(_27) -> [return: bb31, unwind: bb33]; // scope 2 at errors.rs:32:9: 32:10
+    }
+
+    bb20: {
+        _38 = [move _42];                // scope 13 at /home/sabin/cheri/rust/library/std/src/panic.rs:24:38: 24:80
+        _45 = &_38;                      // scope 12 at /home/sabin/cheri/rust/library/std/src/panic.rs:24:38: 24:80
+        _68 = const main::promoted[0];   // scope 15 at errors.rs:27:34: 27:67
+                                         // ty::Const
+                                         // + ty: &[&str; 1]
+                                         // + val: Unevaluated(main, [], Some(promoted[0]))
+                                         // mir::Constant
+                                         // + span: errors.rs:27:34: 27:67
+                                         // + literal: Const { ty: &[&str; 1], val: Unevaluated(Unevaluated { def: WithOptConstParam { did: DefId(0:3 ~ errors[dd32]::main), const_param_did: None }, substs_: Some([]), promoted: Some(promoted[0]) }) }
+        _48 = _68;                       // scope 15 at errors.rs:27:34: 27:67
+        _47 = _48;                       // scope 15 at errors.rs:27:34: 27:67
+        _46 = move _47 as &[&str] (Pointer(Unsize)); // scope 15 at errors.rs:27:34: 27:67
+        _50 = _45;                       // scope 15 at /home/sabin/cheri/rust/library/std/src/panic.rs:24:38: 24:80
+        _49 = move _50 as &[std::fmt::ArgumentV1] (Pointer(Unsize)); // scope 15 at /home/sabin/cheri/rust/library/std/src/panic.rs:24:38: 24:80
+        _37 = Arguments::new_v1(move _46, move _49) -> [return: bb21, unwind: bb26]; // scope 15 at /home/sabin/cheri/rust/library/std/src/panic.rs:24:38: 24:80
+                                         // mir::Constant
+                                         // + span: /home/sabin/cheri/rust/library/std/src/panic.rs:24:38: 24:80
+                                         // + user_ty: UserType(7)
+                                         // + literal: Const { ty: unsafe fn(&[&'static str], &[std::fmt::ArgumentV1]) -> std::fmt::Arguments {std::fmt::Arguments::new_v1}, val: Value(Scalar(<ZST>)) }
+    }
+
+    bb21: {
+        _36 = &_37;                      // scope 12 at /home/sabin/cheri/rust/library/std/src/panic.rs:24:37: 24:80
+        _35 = _36;                       // scope 12 at /home/sabin/cheri/rust/library/std/src/panic.rs:24:37: 24:80
+        begin_panic_fmt(move _35) -> bb26; // scope 12 at /home/sabin/cheri/rust/library/std/src/panic.rs:24:9: 24:81
+                                         // mir::Constant
+                                         // + span: /home/sabin/cheri/rust/library/std/src/panic.rs:24:9: 24:36
+                                         // + literal: Const { ty: for<'r, 's> fn(&'r std::fmt::Arguments<'s>) -> ! {std::rt::begin_panic_fmt}, val: Value(Scalar(<ZST>)) }
+    }
+
+    bb22: {
+        _55 = [move _59];                // scope 17 at /home/sabin/cheri/rust/library/std/src/panic.rs:24:38: 24:80
+        _62 = &_55;                      // scope 16 at /home/sabin/cheri/rust/library/std/src/panic.rs:24:38: 24:80
+        _69 = const main::promoted[1];   // scope 19 at errors.rs:30:24: 30:56
+                                         // ty::Const
+                                         // + ty: &[&str; 1]
+                                         // + val: Unevaluated(main, [], Some(promoted[1]))
+                                         // mir::Constant
+                                         // + span: errors.rs:30:24: 30:56
+                                         // + literal: Const { ty: &[&str; 1], val: Unevaluated(Unevaluated { def: WithOptConstParam { did: DefId(0:3 ~ errors[dd32]::main), const_param_did: None }, substs_: Some([]), promoted: Some(promoted[1]) }) }
+        _65 = _69;                       // scope 19 at errors.rs:30:24: 30:56
+        _64 = _65;                       // scope 19 at errors.rs:30:24: 30:56
+        _63 = move _64 as &[&str] (Pointer(Unsize)); // scope 19 at errors.rs:30:24: 30:56
+        _67 = _62;                       // scope 19 at /home/sabin/cheri/rust/library/std/src/panic.rs:24:38: 24:80
+        _66 = move _67 as &[std::fmt::ArgumentV1] (Pointer(Unsize)); // scope 19 at /home/sabin/cheri/rust/library/std/src/panic.rs:24:38: 24:80
+        _54 = Arguments::new_v1(move _63, move _66) -> [return: bb23, unwind: bb27]; // scope 19 at /home/sabin/cheri/rust/library/std/src/panic.rs:24:38: 24:80
+                                         // mir::Constant
+                                         // + span: /home/sabin/cheri/rust/library/std/src/panic.rs:24:38: 24:80
+                                         // + user_ty: UserType(9)
+                                         // + literal: Const { ty: unsafe fn(&[&'static str], &[std::fmt::ArgumentV1]) -> std::fmt::Arguments {std::fmt::Arguments::new_v1}, val: Value(Scalar(<ZST>)) }
+    }
+
+    bb23: {
+        _53 = &_54;                      // scope 16 at /home/sabin/cheri/rust/library/std/src/panic.rs:24:37: 24:80
+        _52 = _53;                       // scope 16 at /home/sabin/cheri/rust/library/std/src/panic.rs:24:37: 24:80
+        begin_panic_fmt(move _52) -> bb27; // scope 16 at /home/sabin/cheri/rust/library/std/src/panic.rs:24:9: 24:81
+                                         // mir::Constant
+                                         // + span: /home/sabin/cheri/rust/library/std/src/panic.rs:24:9: 24:36
+                                         // + literal: Const { ty: for<'r, 's> fn(&'r std::fmt::Arguments<'s>) -> ! {std::rt::begin_panic_fmt}, val: Value(Scalar(<ZST>)) }
+    }
+
+    bb24: {
+        drop(_3) -> bb25;                // scope 1 at errors.rs:34:1: 34:2
+    }
+
+    bb25: {
+        return;                          // scope 0 at errors.rs:34:2: 34:2
+    }
+
+    bb26 (cleanup): {
+        drop(_34) -> bb32;               // scope 10 at errors.rs:27:70: 27:71
+    }
+
+    bb27 (cleanup): {
+        drop(_27) -> bb33;               // scope 2 at errors.rs:32:9: 32:10
+    }
+
+    bb28 (cleanup): {
+        drop(_3) -> bb30;                // scope 1 at errors.rs:34:1: 34:2
+    }
+
+    bb29 (cleanup): {
+        drop(_6) -> bb30;                // scope 1 at errors.rs:17:69: 17:70
+    }
+
+    bb30 (cleanup): {
+        resume;                          // scope 0 at errors.rs:1:1: 34:2
+    }
+
+    bb31: {
+        drop(_23) -> [return: bb24, unwind: bb28]; // scope 2 at errors.rs:34:1: 34:2
+    }
+
+    bb32 (cleanup): {
+        goto -> bb27;                    // scope 10 at errors.rs:28:13: 28:14
+    }
+
+    bb33 (cleanup): {
+        goto -> bb28;                    // scope 2 at errors.rs:33:6: 33:7
+    }
+}
+
+promoted[0] in main: &[&str; 1] = {
+    let mut _0: &[&str; 1];              // return place in scope 0 at errors.rs:27:34: 27:67
+    let mut _1: [&str; 1];               // in scope 0 at errors.rs:27:34: 27:67
+
+    bb0: {
+        _1 = [const "Problem creating the file: "]; // scope 0 at errors.rs:27:34: 27:67
+                                         // ty::Const
+                                         // + ty: &str
+                                         // + val: Value(Slice { data: Allocation { bytes: [80, 114, 111, 98, 108, 101, 109, 32, 99, 114, 101, 97, 116, 105, 110, 103, 32, 116, 104, 101, 32, 102, 105, 108, 101, 58, 32], relocations: Relocations(SortedMap { data: [] }), init_mask: InitMask { blocks: [134217727], len: Size { raw: 27 } }, align: Align { pow2: 0 }, mutability: Not, extra: () }, start: 0, end: 27 })
+                                         // mir::Constant
+                                         // + span: errors.rs:27:34: 27:67
+                                         // + literal: Const { ty: &str, val: Value(Slice { data: Allocation { bytes: [80, 114, 111, 98, 108, 101, 109, 32, 99, 114, 101, 97, 116, 105, 110, 103, 32, 116, 104, 101, 32, 102, 105, 108, 101, 58, 32], relocations: Relocations(SortedMap { data: [] }), init_mask: InitMask { blocks: [134217727], len: Size { raw: 27 } }, align: Align { pow2: 0 }, mutability: Not, extra: () }, start: 0, end: 27 }) }
+        _0 = &_1;                        // scope 0 at errors.rs:27:34: 27:67
+        return;                          // scope 0 at errors.rs:27:34: 27:67
+    }
+}
+
+promoted[1] in main: &[&str; 1] = {
+    let mut _0: &[&str; 1];              // return place in scope 0 at errors.rs:30:24: 30:56
+    let mut _1: [&str; 1];               // in scope 0 at errors.rs:30:24: 30:56
+
+    bb0: {
+        _1 = [const "Problem opening the file: "]; // scope 0 at errors.rs:30:24: 30:56
+                                         // ty::Const
+                                         // + ty: &str
+                                         // + val: Value(Slice { data: Allocation { bytes: [80, 114, 111, 98, 108, 101, 109, 32, 111, 112, 101, 110, 105, 110, 103, 32, 116, 104, 101, 32, 102, 105, 108, 101, 58, 32], relocations: Relocations(SortedMap { data: [] }), init_mask: InitMask { blocks: [67108863], len: Size { raw: 26 } }, align: Align { pow2: 0 }, mutability: Not, extra: () }, start: 0, end: 26 })
+                                         // mir::Constant
+                                         // + span: errors.rs:30:24: 30:56
+                                         // + literal: Const { ty: &str, val: Value(Slice { data: Allocation { bytes: [80, 114, 111, 98, 108, 101, 109, 32, 111, 112, 101, 110, 105, 110, 103, 32, 116, 104, 101, 32, 102, 105, 108, 101, 58, 32], relocations: Relocations(SortedMap { data: [] }), init_mask: InitMask { blocks: [67108863], len: Size { raw: 26 } }, align: Align { pow2: 0 }, mutability: Not, extra: () }, start: 0, end: 26 }) }
+        _0 = &_1;                        // scope 0 at errors.rs:30:24: 30:56
+        return;                          // scope 0 at errors.rs:30:24: 30:56
+    }
+}
+
+promoted[2] in main: &[&str; 1] = {
+    let mut _0: &[&str; 1];              // return place in scope 0 at errors.rs:17:30: 17:62
+    let mut _1: [&str; 1];               // in scope 0 at errors.rs:17:30: 17:62
+
+    bb0: {
+        _1 = [const "Problem opening the file: "]; // scope 0 at errors.rs:17:30: 17:62
+                                         // ty::Const
+                                         // + ty: &str
+                                         // + val: Value(Slice { data: Allocation { bytes: [80, 114, 111, 98, 108, 101, 109, 32, 111, 112, 101, 110, 105, 110, 103, 32, 116, 104, 101, 32, 102, 105, 108, 101, 58, 32], relocations: Relocations(SortedMap { data: [] }), init_mask: InitMask { blocks: [67108863], len: Size { raw: 26 } }, align: Align { pow2: 0 }, mutability: Not, extra: () }, start: 0, end: 26 })
+                                         // mir::Constant
+                                         // + span: errors.rs:17:30: 17:62
+                                         // + literal: Const { ty: &str, val: Value(Slice { data: Allocation { bytes: [80, 114, 111, 98, 108, 101, 109, 32, 111, 112, 101, 110, 105, 110, 103, 32, 116, 104, 101, 32, 102, 105, 108, 101, 58, 32], relocations: Relocations(SortedMap { data: [] }), init_mask: InitMask { blocks: [67108863], len: Size { raw: 26 } }, align: Align { pow2: 0 }, mutability: Not, extra: () }, start: 0, end: 26 }) }
+        _0 = &_1;                        // scope 0 at errors.rs:17:30: 17:62
+        return;                          // scope 0 at errors.rs:17:30: 17:62
+    }
+}

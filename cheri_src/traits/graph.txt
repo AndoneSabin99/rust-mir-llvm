@@ -1,0 +1,116 @@
+digraph __crate__ {
+subgraph cluster_Mir_0_5 {
+    graph [fontname="Courier, monospace"];
+    node [fontname="Courier, monospace"];
+    edge [fontname="Courier, monospace"];
+    label=<fn Summary::say_hello() -&gt; ()<br align="left"/>let _1: ();<br align="left"/>let mut _2: std::fmt::Arguments;<br align="left"/>let _3: &amp;[std::fmt::ArgumentV1; 0];<br align="left"/>let mut _4: &amp;[&amp;str];<br align="left"/>let mut _5: &amp;[&amp;str; 1];<br align="left"/>let _6: &amp;[&amp;str; 1];<br align="left"/>let mut _7: &amp;[std::fmt::ArgumentV1];<br align="left"/>let mut _8: &amp;[std::fmt::ArgumentV1; 0];<br align="left"/>let mut _9: &amp;[&amp;str; 1];<br align="left"/>let mut _10: &amp;[std::fmt::ArgumentV1; 0];<br align="left"/>debug args =&gt; _3;<br align="left"/>>;
+    bb0__0_5 [shape="none", label=<<table border="0" cellborder="1" cellspacing="0"><tr><td bgcolor="gray" align="center" colspan="1">0</td></tr><tr><td align="left" balign="left">_10 = const &lt;Self as Summary&gt;::say_hello::promoted[1]<br/>_3 = _10<br/>_9 = const &lt;Self as Summary&gt;::say_hello::promoted[0]<br/>_6 = _9<br/>_5 = _6<br/>_4 = move _5 as &amp;[&amp;str] (Pointer(Unsize))<br/>_8 = _3<br/>_7 = move _8 as &amp;[std::fmt::ArgumentV1] (Pointer(Unsize))<br/></td></tr><tr><td align="left">_2 = Arguments::new_v1(move _4, move _7)</td></tr></table>>];
+    bb1__0_5 [shape="none", label=<<table border="0" cellborder="1" cellspacing="0"><tr><td bgcolor="gray" align="center" colspan="1">1</td></tr><tr><td align="left">_1 = _print(move _2)</td></tr></table>>];
+    bb2__0_5 [shape="none", label=<<table border="0" cellborder="1" cellspacing="0"><tr><td bgcolor="gray" align="center" colspan="1">2</td></tr><tr><td align="left">return</td></tr></table>>];
+    bb0__0_5 -> bb1__0_5 [label="return"];
+    bb1__0_5 -> bb2__0_5 [label="return"];
+}
+subgraph cluster_Mir_0_21 {
+    graph [fontname="Courier, monospace"];
+    node [fontname="Courier, monospace"];
+    edge [fontname="Courier, monospace"];
+    label=<fn main() -&gt; ()<br align="left"/>let _1: Tweet;<br align="left"/>let mut _2: std::string::String;<br align="left"/>let mut _3: &amp;str;<br align="left"/>let _4: &amp;str;<br align="left"/>let mut _5: std::string::String;<br align="left"/>let mut _6: &amp;str;<br align="left"/>let _7: &amp;str;<br align="left"/>let _8: NewsArticle;<br align="left"/>let mut _9: std::string::String;<br align="left"/>let mut _10: &amp;str;<br align="left"/>let _11: &amp;str;<br align="left"/>let mut _12: std::string::String;<br align="left"/>let mut _13: &amp;str;<br align="left"/>let _14: &amp;str;<br align="left"/>let mut _15: std::string::String;<br align="left"/>let mut _16: &amp;str;<br align="left"/>let _17: &amp;str;<br align="left"/>let mut _18: std::string::String;<br align="left"/>let mut _19: &amp;str;<br align="left"/>let _20: &amp;str;<br align="left"/>let _21: std::string::String;<br align="left"/>let mut _22: &amp;Tweet;<br align="left"/>let _23: std::string::String;<br align="left"/>let mut _24: &amp;NewsArticle;<br align="left"/>let _25: ();<br align="left"/>let _26: ();<br align="left"/>debug t =&gt; _1;<br align="left"/>debug n =&gt; _8;<br align="left"/>>;
+    bb0__0_21 [shape="none", label=<<table border="0" cellborder="1" cellspacing="0"><tr><td bgcolor="gray" align="center" colspan="1">0</td></tr><tr><td align="left" balign="left">_4 = const &quot;User1&quot;<br/>_3 = _4<br/></td></tr><tr><td align="left">_2 = &lt;str as ToString&gt;::to_string(move _3)</td></tr></table>>];
+    bb1__0_21 [shape="none", label=<<table border="0" cellborder="1" cellspacing="0"><tr><td bgcolor="gray" align="center" colspan="1">1</td></tr><tr><td align="left" balign="left">_7 = const &quot;qwerty&quot;<br/>_6 = _7<br/></td></tr><tr><td align="left">_5 = &lt;str as ToString&gt;::to_string(move _6)</td></tr></table>>];
+    bb2__0_21 [shape="none", label=<<table border="0" cellborder="1" cellspacing="0"><tr><td bgcolor="gray" align="center" colspan="1">2</td></tr><tr><td align="left" balign="left">(_1.0: std::string::String) = move _2<br/>(_1.1: std::string::String) = move _5<br/>(_1.2: bool) = const false<br/>(_1.3: bool) = const false<br/>_11 = const &quot;Wasps!&quot;<br/>_10 = _11<br/></td></tr><tr><td align="left">_9 = &lt;str as ToString&gt;::to_string(move _10)</td></tr></table>>];
+    bb3__0_21 [shape="none", label=<<table border="0" cellborder="1" cellspacing="0"><tr><td bgcolor="gray" align="center" colspan="1">3</td></tr><tr><td align="left" balign="left">_14 = const &quot;Trento&quot;<br/>_13 = _14<br/></td></tr><tr><td align="left">_12 = &lt;str as ToString&gt;::to_string(move _13)</td></tr></table>>];
+    bb4__0_21 [shape="none", label=<<table border="0" cellborder="1" cellspacing="0"><tr><td bgcolor="gray" align="center" colspan="1">4</td></tr><tr><td align="left" balign="left">_17 = const &quot;Author1&quot;<br/>_16 = _17<br/></td></tr><tr><td align="left">_15 = &lt;str as ToString&gt;::to_string(move _16)</td></tr></table>>];
+    bb5__0_21 [shape="none", label=<<table border="0" cellborder="1" cellspacing="0"><tr><td bgcolor="gray" align="center" colspan="1">5</td></tr><tr><td align="left" balign="left">_20 = const &quot;there is a wasp in my attic&quot;<br/>_19 = _20<br/></td></tr><tr><td align="left">_18 = &lt;str as ToString&gt;::to_string(move _19)</td></tr></table>>];
+    bb6__0_21 [shape="none", label=<<table border="0" cellborder="1" cellspacing="0"><tr><td bgcolor="gray" align="center" colspan="1">6</td></tr><tr><td align="left" balign="left">(_8.0: std::string::String) = move _9<br/>(_8.1: std::string::String) = move _12<br/>(_8.2: std::string::String) = move _15<br/>(_8.3: std::string::String) = move _18<br/>_22 = &amp;_1<br/></td></tr><tr><td align="left">_21 = &lt;Tweet as Summary&gt;::summarize(move _22)</td></tr></table>>];
+    bb7__0_21 [shape="none", label=<<table border="0" cellborder="1" cellspacing="0"><tr><td bgcolor="gray" align="center" colspan="1">7</td></tr><tr><td align="left">drop(_21)</td></tr></table>>];
+    bb8__0_21 [shape="none", label=<<table border="0" cellborder="1" cellspacing="0"><tr><td bgcolor="gray" align="center" colspan="1">8</td></tr><tr><td align="left" balign="left">_24 = &amp;_8<br/></td></tr><tr><td align="left">_23 = &lt;NewsArticle as Summary&gt;::summarize(move _24)</td></tr></table>>];
+    bb9__0_21 [shape="none", label=<<table border="0" cellborder="1" cellspacing="0"><tr><td bgcolor="gray" align="center" colspan="1">9</td></tr><tr><td align="left">drop(_23)</td></tr></table>>];
+    bb10__0_21 [shape="none", label=<<table border="0" cellborder="1" cellspacing="0"><tr><td bgcolor="gray" align="center" colspan="1">10</td></tr><tr><td align="left">_25 = &lt;NewsArticle as Summary&gt;::say_hello()</td></tr></table>>];
+    bb11__0_21 [shape="none", label=<<table border="0" cellborder="1" cellspacing="0"><tr><td bgcolor="gray" align="center" colspan="1">11</td></tr><tr><td align="left">_26 = &lt;Tweet as Summary&gt;::say_hello()</td></tr></table>>];
+    bb12__0_21 [shape="none", label=<<table border="0" cellborder="1" cellspacing="0"><tr><td bgcolor="gray" align="center" colspan="1">12</td></tr><tr><td align="left">drop(_8)</td></tr></table>>];
+    bb13__0_21 [shape="none", label=<<table border="0" cellborder="1" cellspacing="0"><tr><td bgcolor="gray" align="center" colspan="1">13</td></tr><tr><td align="left">drop(_1)</td></tr></table>>];
+    bb14__0_21 [shape="none", label=<<table border="0" cellborder="1" cellspacing="0"><tr><td bgcolor="gray" align="center" colspan="1">14</td></tr><tr><td align="left">return</td></tr></table>>];
+    bb15__0_21 [shape="none", label=<<table border="0" cellborder="1" cellspacing="0"><tr><td bgcolor="lightblue" align="center" colspan="1">15 (cleanup)</td></tr><tr><td align="left">drop(_8)</td></tr></table>>];
+    bb16__0_21 [shape="none", label=<<table border="0" cellborder="1" cellspacing="0"><tr><td bgcolor="lightblue" align="center" colspan="1">16 (cleanup)</td></tr><tr><td align="left">drop(_15)</td></tr></table>>];
+    bb17__0_21 [shape="none", label=<<table border="0" cellborder="1" cellspacing="0"><tr><td bgcolor="lightblue" align="center" colspan="1">17 (cleanup)</td></tr><tr><td align="left">drop(_12)</td></tr></table>>];
+    bb18__0_21 [shape="none", label=<<table border="0" cellborder="1" cellspacing="0"><tr><td bgcolor="lightblue" align="center" colspan="1">18 (cleanup)</td></tr><tr><td align="left">drop(_9)</td></tr></table>>];
+    bb19__0_21 [shape="none", label=<<table border="0" cellborder="1" cellspacing="0"><tr><td bgcolor="lightblue" align="center" colspan="1">19 (cleanup)</td></tr><tr><td align="left">drop(_1)</td></tr></table>>];
+    bb20__0_21 [shape="none", label=<<table border="0" cellborder="1" cellspacing="0"><tr><td bgcolor="lightblue" align="center" colspan="1">20 (cleanup)</td></tr><tr><td align="left">drop(_2)</td></tr></table>>];
+    bb21__0_21 [shape="none", label=<<table border="0" cellborder="1" cellspacing="0"><tr><td bgcolor="lightblue" align="center" colspan="1">21 (cleanup)</td></tr><tr><td align="left">resume</td></tr></table>>];
+    bb0__0_21 -> bb1__0_21 [label="return"];
+    bb1__0_21 -> bb2__0_21 [label="return"];
+    bb1__0_21 -> bb20__0_21 [label="unwind"];
+    bb2__0_21 -> bb3__0_21 [label="return"];
+    bb2__0_21 -> bb19__0_21 [label="unwind"];
+    bb3__0_21 -> bb4__0_21 [label="return"];
+    bb3__0_21 -> bb18__0_21 [label="unwind"];
+    bb4__0_21 -> bb5__0_21 [label="return"];
+    bb4__0_21 -> bb17__0_21 [label="unwind"];
+    bb5__0_21 -> bb6__0_21 [label="return"];
+    bb5__0_21 -> bb16__0_21 [label="unwind"];
+    bb6__0_21 -> bb7__0_21 [label="return"];
+    bb6__0_21 -> bb15__0_21 [label="unwind"];
+    bb7__0_21 -> bb8__0_21 [label="return"];
+    bb7__0_21 -> bb15__0_21 [label="unwind"];
+    bb8__0_21 -> bb9__0_21 [label="return"];
+    bb8__0_21 -> bb15__0_21 [label="unwind"];
+    bb9__0_21 -> bb10__0_21 [label="return"];
+    bb9__0_21 -> bb15__0_21 [label="unwind"];
+    bb10__0_21 -> bb11__0_21 [label="return"];
+    bb10__0_21 -> bb15__0_21 [label="unwind"];
+    bb11__0_21 -> bb12__0_21 [label="return"];
+    bb11__0_21 -> bb15__0_21 [label="unwind"];
+    bb12__0_21 -> bb13__0_21 [label="return"];
+    bb12__0_21 -> bb19__0_21 [label="unwind"];
+    bb13__0_21 -> bb14__0_21 [label="return"];
+    bb15__0_21 -> bb19__0_21 [label="return"];
+    bb16__0_21 -> bb17__0_21 [label="return"];
+    bb17__0_21 -> bb18__0_21 [label="return"];
+    bb18__0_21 -> bb19__0_21 [label="return"];
+    bb19__0_21 -> bb21__0_21 [label="return"];
+    bb20__0_21 -> bb21__0_21 [label="return"];
+}
+subgraph cluster_Mir_0_12 {
+    graph [fontname="Courier, monospace"];
+    node [fontname="Courier, monospace"];
+    edge [fontname="Courier, monospace"];
+    label=<fn &lt;NewsArticle as Summary&gt;::summarize(_1: &amp;NewsArticle) -&gt; std::string::String<br align="left"/>let mut _2: std::fmt::Arguments;<br align="left"/>let mut _3: [std::fmt::ArgumentV1; 3];<br align="left"/>let mut _4: (&amp;std::string::String, &amp;std::string::String, &amp;std::string::String);<br align="left"/>let mut _5: &amp;std::string::String;<br align="left"/>let mut _6: &amp;std::string::String;<br align="left"/>let mut _7: &amp;std::string::String;<br align="left"/>let _8: &amp;std::string::String;<br align="left"/>let _9: &amp;std::string::String;<br align="left"/>let _10: &amp;std::string::String;<br align="left"/>let mut _11: std::fmt::ArgumentV1;<br align="left"/>let mut _12: &amp;std::string::String;<br align="left"/>let mut _13: for&lt;'r, 's, 't0&gt; fn(&amp;'r std::string::String, &amp;'s mut std::fmt::Formatter&lt;'t0&gt;) -&gt; std::result::Result&lt;(), std::fmt::Error&gt;;<br align="left"/>let mut _14: std::fmt::ArgumentV1;<br align="left"/>let mut _15: &amp;std::string::String;<br align="left"/>let mut _16: for&lt;'r, 's, 't0&gt; fn(&amp;'r std::string::String, &amp;'s mut std::fmt::Formatter&lt;'t0&gt;) -&gt; std::result::Result&lt;(), std::fmt::Error&gt;;<br align="left"/>let mut _17: std::fmt::ArgumentV1;<br align="left"/>let mut _18: &amp;std::string::String;<br align="left"/>let mut _19: for&lt;'r, 's, 't0&gt; fn(&amp;'r std::string::String, &amp;'s mut std::fmt::Formatter&lt;'t0&gt;) -&gt; std::result::Result&lt;(), std::fmt::Error&gt;;<br align="left"/>let _20: &amp;[std::fmt::ArgumentV1; 3];<br align="left"/>let mut _21: &amp;[&amp;str];<br align="left"/>let mut _22: &amp;[&amp;str; 4];<br align="left"/>let _23: &amp;[&amp;str; 4];<br align="left"/>let mut _24: &amp;[std::fmt::ArgumentV1];<br align="left"/>let mut _25: &amp;[std::fmt::ArgumentV1; 3];<br align="left"/>let mut _26: &amp;[&amp;str; 4];<br align="left"/>debug self =&gt; _1;<br align="left"/>debug res =&gt; _0;<br align="left"/>debug arg0 =&gt; _8;<br align="left"/>debug arg1 =&gt; _9;<br align="left"/>debug arg2 =&gt; _10;<br align="left"/>debug args =&gt; _20;<br align="left"/>>;
+    bb0__0_12 [shape="none", label=<<table border="0" cellborder="1" cellspacing="0"><tr><td bgcolor="gray" align="center" colspan="1">0</td></tr><tr><td align="left" balign="left">_5 = &amp;((*_1).0: std::string::String)<br/>_6 = &amp;((*_1).2: std::string::String)<br/>_7 = &amp;((*_1).1: std::string::String)<br/>(_4.0: &amp;std::string::String) = move _5<br/>(_4.1: &amp;std::string::String) = move _6<br/>(_4.2: &amp;std::string::String) = move _7<br/>_8 = (_4.0: &amp;std::string::String)<br/>_9 = (_4.1: &amp;std::string::String)<br/>_10 = (_4.2: &amp;std::string::String)<br/>_12 = _8<br/>_13 = &lt;String as std::fmt::Display&gt;::fmt as for&lt;'r, 's, 't0&gt; fn(&amp;'r std::string::String, &amp;'s mut std::fmt::Formatter&lt;'t0&gt;) -&gt; std::result::Result&lt;(), std::fmt::Error&gt; (Pointer(ReifyFnPointer))<br/></td></tr><tr><td align="left">_11 = ArgumentV1::new::&lt;String&gt;(move _12, move _13)</td></tr></table>>];
+    bb1__0_12 [shape="none", label=<<table border="0" cellborder="1" cellspacing="0"><tr><td bgcolor="gray" align="center" colspan="1">1</td></tr><tr><td align="left" balign="left">_15 = _9<br/>_16 = &lt;String as std::fmt::Display&gt;::fmt as for&lt;'r, 's, 't0&gt; fn(&amp;'r std::string::String, &amp;'s mut std::fmt::Formatter&lt;'t0&gt;) -&gt; std::result::Result&lt;(), std::fmt::Error&gt; (Pointer(ReifyFnPointer))<br/></td></tr><tr><td align="left">_14 = ArgumentV1::new::&lt;String&gt;(move _15, move _16)</td></tr></table>>];
+    bb2__0_12 [shape="none", label=<<table border="0" cellborder="1" cellspacing="0"><tr><td bgcolor="gray" align="center" colspan="1">2</td></tr><tr><td align="left" balign="left">_18 = _10<br/>_19 = &lt;String as std::fmt::Display&gt;::fmt as for&lt;'r, 's, 't0&gt; fn(&amp;'r std::string::String, &amp;'s mut std::fmt::Formatter&lt;'t0&gt;) -&gt; std::result::Result&lt;(), std::fmt::Error&gt; (Pointer(ReifyFnPointer))<br/></td></tr><tr><td align="left">_17 = ArgumentV1::new::&lt;String&gt;(move _18, move _19)</td></tr></table>>];
+    bb3__0_12 [shape="none", label=<<table border="0" cellborder="1" cellspacing="0"><tr><td bgcolor="gray" align="center" colspan="1">3</td></tr><tr><td align="left" balign="left">_3 = [move _11, move _14, move _17]<br/>_20 = &amp;_3<br/>_26 = const &lt;NewsArticle as Summary&gt;::summarize::promoted[0]<br/>_23 = _26<br/>_22 = _23<br/>_21 = move _22 as &amp;[&amp;str] (Pointer(Unsize))<br/>_25 = _20<br/>_24 = move _25 as &amp;[std::fmt::ArgumentV1] (Pointer(Unsize))<br/></td></tr><tr><td align="left">_2 = Arguments::new_v1(move _21, move _24)</td></tr></table>>];
+    bb4__0_12 [shape="none", label=<<table border="0" cellborder="1" cellspacing="0"><tr><td bgcolor="gray" align="center" colspan="1">4</td></tr><tr><td align="left">_0 = format(move _2)</td></tr></table>>];
+    bb5__0_12 [shape="none", label=<<table border="0" cellborder="1" cellspacing="0"><tr><td bgcolor="gray" align="center" colspan="1">5</td></tr><tr><td align="left">return</td></tr></table>>];
+    bb0__0_12 -> bb1__0_12 [label="return"];
+    bb1__0_12 -> bb2__0_12 [label="return"];
+    bb2__0_12 -> bb3__0_12 [label="return"];
+    bb3__0_12 -> bb4__0_12 [label="return"];
+    bb4__0_12 -> bb5__0_12 [label="return"];
+}
+subgraph cluster_Mir_0_20 {
+    graph [fontname="Courier, monospace"];
+    node [fontname="Courier, monospace"];
+    edge [fontname="Courier, monospace"];
+    label=<fn &lt;Tweet as Summary&gt;::say_hello() -&gt; ()<br align="left"/>let _1: ();<br align="left"/>let mut _2: std::fmt::Arguments;<br align="left"/>let _3: &amp;[std::fmt::ArgumentV1; 0];<br align="left"/>let mut _4: &amp;[&amp;str];<br align="left"/>let mut _5: &amp;[&amp;str; 1];<br align="left"/>let _6: &amp;[&amp;str; 1];<br align="left"/>let mut _7: &amp;[std::fmt::ArgumentV1];<br align="left"/>let mut _8: &amp;[std::fmt::ArgumentV1; 0];<br align="left"/>let mut _9: &amp;[&amp;str; 1];<br align="left"/>let mut _10: &amp;[std::fmt::ArgumentV1; 0];<br align="left"/>debug args =&gt; _3;<br align="left"/>>;
+    bb0__0_20 [shape="none", label=<<table border="0" cellborder="1" cellspacing="0"><tr><td bgcolor="gray" align="center" colspan="1">0</td></tr><tr><td align="left" balign="left">_10 = const &lt;Tweet as Summary&gt;::say_hello::promoted[1]<br/>_3 = _10<br/>_9 = const &lt;Tweet as Summary&gt;::say_hello::promoted[0]<br/>_6 = _9<br/>_5 = _6<br/>_4 = move _5 as &amp;[&amp;str] (Pointer(Unsize))<br/>_8 = _3<br/>_7 = move _8 as &amp;[std::fmt::ArgumentV1] (Pointer(Unsize))<br/></td></tr><tr><td align="left">_2 = Arguments::new_v1(move _4, move _7)</td></tr></table>>];
+    bb1__0_20 [shape="none", label=<<table border="0" cellborder="1" cellspacing="0"><tr><td bgcolor="gray" align="center" colspan="1">1</td></tr><tr><td align="left">_1 = _print(move _2)</td></tr></table>>];
+    bb2__0_20 [shape="none", label=<<table border="0" cellborder="1" cellspacing="0"><tr><td bgcolor="gray" align="center" colspan="1">2</td></tr><tr><td align="left">return</td></tr></table>>];
+    bb0__0_20 -> bb1__0_20 [label="return"];
+    bb1__0_20 -> bb2__0_20 [label="return"];
+}
+subgraph cluster_Mir_0_19 {
+    graph [fontname="Courier, monospace"];
+    node [fontname="Courier, monospace"];
+    edge [fontname="Courier, monospace"];
+    label=<fn &lt;Tweet as Summary&gt;::summarize(_1: &amp;Tweet) -&gt; std::string::String<br align="left"/>let mut _2: std::fmt::Arguments;<br align="left"/>let mut _3: [std::fmt::ArgumentV1; 2];<br align="left"/>let mut _4: (&amp;std::string::String, &amp;std::string::String);<br align="left"/>let mut _5: &amp;std::string::String;<br align="left"/>let mut _6: &amp;std::string::String;<br align="left"/>let _7: &amp;std::string::String;<br align="left"/>let _8: &amp;std::string::String;<br align="left"/>let mut _9: std::fmt::ArgumentV1;<br align="left"/>let mut _10: &amp;std::string::String;<br align="left"/>let mut _11: for&lt;'r, 's, 't0&gt; fn(&amp;'r std::string::String, &amp;'s mut std::fmt::Formatter&lt;'t0&gt;) -&gt; std::result::Result&lt;(), std::fmt::Error&gt;;<br align="left"/>let mut _12: std::fmt::ArgumentV1;<br align="left"/>let mut _13: &amp;std::string::String;<br align="left"/>let mut _14: for&lt;'r, 's, 't0&gt; fn(&amp;'r std::string::String, &amp;'s mut std::fmt::Formatter&lt;'t0&gt;) -&gt; std::result::Result&lt;(), std::fmt::Error&gt;;<br align="left"/>let _15: &amp;[std::fmt::ArgumentV1; 2];<br align="left"/>let mut _16: &amp;[&amp;str];<br align="left"/>let mut _17: &amp;[&amp;str; 2];<br align="left"/>let _18: &amp;[&amp;str; 2];<br align="left"/>let mut _19: &amp;[std::fmt::ArgumentV1];<br align="left"/>let mut _20: &amp;[std::fmt::ArgumentV1; 2];<br align="left"/>let mut _21: &amp;[&amp;str; 2];<br align="left"/>debug self =&gt; _1;<br align="left"/>debug res =&gt; _0;<br align="left"/>debug arg0 =&gt; _7;<br align="left"/>debug arg1 =&gt; _8;<br align="left"/>debug args =&gt; _15;<br align="left"/>>;
+    bb0__0_19 [shape="none", label=<<table border="0" cellborder="1" cellspacing="0"><tr><td bgcolor="gray" align="center" colspan="1">0</td></tr><tr><td align="left" balign="left">_5 = &amp;((*_1).0: std::string::String)<br/>_6 = &amp;((*_1).1: std::string::String)<br/>(_4.0: &amp;std::string::String) = move _5<br/>(_4.1: &amp;std::string::String) = move _6<br/>_7 = (_4.0: &amp;std::string::String)<br/>_8 = (_4.1: &amp;std::string::String)<br/>_10 = _7<br/>_11 = &lt;String as std::fmt::Display&gt;::fmt as for&lt;'r, 's, 't0&gt; fn(&amp;'r std::string::String, &amp;'s mut std::fmt::Formatter&lt;'t0&gt;) -&gt; std::result::Result&lt;(), std::fmt::Error&gt; (Pointer(ReifyFnPointer))<br/></td></tr><tr><td align="left">_9 = ArgumentV1::new::&lt;String&gt;(move _10, move _11)</td></tr></table>>];
+    bb1__0_19 [shape="none", label=<<table border="0" cellborder="1" cellspacing="0"><tr><td bgcolor="gray" align="center" colspan="1">1</td></tr><tr><td align="left" balign="left">_13 = _8<br/>_14 = &lt;String as std::fmt::Display&gt;::fmt as for&lt;'r, 's, 't0&gt; fn(&amp;'r std::string::String, &amp;'s mut std::fmt::Formatter&lt;'t0&gt;) -&gt; std::result::Result&lt;(), std::fmt::Error&gt; (Pointer(ReifyFnPointer))<br/></td></tr><tr><td align="left">_12 = ArgumentV1::new::&lt;String&gt;(move _13, move _14)</td></tr></table>>];
+    bb2__0_19 [shape="none", label=<<table border="0" cellborder="1" cellspacing="0"><tr><td bgcolor="gray" align="center" colspan="1">2</td></tr><tr><td align="left" balign="left">_3 = [move _9, move _12]<br/>_15 = &amp;_3<br/>_21 = const &lt;Tweet as Summary&gt;::summarize::promoted[0]<br/>_18 = _21<br/>_17 = _18<br/>_16 = move _17 as &amp;[&amp;str] (Pointer(Unsize))<br/>_20 = _15<br/>_19 = move _20 as &amp;[std::fmt::ArgumentV1] (Pointer(Unsize))<br/></td></tr><tr><td align="left">_2 = Arguments::new_v1(move _16, move _19)</td></tr></table>>];
+    bb3__0_19 [shape="none", label=<<table border="0" cellborder="1" cellspacing="0"><tr><td bgcolor="gray" align="center" colspan="1">3</td></tr><tr><td align="left">_0 = format(move _2)</td></tr></table>>];
+    bb4__0_19 [shape="none", label=<<table border="0" cellborder="1" cellspacing="0"><tr><td bgcolor="gray" align="center" colspan="1">4</td></tr><tr><td align="left">return</td></tr></table>>];
+    bb0__0_19 -> bb1__0_19 [label="return"];
+    bb1__0_19 -> bb2__0_19 [label="return"];
+    bb2__0_19 -> bb3__0_19 [label="return"];
+    bb3__0_19 -> bb4__0_19 [label="return"];
+}
+}

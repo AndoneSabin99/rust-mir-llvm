@@ -1,0 +1,136 @@
+// WARNING: This output format is intended for human consumers only
+// and is subject to change without notice. Knock yourself out.
+fn main() -> () {
+    let mut _0: ();                      // return place in scope 0 at rc.rs:10:10: 10:10
+    let _1: std::rc::Rc<RcList>;         // in scope 0 at rc.rs:11:9: 11:10
+    let mut _2: RcList;                  // in scope 0 at rc.rs:11:21: 11:67
+    let mut _3: std::rc::Rc<RcList>;     // in scope 0 at rc.rs:11:31: 11:66
+    let mut _4: RcList;                  // in scope 0 at rc.rs:11:39: 11:65
+    let mut _5: std::rc::Rc<RcList>;     // in scope 0 at rc.rs:11:50: 11:64
+    let mut _6: RcList;                  // in scope 0 at rc.rs:11:58: 11:63
+    let mut _8: std::rc::Rc<RcList>;     // in scope 0 at rc.rs:14:23: 14:36
+    let mut _9: &std::rc::Rc<RcList>;    // in scope 0 at rc.rs:14:33: 14:35
+    let _10: &std::rc::Rc<RcList>;       // in scope 0 at rc.rs:14:33: 14:35
+    let mut _12: std::rc::Rc<RcList>;    // in scope 0 at rc.rs:18:27: 18:40
+    let mut _13: &std::rc::Rc<RcList>;   // in scope 0 at rc.rs:18:37: 18:39
+    let _14: &std::rc::Rc<RcList>;       // in scope 0 at rc.rs:18:37: 18:39
+    scope 1 {
+        debug a => _1;                   // in scope 1 at rc.rs:11:9: 11:10
+        let _7: RcList;                  // in scope 1 at rc.rs:14:9: 14:10
+        scope 2 {
+            debug b => _7;               // in scope 2 at rc.rs:14:9: 14:10
+            let _11: RcList;             // in scope 2 at rc.rs:18:13: 18:14
+            scope 3 {
+                debug c => _11;          // in scope 3 at rc.rs:18:13: 18:14
+            }
+        }
+    }
+
+    bb0: {
+        discriminant(_6) = 1;            // scope 0 at rc.rs:11:58: 11:63
+        _5 = Rc::<RcList>::new(move _6) -> bb1; // scope 0 at rc.rs:11:50: 11:64
+                                         // mir::Constant
+                                         // + span: rc.rs:11:50: 11:57
+                                         // + user_ty: UserType(2)
+                                         // + literal: Const { ty: fn(RcList) -> std::rc::Rc<RcList> {std::rc::Rc::<RcList>::new}, val: Value(Scalar(<ZST>)) }
+    }
+
+    bb1: {
+        ((_4 as RcCons).0: i32) = const 10_i32; // scope 0 at rc.rs:11:39: 11:65
+        ((_4 as RcCons).1: std::rc::Rc<RcList>) = move _5; // scope 0 at rc.rs:11:39: 11:65
+        discriminant(_4) = 0;            // scope 0 at rc.rs:11:39: 11:65
+        _3 = Rc::<RcList>::new(move _4) -> bb2; // scope 0 at rc.rs:11:31: 11:66
+                                         // mir::Constant
+                                         // + span: rc.rs:11:31: 11:38
+                                         // + user_ty: UserType(1)
+                                         // + literal: Const { ty: fn(RcList) -> std::rc::Rc<RcList> {std::rc::Rc::<RcList>::new}, val: Value(Scalar(<ZST>)) }
+    }
+
+    bb2: {
+        ((_2 as RcCons).0: i32) = const 5_i32; // scope 0 at rc.rs:11:21: 11:67
+        ((_2 as RcCons).1: std::rc::Rc<RcList>) = move _3; // scope 0 at rc.rs:11:21: 11:67
+        discriminant(_2) = 0;            // scope 0 at rc.rs:11:21: 11:67
+        _1 = Rc::<RcList>::new(move _2) -> bb3; // scope 0 at rc.rs:11:13: 11:68
+                                         // mir::Constant
+                                         // + span: rc.rs:11:13: 11:20
+                                         // + user_ty: UserType(0)
+                                         // + literal: Const { ty: fn(RcList) -> std::rc::Rc<RcList> {std::rc::Rc::<RcList>::new}, val: Value(Scalar(<ZST>)) }
+    }
+
+    bb3: {
+        _10 = &_1;                       // scope 1 at rc.rs:14:33: 14:35
+        _9 = _10;                        // scope 1 at rc.rs:14:33: 14:35
+        _8 = <Rc<RcList> as Clone>::clone(move _9) -> [return: bb4, unwind: bb10]; // scope 1 at rc.rs:14:23: 14:36
+                                         // mir::Constant
+                                         // + span: rc.rs:14:23: 14:32
+                                         // + user_ty: UserType(3)
+                                         // + literal: Const { ty: for<'r> fn(&'r std::rc::Rc<RcList>) -> std::rc::Rc<RcList> {<std::rc::Rc<RcList> as std::clone::Clone>::clone}, val: Value(Scalar(<ZST>)) }
+    }
+
+    bb4: {
+        ((_7 as RcCons).0: i32) = const 3_i32; // scope 1 at rc.rs:14:13: 14:37
+        ((_7 as RcCons).1: std::rc::Rc<RcList>) = move _8; // scope 1 at rc.rs:14:13: 14:37
+        discriminant(_7) = 0;            // scope 1 at rc.rs:14:13: 14:37
+        _14 = &_1;                       // scope 2 at rc.rs:18:37: 18:39
+        _13 = _14;                       // scope 2 at rc.rs:18:37: 18:39
+        _12 = <Rc<RcList> as Clone>::clone(move _13) -> [return: bb5, unwind: bb9]; // scope 2 at rc.rs:18:27: 18:40
+                                         // mir::Constant
+                                         // + span: rc.rs:18:27: 18:36
+                                         // + user_ty: UserType(4)
+                                         // + literal: Const { ty: for<'r> fn(&'r std::rc::Rc<RcList>) -> std::rc::Rc<RcList> {<std::rc::Rc<RcList> as std::clone::Clone>::clone}, val: Value(Scalar(<ZST>)) }
+    }
+
+    bb5: {
+        ((_11 as RcCons).0: i32) = const 4_i32; // scope 2 at rc.rs:18:17: 18:41
+        ((_11 as RcCons).1: std::rc::Rc<RcList>) = move _12; // scope 2 at rc.rs:18:17: 18:41
+        discriminant(_11) = 0;           // scope 2 at rc.rs:18:17: 18:41
+        drop(_11) -> [return: bb6, unwind: bb9]; // scope 2 at rc.rs:20:5: 20:6
+    }
+
+    bb6: {
+        drop(_7) -> [return: bb7, unwind: bb10]; // scope 1 at rc.rs:22:1: 22:2
+    }
+
+    bb7: {
+        drop(_1) -> bb8;                 // scope 0 at rc.rs:22:1: 22:2
+    }
+
+    bb8: {
+        return;                          // scope 0 at rc.rs:22:2: 22:2
+    }
+
+    bb9 (cleanup): {
+        drop(_7) -> bb10;                // scope 1 at rc.rs:22:1: 22:2
+    }
+
+    bb10 (cleanup): {
+        drop(_1) -> bb11;                // scope 0 at rc.rs:22:1: 22:2
+    }
+
+    bb11 (cleanup): {
+        resume;                          // scope 0 at rc.rs:10:1: 22:2
+    }
+}
+
+fn RcList::RcCons(_1: i32, _2: Rc<RcList>) -> RcList {
+    let mut _0: RcList;                  // return place in scope 0 at rc.rs:5:5: 5:28
+
+    bb0: {
+        ((_0 as RcCons).0: i32) = move _1; // scope 0 at rc.rs:5:5: 5:28
+        ((_0 as RcCons).1: std::rc::Rc<RcList>) = move _2; // scope 0 at rc.rs:5:5: 5:28
+        discriminant(_0) = 0;            // scope 0 at rc.rs:5:5: 5:28
+        return;                          // scope 0 at rc.rs:5:5: 5:28
+    }
+}
+
+// MIR FOR CTFE
+fn RcList::RcCons(_1: i32, _2: Rc<RcList>) -> RcList {
+    let mut _0: RcList;                  // return place in scope 0 at rc.rs:5:5: 5:28
+
+    bb0: {
+        ((_0 as RcCons).0: i32) = move _1; // scope 0 at rc.rs:5:5: 5:28
+        ((_0 as RcCons).1: std::rc::Rc<RcList>) = move _2; // scope 0 at rc.rs:5:5: 5:28
+        discriminant(_0) = 0;            // scope 0 at rc.rs:5:5: 5:28
+        return;                          // scope 0 at rc.rs:5:5: 5:28
+    }
+}
