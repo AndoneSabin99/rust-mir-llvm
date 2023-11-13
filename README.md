@@ -23,18 +23,17 @@ No particular tool is required for accessing the files. If interested in doing a
 
 
 ## Useful commands
-The followings are just some useful commands that are used in order to compile rust programs and to obtain either .mir, .ll or the .txt file with the cfg representation:
+The followings are just some useful commands that are used in order to compile rust programs and to obtain either .mir, .ll or the .txt file with the cfg representation. 
 
+Standard compilation:
 ```
-Note: you can substitute rustc with the PATH of your rustc compiler, hello.rs with the name of your .rs file and graph.txt with the name of the .txt file where you want to save the cfg representation in .dot format
-
-*    rustc --emit=mir first_file.rs    //obtain the .mir file of hello.rs
+*    rustc --emit=mir hello.rs    //obtain the .mir file of hello.rs
 *    rustc --emit=llvm-ir hello.rs    //obtain the .ll file of hello.rs
 *    rustc -Z unpretty=mir-cfg hello.rs > graph.txt    //obtain the cfg representation
-
-Only for cheri; it is necessary to specify the target and also the path of the linker
+```
+Compilation for CHERI: 
+```
 *    rustc --emit=mir hello.rs -o hello.mir --target aarch64-unknown-freebsd-purecap -C linker=/home/sabin/cheri/rust/clang-morello.sh    //obtain the .mir file of hello.rs with cheri support
 *    rustc --emit=llvm-ir hello.rs -o hello.ll --target aarch64-unknown-freebsd-purecap -C linker=/home/sabin/cheri/rust/clang-morello.sh    //obtain the .ll file of hello.rs with cheri support 
-
-
 ```
+Remember to substitute the placeholders (`rustc`, `hello.rs`, `graph.txt`, etc.) with your actual values.
